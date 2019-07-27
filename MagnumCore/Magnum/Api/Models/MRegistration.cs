@@ -5,9 +5,9 @@ namespace Magnum.Api.Models
 {
 	public class MRegistration
 	{
-        int RegistrationId {get; set;}
-        int BarcodeId {get; set;}        
-        string RegistrationDate {get; set;}
-        string Status {get; set;}
+        public int RegistrationId {get; set;}
+        public int BarcodeId {get; set;}        
+        public string RegistrationDate {get; set;}
+        public string Status {get; set;}
     }
 }

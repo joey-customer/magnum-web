@@ -11,5 +11,10 @@ namespace Magnum.Api.Commons.Business
         {
             fbContext = context;
         }
+
+        public FirebaseClient GetContext()
+        {
+            return fbContext;
+        }
     }
 }

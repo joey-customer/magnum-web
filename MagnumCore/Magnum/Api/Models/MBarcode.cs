@@ -5,11 +5,11 @@ namespace Magnum.Api.Models
 {
 	public class MBarcode
 	{
-        int BarcodeId {get; set;}
-        string SerialNumber {get; set;}
-        string Pin {get; set;}
-        string Barcode {get; set;}
-        string Url {get; set;}
-        string GeneratedDate {get; set;}
+        public int BarcodeId {get; set;}
+        public string SerialNumber {get; set;}
+        public string Pin {get; set;}
+        public string Barcode {get; set;}
+        public string Url {get; set;}
+        public string GeneratedDate {get; set;}
     }
 }
