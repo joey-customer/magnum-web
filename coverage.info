@@ -1,0 +1,230 @@
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\LibSetting.cs
+FN:19,Magnum.Api.Utils.LibSetting Magnum.Api.Utils.LibSetting::GetInstance()
+FNDA:2,Magnum.Api.Utils.LibSetting Magnum.Api.Utils.LibSetting::GetInstance()
+DA:20,2
+DA:21,2
+DA:22,2
+FN:26,System.Void Magnum.Api.Utils.LibSetting::set_Configuration(Microsoft.Extensions.Configuration.IConfigurationRoot)
+FNDA:2,System.Void Magnum.Api.Utils.LibSetting::set_Configuration(Microsoft.Extensions.Configuration.IConfigurationRoot)
+DA:27,2
+DA:28,2
+DA:29,2
+DA:30,2
+DA:32,2
+DA:33,2
+FN:35,Microsoft.Extensions.Configuration.IConfigurationRoot Magnum.Api.Utils.LibSetting::get_Configuration()
+FNDA:1,Microsoft.Extensions.Configuration.IConfigurationRoot Magnum.Api.Utils.LibSetting::get_Configuration()
+DA:36,1
+DA:37,1
+DA:38,1
+FN:43,System.Void Magnum.Api.Utils.LibSetting::set_ConnectionString(System.String)
+FNDA:1,System.Void Magnum.Api.Utils.LibSetting::set_ConnectionString(System.String)
+DA:44,1
+DA:45,1
+DA:46,1
+FN:48,System.String Magnum.Api.Utils.LibSetting::get_ConnectionString()
+FNDA:2,System.String Magnum.Api.Utils.LibSetting::get_ConnectionString()
+DA:49,2
+DA:50,2
+DA:51,2
+FN:56,System.Void Magnum.Api.Utils.LibSetting::set_OAuthKey(System.String)
+FNDA:1,System.Void Magnum.Api.Utils.LibSetting::set_OAuthKey(System.String)
+DA:57,1
+DA:58,1
+DA:59,1
+FN:61,System.String Magnum.Api.Utils.LibSetting::get_OAuthKey()
+FNDA:2,System.String Magnum.Api.Utils.LibSetting::get_OAuthKey()
+DA:62,2
+DA:63,2
+DA:64,2
+FN:69,System.Void Magnum.Api.Utils.LibSetting::set_ExternalApplicationKey(System.String)
+FNDA:1,System.Void Magnum.Api.Utils.LibSetting::set_ExternalApplicationKey(System.String)
+DA:70,1
+DA:71,1
+DA:72,1
+FN:74,System.String Magnum.Api.Utils.LibSetting::get_ExternalApplicationKey()
+FNDA:2,System.String Magnum.Api.Utils.LibSetting::get_ExternalApplicationKey()
+DA:75,2
+DA:76,2
+DA:77,2
+FN:9,System.Void Magnum.Api.Utils.LibSetting::.ctor()
+FNDA:1,System.Void Magnum.Api.Utils.LibSetting::.ctor()
+DA:10,1
+DA:11,1
+DA:12,1
+DA:13,1
+DA:15,1
+DA:16,1
+DA:17,1
+FN:7,System.Void Magnum.Api.Utils.LibSetting::.cctor()
+FNDA:1,System.Void Magnum.Api.Utils.LibSetting::.cctor()
+DA:8,1
+LF:38
+LH:38
+BRF:0
+BRH:0
+FNF:11
+FNH:11
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\VersionUtils.cs
+FN:8,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
+FNDA:1,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
+DA:9,1
+DA:10,1
+DA:11,1
+DA:12,1
+LF:4
+LH:4
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MBarcode.cs
+FN:7,System.Int32 Magnum.Api.Models.MBarcode::get_BarcodeId()
+FNDA:0,System.Int32 Magnum.Api.Models.MBarcode::get_BarcodeId()
+DA:8,0
+FN:8,System.String Magnum.Api.Models.MBarcode::get_SerialNumber()
+FNDA:0,System.String Magnum.Api.Models.MBarcode::get_SerialNumber()
+DA:9,0
+FN:9,System.String Magnum.Api.Models.MBarcode::get_Pin()
+FNDA:0,System.String Magnum.Api.Models.MBarcode::get_Pin()
+DA:10,0
+FN:10,System.String Magnum.Api.Models.MBarcode::get_Barcode()
+FNDA:0,System.String Magnum.Api.Models.MBarcode::get_Barcode()
+DA:11,0
+FN:11,System.String Magnum.Api.Models.MBarcode::get_Url()
+FNDA:0,System.String Magnum.Api.Models.MBarcode::get_Url()
+DA:12,0
+FN:12,System.String Magnum.Api.Models.MBarcode::get_GeneratedDate()
+FNDA:0,System.String Magnum.Api.Models.MBarcode::get_GeneratedDate()
+DA:13,0
+LF:6
+LH:0
+BRF:0
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MRegistration.cs
+FN:7,System.Int32 Magnum.Api.Models.MRegistration::get_RegistrationId()
+FNDA:0,System.Int32 Magnum.Api.Models.MRegistration::get_RegistrationId()
+DA:8,0
+FN:8,System.Int32 Magnum.Api.Models.MRegistration::get_BarcodeId()
+FNDA:0,System.Int32 Magnum.Api.Models.MRegistration::get_BarcodeId()
+DA:9,0
+FN:9,System.String Magnum.Api.Models.MRegistration::get_RegistrationDate()
+FNDA:0,System.String Magnum.Api.Models.MRegistration::get_RegistrationDate()
+DA:10,0
+FN:10,System.String Magnum.Api.Models.MRegistration::get_Status()
+FNDA:0,System.String Magnum.Api.Models.MRegistration::get_Status()
+DA:11,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Factories\FactoryBusinessOperation.cs
+FN:15,System.Void Magnum.Api.Factories.FactoryBusinessOperation::addClassConfig(System.String,System.String)
+FNDA:2,System.Void Magnum.Api.Factories.FactoryBusinessOperation::addClassConfig(System.String,System.String)
+DA:16,2
+DA:17,2
+DA:18,2
+FN:25,System.Void Magnum.Api.Factories.FactoryBusinessOperation::initClassMap()
+FNDA:1,System.Void Magnum.Api.Factories.FactoryBusinessOperation::initClassMap()
+DA:26,1
+DA:27,1
+DA:28,1
+DA:29,1
+FN:31,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetContext(System.String)
+FNDA:1,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetContext(System.String)
+DA:32,1
+DA:33,1
+DA:34,1
+FN:36,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetContext(Firebase.Database.FirebaseClient)
+FNDA:2,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetContext(Firebase.Database.FirebaseClient)
+DA:37,2
+DA:38,2
+DA:39,2
+FN:41,Firebase.Database.FirebaseClient Magnum.Api.Factories.FactoryBusinessOperation::GetContext()
+FNDA:2,Firebase.Database.FirebaseClient Magnum.Api.Factories.FactoryBusinessOperation::GetContext()
+DA:42,2
+DA:43,2
+DA:44,2
+FN:46,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
+FNDA:5,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
+DA:47,5
+DA:48,5
+DA:49,5
+DA:50,1
+DA:51,1
+DA:54,4
+DA:55,4
+DA:57,4
+DA:59,4
+DA:60,4
+BRDA:49,24,0,1
+BRDA:49,24,1,4
+FN:11,System.Void Magnum.Api.Factories.FactoryBusinessOperation::.cctor()
+FNDA:1,System.Void Magnum.Api.Factories.FactoryBusinessOperation::.cctor()
+DA:12,1
+DA:13,1
+DA:21,1
+DA:22,1
+DA:23,1
+LF:31
+LH:31
+BRF:2
+BRH:2
+FNF:7
+FNH:7
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Business\BusinessOperationBase.cs
+FN:10,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetContext(Firebase.Database.FirebaseClient)
+FNDA:4,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetContext(Firebase.Database.FirebaseClient)
+DA:11,4
+DA:12,4
+DA:13,4
+FN:15,Firebase.Database.FirebaseClient Magnum.Api.Commons.Business.BusinessOperationBase::GetContext()
+FNDA:1,Firebase.Database.FirebaseClient Magnum.Api.Commons.Business.BusinessOperationBase::GetContext()
+DA:16,1
+DA:17,1
+DA:18,1
+FN:7,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
+FNDA:4,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
+DA:8,4
+LF:7
+LH:7
+BRF:0
+BRH:0
+FNF:3
+FNH:3
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Registrations\CreateRegistration.cs
+FN:9,System.Int32 Magnum.Api.Businesses.Registrations.CreateRegistration::Apply(Magnum.Api.Models.MRegistration)
+FNDA:1,System.Int32 Magnum.Api.Businesses.Registrations.CreateRegistration::Apply(Magnum.Api.Models.MRegistration)
+DA:10,1
+DA:11,1
+DA:12,1
+LF:3
+LH:3
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Barcodes\CreateBarcode.cs
+FN:9,System.Int32 Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
+FNDA:1,System.Int32 Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
+DA:10,1
+DA:11,1
+DA:12,1
+LF:3
+LH:3
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record

@@ -24,9 +24,9 @@ namespace Magnum.Api.Factories
 
         private static void initClassMap()
         {
-            addClassConfig("CreateBarcode", "Magnum.Api.Businesses.Barcodes.CreateBarcode");                        
+            addClassConfig("CreateBarcode", "Magnum.Api.Businesses.Barcodes.CreateBarcode");
+            addClassConfig("CreateRegistration", "Magnum.Api.Businesses.Registrations.CreateRegistration");                        
         }
-
 
         public static void SetContext(string url)
         {
@@ -37,6 +37,11 @@ namespace Magnum.Api.Factories
         {
             fbContext = ctx;
         }        
+
+        public static FirebaseClient GetContext()
+        {
+            return fbContext;
+        }    
 
         public static IBusinessOperation CreateBusinessOperationObject(string name)
         {        
