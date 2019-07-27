@@ -11,7 +11,7 @@ pipeline {
         BUILT_VERSION = '1.1.1-SNAPSHOT'
         SONAR_SCANNER = '/home/tomcat/.dotnet/tools/dotnet-sonarscanner'
         COVERLET = '/home/tomcat/.dotnet/tools/coverlet'
-        UNIT_TEST_ASSEMBLY = './tests/bin/Debug/netcoreapp2.2/MagnumTest.dll'
+        UNIT_TEST_ASSEMBLY = './MagnumTest/bin/Debug/netcoreapp2.2/MagnumTest.dll'
         PACKAGE_PATH = './sources/bin/Release'
     }
 
