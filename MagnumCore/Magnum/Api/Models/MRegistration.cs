@@ -7,7 +7,7 @@ namespace Magnum.Api.Models
 	{
         public int RegistrationId {get; set;}
         public int BarcodeId {get; set;}        
-        public string RegistrationDate {get; set;}
+        public DateTime RegistrationDate {get; set;}
         public string Status {get; set;}
     }
 }

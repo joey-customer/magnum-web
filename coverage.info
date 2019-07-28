@@ -1,4 +1,4 @@
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\LibSetting.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\LibSetting.cs
 FN:19,Magnum.Api.Utils.LibSetting Magnum.Api.Utils.LibSetting::GetInstance()
 FNDA:2,Magnum.Api.Utils.LibSetting Magnum.Api.Utils.LibSetting::GetInstance()
 DA:20,2
@@ -66,7 +66,7 @@ BRH:0
 FNF:11
 FNH:11
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\VersionUtils.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\VersionUtils.cs
 FN:8,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
 FNDA:1,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
 DA:9,1
@@ -80,53 +80,53 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MBarcode.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MBarcode.cs
 FN:7,System.Int32 Magnum.Api.Models.MBarcode::get_BarcodeId()
-FNDA:0,System.Int32 Magnum.Api.Models.MBarcode::get_BarcodeId()
-DA:8,0
+FNDA:2,System.Int32 Magnum.Api.Models.MBarcode::get_BarcodeId()
+DA:8,2
 FN:8,System.String Magnum.Api.Models.MBarcode::get_SerialNumber()
-FNDA:0,System.String Magnum.Api.Models.MBarcode::get_SerialNumber()
-DA:9,0
+FNDA:2,System.String Magnum.Api.Models.MBarcode::get_SerialNumber()
+DA:9,2
 FN:9,System.String Magnum.Api.Models.MBarcode::get_Pin()
-FNDA:0,System.String Magnum.Api.Models.MBarcode::get_Pin()
-DA:10,0
+FNDA:2,System.String Magnum.Api.Models.MBarcode::get_Pin()
+DA:10,2
 FN:10,System.String Magnum.Api.Models.MBarcode::get_Barcode()
-FNDA:0,System.String Magnum.Api.Models.MBarcode::get_Barcode()
-DA:11,0
+FNDA:2,System.String Magnum.Api.Models.MBarcode::get_Barcode()
+DA:11,2
 FN:11,System.String Magnum.Api.Models.MBarcode::get_Url()
-FNDA:0,System.String Magnum.Api.Models.MBarcode::get_Url()
-DA:12,0
-FN:12,System.String Magnum.Api.Models.MBarcode::get_GeneratedDate()
-FNDA:0,System.String Magnum.Api.Models.MBarcode::get_GeneratedDate()
-DA:13,0
+FNDA:2,System.String Magnum.Api.Models.MBarcode::get_Url()
+DA:12,2
+FN:12,System.DateTime Magnum.Api.Models.MBarcode::get_GeneratedDate()
+FNDA:2,System.DateTime Magnum.Api.Models.MBarcode::get_GeneratedDate()
+DA:13,2
 LF:6
-LH:0
+LH:6
 BRF:0
 BRH:0
 FNF:6
-FNH:0
+FNH:6
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MRegistration.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MRegistration.cs
 FN:7,System.Int32 Magnum.Api.Models.MRegistration::get_RegistrationId()
-FNDA:0,System.Int32 Magnum.Api.Models.MRegistration::get_RegistrationId()
-DA:8,0
+FNDA:2,System.Int32 Magnum.Api.Models.MRegistration::get_RegistrationId()
+DA:8,2
 FN:8,System.Int32 Magnum.Api.Models.MRegistration::get_BarcodeId()
-FNDA:0,System.Int32 Magnum.Api.Models.MRegistration::get_BarcodeId()
-DA:9,0
-FN:9,System.String Magnum.Api.Models.MRegistration::get_RegistrationDate()
-FNDA:0,System.String Magnum.Api.Models.MRegistration::get_RegistrationDate()
-DA:10,0
+FNDA:2,System.Int32 Magnum.Api.Models.MRegistration::get_BarcodeId()
+DA:9,2
+FN:9,System.DateTime Magnum.Api.Models.MRegistration::get_RegistrationDate()
+FNDA:2,System.DateTime Magnum.Api.Models.MRegistration::get_RegistrationDate()
+DA:10,2
 FN:10,System.String Magnum.Api.Models.MRegistration::get_Status()
-FNDA:0,System.String Magnum.Api.Models.MRegistration::get_Status()
-DA:11,0
+FNDA:2,System.String Magnum.Api.Models.MRegistration::get_Status()
+DA:11,2
 LF:4
-LH:0
+LH:4
 BRF:0
 BRH:0
 FNF:4
-FNH:0
+FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Factories\FactoryBusinessOperation.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Factories\FactoryBusinessOperation.cs
 FN:15,System.Void Magnum.Api.Factories.FactoryBusinessOperation::addClassConfig(System.String,System.String)
 FNDA:2,System.Void Magnum.Api.Factories.FactoryBusinessOperation::addClassConfig(System.String,System.String)
 DA:16,2
@@ -181,7 +181,7 @@ BRH:2
 FNF:7
 FNH:7
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Business\BusinessOperationBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Business\BusinessOperationBase.cs
 FN:10,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetContext(Firebase.Database.FirebaseClient)
 FNDA:4,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetContext(Firebase.Database.FirebaseClient)
 DA:11,4
@@ -202,7 +202,7 @@ BRH:0
 FNF:3
 FNH:3
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Registrations\CreateRegistration.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Registrations\CreateRegistration.cs
 FN:9,System.Int32 Magnum.Api.Businesses.Registrations.CreateRegistration::Apply(Magnum.Api.Models.MRegistration)
 FNDA:1,System.Int32 Magnum.Api.Businesses.Registrations.CreateRegistration::Apply(Magnum.Api.Models.MRegistration)
 DA:10,1
@@ -215,7 +215,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Barcodes\CreateBarcode.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Barcodes\CreateBarcode.cs
 FN:9,System.Int32 Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
 FNDA:1,System.Int32 Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
 DA:10,1
