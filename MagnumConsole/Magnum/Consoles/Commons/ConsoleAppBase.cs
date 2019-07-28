@@ -6,7 +6,7 @@ namespace Magnum.Consoles.Commons
 {
 	public abstract class ConsoleAppBase : IConsoleApp
 	{
-        private Hashtable arguments = new Hashtable();
+        private readonly Hashtable arguments = new Hashtable();
         
         protected abstract int Execute();
         public abstract OptionSet CreateOptionSet();        

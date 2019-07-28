@@ -30,6 +30,7 @@ namespace Magnum.Consoles.Barcodes
 
         private void BarcodeGenerateProgressUpdate(MBarcode bc, string dir)
         {
+            //Put any progress update here
         }
 
         public void SetUpdateProgressFunc(BarcodeGenerateProgress func)
@@ -87,8 +88,7 @@ namespace Magnum.Consoles.Barcodes
 
         protected override int Execute()
         {
-            Hashtable args = GetArguments();
-            LibSetting setting = LibSetting.GetInstance();
+            Hashtable args = GetArguments();        
             
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
