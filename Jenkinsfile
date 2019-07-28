@@ -25,10 +25,7 @@ pipeline {
                     /d:sonar.host.url=https://sonarcloud.io \
                     /d:sonar.branch.name=${env.BRANCH_NAME} \
                     /d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml \
-                    /d:sonar.javascript.exclusions=**/bootstrap/** \
-                    /d:sonar.javascript.exclusions=**/jquery/** \
-                    /d:sonar.javascript.exclusions=**/jquery-validation/** \
-                    /d:sonar.javascript.exclusions=**/jquery-validation-unobtrusive/** \
+                    /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
                     /d:sonar.login=${params.SONAR_LOGIN_KEY}"
 
                 sh "echo [${env.BUILT_VERSION}]"
