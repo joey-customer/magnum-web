@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\MagnumCore\MagnumCore.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="NDesk.Options.Core" Version="1.2.5" />
+    <PackageReference Include="QRCoder" Version="1.3.6" />
+  </ItemGroup>
+</Project>
