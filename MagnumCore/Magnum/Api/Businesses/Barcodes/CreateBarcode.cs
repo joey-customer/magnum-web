@@ -48,6 +48,7 @@ namespace Magnum.Api.Businesses.Barcodes
             
             bc.SerialNumber = RandomStringNum(10);
             bc.Pin = RandomString(10);
+            bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}", bc.Url, bc.SerialNumber, bc.Pin);
 
             return bc;
         }
