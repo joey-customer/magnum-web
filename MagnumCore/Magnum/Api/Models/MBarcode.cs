@@ -10,6 +10,6 @@ namespace Magnum.Api.Models
         public string Pin {get; set;}
         public string Barcode {get; set;}
         public string Url {get; set;}
-        public string GeneratedDate {get; set;}
+        public DateTime GeneratedDate {get; set;}
     }
 }
