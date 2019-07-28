@@ -2,7 +2,7 @@ pipeline {
     agent any 
     
     parameters {
-        string(name: 'SONAR_LOGIN_KEY', defaultValue: '33c49d05009d1f807dd0d47e820e509d57b2d6c0', description: 'Sonarqube logon key')
+        string(name: 'SONAR_LOGIN_KEY', defaultValue: '6b3024e6cc1576028a5bba761b1009ffb850b6f5', description: 'Sonarqube logon key')
     }    
     
     environment {
@@ -25,6 +25,10 @@ pipeline {
                     /d:sonar.host.url=https://sonarcloud.io \
                     /d:sonar.branch.name=${env.BRANCH_NAME} \
                     /d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml \
+                    /d:sonar.javascript.exclusions=**/bootstrap/** \
+                    /d:sonar.javascript.exclusions=**/jquery/** \
+                    /d:sonar.javascript.exclusions=**/jquery-validation/** \
+                    /d:sonar.javascript.exclusions=**/jquery-validation-unobtrusive/** \
                     /d:sonar.login=${params.SONAR_LOGIN_KEY}"
 
                 sh "echo [${env.BUILT_VERSION}]"
