@@ -41,6 +41,10 @@ namespace Magnum.Api.Models
                     {
                         oldValue = DateTime.Now;
                     }
+                    else if (prop.PropertyType == typeof(bool))
+                    {
+                        oldValue = false;
+                    }
 
                     prop.SetValue(model, oldValue);
                     var newValue = prop.GetValue(model);

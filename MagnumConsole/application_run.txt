@@ -1,0 +1,3 @@
+#To generate barcode
+
+dotnet run BarcodeGen --h=url --q=50000 --b=KH0009 --u=https://magnum-verify.com --p 'ALPHA-099' -o '/d/temp'
