@@ -6,9 +6,9 @@ using NDesk.Options;
 
 namespace Magnum.Consoles
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {            
             if (args.Length <= 0)
             {

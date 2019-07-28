@@ -9,14 +9,14 @@ namespace Magnum.Consoles.Commons
         private Hashtable arguments = new Hashtable();
         
         protected abstract int Execute();
-        public abstract OptionSet CreateOptionSet();
+        public abstract OptionSet CreateOptionSet();        
         
         protected void ClearArgument()
         {
             arguments.Clear();
         }
 
-        protected void AddArgument(string key, string value)
+        public void AddArgument(string key, string value)
         {
             arguments[key] = value;
         }
@@ -25,11 +25,6 @@ namespace Magnum.Consoles.Commons
         {
             int code = Execute();
             return code;
-        }
-
-        public void SetArguments(Hashtable args)
-        {
-            arguments = args;
         }
 
         public void DumpParameter()

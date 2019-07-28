@@ -14,15 +14,36 @@ using NDesk.Options;
 
 namespace Magnum.Consoles.Barcodes
 {
+    public delegate void BarcodeGenerateProgress(MBarcode bc, string dir);
+
 	public class BarcodeGenerator : ConsoleAppBase
 	{
+        private int imgPerFolder = 1000;
+        private int progressPerImage = 100;
+
+        private BarcodeGenerateProgress progressFunc = null;
+        
+        public BarcodeGenerator()
+        {
+            progressFunc = BarcodeGenerateProgressUpdate;
+        }
+
+        private void BarcodeGenerateProgressUpdate(MBarcode bc, string dir)
+        {
+        }
+
+        public void SetUpdateProgressFunc(BarcodeGenerateProgress func)
+        {
+            progressFunc = func;
+        }
+
         public override OptionSet CreateOptionSet()
         {
             ClearArgument();
 
             var options = new OptionSet() 
             {
-                { "h=|host",     "Firebase URL", s => AddArgument("url", s) },
+                { "h=|host",     "Firebase URL", s => AddArgument("host", s) },
                 { "k=|key=",      "Oauth key to access Firebase", s => AddArgument("key", s) },
                 { "q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s) },
                 { "u=|url=",      "QR scan URL", s => AddArgument("url", s) },
@@ -54,6 +75,16 @@ namespace Magnum.Consoles.Barcodes
             bmp.Save(fileName);
         }
 
+        public void SetFilePerFoler(int num)
+        {
+            imgPerFolder = num;
+        }
+
+        public void SetProgressPerImage(int num)
+        {
+            progressPerImage = num;
+        }
+
         protected override int Execute()
         {
             Hashtable args = GetArguments();
@@ -69,8 +100,6 @@ namespace Magnum.Consoles.Barcodes
 
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
-            int imgPerFolder = 1000;
-
             for (int i=1; i<=quantity; i++)
             {
                 string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(5, '0');
@@ -82,10 +111,11 @@ namespace Magnum.Consoles.Barcodes
 
                 MBarcode bc = opr.Apply(param);
                 GenerateQR(bc, dir);
+                progressFunc(bc, dir);
 
                 Console.WriteLine("SerialNo=[{0}], Pin=[{1}]", bc.SerialNumber, bc.Pin);
                 
-                if ((i % 100) == 0)
+                if ((i % progressPerImage) == 0)
                 {
                     int remain = quantity - i;
                     Console.WriteLine("Generated {0} barcodes, {1} barcodes to go...", i, remain);
