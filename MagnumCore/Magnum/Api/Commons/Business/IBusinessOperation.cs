@@ -1,10 +1,10 @@
 using System;
-using Firebase.Database;
+using Magnum.Api.NoSql;
 
 namespace Magnum.Api.Commons.Business
 {
 	public interface IBusinessOperation
 	{
-        void SetContext(FirebaseClient context);
+        void SetContext(INoSqlContext context);
     }
 }

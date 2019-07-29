@@ -50,6 +50,11 @@ namespace Magnum.Api.Businesses.Barcodes
             bc.Pin = RandomString(10);
             bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}", bc.Url, bc.SerialNumber, bc.Pin);
 
+            string path = string.Format("barcodes/{0}-{1}", bc.SerialNumber, bc.Pin);
+            
+            var ctx = GetContext();
+            ctx.PostData(path, bc);
+
             return bc;
         }
     }

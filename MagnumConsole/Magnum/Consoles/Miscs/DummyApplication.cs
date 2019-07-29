@@ -1,18 +1,8 @@
 using System;
-using System.IO;
-using System.Collections;
-using System.Drawing;
-
-using QRCoder;
-using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
-using Magnum.Api.Factories;
-using Magnum.Api.Utils;
-using Magnum.Api.Businesses.Barcodes;
-
 using NDesk.Options;
 
-namespace Magnum.Consoles.Commons
+namespace Magnum.Consoles.Miscs
 {
 	public class DummyApplication : ConsoleAppBase
 	{

@@ -21,9 +21,10 @@ namespace Magnum.Consoles.Factories
         }
 
         private static void initClassMap()
-        {
-            addClassConfig("DummyApp", "Magnum.Consoles.Commons.DummyApplication");
-            addClassConfig("BarcodeGen", "Magnum.Consoles.Barcodes.BarcodeGenerator");               
+        {            
+            addClassConfig("BarcodeGen", "Magnum.Consoles.Barcodes.BarcodeGeneratorApplication"); 
+            addClassConfig("FirebaseCheck", "Magnum.Consoles.Miscs.FirebaseCheckApplication");
+            addClassConfig("DummyApp", "Magnum.Consoles.Miscs.DummyApplication");       
         }  
 
         public static IConsoleApp CreateConsoleApplicationObject(string name)

@@ -1,5 +1,5 @@
 using System;
-using System.Collections;
+using Magnum.Api.NoSql;
 using NDesk.Options;
 
 namespace Magnum.Consoles.Commons
@@ -8,5 +8,7 @@ namespace Magnum.Consoles.Commons
 	{
         int Run();
         OptionSet CreateOptionSet();
+        void SetNoSqlContext(INoSqlContext context);
+        INoSqlContext GetNoSqlContext();
     }
 }

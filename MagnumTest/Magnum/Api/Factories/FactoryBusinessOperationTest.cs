@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 using Magnum.Api.Commons.Business;
 
-using Firebase.Database;
+using Magnum.Api.NoSql;
 
 namespace Magnum.Api.Factories
 {
@@ -34,28 +34,22 @@ namespace Magnum.Api.Factories
             Assert.IsNotNull(opt, "Object must not be null!!!");
         } 
 
-        [TestCase("dummy-firebase-url.com")]
-        public void SetContextFromUrlTest(string url)
+        [TestCase("dummy-firebase-url.com", "faked_key")]
+        public void SetContextFromObjectTest(string url, string key)
         {
-            FactoryBusinessOperation.SetContext(url);
-            var ctx = FactoryBusinessOperation.GetContext();
-            Assert.IsNotNull(ctx, "Object must not be null!!!");
-        }
-
-        [TestCase("dummy-firebase-url.com")]
-        public void SetContextFromObjectTest(string url)
-        {
-            FirebaseClient fbContext = new FirebaseClient(url);
+            INoSqlContext fbContext = new MockedNoSqlContext();
+            fbContext.Authenticate(url, key, "", "");
             FactoryBusinessOperation.SetContext(fbContext);
 
-            FirebaseClient ctx = FactoryBusinessOperation.GetContext();
+            INoSqlContext ctx = FactoryBusinessOperation.GetContext();
             Assert.IsNotNull(ctx, "Object must not be null!!!");
         } 
 
-        [TestCase("dummy-firebase-url.com", "CreateBarcode")]
-        public void BusinessOperationGetSameContextTest(string url, string apiName)
+        [TestCase("dummy-firebase-url.com", "faked_key", "CreateBarcode")]
+        public void BusinessOperationGetSameContextTest(string url, string key, string apiName)
         {
-            FirebaseClient fbContext = new FirebaseClient(url);
+            INoSqlContext fbContext = new MockedNoSqlContext();
+            fbContext.Authenticate(url, key, "", "");
             FactoryBusinessOperation.SetContext(fbContext);
 
             BusinessOperationBase opt = (BusinessOperationBase) FactoryBusinessOperation.CreateBusinessOperationObject(apiName);

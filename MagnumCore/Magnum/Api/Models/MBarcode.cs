@@ -5,7 +5,8 @@ namespace Magnum.Api.Models
 {
 	public class MBarcode
 	{
-        public int BarcodeId {get; set;}
+        public string ID {get; set;}
+        public string Key {get; set;}
         public bool IsActivated {get; set;}
         public string Product {get; set;}
         public string BatchNo {get; set;}

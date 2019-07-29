@@ -7,8 +7,8 @@ using QRCoder;
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
-using Magnum.Api.Utils;
 using Magnum.Api.Businesses.Barcodes;
+using Magnum.Api.NoSql;
 
 using NDesk.Options;
 
@@ -16,14 +16,14 @@ namespace Magnum.Consoles.Barcodes
 {
     public delegate void BarcodeGenerateProgress(MBarcode bc, string dir);
 
-	public class BarcodeGenerator : ConsoleAppBase
+	public class BarcodeGeneratorApplication : ConsoleAppBase
 	{
         private int imgPerFolder = 1000;
         private int progressPerImage = 100;
 
         private BarcodeGenerateProgress progressFunc = null;
         
-        public BarcodeGenerator()
+        public BarcodeGeneratorApplication()
         {
             progressFunc = BarcodeGenerateProgressUpdate;
         }
@@ -51,6 +51,8 @@ namespace Magnum.Consoles.Barcodes
                 { "p=|product=",  "Product code", s => AddArgument("product", s) },
                 { "o=|outpath=",  "QR image file output directory (folder)", s => AddArgument("outpath", s) },
                 { "b=|batch=",    "Batch number", s => AddArgument("batch", s) },
+                { "user=",    "Firebase username", s => AddArgument("user", s) },
+                { "password=",    "Firebase password", s => AddArgument("password", s) },
             };
 
             return options;
@@ -88,15 +90,29 @@ namespace Magnum.Consoles.Barcodes
 
         protected override int Execute()
         {
-            Hashtable args = GetArguments();        
-            
+            Hashtable args = GetArguments();
+            string key = args["key"].ToString();
+            string host = args["host"].ToString();
+            string user = args["user"].ToString();
+            string password = args["password"].ToString();
+            string payloadUrl = args["url"].ToString();
+            string batch = args["batch"].ToString();
+
+            INoSqlContext ctx = GetNoSqlContext();
+            if (ctx == null)
+            {
+                ctx = new FirebaseNoSqlContext();
+                ctx.Authenticate(host, key, user, password);
+            }
+
+            FactoryBusinessOperation.SetContext(ctx);
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());
 
             MBarcode param = new MBarcode();
-            param.BatchNo = args["batch"].ToString();
-            param.Url = args["url"].ToString();
+            param.BatchNo = batch;
+            param.Url = payloadUrl;
 
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
@@ -110,7 +126,7 @@ namespace Magnum.Consoles.Barcodes
                 }
 
                 MBarcode bc = opr.Apply(param);
-                GenerateQR(bc, dir);
+                GenerateQR(bc, dir);                
                 progressFunc(bc, dir);
 
                 Console.WriteLine("SerialNo=[{0}], Pin=[{1}]", bc.SerialNumber, bc.Pin);

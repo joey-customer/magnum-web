@@ -6,6 +6,7 @@ using NUnit.Framework;
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using Magnum.Api.Models;
+using Magnum.Api.Factories;
 
 using NDesk.Options;
 
@@ -29,6 +30,8 @@ namespace Magnum.Consoles.Barcodes
                 {"url", "https://magnum-verify.com"},
                 {"product", "ALPHA-099"},
                 {"outpath", "/d/temp"},
+                {"user", "pjame"},
+                {"password", "faked_password"},
             };
 
             args = new string[] 
@@ -40,6 +43,8 @@ namespace Magnum.Consoles.Barcodes
                 string.Format("--u={0}", h["url"]), 
                 string.Format("--p={0}", h["product"]), 
                 string.Format("--o={0}", h["outpath"]), 
+                string.Format("--user={0}", h["user"]), 
+                string.Format("--password={0}", h["password"]), 
             };                      
         }
 
@@ -80,7 +85,7 @@ namespace Magnum.Consoles.Barcodes
         {
             generatedCount = 0;
 
-            BarcodeGenerator app = (BarcodeGenerator) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            BarcodeGeneratorApplication app = (BarcodeGeneratorApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             app.SetFilePerFoler(10);
             app.SetProgressPerImage(2);
             if (callFunc)
@@ -95,11 +100,14 @@ namespace Magnum.Consoles.Barcodes
             app.AddArgument("outpath", Path.GetTempPath());
             app.AddArgument("quantity", quantity.ToString());
 
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            app.SetNoSqlContext(ctx);
+
             app.Run();
             
             if (callFunc)
             {
-                Assert.AreEqual(quantity, generatedCount, "Gerated file count is wrong!!!");
+                Assert.AreEqual(quantity, generatedCount, "Generated file count is wrong!!!");
             }
         }          
     }    
