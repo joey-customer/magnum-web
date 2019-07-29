@@ -9,16 +9,16 @@ use File::Copy;
 use constant false => 0;
 use constant true  => 1;
 
-# ./branch_release -rv '2.0.20'
+# ./branch_release -rv '1.0.0'
 
 my $TEMP_DIR = $ENV{'TEMP'}; #Temp directory
 
 #SOURCE_BRANCH can be modified if passed -src xxxxx from command line
-my $SOURCE_BRANCH = 'dev/main_development';
+my $SOURCE_BRANCH = 'trunk';
 
-my $REPO_NAME = 'VisionInvestor';
-my $POM_FILE = "$TEMP_DIR/$REPO_NAME/pom.xml";
-my $SOURCE_REPO = 'git@code.ssnc.global:FSG/AS/Vision-Investor/' . "$REPO_NAME.git";
+my $REPO_NAME = 'magnum-web';
+my $POM_FILE = "$TEMP_DIR/$REPO_NAME/Jenkinsfile";
+my $SOURCE_REPO = 'https://github.com/pjamenaja/' . "$REPO_NAME.git";
 my $TARGET_BRANCH = 'master';
 my $RELEASE_PREFIX = 'release';
 
