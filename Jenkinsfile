@@ -8,7 +8,7 @@ pipeline {
     environment {
         PRODUCT_NAME = 'MagnumWeb'
         PUBLISH_FLAG = 'TRUE'
-        BUILT_VERSION = '1.0.3'
+        BUILT_VERSION = '1.0.6'
         SONAR_SCANNER = '/home/tomcat/.dotnet/tools/dotnet-sonarscanner'
         COVERLET = '/home/tomcat/.dotnet/tools/coverlet'
         UNIT_TEST_ASSEMBLY = './MagnumTest/bin/Debug/netcoreapp2.2/MagnumTest.dll'
