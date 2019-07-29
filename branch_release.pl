@@ -153,7 +153,7 @@ sub parse_pom
         my $line = $_;
         my $new_line = $line;
 
-        if (($line =~ /^\s*<version>(.+)<\/version>.*$/) && (!$found_version))
+        if (($line =~ /^\s*BUILT_VERSION\s*=\s*'(.+)'\s*$/) && (!$found_version))
         { 
             #Replace only first occurence            
 
@@ -163,15 +163,13 @@ sub parse_pom
             print("Replaced [$old_version] with [$version]\n");
             $found_version = true;
         }
-        elsif ($line =~ /^.*\$\{BUILD_TOKEN\}.*$/)
+        elsif ($line =~ /^\s*PUBLISH_FLAG\s*=\s*'(.+)'\s*$/)
         { 
-            #<!-- DO NOT REMOVE THIS LINE : ${BUILD_TOKEN} -->            
+            my $keyword = $1;
+            my $flag = 'TRUE';
+            $new_line =~ s/$keyword/$flag/ig;
 
-            my $keyword = '\$\{BUILD_TOKEN\}';
-            my $token = $time_stamp;
-            $new_line =~ s/$keyword/$token/ig;
-
-            print("Replaced BUILD_TOKEN with [$token]\n");
+            print("Replaced PUBLISH_FLAG with [$flag]\n");
         }
 
         print($oh "$new_line");
@@ -294,9 +292,11 @@ my @COMMANDS =
         "cd $REPO_NAME; git merge origin/$TARGET_BRANCH --strategy-option ours -m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",
         "cd $REPO_NAME; mv $POM_FILE.original $POM_FILE", #We don't care version from 'master' branch
 
-        "parse_pom($POM_FILE,$RELEASE_VERSION-SNAPSHOT)",
-        "cd $REPO_NAME; git add *; git commit --m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",
+        "parse_pom($POM_FILE,$RELEASE_VERSION)",
+        "cd $REPO_NAME; git add *; git commit --m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",        
         "cd $REPO_NAME; git push origin $RELEASE_BRANCH",
+        "cd $REPO_NAME; git tag -a V$RELEASE_VERSION -m 'Release $RELEASE_VERSION'",
+        "cd $REPO_NAME; git push origin V$RELEASE_VERSION",
     );
 
 #parse_pom($POM_FILE, $RELEASE_VERSION);

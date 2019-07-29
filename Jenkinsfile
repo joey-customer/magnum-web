@@ -7,7 +7,7 @@ pipeline {
     
     environment {
         PRODUCT_NAME = 'MagnumWeb'
-        PUBLISH_FLAG = 'N'
+        PUBLISH_FLAG = 'FALSE'
         BUILT_VERSION = '1.1.1-SNAPSHOT'
         SONAR_SCANNER = '/home/tomcat/.dotnet/tools/dotnet-sonarscanner'
         COVERLET = '/home/tomcat/.dotnet/tools/coverlet'
