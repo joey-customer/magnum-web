@@ -2,7 +2,7 @@ pipeline {
     agent any 
     
     parameters {
-        string(name: 'SONAR_LOGIN_KEY', defaultValue: '===6b3024e6cc1576028a5bba761b1009ffb850b6f5===', description: 'Sonarqube logon key')
+        string(name: 'SONAR_LOGIN_KEY', defaultValue: '6b3024e6cc1576028a5bba761b1009ffb850b6f5', description: 'Sonarqube logon key')
     }    
     
     environment {
