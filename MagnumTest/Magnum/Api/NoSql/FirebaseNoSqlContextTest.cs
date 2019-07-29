@@ -37,17 +37,21 @@ namespace Magnum.Api.NoSql
 
             try
             {
+                string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
+                string username = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
+                string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
+
                 //This is for unit testing only, DO NOT put any production data in this DB
                 ctx.Authenticate("https://compute-engine-vm-test.firebaseio.com/", 
-                    "AIzaSyCgvL2t12A8Os9CM9k59PdqDay3EB09Czs", 
-                    "test@test.com", 
-                    "test12345");
+                    key, 
+                    username, 
+                    password);
 
                 ctx.PostData("unit_testing", DateTime.Now);      
             }
             catch
             {
-                Assert.Fail("Exception should be thrown for failed authen !!!");
+                Assert.Fail("Please see env variable MAGNUM_FIREBASE_KEY, MAGNUM_DB_USERNAME, MAGNUM_DB_PASSWORD !!!");
             }
         }
 
