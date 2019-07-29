@@ -24,9 +24,9 @@ namespace Magnum.Consoles.Commons
             arguments[key] = value;
         }
 
-        public void SetNoSqlContext(INoSqlContext ctx)
+        public void SetNoSqlContext(INoSqlContext context)
         {
-            context = ctx;
+            this.context = context;
         }
 
         public INoSqlContext GetNoSqlContext()

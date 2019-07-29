@@ -10,7 +10,6 @@ namespace Magnum.Api.NoSql
 	public class FirebaseNoSqlContext : INoSqlContext
 	{
         private FirebaseClient fbClient = null;
-        private FirebaseAuthProvider authProvider = null;
         private string authKey = "";
 
         private string dbUrl = "";
@@ -19,7 +18,7 @@ namespace Magnum.Api.NoSql
 
         private async Task AuthenToFirebase()
         {
-            authProvider = new FirebaseAuthProvider(new FirebaseConfig(authKey));
+            FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig(authKey));
             string firebaseUsername = dbUser;
             string firebasePassword = dbPassword;
             var token = await authProvider.SignInWithEmailAndPasswordAsync(firebaseUsername, firebasePassword);
@@ -34,9 +33,9 @@ namespace Magnum.Api.NoSql
 
         private async Task PostFirebaseData(string path, object data)
         {
-            var t = await fbClient
-            .Child(path)
-            .PostAsync(data, true);
+            await fbClient
+                .Child(path)
+                .PostAsync(data, true);
         }
 
         public void Authenticate(string url, string key, string user, string passwd)
