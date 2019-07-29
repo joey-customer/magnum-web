@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
+
 using NDesk.Options;
+using Magnum.Api.NoSql;
 
 namespace Magnum.Consoles.Commons
 {
 	public abstract class ConsoleAppBase : IConsoleApp
 	{
         private readonly Hashtable arguments = new Hashtable();
+        private INoSqlContext context = null;
         
         protected abstract int Execute();
         public abstract OptionSet CreateOptionSet();        
@@ -19,6 +22,16 @@ namespace Magnum.Consoles.Commons
         public void AddArgument(string key, string value)
         {
             arguments[key] = value;
+        }
+
+        public void SetNoSqlContext(INoSqlContext context)
+        {
+            this.context = context;
+        }
+
+        public INoSqlContext GetNoSqlContext()
+        {
+            return context;
         }
 
         public int Run()

@@ -1,18 +1,18 @@
 using System;
-using Firebase.Database;
+using Magnum.Api.NoSql;
 
 namespace Magnum.Api.Commons.Business
 {    
 	public class BusinessOperationBase : IBusinessOperation
 	{
-        private FirebaseClient fbContext = null;
+        private INoSqlContext fbContext = null;
 
-        public void SetContext(FirebaseClient context)
+        public void SetContext(INoSqlContext context)
         {
             fbContext = context;
         }
 
-        public FirebaseClient GetContext()
+        public INoSqlContext GetContext()
         {
             return fbContext;
         }

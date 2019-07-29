@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 using System.Reflection;
+using Magnum.Api.NoSql;
 
 using Magnum.Api.Commons.Business;
-using Firebase.Database;
 
 namespace Magnum.Api.Factories
 {   
     public static class FactoryBusinessOperation
     {
         private static Hashtable classMaps = new Hashtable();
-        private static FirebaseClient fbContext = null;
+        private static INoSqlContext fbContext = null;
 
         private static void addClassConfig(string apiName, string fqdn)
         {
@@ -28,17 +28,12 @@ namespace Magnum.Api.Factories
             addClassConfig("CreateRegistration", "Magnum.Api.Businesses.Registrations.CreateRegistration");                        
         }
 
-        public static void SetContext(string url)
-        {
-            fbContext = new FirebaseClient(url);
-        }
-
-        public static void SetContext(FirebaseClient ctx)
+        public static void SetContext(INoSqlContext ctx)
         {
             fbContext = ctx;
         }        
 
-        public static FirebaseClient GetContext()
+        public static INoSqlContext GetContext()
         {
             return fbContext;
         }    

@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+
 using Magnum.Api.Factories;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Models;
@@ -16,6 +17,9 @@ namespace Magnum.Api.Businesses.Barcodes
         [TestCase]
         public void CreateBarcodeWithRandomStringTest()
         {
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            FactoryBusinessOperation.SetContext(ctx);
+
             var opt = (IBusinessOperationGetInfo<MBarcode>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
             MBarcode bc = new MBarcode();
             bc.Url = "http://this_is_fake_url";
