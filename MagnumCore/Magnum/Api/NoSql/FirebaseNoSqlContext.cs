@@ -38,6 +38,15 @@ namespace Magnum.Api.NoSql
                 .PostAsync(data, true);
         }
 
+        private async Task<T> GetFirebaseData<T>(string path, string key)
+        {
+            var item = await fbClient
+                .Child(path)
+                .OnceSingleAsync<T>();
+
+            return item;
+        }
+
         public void Authenticate(string url, string key, string user, string passwd)
         {
             authKey = key;
@@ -53,5 +62,11 @@ namespace Magnum.Api.NoSql
             PostFirebaseData(path, data).Wait();
             return data;
         } 
+
+        public T GetObjectByKey<T>(string path, string key)
+        {
+            T o = GetFirebaseData<T>(path, key).Result;
+            return o;
+        }
     }
 }

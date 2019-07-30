@@ -7,5 +7,6 @@ namespace Magnum.Api.NoSql
 	{
         void Authenticate(string url, string key, string user, string passwd);
         object PostData(string path, object data);
+        T GetObjectByKey<T>(string path, string key);
     }    
 }

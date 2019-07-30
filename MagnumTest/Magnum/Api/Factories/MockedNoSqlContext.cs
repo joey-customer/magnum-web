@@ -14,5 +14,10 @@ namespace Magnum.Api.Factories
         {
             return null;
         }
+
+        public T GetObjectByKey<T>(string path, string key)
+        {
+            return default(T);
+        }
     }
 }

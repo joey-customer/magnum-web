@@ -53,5 +53,18 @@ namespace Magnum.Consoles.Commons
         {
             return arguments;
         }
+
+        protected INoSqlContext GetNoSqlContext(string provider, string host, string key, string user, string password)
+        {
+            INoSqlContext ctx = null;
+            if (provider.Equals("firebase"))
+            {
+                ctx = new FirebaseNoSqlContext();
+                ctx.Authenticate(host, key, user, password); 
+            }
+
+            return ctx;
+        }
+       
     }
 }
