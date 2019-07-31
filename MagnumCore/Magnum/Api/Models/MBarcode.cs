@@ -16,5 +16,6 @@ namespace Magnum.Api.Models
         public string PayloadUrl {get; set;}
         public string Path {get; set;}
         public DateTime GeneratedDate {get; set;}
+        public DateTime ActivatedDate {get; set;}
     }
 }

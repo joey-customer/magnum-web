@@ -58,7 +58,7 @@ namespace Magnum.Api.NoSql
             T o = default(T);
             foreach (var item in items)
             {
-                o = (T) item.Object;
+                o = item.Object;
                 (o as BaseModel).Key = item.Key;
             }
 

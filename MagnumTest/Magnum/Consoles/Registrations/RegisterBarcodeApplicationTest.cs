@@ -16,7 +16,6 @@ namespace Magnum.Consoles.Registrations
     {
         private Hashtable h = null;
         private string[] args = null;
-        private int generatedCount = 0;
 
         [SetUp]
         public void Setup()
@@ -71,8 +70,6 @@ namespace Magnum.Consoles.Registrations
         [TestCase("BarcodeReg", 210)]
         public void GenerateBarcodeTest(string appName, int quantity)
         {
-            generatedCount = 0;
-
             RegisterBarcodeApplication app = (RegisterBarcodeApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
