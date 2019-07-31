@@ -16,7 +16,7 @@ dotnet run BarcodeReg \
 --h=https://compute-engine-vm-test.firebaseio.com/ \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
---serial=9466518593 \
---pin=DWABVANTAC \
+--serial=9466216881 \
+--pin=FCPHYMFEHV \
 --ip=192.168.1.99 \
 --key=${MAGNUM_FIREBASE_KEY}

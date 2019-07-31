@@ -2,7 +2,7 @@ using System;
 
 namespace Magnum.Api.Models
 {
-	public class MRegistration
+	public class MRegistration : BaseModel
 	{
         public string SerialNumber {get; set;}
         public string Pin {get; set;}

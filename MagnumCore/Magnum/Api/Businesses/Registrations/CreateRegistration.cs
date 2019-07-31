@@ -18,15 +18,16 @@ namespace Magnum.Api.Businesses.Registrations
             var ctx = GetContext();
 
             string barcode = string.Format("{0}-{1}", dat.SerialNumber, dat.Pin);
-            string key = string.Format("barcodes/{0}", barcode);
-            MBarcode bc = ctx.GetObjectByKey<MBarcode>(key, "");
+            string bcPath = string.Format("barcodes/{0}", barcode);
+            MBarcode bc = ctx.GetObjectByKey<MBarcode>(bcPath);
 
             dat.RegistrationDate = DateTime.Now;
-            string path = string.Format("registrations/{0}", barcode);
 
+            string path = "";
             if (bc == null) 
             {
                 dat.Status = "NOTFOUND";
+                path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
                 string msg = string.Format("Barcode not found [{0}]", barcode);
@@ -36,15 +37,19 @@ namespace Magnum.Api.Businesses.Registrations
             if (bc.IsActivated)
             {
                 dat.Status = "FAILED";
+                path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
                 string msg = string.Format("Barcode was already registered [{0}]", barcode);
                 throw(new ArgumentException(msg));
             }
-Console.WriteLine("DEBUG [{0}]", bc.SerialNumber);
+
             //Update status back to barcode
+            bc.IsActivated = true;
+            ctx.PutData(bcPath, bc.Key, bc);
 
             dat.Status = "SUCCESS";
+            path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
             ctx.PostData(path, dat);
             
             return 0;

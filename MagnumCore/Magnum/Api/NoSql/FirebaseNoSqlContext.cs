@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Firebase.Auth;
+using Magnum.Api.Models;
 
 namespace Magnum.Api.NoSql
 {    
@@ -38,13 +39,30 @@ namespace Magnum.Api.NoSql
                 .PostAsync(data, true);
         }
 
-        private async Task<T> GetFirebaseData<T>(string path, string key)
+        private async Task PutFirebaseData(string path, string key, object data)
         {
-            var item = await fbClient
+            await fbClient
                 .Child(path)
-                .OnceSingleAsync<T>();
+                .Child(key)
+                .PutAsync(data);
+        }
 
-            return item;
+        private async Task<T> GetFirebaseData<T>(string path)
+        {
+            var items = await fbClient
+                .Child(path)
+                .OrderByKey()
+                .LimitToFirst(1)
+                .OnceAsync<T>();
+
+            T o = default(T);
+            foreach (var item in items)
+            {
+                o = (T) item.Object;
+                (o as BaseModel).Key = item.Key;
+            }
+
+            return o;
         }
 
         public void Authenticate(string url, string key, string user, string passwd)
@@ -63,9 +81,15 @@ namespace Magnum.Api.NoSql
             return data;
         } 
 
-        public T GetObjectByKey<T>(string path, string key)
+        public object PutData(string path, string key, object data)
         {
-            T o = GetFirebaseData<T>(path, key).Result;
+            PutFirebaseData(path, key, data).Wait();
+            return data;
+        } 
+
+        public T GetObjectByKey<T>(string path) where T : BaseModel
+        {
+            T o = GetFirebaseData<T>(path).Result;
             return o;
         }
     }

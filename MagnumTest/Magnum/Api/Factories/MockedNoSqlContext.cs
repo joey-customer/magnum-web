@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Magnum.Api.NoSql;
+using Magnum.Api.Models;
 
 namespace Magnum.Api.Factories
 {    
@@ -15,7 +16,12 @@ namespace Magnum.Api.Factories
             return null;
         }
 
-        public T GetObjectByKey<T>(string path, string key)
+        public object PutData(string path, string key, object data)
+        {
+            return null;
+        }
+
+        public T GetObjectByKey<T>(string path) where T : BaseModel
         {
             return default(T);
         }
