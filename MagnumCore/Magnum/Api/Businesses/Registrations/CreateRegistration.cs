@@ -41,12 +41,13 @@ namespace Magnum.Api.Businesses.Registrations
                 path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
-                string msg = string.Format("Barcode was already registered [{0}]", barcode);
+                string msg = string.Format("Barcode was already registered [{0}] since [{1}]", barcode, bc.ActivatedDate);
                 throw(new ArgumentException(msg));
             }
 
             //Update status back to barcode
             bc.IsActivated = true;
+            bc.ActivatedDate = DateTime.Now;
             ctx.PutData(bcPath, bc.Key, bc);
 
             dat.Status = "SUCCESS";
