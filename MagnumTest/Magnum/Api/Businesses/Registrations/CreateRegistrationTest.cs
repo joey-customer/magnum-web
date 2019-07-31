@@ -26,7 +26,15 @@ namespace Magnum.Api.Businesses.Registrations
             rg.SerialNumber = serial;
             rg.IP = ip;
             
-            opt.Apply(rg);
+            try
+            {
+                opt.Apply(rg);
+                Assert.Fail("Exception should be thrown because of barcode not found!!!");
+            }
+            catch (Exception)
+            {
+                //Do nothing
+            }            
         } 
 
         [TestCase("192.168.0.1", "9999999999", "")]
