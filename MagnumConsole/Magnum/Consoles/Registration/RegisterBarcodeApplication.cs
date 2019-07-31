@@ -32,7 +32,7 @@ namespace Magnum.Consoles.Registrations
                 { "user=",      "Firebase username", s => AddArgument("user", s) },
                 { "password=",  "Firebase password", s => AddArgument("password", s) },                
             };
-
+            
             return options;
         }
 
