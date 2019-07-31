@@ -1,4 +1,4 @@
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Program.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Program.cs
 FN:11,System.Void Magnum.Consoles.Program::Main(System.String[])
 FNDA:2,System.Void Magnum.Consoles.Program::Main(System.String[])
 DA:12,2
@@ -21,7 +21,7 @@ BRH:2
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Registration\RegisterBarcodeApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Registration\RegisterBarcodeApplication.cs
 FN:20,NDesk.Options.OptionSet Magnum.Consoles.Registrations.RegisterBarcodeApplication::CreateOptionSet()
 FNDA:3,NDesk.Options.OptionSet Magnum.Consoles.Registrations.RegisterBarcodeApplication::CreateOptionSet()
 DA:21,3
@@ -87,7 +87,7 @@ BRH:1
 FNF:3
 FNH:3
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Miscs\DummyApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Miscs\DummyApplication.cs
 FN:9,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
 FNDA:1,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
 DA:10,1
@@ -108,7 +108,7 @@ BRH:0
 FNF:2
 FNH:2
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Factories\FactoryConsoleApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Factories\FactoryConsoleApplication.cs
 FN:13,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
 FNDA:4,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
 DA:14,4
@@ -148,7 +148,7 @@ BRH:2
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Commons\ConsoleAppBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Commons\ConsoleAppBase.cs
 FN:17,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
 FNDA:7,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
 DA:18,7
@@ -215,7 +215,7 @@ BRH:4
 FNF:9
 FNH:9
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\BarcodeGeneratorApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\BarcodeGeneratorApplication.cs
 FN:31,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
 FNDA:20,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
 DA:32,20
@@ -566,12 +566,15 @@ DA:17,214
 FN:17,System.DateTime Magnum.Api.Models.MBarcode::get_GeneratedDate()
 FNDA:45,System.DateTime Magnum.Api.Models.MBarcode::get_GeneratedDate()
 DA:18,45
-LF:11
-LH:11
+FN:18,System.DateTime Magnum.Api.Models.MBarcode::get_ActivatedDate()
+FNDA:5,System.DateTime Magnum.Api.Models.MBarcode::get_ActivatedDate()
+DA:19,5
+LF:12
+LH:12
 BRF:0
 BRH:0
-FNF:11
-FNH:11
+FNF:12
+FNH:12
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MRegistration.cs
 FN:6,System.String Magnum.Api.Models.MRegistration::get_SerialNumber()
@@ -702,11 +705,12 @@ DA:44,1
 DA:45,1
 DA:49,1
 DA:50,1
-DA:52,1
+DA:51,1
 DA:53,1
 DA:54,1
-DA:56,1
+DA:55,1
 DA:57,1
+DA:58,1
 BRDA:11,12,0,8
 BRDA:11,25,0,7
 BRDA:11,38,0,6
@@ -719,8 +723,8 @@ BRDA:28,155,0,4
 BRDA:28,155,1,2
 BRDA:38,230,0,1
 BRDA:38,230,1,1
-LF:34
-LH:34
+LF:35
+LH:35
 BRF:12
 BRH:12
 FNF:1
