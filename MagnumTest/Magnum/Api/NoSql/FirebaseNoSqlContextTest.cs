@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using Magnum.Api.Models;
 
 namespace Magnum.Api.NoSql
 {
@@ -28,6 +29,19 @@ namespace Magnum.Api.NoSql
             }
         } 
 
+        private void Authen(INoSqlContext ctx)
+        {
+            string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
+            string username = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
+            string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
+
+            //This is for unit testing only, DO NOT put any production data in this DB
+            ctx.Authenticate("https://compute-engine-vm-test.firebaseio.com/",
+                key,
+                username,
+                password);
+        }
+
         [TestCase]
         public void SuccessAuthenTest()
         {
@@ -37,16 +51,7 @@ namespace Magnum.Api.NoSql
 
             try
             {
-                string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
-                string username = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
-                string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
-
-                //This is for unit testing only, DO NOT put any production data in this DB
-                ctx.Authenticate("https://compute-engine-vm-test.firebaseio.com/", 
-                    key, 
-                    username, 
-                    password);
-
+                Authen(ctx);
                 ctx.PostData("unit_testing", DateTime.Now);      
             }
             catch
@@ -71,6 +76,45 @@ namespace Magnum.Api.NoSql
             {
                 //Do nothing
             }
-        }         
+        } 
+
+        [TestCase]
+        public void NoDataToPutTest()
+        {
+            //Just to cover the test coverage
+
+            INoSqlContext ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+
+            try
+            {
+                ctx.PutData("unit_testing", "unit_testing", new String("HELLO"));
+            }
+            catch (Exception e)
+            {
+                //Do nothing
+                Assert.Fail(e.Message);                
+            }
+        }  
+
+        [TestCase]
+        public void GetObjectByKeyTest()
+        {
+            //Just to cover the test coverage
+
+            INoSqlContext ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+
+            try
+            {
+                ctx.PostData("unit_testing", new MBarcode());
+                ctx.GetObjectByKey<BaseModel>("unit_testing");
+            }
+            catch (Exception e)
+            {
+                //Do nothing
+                Assert.Fail(e.Message);                
+            }
+        }                         
     }
 }
