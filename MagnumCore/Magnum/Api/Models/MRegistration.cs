@@ -1,13 +1,13 @@
 using System;
-using System.Collections;
 
 namespace Magnum.Api.Models
 {
-	public class MRegistration
+	public class MRegistration : BaseModel
 	{
-        public int RegistrationId {get; set;}
-        public int BarcodeId {get; set;}        
+        public string SerialNumber {get; set;}
+        public string Pin {get; set;}
         public DateTime RegistrationDate {get; set;}
         public string Status {get; set;}
+        public string IP {get; set;}
     }
 }

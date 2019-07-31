@@ -101,8 +101,7 @@ namespace Magnum.Consoles.Barcodes
             INoSqlContext ctx = GetNoSqlContext();
             if (ctx == null)
             {
-                ctx = new FirebaseNoSqlContext();
-                ctx.Authenticate(host, key, user, password);
+                ctx = GetNoSqlContext("firebase", host, key, user, password);
             }
 
             FactoryBusinessOperation.SetContext(ctx);
