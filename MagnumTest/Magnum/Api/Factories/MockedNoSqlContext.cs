@@ -7,8 +7,15 @@ namespace Magnum.Api.Factories
 {    
 	public class MockedNoSqlContext : INoSqlContext
 	{
+        private BaseModel m = null;
+
         public void Authenticate(string url, string key, string user, string passwd)
         {
+        }
+
+        public void SetReturnObjectByKey<T>(T obj) where T : BaseModel
+        {
+            m = obj;
         }
 
         public object PostData(string path, object data)
@@ -23,7 +30,7 @@ namespace Magnum.Api.Factories
 
         public T GetObjectByKey<T>(string path) where T : BaseModel
         {
-            return default(T);
+            return (T) m;
         }
     }
 }
