@@ -49,6 +49,14 @@ namespace Magnum.Consoles.Commons
             }            
         }
 
+        protected void PopulateDefaultParameters(OptionSet options)
+        {
+            options.Add("h=|host", "Firebase URL", s => AddArgument("host", s))
+                .Add("k=|key=", "Oauth key to access Firebase", s => AddArgument("key", s))
+                .Add("user=", "Firebase username", s => AddArgument("user", s))
+                .Add("password=", "Firebase password", s => AddArgument("password", s));        
+        }
+
         public Hashtable GetArguments()
         {
             return arguments;

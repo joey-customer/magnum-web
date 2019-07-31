@@ -23,15 +23,13 @@ namespace Magnum.Consoles.Registrations
 
             var options = new OptionSet() 
             {
-                { "h=|host",    "Firebase URL", s => AddArgument("host", s) },
-                { "k=|key=",    "Oauth key to access Firebase", s => AddArgument("key", s) },
                 { "s=|serial=", "Serial number", s => AddArgument("serial", s) },
                 { "p=|pin=",    "PIN number", s => AddArgument("pin", s) },
                 { "i=|ip=",     "IP Address", s => AddArgument("ip", s) },
                 { "path=",      "Virtual path (Firebase path)", s => AddArgument("path", s) },
-                { "user=",      "Firebase username", s => AddArgument("user", s) },
-                { "password=",  "Firebase password", s => AddArgument("password", s) },                
             };
+
+            PopulateDefaultParameters(options);
             
             return options;
         }

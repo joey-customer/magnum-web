@@ -44,17 +44,15 @@ namespace Magnum.Consoles.Barcodes
 
             var options = new OptionSet() 
             {
-                { "h=|host",      "Firebase URL", s => AddArgument("host", s) },
-                { "k=|key=",      "Oauth key to access Firebase", s => AddArgument("key", s) },
                 { "q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s) },
                 { "u=|url=",      "QR scan URL", s => AddArgument("url", s) },
                 { "p=|product=",  "Product code", s => AddArgument("product", s) },
                 { "o=|outpath=",  "QR image file output directory (folder)", s => AddArgument("outpath", s) },
                 { "b=|batch=",    "Batch number", s => AddArgument("batch", s) },
-                { "user=",        "Firebase username", s => AddArgument("user", s) },
-                { "password=",    "Firebase password", s => AddArgument("password", s) },
-            };
-            
+            };            
+
+            PopulateDefaultParameters(options);
+
             return options;
         }
 
