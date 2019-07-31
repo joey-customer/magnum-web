@@ -29,6 +29,7 @@ namespace Magnum.Consoles.Registrations
                 { "s=|serial=", "Serial number", s => AddArgument("serial", s) },
                 { "p=|pin=",    "PIN number", s => AddArgument("pin", s) },
                 { "i=|ip=",     "IP Address", s => AddArgument("ip", s) },
+                { "path=",      "Virtual path (Firebase path)", s => AddArgument("path", s) },
                 { "user=",      "Firebase username", s => AddArgument("user", s) },
                 { "password=",  "Firebase password", s => AddArgument("password", s) },                
             };
@@ -46,6 +47,7 @@ namespace Magnum.Consoles.Registrations
             string ip = args["ip"].ToString();
             string user = args["user"].ToString();
             string password = args["password"].ToString();
+            string path = args["path"].ToString();
 
             INoSqlContext ctx = GetNoSqlContext();
             if (ctx == null)
@@ -60,6 +62,7 @@ namespace Magnum.Consoles.Registrations
             param.IP = ip;
             param.Pin = pin;
             param.SerialNumber = serial;
+            param.Path = path;
 
             try
             {

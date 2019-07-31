@@ -45,12 +45,13 @@ namespace Magnum.Api.Businesses.Barcodes
             bc.Product = dat.Product;
             bc.GeneratedDate = DateTime.Now;
             bc.IsActivated = false;
+            bc.Path = dat.Path;
             
             bc.SerialNumber = RandomStringNum(10);
             bc.Pin = RandomString(10);
-            bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}", bc.Url, bc.SerialNumber, bc.Pin);
+            bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}/{3}", bc.Url, bc.Path, bc.SerialNumber, bc.Pin);
 
-            string path = string.Format("barcodes/{0}-{1}", bc.SerialNumber, bc.Pin);
+            string path = string.Format("asset_barcodes/{0}/{1}-{2}", bc.Path, bc.SerialNumber, bc.Pin);
             
             var ctx = GetContext();
             ctx.PostData(path, bc);

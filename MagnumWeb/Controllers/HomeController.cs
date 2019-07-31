@@ -12,6 +12,7 @@ namespace MagnumWeb.Controllers
     {
         public IActionResult Index()
         {
+            //sss
             return View();
         }
 
