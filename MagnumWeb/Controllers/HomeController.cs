@@ -12,6 +12,7 @@ namespace MagnumWeb.Controllers
     {
         public IActionResult Index()
         {
+            //TODO
             return View();
         }
 
