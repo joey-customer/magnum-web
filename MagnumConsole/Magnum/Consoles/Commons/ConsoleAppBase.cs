@@ -12,7 +12,24 @@ namespace Magnum.Consoles.Commons
         private INoSqlContext context = null;
         
         protected abstract int Execute();
-        public abstract OptionSet CreateOptionSet();        
+
+        protected abstract OptionSet PopulateCustomOptionSet(OptionSet options);
+
+        public virtual OptionSet CreateOptionSet()
+        {
+            ClearArgument();
+
+            var options = new OptionSet();
+
+            options.Add("h=|host", "Firebase URL", s => AddArgument("host", s))
+                .Add("k=|key=", "Oauth key to access Firebase", s => AddArgument("key", s))
+                .Add("user=", "Firebase username", s => AddArgument("user", s))
+                .Add("password=", "Firebase password", s => AddArgument("password", s));
+
+            PopulateCustomOptionSet(options);
+
+            return options;
+        }   
         
         protected void ClearArgument()
         {
@@ -47,14 +64,6 @@ namespace Magnum.Consoles.Commons
                 string v = (string) arguments[key];
                 Console.WriteLine("Param : {0} - {1}", key, v);
             }            
-        }
-
-        protected void PopulateDefaultParameters(OptionSet options)
-        {
-            options.Add("h=|host", "Firebase URL", s => AddArgument("host", s))
-                .Add("k=|key=", "Oauth key to access Firebase", s => AddArgument("key", s))
-                .Add("user=", "Firebase username", s => AddArgument("user", s))
-                .Add("password=", "Firebase password", s => AddArgument("password", s));        
         }
 
         public Hashtable GetArguments()

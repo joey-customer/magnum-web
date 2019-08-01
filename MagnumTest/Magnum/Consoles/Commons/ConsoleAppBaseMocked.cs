@@ -38,5 +38,11 @@ namespace Magnum.Consoles.Commons
         {
             return null;
         }
+
+        protected override OptionSet PopulateCustomOptionSet(OptionSet options)
+        {
+            //Do nothing
+            return options;
+        }           
     }
 }

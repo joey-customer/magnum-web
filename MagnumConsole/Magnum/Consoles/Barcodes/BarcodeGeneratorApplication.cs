@@ -38,20 +38,13 @@ namespace Magnum.Consoles.Barcodes
             progressFunc = func;
         }
 
-        public override OptionSet CreateOptionSet()
+        protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
-            ClearArgument();
-
-            var options = new OptionSet() 
-            {
-                { "q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s) },
-                { "u=|url=",      "QR scan URL", s => AddArgument("url", s) },
-                { "p=|product=",  "Product code", s => AddArgument("product", s) },
-                { "o=|outpath=",  "QR image file output directory (folder)", s => AddArgument("outpath", s) },
-                { "b=|batch=",    "Batch number", s => AddArgument("batch", s) },
-            };            
-
-            PopulateDefaultParameters(options);
+            options.Add("q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s))
+            .Add("u=|url=", "QR scan URL", s => AddArgument("url", s))
+            .Add("p=|product=", "Product code", s => AddArgument("product", s))
+            .Add("o=|outpath=", "QR image file output directory (folder)", s => AddArgument("outpath", s))
+            .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));
 
             return options;
         }

@@ -17,19 +17,12 @@ namespace Magnum.Consoles.Registrations
         {
         }
 
-        public override OptionSet CreateOptionSet()
+        protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
-            ClearArgument();
-
-            var options = new OptionSet() 
-            {
-                { "s=|serial=", "Serial number", s => AddArgument("serial", s) },
-                { "p=|pin=",    "PIN number", s => AddArgument("pin", s) },
-                { "i=|ip=",     "IP Address", s => AddArgument("ip", s) },
-                { "path=",      "Virtual path (Firebase path)", s => AddArgument("path", s) },
-            };
-
-            PopulateDefaultParameters(options);
+            options.Add("s=|serial=", "Serial number", s => AddArgument("serial", s))
+            .Add("p=|pin=", "PIN number", s => AddArgument("pin", s))
+            .Add("i=|ip=", "IP Address", s => AddArgument("ip", s))
+            .Add("path=",  "Virtual path (Firebase path)", s => AddArgument("path", s));
             
             return options;
         }

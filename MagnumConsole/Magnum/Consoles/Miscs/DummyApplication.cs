@@ -10,8 +10,15 @@ namespace Magnum.Consoles.Miscs
         {
             ClearArgument();
             var options = new OptionSet();
+            PopulateCustomOptionSet(options);
             return options;
         }
+
+        protected override OptionSet PopulateCustomOptionSet(OptionSet options)
+        {
+            //Do nothing
+            return options;
+        }        
 
         protected override int Execute()
         {
