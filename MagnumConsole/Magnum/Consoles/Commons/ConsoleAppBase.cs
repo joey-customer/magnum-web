@@ -12,7 +12,24 @@ namespace Magnum.Consoles.Commons
         private INoSqlContext context = null;
         
         protected abstract int Execute();
-        public abstract OptionSet CreateOptionSet();        
+
+        protected abstract OptionSet PopulateCustomOptionSet(OptionSet options);
+
+        public virtual OptionSet CreateOptionSet()
+        {
+            ClearArgument();
+
+            var options = new OptionSet();
+
+            options.Add("h=|host", "Firebase URL", s => AddArgument("host", s))
+                .Add("k=|key=", "Oauth key to access Firebase", s => AddArgument("key", s))
+                .Add("user=", "Firebase username", s => AddArgument("user", s))
+                .Add("password=", "Firebase password", s => AddArgument("password", s));
+
+            PopulateCustomOptionSet(options);
+
+            return options;
+        }   
         
         protected void ClearArgument()
         {
@@ -53,5 +70,18 @@ namespace Magnum.Consoles.Commons
         {
             return arguments;
         }
+
+        protected INoSqlContext GetNoSqlContext(string provider, string host, string key, string user, string password)
+        {
+            INoSqlContext ctx = null;
+            if (provider.Equals("firebase"))
+            {
+                ctx = new FirebaseNoSqlContext();
+                ctx.Authenticate(host, key, user, password); 
+            }
+
+            return ctx;
+        }
+       
     }
 }

@@ -3,10 +3,9 @@ using System.Collections;
 
 namespace Magnum.Api.Models
 {
-	public class MBarcode
+	public class MBarcode : BaseModel
 	{
         public string ID {get; set;}
-        public string Key {get; set;}
         public bool IsActivated {get; set;}
         public string Product {get; set;}
         public string BatchNo {get; set;}
@@ -15,6 +14,8 @@ namespace Magnum.Api.Models
         public string Barcode {get; set;}
         public string Url {get; set;}
         public string PayloadUrl {get; set;}
+        public string Path {get; set;}
         public DateTime GeneratedDate {get; set;}
+        public DateTime ActivatedDate {get; set;}
     }
 }
