@@ -28,9 +28,9 @@ namespace Magnum.Consoles.Barcodes
                 {"quantity", "15"},
                 {"batch", "KH0009"},
                 {"url", "https://magnum-verify.com"},
-                {"product", "ALPHA-099"},
                 {"outpath", "/d/temp"},
                 {"user", "pjame"},
+                {"profile", "Oxandro10"},
                 {"password", "faked_password"},
             };
 
@@ -41,9 +41,9 @@ namespace Magnum.Consoles.Barcodes
                 string.Format("--q={0}", h["quantity"]), 
                 string.Format("--b={0}", h["batch"]), 
                 string.Format("--u={0}", h["url"]), 
-                string.Format("--p={0}", h["product"]), 
                 string.Format("--o={0}", h["outpath"]), 
                 string.Format("--user={0}", h["user"]), 
+                string.Format("--profile={0}", h["profile"]), 
                 string.Format("--password={0}", h["password"]), 
             };                      
         }

@@ -46,7 +46,11 @@ namespace Magnum.Api.Businesses.Barcodes
             bc.GeneratedDate = DateTime.Now;
             bc.IsActivated = false;
             bc.Path = dat.Path;
-            
+
+            bc.CompanyWebSite = dat.CompanyWebSite;
+            bc.Barcode = dat.Barcode;
+            bc.Product = dat.Product;
+
             bc.SerialNumber = RandomStringNum(10);
             bc.Pin = RandomString(10);
             bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}/{3}", bc.Url, bc.Path, bc.SerialNumber, bc.Pin);

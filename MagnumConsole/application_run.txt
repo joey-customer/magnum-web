@@ -4,11 +4,11 @@ dotnet run BarcodeGen --h=https://compute-engine-vm-test.firebaseio.com/ \
 --q=1 \
 --b=KH0009 \
 --u=https://magnum-pharmacy-verify.com \
---p='ALPHA-099' \
 --o='/d/temp' \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
---key=${MAGNUM_FIREBASE_KEY}
+--key=${MAGNUM_FIREBASE_KEY} \
+--profile="Oxandro10"
 
 
 
@@ -16,8 +16,8 @@ dotnet run BarcodeReg \
 --h=https://compute-engine-vm-test.firebaseio.com/ \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
---serial=0199006725 \
---pin=OTQRHVPTAP \
---path=KH0009_20190731212732/000001 \
+--serial=8275692980 \
+--pin=CGHHABUPDC \
+--path=Oxandro10_KH0009_20190801230949/000000 \
 --ip=192.168.1.99 \
 --key=${MAGNUM_FIREBASE_KEY}

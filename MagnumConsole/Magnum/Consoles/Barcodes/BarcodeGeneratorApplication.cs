@@ -9,6 +9,7 @@ using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
 using Magnum.Api.Businesses.Barcodes;
 using Magnum.Api.NoSql;
+using Magnum.Consoles.Barcodes.Profiles;
 
 using NDesk.Options;
 
@@ -42,8 +43,8 @@ namespace Magnum.Consoles.Barcodes
         {
             options.Add("q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s))
             .Add("u=|url=", "QR scan URL", s => AddArgument("url", s))
-            .Add("p=|product=", "Product code", s => AddArgument("product", s))
             .Add("o=|outpath=", "QR image file output directory (folder)", s => AddArgument("outpath", s))
+            .Add("profile=", "Product profile", s => AddArgument("profile", s))
             .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));
 
             return options;
@@ -88,6 +89,9 @@ namespace Magnum.Consoles.Barcodes
             string password = args["password"].ToString();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
+            string prof = args["profile"].ToString();
+
+            BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
 
             INoSqlContext ctx = GetNoSqlContext();
             if (ctx == null)
@@ -102,14 +106,14 @@ namespace Magnum.Consoles.Barcodes
 
             MBarcode param = new MBarcode();
             param.BatchNo = batch;
-            param.Url = payloadUrl;
+            param.Url = payloadUrl;            
 
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
             for (int i=1; i<=quantity; i++)
             {
                 string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(6, '0');
-                string urlPath = string.Format("{0}_{1}/{2}", param.BatchNo, timeStamp, chunk);
+                string urlPath = string.Format("{0}_{1}_{2}/{3}", prof, param.BatchNo, timeStamp, chunk);
                 string dir = string.Format("{0}/{1}", args["outpath"].ToString(), urlPath);
                 if (!Directory.Exists(dir))
                 {
@@ -117,6 +121,9 @@ namespace Magnum.Consoles.Barcodes
                 }
 
                 param.Path = urlPath;
+                param.CompanyWebSite = prf.CompanyWebSite;
+                param.Barcode = prf.Barcode;
+                param.Product = prf.Product;
                 MBarcode bc = opr.Apply(param);                
 
                 GenerateQR(bc, dir);
