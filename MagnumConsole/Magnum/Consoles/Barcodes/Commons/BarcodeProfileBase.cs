@@ -1,6 +1,6 @@
 using System;
 
-namespace Magnum.Consoles.Barcodes.Profiles
+namespace Magnum.Consoles.Barcodes.Commons
 {
 	public abstract class BarcodeProfileBase : IBarcodeProfile
 	{

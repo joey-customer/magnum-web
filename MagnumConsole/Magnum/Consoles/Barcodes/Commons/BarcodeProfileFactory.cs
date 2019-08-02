@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Reflection;
 
-namespace Magnum.Consoles.Barcodes.Profiles
+namespace Magnum.Consoles.Barcodes.Commons
 {   
     public static class BarcodeProfileFactory
     {

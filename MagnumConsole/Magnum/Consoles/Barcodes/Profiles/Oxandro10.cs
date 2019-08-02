@@ -1,5 +1,7 @@
 using System;
 
+using Magnum.Consoles.Barcodes.Commons;
+
 namespace Magnum.Consoles.Barcodes.Profiles
 {
 	public class Oxandro10 : BarcodeProfileBase

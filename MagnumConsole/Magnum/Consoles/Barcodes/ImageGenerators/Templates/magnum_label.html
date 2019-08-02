@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bare - Start Bootstrap Template</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
+  
+  <style>
+   .barcode-container {
+		width: 70%;
+		margin: 20px 20px 0 0;  
+		border: 5px solid #333;
+		overflow: auto
+	}
+	.qr-wrap {
+		float: left
+	}
+	.qr-wrap img {
+		display: block
+	}
+	.content {
+		margin-left: 200px
+	}
+	.content img {
+		padding-top: 12px;
+		padding-left: 12px;
+	}
+
+	.text {
+		font-weight: bold;
+		padding-left: 12px;
+		margin: 5px 0 0 0;
+	}
+
+	.serial {
+		font-weight: bold;
+		padding-left: 12px;
+		margin: 0px 0 0 0;
+		font-size: 25px;
+	}
+
+	.barcode {
+		font-family: 'Libre Barcode 39 Extended Text', cursive;
+		padding-left: 12px;
+		margin: 0px 0 0 0;
+		font-size: 70px;
+	}	
+	
+	.content p {
+		padding-left: 12px;
+	}
+	
+	.content .web {
+		font-size: 140%;
+		margin: 0;
+	}
+	
+	.content .pin {
+		font-size: 40%;
+	}
+	
+  </style>
+
+</head>
+
+<body>
+    <!-- Page Content -->
+	<div class="barcode-container">                
+		<div class="qr-wrap">
+			<img src="${IMAGE_QR}">
+			<h3 class="serial">SN : ${SERIAL_NO}</h3>
+		</div>
+		<div class="content">
+			<h3 class="barcode">${BARCODE_TEXT}</h3><br>
+			<h3 class="text">PIN : ${PIN_NO}</h3>
+			<p class="web">${WEB_SITE}</p>
+		</div>
+	</div>
+</body>
+
+</html>
