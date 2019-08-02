@@ -1,6 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Collections;
+using System.Reflection;
 using System.IO;
 using System.Drawing;
 
@@ -14,35 +15,49 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
 {
 	public class LabelGenerator : ImageGeneratorBase
 	{
-        private Hashtable varMapsProperty = new Hashtable();
         private MBarcode currentData = null;
-        private string currentQR = "";
+        private string currentQRfile = "";
+        private List<string> templateLines = new List<string>();
 
         protected override void CustomSetup()
         {
-            varMapsProperty.Clear();
+            templateLines.Clear();
 
-            varMapsProperty["${SERIAL_NO}"] = "SerialNumber";
-            varMapsProperty["${BARCODE_TEXT}"] = "Barcode";
-            varMapsProperty["${PIN_NO}"] = "Pin";
-            varMapsProperty["${WEB_SITE}"] = "CompanyWebSite";
-            varMapsProperty["${IMAGE_QR}"] = "";
+            string template = "EmbeddedResource.Magnum.Consoles.Barcodes.ImageGenerators.Templates.magnum_label.html";
+
+            var assembly = Assembly.GetEntryAssembly();
+            var resourceStream = assembly.GetManifestResourceStream(template);
+
+            using (var sr = new StreamReader(resourceStream))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    templateLines.Add(line);
+                }
+            }            
         }
 
-        private void ParseTemplate(MBarcode data, string qrImageFile)
+        private MemoryStream ParseTemplate(MBarcode data, string qrImageFile)
         {
-            string template = @"D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\ImageGenerators\Templates\magnum_label.html";
-            string[] lines = File.ReadAllLines(template);  
-  
+            string content = "";
+
             Regex regex = new Regex(@"(?<variable>\$\{.+\})");
             currentData = data;
-            currentQR = qrImageFile;
+            currentQRfile = qrImageFile;
 
-            foreach (string line in lines)
+            foreach (string line in templateLines)
             {
                 string replaceString = regex.Replace(line, ProcessVariable);
+                content = content + replaceString;
 Console.WriteLine(replaceString);              
             }
+
+            var converter = new HtmlConverter();
+            var bytes = converter.FromHtmlString(content, 780, ImageFormat.Png, 200);
+            MemoryStream ms = new MemoryStream(bytes);
+
+            return ms;
         }
 
         private string ProcessVariable(Match m)
@@ -68,17 +83,10 @@ Console.WriteLine(replaceString);
             } 
             else if (varName.Equals("${IMAGE_QR}"))
             {
-                value = currentQR;
+                value = currentQRfile;
             } 
 
             return value;
-        }
-
-        private void TestHtmlToImage2()
-        {                    
-            var converter = new HtmlConverter();
-            var bytes = converter.FromUrl(@"C:\Users\pjame\Desktop\barcode\index.html");
-            File.WriteAllBytes(@"D:\temp\image.jpg", bytes);
         }
 
         private string CreateQR(MBarcode data)
@@ -107,20 +115,21 @@ Console.WriteLine(replaceString);
             MBarcode bc = (MBarcode) data;
 
             string qrFile = CreateQR(bc);
-            ParseTemplate(bc, qrFile);
-
-            var ms = new MemoryStream();
+            var ms = ParseTemplate(bc, qrFile);
             return ms;
         }
 
         protected override void CustomCleanup()
         {
+            //Do nothing
         }
 
         protected override void SaveToFile(MemoryStream ms, string fileName)
         {
             Bitmap bmp = new Bitmap(ms);
-            bmp.Save(fileName);            
+            bmp.Save(fileName); 
+
+            File.Delete(currentQRfile);   
         }	
     }
 }

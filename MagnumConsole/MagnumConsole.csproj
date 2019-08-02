@@ -8,7 +8,18 @@
   <ItemGroup>
     <ProjectReference Include="..\MagnumCore\MagnumCore.csproj" />
   </ItemGroup>
-  
+<!--
+  <ItemGroup>
+    <Content Remove="Magnum\Consoles\Barcodes\ImageGenerators\Templates\magnum_label.html" />
+  </ItemGroup>
+-->  
+  <ItemGroup>
+    <EmbeddedResource Include="Magnum\Consoles\Barcodes\ImageGenerators\Templates\magnum_label.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Magnum\Consoles\Barcodes\ImageGenerators\Templates\magnum_label.html" />
+</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="CoreHtmlToImage" Version="1.0.5" />
     <PackageReference Include="FirebaseAuthentication.net" Version="3.2.0" />

@@ -14,7 +14,7 @@ namespace Magnum.Consoles.Barcodes.Commons
 
         public virtual void Setup()
         {
-            CompanyWebSite = "https://www.magnum-pharmacy.com";
+            CompanyWebSite = "www.magnum-pharmacy.com";
             CustomSetting(); 
         }
     }

@@ -8,8 +8,8 @@ namespace Magnum.Consoles.Barcodes.Profiles
 	{
         protected override void CustomSetting()
         {
-            Barcode = "2009091112";
-            Product = "OXANDRO 10";
+            Barcode = "OXANDRO10";
+            Product = "OXANDRO10";
         }
     }
 }

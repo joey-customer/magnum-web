@@ -52,7 +52,7 @@ namespace Magnum.Api.Businesses.Barcodes
             bc.Product = dat.Product;
 
             bc.SerialNumber = RandomStringNum(10);
-            bc.Pin = RandomString(10);
+            bc.Pin = RandomStringNum(10);
             bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}/{3}", bc.Url, bc.Path, bc.SerialNumber, bc.Pin);
 
             string path = string.Format("asset_barcodes/{0}/{1}-{2}", bc.Path, bc.SerialNumber, bc.Pin);
