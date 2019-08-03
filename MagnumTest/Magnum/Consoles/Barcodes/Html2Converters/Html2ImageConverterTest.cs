@@ -24,9 +24,9 @@ namespace Magnum.Consoles.Barcodes.HtmlConverters
             cvt.SetImageFormat(0);
 
             cvt.SetImageQuality(200);
-            cvt.FromHtmlString("<html></html>");
+            //cvt.FromHtmlString("<html></html>");
 
-            cvt.FromUrl("");
+            //cvt.FromUrl("");
         }                        
     }    
 }
