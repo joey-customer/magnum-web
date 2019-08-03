@@ -12,20 +12,6 @@ namespace MagnumWeb.Controllers
         [HttpGet("verification/{product}/{group}/{serial}/{pin}")]
         public String Check(String product, String group, String serial, String pin)
         {
-            var view = View();
-
-            INoSqlContext ctx = GetNoSqlContext();
-            if (ctx == null)
-            {
-                string host = "https://compute-engine-vm-test.firebaseio.com/";
-                string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
-                string user = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
-                string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
-                ctx = GetNoSqlContext("firebase", host, key, user, password);
-                SetNoSqlContext(ctx);
-            }
-
-            FactoryBusinessOperation.SetContext(ctx);
             CreateRegistration opr = (CreateRegistration)FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
 
             MRegistration param = new MRegistration();
