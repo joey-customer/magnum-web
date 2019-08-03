@@ -98,7 +98,7 @@ namespace Magnum.Consoles.Barcodes
                 Bitmap img = (Bitmap) Bitmap.FromFile(tmpPath);
 
                 img.Save(ms, ImageFormat.Bmp);
-                
+
                 byteImage = new Byte[ms.Length];   
                 byteImage = ms.ToArray();
             }
@@ -122,7 +122,7 @@ namespace Magnum.Consoles.Barcodes
 
             BarcodeGeneratorApplication app = (BarcodeGeneratorApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             app.SetLabelGnerator(generator);            
-            app.SetFilePerFoler(10);
+            app.SetFilePerFolder(10);
             app.SetProgressPerImage(2);
             if (callFunc)
             {

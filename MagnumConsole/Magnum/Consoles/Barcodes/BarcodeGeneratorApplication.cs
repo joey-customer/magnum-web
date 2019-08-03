@@ -56,7 +56,7 @@ namespace Magnum.Consoles.Barcodes
             return options;
         }
 
-        public void SetFilePerFoler(int num)
+        public void SetFilePerFolder(int num)
         {
             imgPerFolder = num;
         }

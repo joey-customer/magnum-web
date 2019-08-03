@@ -40,7 +40,7 @@ namespace Magnum.Consoles.Barcodes.HtmlConverters
 
         public byte[] FromUrl(string url)
         {
-            byte[] bytes = converter.FromUrl(url, width, imgFormat, imgQuality);
+            //Not implement now
             return null;
         }
     }
