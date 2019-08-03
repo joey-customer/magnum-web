@@ -9,6 +9,5 @@ namespace Magnum.Consoles.Barcodes.HtmlConverters
         void SetImageQuality(int quality);
 
         byte[] FromHtmlString(string html);
-        byte[] FromUrl(string url);
     }
 }

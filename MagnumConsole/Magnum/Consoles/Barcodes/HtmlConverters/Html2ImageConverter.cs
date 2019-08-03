@@ -5,7 +5,7 @@ namespace Magnum.Consoles.Barcodes.HtmlConverters
 {
 	public class Html2ImageConverter : IHtmlConverter
 	{
-        private HtmlConverter converter = new HtmlConverter();
+        private readonly HtmlConverter converter = new HtmlConverter();
         private int width = 1024;
         private int imgQuality = 200;
         private ImageFormat imgFormat = ImageFormat.Jpg;
@@ -36,12 +36,6 @@ namespace Magnum.Consoles.Barcodes.HtmlConverters
         {
             byte[] bytes = converter.FromHtmlString(html, width, imgFormat, imgQuality);
             return bytes;
-        }
-
-        public byte[] FromUrl(string url)
-        {
-            //Not implement now
-            return null;
         }
     }
 }

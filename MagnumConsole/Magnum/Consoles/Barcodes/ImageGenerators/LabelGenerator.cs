@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Drawing;
@@ -40,16 +41,20 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
             currentData = data;
             currentQRfile = qrImageFile;
 
+            StringBuilder bld = new StringBuilder();
             foreach (string line in templateLines)
             {
                 string replaceString = regex.Replace(line, ProcessVariable);
-                content = content + replaceString;
+                bld.Append(replaceString);
             }
+
+            content = bld.ToString();
 
             htmlConverter.SetWidth(780);
             htmlConverter.SetImageFormat(1);
             htmlConverter.SetImageQuality(200);
             var bytes = htmlConverter.FromHtmlString(content);
+            
             MemoryStream ms = new MemoryStream(bytes);
 
             return ms;

@@ -292,9 +292,9 @@ DA:104,3
 DA:105,3
 DA:106,3
 DA:107,3
-DA:108,1
-DA:109,1
-DA:110,1
+DA:108,2
+DA:109,2
+DA:110,2
 DA:112,3
 DA:113,3
 DA:114,3
@@ -317,7 +317,7 @@ DA:134,2
 BRDA:83,162,0,0
 BRDA:83,162,1,2
 BRDA:102,672,1,3
-BRDA:107,437,0,1
+BRDA:107,437,0,2
 BRDA:107,437,1,3
 BRDA:124,616,0,1
 BRDA:124,616,1,3
@@ -410,120 +410,122 @@ FNF:1
 FNH:1
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\ImageGenerators\LabelGenerator.cs
-FN:23,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomSetup()
+FN:24,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomSetup()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomSetup()
-DA:24,2
 DA:25,2
 DA:26,2
 DA:27,2
 DA:28,2
-FN:30,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::SetHtmlConverter(Magnum.Consoles.Barcodes.HtmlConverters.IHtmlConverter)
+DA:29,2
+FN:31,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::SetHtmlConverter(Magnum.Consoles.Barcodes.HtmlConverters.IHtmlConverter)
 FNDA:2,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::SetHtmlConverter(Magnum.Consoles.Barcodes.HtmlConverters.IHtmlConverter)
-DA:31,2
 DA:32,2
 DA:33,2
-FN:35,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::ParseTemplate(Magnum.Api.Models.MBarcode,System.String)
+DA:34,2
+FN:36,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::ParseTemplate(Magnum.Api.Models.MBarcode,System.String)
 FNDA:3,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::ParseTemplate(Magnum.Api.Models.MBarcode,System.String)
-DA:36,3
 DA:37,3
-DA:39,3
+DA:38,3
 DA:40,3
 DA:41,3
-DA:43,63
-DA:44,27
-DA:45,27
+DA:42,3
+DA:44,3
+DA:45,63
 DA:46,27
 DA:47,27
-DA:49,3
-DA:50,3
+DA:48,27
+DA:49,27
 DA:51,3
-DA:52,3
 DA:53,3
+DA:54,3
 DA:55,3
 DA:56,3
-BRDA:43,97,1,27
-BRDA:43,97,0,3
-FN:58,System.String Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::ProcessVariable(System.Text.RegularExpressions.Match)
+DA:58,3
+DA:60,3
+DA:61,3
+BRDA:45,103,1,27
+BRDA:45,103,0,3
+FN:63,System.String Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::ProcessVariable(System.Text.RegularExpressions.Match)
 FNDA:15,System.String Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::ProcessVariable(System.Text.RegularExpressions.Match)
-DA:59,15
-DA:60,15
-DA:61,15
-DA:63,15
-DA:64,3
-DA:65,3
-DA:66,3
-DA:67,12
-DA:68,3
+DA:64,15
+DA:65,15
+DA:66,15
+DA:68,15
 DA:69,3
 DA:70,3
-DA:71,9
-DA:72,3
+DA:71,3
+DA:72,12
 DA:73,3
 DA:74,3
-DA:75,6
-DA:76,3
+DA:75,3
+DA:76,9
 DA:77,3
 DA:78,3
 DA:79,3
-DA:80,3
+DA:80,6
 DA:81,3
 DA:82,3
-DA:84,15
-DA:85,15
-BRDA:63,42,0,3
-BRDA:63,42,1,12
-BRDA:67,73,0,3
-BRDA:67,73,1,9
-BRDA:71,106,0,3
-BRDA:71,106,1,6
-BRDA:75,139,0,3
-BRDA:75,139,1,3
-BRDA:79,172,0,3
-BRDA:79,172,1,15
-FN:87,System.String Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CreateQR(Magnum.Api.Models.MBarcode)
+DA:83,3
+DA:84,3
+DA:85,3
+DA:86,3
+DA:87,3
+DA:89,15
+DA:90,15
+BRDA:68,42,0,3
+BRDA:68,42,1,12
+BRDA:72,73,0,3
+BRDA:72,73,1,9
+BRDA:76,106,0,3
+BRDA:76,106,1,6
+BRDA:80,139,0,3
+BRDA:80,139,1,3
+BRDA:84,172,0,3
+BRDA:84,172,1,15
+FN:92,System.String Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CreateQR(Magnum.Api.Models.MBarcode)
 FNDA:3,System.String Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CreateQR(Magnum.Api.Models.MBarcode)
-DA:88,3
-DA:89,3
-DA:90,3
-DA:91,3
 DA:93,3
 DA:94,3
+DA:95,3
 DA:96,3
-DA:97,3
 DA:98,3
 DA:99,3
 DA:101,3
 DA:102,3
 DA:103,3
-DA:105,3
+DA:104,3
 DA:106,3
-FN:108,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::RenderToStream(Magnum.Api.Models.BaseModel)
-FNDA:3,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::RenderToStream(Magnum.Api.Models.BaseModel)
-DA:109,3
+DA:107,3
+DA:108,3
 DA:110,3
-DA:112,3
-DA:113,3
+DA:111,3
+FN:113,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::RenderToStream(Magnum.Api.Models.BaseModel)
+FNDA:3,System.IO.MemoryStream Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::RenderToStream(Magnum.Api.Models.BaseModel)
 DA:114,3
 DA:115,3
-FN:117,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomCleanup()
+DA:117,3
+DA:118,3
+DA:119,3
+DA:120,3
+FN:122,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomCleanup()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomCleanup()
-DA:118,2
-DA:120,2
-FN:122,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::SaveToFile(System.IO.MemoryStream,System.String)
+DA:123,2
+DA:125,2
+FN:127,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::SaveToFile(System.IO.MemoryStream,System.String)
 FNDA:3,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::SaveToFile(System.IO.MemoryStream,System.String)
-DA:123,3
-DA:124,3
-DA:125,3
-DA:127,3
 DA:128,3
-FN:16,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::.ctor()
+DA:129,3
+DA:130,3
+DA:132,3
+DA:133,3
+FN:17,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::.ctor()
 FNDA:6,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::.ctor()
-DA:17,6
-DA:19,6
+DA:18,6
 DA:20,6
 DA:21,6
-LF:82
-LH:82
+DA:22,6
+LF:84
+LH:84
 BRF:12
 BRH:12
 FNF:9
@@ -554,28 +556,23 @@ DA:31,1
 DA:32,1
 DA:33,1
 FN:35,System.Byte[] Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::FromHtmlString(System.String)
-FNDA:1,System.Byte[] Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::FromHtmlString(System.String)
-DA:36,1
-DA:37,1
-DA:38,1
-DA:39,1
-FN:41,System.Byte[] Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::FromUrl(System.String)
-FNDA:1,System.Byte[] Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::FromUrl(System.String)
-DA:42,1
-DA:44,1
-DA:45,1
+FNDA:0,System.Byte[] Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::FromHtmlString(System.String)
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
 FN:7,System.Void Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::.ctor()
 FNDA:7,System.Void Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::.ctor()
 DA:8,7
 DA:9,7
 DA:10,7
 DA:11,7
-LF:26
-LH:26
+LF:23
+LH:19
 BRF:2
 BRH:2
-FNF:6
-FNH:6
+FNF:5
+FNH:4
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\BarcodeProfileBase.cs
 FN:6,System.String Magnum.Consoles.Barcodes.Commons.BarcodeProfileBase::get_TemplateFile()
