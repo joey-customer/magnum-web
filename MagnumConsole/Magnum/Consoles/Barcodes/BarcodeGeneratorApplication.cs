@@ -18,6 +18,8 @@ namespace Magnum.Consoles.Barcodes
 
 	public class BarcodeGeneratorApplication : ConsoleAppBase
 	{
+        private LabelGenerator generator = new LabelGenerator();
+
         private int imgPerFolder = 100;
         private int progressPerImage = 100;
 
@@ -38,6 +40,11 @@ namespace Magnum.Consoles.Barcodes
             progressFunc = func;
         }
 
+        public void SetLabelGnerator(LabelGenerator labelGenerator)
+        {
+            generator = labelGenerator;
+        }
+
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s))
@@ -49,7 +56,7 @@ namespace Magnum.Consoles.Barcodes
             return options;
         }
 
-        public void SetFilePerFoler(int num)
+        public void SetFilePerFolder(int num)
         {
             imgPerFolder = num;
         }
@@ -89,7 +96,6 @@ namespace Magnum.Consoles.Barcodes
 
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
-            LabelGenerator generator = new LabelGenerator();
             generator.TemplateFile = prf.TemplateFile;
             generator.Setup();
 

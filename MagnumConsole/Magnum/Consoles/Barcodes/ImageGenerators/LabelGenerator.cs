@@ -1,19 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Drawing;
 
 using Magnum.Api.Models;
 using Magnum.Consoles.Barcodes.Commons;
+using Magnum.Consoles.Barcodes.HtmlConverters;
 
 using QRCoder;
-using CoreHtmlToImage;
 
 namespace Magnum.Consoles.Barcodes.ImageGenerators
 {
-	public class LabelGenerator : ImageGeneratorBase
+	public class LabelGenerator : ImageGeneratorBase, IImageFromHtmlGenerator
 	{
+        private IHtmlConverter htmlConverter = new Html2ImageConverter();
+
         private MBarcode currentData = null;
         private string currentQRfile = "";
         private List<string> templateLines = new List<string>();
@@ -25,6 +28,11 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
             templateLines = new List<string>(lines);
         }
 
+        public void SetHtmlConverter(IHtmlConverter converter)
+        {
+            htmlConverter = converter;
+        }        
+
         private MemoryStream ParseTemplate(MBarcode data, string qrImageFile)
         {
             string content = "";
@@ -33,14 +41,20 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
             currentData = data;
             currentQRfile = qrImageFile;
 
+            StringBuilder bld = new StringBuilder();
             foreach (string line in templateLines)
             {
                 string replaceString = regex.Replace(line, ProcessVariable);
-                content = content + replaceString;
+                bld.Append(replaceString);
             }
 
-            var converter = new HtmlConverter();
-            var bytes = converter.FromHtmlString(content, 780, ImageFormat.Png, 200);
+            content = bld.ToString();
+
+            htmlConverter.SetWidth(780);
+            htmlConverter.SetImageFormat(1);
+            htmlConverter.SetImageQuality(200);
+            var bytes = htmlConverter.FromHtmlString(content);
+            
             MemoryStream ms = new MemoryStream(bytes);
 
             return ms;

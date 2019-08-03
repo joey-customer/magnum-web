@@ -1,14 +1,20 @@
 using System;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Collections;
+
 using NUnit.Framework;
 
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
+using Magnum.Consoles.Barcodes.ImageGenerators;
+using Magnum.Consoles.Barcodes.HtmlConverters;
 using Magnum.Api.Models;
 using Magnum.Api.Factories;
 
 using NDesk.Options;
+using Moq;
 
 namespace Magnum.Consoles.Barcodes
 {
@@ -79,14 +85,44 @@ namespace Magnum.Consoles.Barcodes
             Assert.AreEqual(true, isExist, "File not found [{0}] !!!", fileName);
         }
 
+        private byte[] CreateDummyBitmap()
+        {            
+            byte[] byteImage;
+            MemoryStream ms = new MemoryStream();
+
+            string tmpDir = Path.GetTempPath();
+            string tmpPath = string.Format("{0}/{1}", tmpDir, "dummy.bmp");
+            using (Bitmap bitmap = new Bitmap(100, 100))
+            {
+                bitmap.Save(tmpPath);
+                Bitmap img = (Bitmap) Bitmap.FromFile(tmpPath);
+
+                img.Save(ms, ImageFormat.Bmp);
+
+                byteImage = new Byte[ms.Length];   
+                byteImage = ms.ToArray();
+            }
+         
+            return byteImage;
+        }
+
         [TestCase("BarcodeGen", 1, true)]
         [TestCase("BarcodeGen", 2, false)]
         public void GenerateBarcodeTest(string appName, int quantity, bool callFunc)
         {
+            byte[] bytes = CreateDummyBitmap();
+
+            var mockedConverter = new Mock<IHtmlConverter>();  
+            mockedConverter.Setup(p => p.FromHtmlString(It.IsAny<string>())).Returns(bytes);  
+
+            LabelGenerator generator = new LabelGenerator();
+            generator.SetHtmlConverter(mockedConverter.Object);
+
             generatedCount = 0;
 
             BarcodeGeneratorApplication app = (BarcodeGeneratorApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
-            app.SetFilePerFoler(10);
+            app.SetLabelGnerator(generator);            
+            app.SetFilePerFolder(10);
             app.SetProgressPerImage(2);
             if (callFunc)
             {
