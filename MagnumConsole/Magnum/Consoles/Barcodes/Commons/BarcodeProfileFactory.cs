@@ -21,9 +21,12 @@ namespace Magnum.Consoles.Barcodes.Commons
         private static void initClassMap()
         {                        
             addClassConfig("ForTestingOnly", "Magnum.Consoles.Barcodes.Profiles.ForTestingOnly"); 
+            addClassConfig("ForQrTestingOnly", "Magnum.Consoles.Barcodes.Profiles.ForQrTestingOnly"); 
+
             addClassConfig("Oxandro10", "Magnum.Consoles.Barcodes.Profiles.Oxandro10"); 
             addClassConfig("NandroPlex300", "Magnum.Consoles.Barcodes.Profiles.NandroPlex300"); 
-            addClassConfig("TestPlex300", "Magnum.Consoles.Barcodes.Profiles.TestPlex300");             
+            addClassConfig("TestPlex300", "Magnum.Consoles.Barcodes.Profiles.TestPlex300"); 
+            addClassConfig("CompanyQR", "Magnum.Consoles.Barcodes.Profiles.CompanyQR"); 
         }  
 
         public static IBarcodeProfile CreateBarcodeProfileObject(string name)

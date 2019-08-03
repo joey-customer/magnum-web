@@ -7,36 +7,36 @@ using System.Drawing;
 using Magnum.Api.Models;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.HtmlConverters;
+using Magnum.Api.Utils;
 
 namespace Magnum.Consoles.Barcodes.ImageGenerators
 {
-	public class LabelGenerator : ImageGeneratorBase, IImageFromHtmlGenerator
+	public class QRGenerator : ImageGeneratorBase, IImageFromHtmlGenerator
 	{
         private IHtmlConverter htmlConverter = new Html2ImageConverter();
-
-        private MBarcode currentData = null;
+        private MProfile currentData = null;
         private string currentQRfile = "";
         private List<string> templateLines = new List<string>();
 
         protected override void CustomSetup()
         {
-            htmlConverter.SetWidth(780);
-            htmlConverter.SetImageFormat(1);
-            htmlConverter.SetImageQuality(200);
-
             templateLines.Clear();
             string[] lines = File.ReadAllLines(TemplateFile);
             templateLines = new List<string>(lines);
+
+            htmlConverter.SetWidth(780);
+            htmlConverter.SetImageFormat(1);
+            htmlConverter.SetImageQuality(200);            
         }
 
         public void SetHtmlConverter(IHtmlConverter converter)
         {
-            htmlConverter = converter;
+            htmlConverter = converter;            
         }        
 
         protected override void TemplateParsing(BaseModel data, string qrImageFile)
         {
-            currentData = (MBarcode) data;
+            currentData = (MProfile) data;
             currentQRfile = qrImageFile;
         }
 
@@ -44,23 +44,15 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
         {
             string varName = m.Groups["variable"].Value;
             string value = "";
-
-            if (varName.Equals("${SERIAL_NO}"))
+ 
+            if (varName.Equals("${MESSAGE1}"))
             {
-                value = currentData.SerialNumber;
-            }        
-            else if (varName.Equals("${BARCODE_TEXT}"))
-            {
-                value = currentData.Barcode;
-            }   
-            else if (varName.Equals("${PIN_NO}"))
-            {
-                value = currentData.Pin;
-            }  
-            else if (varName.Equals("${WEB_SITE}"))
-            {
-                value = currentData.CompanyWebSite;
+                value = currentData.Message1;
             } 
+            else if (varName.Equals("${MESSAGE2}"))
+            {
+                value = currentData.Message2;
+            }             
             else if (varName.Equals("${IMAGE_QR}"))
             {
                 value = currentQRfile;
@@ -71,12 +63,12 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
 
         public override MemoryStream RenderToStream(BaseModel data)
         {
-            MBarcode bc = (MBarcode) data;
+            MProfile bc = (MProfile) data;
 
-            string tmpFile = string.Format("{0}_{1}.png", bc.SerialNumber, bc.Pin);
-            string qrFile = CreateQR(tmpFile, bc.PayloadUrl);
-
+            string tmpFile = string.Format("{0}.png", RandomUtils.RandomString(10));
+            string qrFile = CreateQR(tmpFile, bc.CompanyWebSite);
             var ms = ParseTemplate(htmlConverter, templateLines, bc, qrFile);
+
             return ms;
         }
 

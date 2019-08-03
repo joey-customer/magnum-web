@@ -23,8 +23,8 @@ namespace Magnum.Consoles.Factories
         private static void initClassMap()
         {            
             addClassConfig("BarcodeGen", "Magnum.Consoles.Barcodes.BarcodeGeneratorApplication"); 
+            addClassConfig("QrGen", "Magnum.Consoles.Barcodes.QRGeneratorApplication");             
             addClassConfig("BarcodeReg", "Magnum.Consoles.Registrations.RegisterBarcodeApplication"); 
-            addClassConfig("FirebaseCheck", "Magnum.Consoles.Miscs.FirebaseCheckApplication");
             addClassConfig("DummyApp", "Magnum.Consoles.Miscs.DummyApplication");       
         }  
 
