@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using Magnum.Api.NoSql;
 using Magnum.Api.Factories;
 using Magnum.Api.Businesses.Registrations;
 using Magnum.Api.Models;
