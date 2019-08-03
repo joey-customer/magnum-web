@@ -18,9 +18,9 @@ namespace Magnum.Consoles.Barcodes
         {
         }
 
-        public void SetQrGnerator(QRGenerator labelGenerator)
+        public void SetQrGnerator(QRGenerator qrGenerator)
         {
-            generator = labelGenerator;
+            generator = qrGenerator;
         }
 
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)

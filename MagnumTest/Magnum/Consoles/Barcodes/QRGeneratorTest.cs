@@ -79,7 +79,7 @@ namespace Magnum.Consoles.Barcodes
         }
 
         [TestCase("QrGen")]
-        public void GenerateBarcodeTest(string appName)
+        public void GenerateQrTest(string appName)
         {
             byte[] bytes = CreateDummyBitmap();
 
