@@ -11,6 +11,9 @@ dotnet run BarcodeGen --h=https://compute-engine-vm-test.firebaseio.com/ \
 --profile="Oxandro10"
 
 
+dotnet run QrGen \
+--o='/d/temp' \
+--profile="CompanyQR"
 
 dotnet run BarcodeReg \
 --h=https://compute-engine-vm-test.firebaseio.com/ \
