@@ -40,5 +40,10 @@ namespace Magnum.Consoles.Barcodes.Commons
 
             return(obj);
         }
+
+        public static Hashtable GetKnownClassList()
+        {
+            return classMaps;
+        }
     }
 }
