@@ -30,7 +30,7 @@ namespace Magnum.Consoles.Barcodes
                 {"url", "https://magnum-verify.com"},
                 {"outpath", "/d/temp"},
                 {"user", "pjame"},
-                {"profile", "Oxandro10"},
+                {"profile", "ForTestingOnly"},
                 {"password", "faked_password"},
             };
 
@@ -79,8 +79,8 @@ namespace Magnum.Consoles.Barcodes
             Assert.AreEqual(true, isExist, "File not found [{0}] !!!", fileName);
         }
 
-        [TestCase("BarcodeGen", 20, true)]
-        [TestCase("BarcodeGen", 20, false)]
+        [TestCase("BarcodeGen", 1, true)]
+        [TestCase("BarcodeGen", 2, false)]
         public void GenerateBarcodeTest(string appName, int quantity, bool callFunc)
         {
             generatedCount = 0;

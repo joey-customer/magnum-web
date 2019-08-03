@@ -7,7 +7,6 @@ namespace Magnum.Consoles.Barcodes.Commons
 	public abstract class ImageGeneratorBase : IImageGenerator
 	{
 		public string TemplateFile { get; set; }
-		public string WipDir { get; set; }
 
         public void Setup()
 		{

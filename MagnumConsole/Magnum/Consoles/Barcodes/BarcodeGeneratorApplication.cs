@@ -90,6 +90,7 @@ namespace Magnum.Consoles.Barcodes
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
             LabelGenerator generator = new LabelGenerator();
+            generator.TemplateFile = prf.TemplateFile;
             generator.Setup();
 
             for (int i=1; i<=quantity; i++)

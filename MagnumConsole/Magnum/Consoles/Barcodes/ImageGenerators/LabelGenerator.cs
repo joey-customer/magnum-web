@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Reflection;
 using System.IO;
 using System.Drawing;
 
@@ -22,20 +21,8 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
         protected override void CustomSetup()
         {
             templateLines.Clear();
-
-            string template = "EmbeddedResource.Magnum.Consoles.Barcodes.ImageGenerators.Templates.magnum_label.html";
-
-            var assembly = Assembly.GetEntryAssembly();
-            var resourceStream = assembly.GetManifestResourceStream(template);
-
-            using (var sr = new StreamReader(resourceStream))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    templateLines.Add(line);
-                }
-            }            
+            string[] lines = File.ReadAllLines(TemplateFile);
+            templateLines = new List<string>(lines);
         }
 
         private MemoryStream ParseTemplate(MBarcode data, string qrImageFile)
@@ -50,7 +37,6 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
             {
                 string replaceString = regex.Replace(line, ProcessVariable);
                 content = content + replaceString;
-Console.WriteLine(replaceString);              
             }
 
             var converter = new HtmlConverter();
