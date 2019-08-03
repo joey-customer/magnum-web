@@ -1,14 +1,14 @@
 using System;
 using System.IO;
 using System.Collections;
-using System.Drawing;
 
-using QRCoder;
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
 using Magnum.Api.Businesses.Barcodes;
 using Magnum.Api.NoSql;
+using Magnum.Consoles.Barcodes.Commons;
+using Magnum.Consoles.Barcodes.ImageGenerators;
 
 using NDesk.Options;
 
@@ -18,6 +18,8 @@ namespace Magnum.Consoles.Barcodes
 
 	public class BarcodeGeneratorApplication : ConsoleAppBase
 	{
+        private LabelGenerator generator = new LabelGenerator();
+
         private int imgPerFolder = 100;
         private int progressPerImage = 100;
 
@@ -38,38 +40,23 @@ namespace Magnum.Consoles.Barcodes
             progressFunc = func;
         }
 
+        public void SetLabelGnerator(LabelGenerator labelGenerator)
+        {
+            generator = labelGenerator;
+        }
+
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("q=|quantity=", "Number of barcode to generate", s => AddArgument("quantity", s))
             .Add("u=|url=", "QR scan URL", s => AddArgument("url", s))
-            .Add("p=|product=", "Product code", s => AddArgument("product", s))
             .Add("o=|outpath=", "QR image file output directory (folder)", s => AddArgument("outpath", s))
+            .Add("profile=", "Product profile", s => AddArgument("profile", s))
             .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));
 
             return options;
         }
 
-        private void GenerateQR(MBarcode data, string dir)
-        {
-            Uri generator = new Uri(data.PayloadUrl);
-            string payload = generator.ToString();
-
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
-            PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
-            byte[] qrCodeAsPngByteArr = qrCode.GetGraphic(20);
-
-            Bitmap bmp;
-            using (var ms = new MemoryStream(qrCodeAsPngByteArr))
-            {
-                bmp = new Bitmap(ms);
-            }
-
-            string fileName = string.Format("{0}/{1}-{2}.png", dir, data.SerialNumber, data.Pin);
-            bmp.Save(fileName);
-        }
-
-        public void SetFilePerFoler(int num)
+        public void SetFilePerFolder(int num)
         {
             imgPerFolder = num;
         }
@@ -88,6 +75,9 @@ namespace Magnum.Consoles.Barcodes
             string password = args["password"].ToString();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
+            string prof = args["profile"].ToString();
+
+            BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
 
             INoSqlContext ctx = GetNoSqlContext();
             if (ctx == null)
@@ -102,14 +92,17 @@ namespace Magnum.Consoles.Barcodes
 
             MBarcode param = new MBarcode();
             param.BatchNo = batch;
-            param.Url = payloadUrl;
+            param.Url = payloadUrl;            
 
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+
+            generator.TemplateFile = prf.TemplateFile;
+            generator.Setup();
 
             for (int i=1; i<=quantity; i++)
             {
                 string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(6, '0');
-                string urlPath = string.Format("{0}_{1}/{2}", param.BatchNo, timeStamp, chunk);
+                string urlPath = string.Format("{0}_{1}_{2}/{3}", prof, param.BatchNo, timeStamp, chunk);
                 string dir = string.Format("{0}/{1}", args["outpath"].ToString(), urlPath);
                 if (!Directory.Exists(dir))
                 {
@@ -117,9 +110,13 @@ namespace Magnum.Consoles.Barcodes
                 }
 
                 param.Path = urlPath;
+                param.CompanyWebSite = prf.CompanyWebSite;
+                param.Barcode = prf.Barcode;
+                param.Product = prf.Product;
                 MBarcode bc = opr.Apply(param);                
 
-                GenerateQR(bc, dir);
+                string fileName = string.Format("{0}/{1}-{2}.png", dir, bc.SerialNumber, bc.Pin);
+                generator.RenderToFile(bc, fileName);
                 progressFunc(bc, dir);
 
                 Console.WriteLine("SerialNo=[{0}], Pin=[{1}]", bc.SerialNumber, bc.Pin);
@@ -131,6 +128,7 @@ namespace Magnum.Consoles.Barcodes
                 }                
             }
             
+            generator.Cleanup();
             Console.WriteLine("Done generating {0} barcodes.", quantity);
             return 0;
         }

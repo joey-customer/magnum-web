@@ -1,42 +1,12 @@
 using System;
-using System.Text;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Models;
+using Magnum.Api.Utils;
 
 namespace Magnum.Api.Businesses.Barcodes
 {
 	public class CreateBarcode : BusinessOperationBase, IBusinessOperationGetInfo<MBarcode>
 	{
-        private string RandomString(int size)  
-        {  
-            StringBuilder builder = new StringBuilder();  
-            Random random = new Random();  
-
-            for (int i = 0; i < size; i++)  
-            {
-                int idx = Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65));
-                char ch = Convert.ToChar(idx);  
-                builder.Append(ch);
-            }
-
-            return builder.ToString();
-        } 
-
-        private string RandomStringNum(int size)  
-        {  
-            StringBuilder builder = new StringBuilder();  
-            Random random = new Random();  
-
-            for (int i = 0; i < size; i++)  
-            {
-                int idx = Convert.ToInt32(Math.Floor(10 * random.NextDouble() + 48));
-                char ch = Convert.ToChar(idx);  
-                builder.Append(ch);
-            }
-
-            return builder.ToString();
-        } 
-
         public MBarcode Apply(MBarcode dat)
         {
             MBarcode bc = new MBarcode();
@@ -46,9 +16,13 @@ namespace Magnum.Api.Businesses.Barcodes
             bc.GeneratedDate = DateTime.Now;
             bc.IsActivated = false;
             bc.Path = dat.Path;
-            
-            bc.SerialNumber = RandomStringNum(10);
-            bc.Pin = RandomString(10);
+
+            bc.CompanyWebSite = dat.CompanyWebSite;
+            bc.Barcode = dat.Barcode;
+            bc.Product = dat.Product;
+
+            bc.SerialNumber = RandomUtils.RandomStringNum(10);
+            bc.Pin = RandomUtils.RandomStringNum(10);
             bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}/{3}", bc.Url, bc.Path, bc.SerialNumber, bc.Pin);
 
             string path = string.Format("asset_barcodes/{0}/{1}-{2}", bc.Path, bc.SerialNumber, bc.Pin);

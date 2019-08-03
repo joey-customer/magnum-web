@@ -8,8 +8,9 @@
   <ItemGroup>
     <ProjectReference Include="..\MagnumCore\MagnumCore.csproj" />
   </ItemGroup>
-  
+
   <ItemGroup>
+    <PackageReference Include="CoreHtmlToImage" Version="1.0.5" />
     <PackageReference Include="FirebaseAuthentication.net" Version="3.2.0" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.1" />
     <PackageReference Include="NDesk.Options.Core" Version="1.2.5" />
