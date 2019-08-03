@@ -3,8 +3,6 @@ using System.Collections;
 
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
-
 namespace Magnum.Consoles.Barcodes.Commons
 {
     public class BarcodeProfileFactoryTest
