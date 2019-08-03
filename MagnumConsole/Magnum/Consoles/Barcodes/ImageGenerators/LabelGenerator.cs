@@ -6,14 +6,16 @@ using System.Drawing;
 
 using Magnum.Api.Models;
 using Magnum.Consoles.Barcodes.Commons;
+using Magnum.Consoles.Barcodes.HtmlConverters;
 
 using QRCoder;
-using CoreHtmlToImage;
 
 namespace Magnum.Consoles.Barcodes.ImageGenerators
 {
-	public class LabelGenerator : ImageGeneratorBase
+	public class LabelGenerator : ImageGeneratorBase, IImageFromHtmlGenerator
 	{
+        private IHtmlConverter htmlConverter = new Html2ImageConverter();
+
         private MBarcode currentData = null;
         private string currentQRfile = "";
         private List<string> templateLines = new List<string>();
@@ -24,6 +26,11 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
             string[] lines = File.ReadAllLines(TemplateFile);
             templateLines = new List<string>(lines);
         }
+
+        public void SetHtmlConverter(IHtmlConverter converter)
+        {
+            htmlConverter = converter;
+        }        
 
         private MemoryStream ParseTemplate(MBarcode data, string qrImageFile)
         {
@@ -39,8 +46,10 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
                 content = content + replaceString;
             }
 
-            var converter = new HtmlConverter();
-            var bytes = converter.FromHtmlString(content, 780, ImageFormat.Png, 200);
+            htmlConverter.SetWidth(780);
+            htmlConverter.SetImageFormat(1);
+            htmlConverter.SetImageQuality(200);
+            var bytes = htmlConverter.FromHtmlString(content);
             MemoryStream ms = new MemoryStream(bytes);
 
             return ms;
