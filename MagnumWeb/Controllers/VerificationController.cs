@@ -9,12 +9,10 @@ namespace MagnumWeb.Controllers
 {
     public class VerificationController : BaseController
     {
-        public IBusinessOperationManipulate<MRegistration> Opr { get; set; }
-
         [HttpGet("verification/{product}/{group}/{serial}/{pin}")]
         public IActionResult Check(String product, String group, String serial, String pin)
         {
-            Opr = GetCreateRegistrationOperation();
+            IBusinessOperationManipulate<MRegistration> operation = GetCreateRegistrationOperation();
             MRegistration param = new MRegistration();
             IPAddress remoteIPAddress = ControllerContext.HttpContext.Connection.RemoteIpAddress;
             param.IP = remoteIPAddress.ToString();
@@ -24,7 +22,7 @@ namespace MagnumWeb.Controllers
 
             try
             {
-                Opr.Apply(param);
+                operation.Apply(param);
                 ViewBag.Serial = serial;
                 ViewBag.PIN = pin;
                 return View("Success");
