@@ -20,7 +20,7 @@ namespace Magnum.Consoles
         public void Setup()
         {
             var mockController = new Mock<VerificationController>() { CallBase = true };
-            mockController.Setup(foo => foo.getRemoteIP()).Returns("172.0.0.1");
+            mockController.Setup(foo => foo.GetRemoteIP()).Returns("172.0.0.1");
             controller = mockController.Object;
 
             mockOpr = new Mock<IBusinessOperationManipulate<MRegistration>>();
