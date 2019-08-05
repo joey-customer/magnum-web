@@ -7,6 +7,7 @@ using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 
 namespace Magnum.Consoles
 {
@@ -24,7 +25,7 @@ namespace Magnum.Consoles
             controller = mockController.Object;
 
             mockOpr = new Mock<IBusinessOperationManipulate<MRegistration>>();
-            controller.Opr = mockOpr.Object;
+            mockController.Setup(foo => foo.GetCreateRegistrationOperation()).Returns(mockOpr.Object);
         }
 
         [TestCase("Maxnum", "0000", "1234", "5678")]
@@ -55,7 +56,16 @@ namespace Magnum.Consoles
             Assert.AreEqual(keys[0], "Message");
             Assert.AreEqual(values[0], "Invalid barcode");
             Assert.AreEqual(result.ViewName, "Fail");
+        }
 
+        [TestCase]
+        public void TestGetCreateRegistrationOperation()
+        {
+            var mockController = new Mock<VerificationController>() { CallBase = true };
+            controller = mockController.Object;
+
+            CreateRegistration opr = (CreateRegistration) controller.GetCreateRegistrationOperation();
+            Assert.NotNull(opr);
         }
     }
 }

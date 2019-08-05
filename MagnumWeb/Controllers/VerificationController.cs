@@ -14,11 +14,7 @@ namespace MagnumWeb.Controllers
         [HttpGet("verification/{product}/{group}/{serial}/{pin}")]
         public IActionResult Check(String product, String group, String serial, String pin)
         {
-            if (Opr == null)
-            {
-                Opr = (IBusinessOperationManipulate<MRegistration>)FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
-            }
-
+            Opr = GetCreateRegistrationOperation();
             MRegistration param = new MRegistration();
             param.IP = GetRemoteIP();
             param.Pin = pin;
@@ -41,8 +37,12 @@ namespace MagnumWeb.Controllers
 
         public virtual string GetRemoteIP()
         {
-            return Request.HttpContext.Connection.RemoteIpAddress.ToString();
+            return HttpContext.Connection.RemoteIpAddress.ToString();
         }
 
+        public virtual IBusinessOperationManipulate<MRegistration> GetCreateRegistrationOperation()
+        {
+            return (IBusinessOperationManipulate<MRegistration>)FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
+        }
     }
 }
