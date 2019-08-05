@@ -9,9 +9,7 @@ namespace MagnumWeb.Controllers
 {
     public class VerificationController : BaseController
     {
-        private IBusinessOperationManipulate<MRegistration> opr = null;
-
-        public IBusinessOperationManipulate<MRegistration> Opr { get => opr; set => opr = value; }
+        public IBusinessOperationManipulate<MRegistration> Opr { get; set; }
 
         [HttpGet("verification/{product}/{group}/{serial}/{pin}")]
         public IActionResult Check(String product, String group, String serial, String pin)
