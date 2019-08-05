@@ -22,7 +22,7 @@ namespace MagnumWeb.Controllers
             }
 
             MRegistration param = new MRegistration();
-            param.IP = getRemoteIP();
+            param.IP = GetRemoteIP();
             param.Pin = pin;
             param.SerialNumber = serial;
             param.Path = string.Format("{0}/{1}", product, group);
@@ -41,7 +41,7 @@ namespace MagnumWeb.Controllers
             }
         }
 
-        public virtual string getRemoteIP()
+        public virtual string GetRemoteIP()
         {
             return Request.HttpContext.Connection.RemoteIpAddress.ToString();
         }

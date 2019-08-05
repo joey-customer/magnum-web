@@ -1,4 +1,5 @@
 #To generate barcode
+#https://localhost:5001/verification/Oxandro10_KH0009_20190803223419/000000/1271951675/6856314405
 
 dotnet run BarcodeGen --h=https://compute-engine-vm-test.firebaseio.com/ \
 --q=1 \
