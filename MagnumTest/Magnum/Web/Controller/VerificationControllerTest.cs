@@ -8,6 +8,7 @@ using Magnum.Api.Commons.Business;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace Magnum.Consoles
 {
@@ -20,9 +21,16 @@ namespace Magnum.Consoles
         [SetUp]
         public void Setup()
         {
+            var httpContext = new DefaultHttpContext();
+            var controllerContext = new ControllerContext() {
+                HttpContext = httpContext,
+            };
+            controllerContext.HttpContext.Connection.RemoteIpAddress=IPAddress.Parse("127.0.0.1");
+
             var mockController = new Mock<VerificationController>() { CallBase = true };
-            mockController.Setup(foo => foo.GetRemoteIP()).Returns("172.0.0.1");
             controller = mockController.Object;
+            
+            controller.ControllerContext = controllerContext;
 
             mockOpr = new Mock<IBusinessOperationManipulate<MRegistration>>();
             mockController.Setup(foo => foo.GetCreateRegistrationOperation()).Returns(mockOpr.Object);

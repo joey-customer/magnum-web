@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using Magnum.Api.Factories;
-using Magnum.Api.Businesses.Registrations;
 using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
+using System.Net;
 
 namespace MagnumWeb.Controllers
 {
@@ -16,7 +16,8 @@ namespace MagnumWeb.Controllers
         {
             Opr = GetCreateRegistrationOperation();
             MRegistration param = new MRegistration();
-            param.IP = GetRemoteIP();
+            IPAddress remoteIPAddress = ControllerContext.HttpContext.Connection.RemoteIpAddress;
+            param.IP = remoteIPAddress.ToString();
             param.Pin = pin;
             param.SerialNumber = serial;
             param.Path = string.Format("{0}/{1}", product, group);
@@ -33,11 +34,6 @@ namespace MagnumWeb.Controllers
                 ViewBag.Message = e.Message;
                 return View("Fail");
             }
-        }
-
-        public virtual string GetRemoteIP()
-        {
-            return HttpContext.Connection.RemoteIpAddress.ToString();
         }
 
         public virtual IBusinessOperationManipulate<MRegistration> GetCreateRegistrationOperation()
