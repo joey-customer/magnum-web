@@ -22,7 +22,7 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
         {
             htmlConverter.SetWidth(780);
             htmlConverter.SetImageFormat(1);
-            htmlConverter.SetImageQuality(200);
+            htmlConverter.SetImageQuality(300);
 
             templateLines.Clear();
             string[] lines = File.ReadAllLines(TemplateFile);
