@@ -7,6 +7,8 @@ using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace Magnum.Consoles
 {
@@ -19,12 +21,19 @@ namespace Magnum.Consoles
         [SetUp]
         public void Setup()
         {
+            var httpContext = new DefaultHttpContext();
+            var controllerContext = new ControllerContext() {
+                HttpContext = httpContext,
+            };
+            controllerContext.HttpContext.Connection.RemoteIpAddress=IPAddress.Parse("127.0.0.1");
+
             var mockController = new Mock<VerificationController>() { CallBase = true };
-            mockController.Setup(foo => foo.getRemoteIP()).Returns("172.0.0.1");
             controller = mockController.Object;
+            
+            controller.ControllerContext = controllerContext;
 
             mockOpr = new Mock<IBusinessOperationManipulate<MRegistration>>();
-            controller.Opr = mockOpr.Object;
+            mockController.Setup(foo => foo.GetCreateRegistrationOperation()).Returns(mockOpr.Object);
         }
 
         [TestCase("Maxnum", "0000", "1234", "5678")]
@@ -55,7 +64,16 @@ namespace Magnum.Consoles
             Assert.AreEqual(keys[0], "Message");
             Assert.AreEqual(values[0], "Invalid barcode");
             Assert.AreEqual(result.ViewName, "Fail");
+        }
 
+        [TestCase]
+        public void TestGetCreateRegistrationOperation()
+        {
+            var mockController = new Mock<VerificationController>() { CallBase = true };
+            controller = mockController.Object;
+
+            CreateRegistration opr = (CreateRegistration) controller.GetCreateRegistrationOperation();
+            Assert.NotNull(opr);
         }
     }
 }
