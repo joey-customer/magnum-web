@@ -31,7 +31,7 @@ namespace Magnum.Api.Businesses.Registrations
                 path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
-                string msg = string.Format("Barcode not found [{0}]", barcode);
+                string msg = string.Format("Serial number and PIN not found [{0}]", barcode);
                 throw(new ArgumentException(msg));
             }
 
@@ -41,7 +41,7 @@ namespace Magnum.Api.Businesses.Registrations
                 path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
-                string msg = string.Format("Barcode was already registered [{0}] since [{1}]", barcode, bc.ActivatedDate);
+                string msg = string.Format("Serial number and PIN has already been registered [{0}] since [{1}]", barcode, bc.ActivatedDate);
                 throw(new ArgumentException(msg));
             }
 

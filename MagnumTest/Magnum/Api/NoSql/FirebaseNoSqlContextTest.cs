@@ -31,12 +31,13 @@ namespace Magnum.Api.NoSql
 
         private void Authen(INoSqlContext ctx)
         {
+            string host = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_URL");
             string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
             string username = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
             string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
 
             //This is for unit testing only, DO NOT put any production data in this DB
-            ctx.Authenticate("https://compute-engine-vm-test.firebaseio.com/",
+            ctx.Authenticate(host,
                 key,
                 username,
                 password);

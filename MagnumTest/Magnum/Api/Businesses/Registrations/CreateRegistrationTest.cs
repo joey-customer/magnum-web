@@ -67,8 +67,8 @@ namespace Magnum.Api.Businesses.Registrations
             }
         } 
 
-        [TestCase(false, null, "Barcode not found")]
-        [TestCase(true, true, "Barcode was already registered")]
+        [TestCase(false, null, "Serial number and PIN not found")]
+        [TestCase(true, true, "Serial number and PIN has already been registered")]
         [TestCase(true, false, "")]
         public void CreateRegistrationWithCodeNotFoundTest(bool barcodeFound, bool isActivated, string keyword)
         {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Company QR</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.barcode-container {
+			width: 0px;
+			margin: 0px;
+		}
+
+		.text2 {
+			font-size: 10.125px;
+			margin: 0;
+			padding-top: 1.25px;
+			text-align: center;
+		}
+
+		.url {
+			font-size: 9.125px;
+		}
+
+		.qr-wrap {
+			position: relative;
+			background: pink;
+			width: 56.692913px;
+			height: 90.708661px;
+			text-align: center;
+		}
+
+		.qr-wrap img {
+			display: block;
+			width: 45.574803px;
+			height: 45.574803px;
+			margin: 5.5px auto;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- Page Content -->
+	<div class="barcode-container">
+		<div class="qr-wrap">
+			<p class="text2">Visit Us</P>
+			<img src="${IMAGE_QR}" alt="Company Website">
+			<p class="url">${MESSAGE2}</P>
+		</div>
+	</div>
+</body>
+
+</html>
