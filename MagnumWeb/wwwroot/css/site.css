@@ -1,57 +1,68 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+:root {
+    --p-color: #db2a24;
+    --text-color: #777777;
+    --heading-color: #333333;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #f9f9f9;
 }
 
 .intro {
     background: rgb(244, 244, 244);
 }
+
 .intro .container {
     max-width: 930px;
 }
+
 .overlay {
     position: absolute;
     width: 100%;
@@ -60,6 +71,7 @@ body {
     top: 0;
     left: 0;
 }
+
 .main_menu_area {
     position: absolute;
     z-index: 1000;
@@ -164,6 +176,7 @@ body {
     text-shadow: none;
     color: #333;
 }
+
 .dropdown-menu li a {
     color: #9300f7;
 }
@@ -187,15 +200,18 @@ body {
         opacity: 1;
     }
 }
+
 .navbar .navbar-nav > .nav-item:last-child {
     margin-right: 0px;
 }
+
 .banner {
     position: relative;
     padding: 230px 0;
     background-image: url('/images/intro.jpg');
     background-size: cover;
 }
+
 .bannner-content h1 {
     font-size: 60px;
     font-weight: 800;
@@ -203,11 +219,13 @@ body {
     margin-bottom: 20px;
     color: #fff;
 }
+
 .bannner-content p {
     margin-bottom: 50px;
     font-size: 18px;
     color: #ccc;
 }
+
 .bannner-content a {
     padding: 18px 50px;
     font-weight: 600;
@@ -219,6 +237,7 @@ body {
     .banner {
         padding: 130px 0;
     }
+
     .bannner-content h1 {
         font-size: 40px;
         line-height: initial;
@@ -230,7 +249,10 @@ body {
     padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
-    box-shadow: 0 2px 5px 5px lightgrey;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -240,7 +262,7 @@ body {
 }
 
 .fail-bg {
-    padding-bottom: 0;  
+    padding-bottom: 0;
     background: #611b32;
     background-image: -webkit-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#e02d20,#611b32,#082d2a 119%);
     background-image: -moz-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#e02d20,#611b32,#082d2a 119%);
@@ -290,13 +312,216 @@ body {
     font-weight: 100
 }
 
+.verificationSubmit {
+    color: #fff;
+    padding: 15px 0;
+    background-image: -webkit-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#d50000,#611b32,#082d2a 119%);
+}
+
+@media (min-width: 768px) {
+    .formContainer {
+        padding-left: 40px;
+        justify-content: left;
+        padding-bottom: 0;
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    padding: 15px;
+}
+
+.form-control {
+    height: 50px;
+}
+
+
+/*------------------------ OUR SERVICE ---------------------*/
+.our-service {
+    margin-top: -100px;
+}
+
+.heading {
+    margin: 0 0 10px;
+    color: #202124;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.sub-heading {
+    color: #757575;
+}
+
+.our-service .single-service {
+    background: #fff;
+    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    padding: 50px 30px 50px 40px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.our-service .single-service h6 {
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.our-service .single-service .count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 63px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.03);
+    position: absolute;
+    top: 50px;
+    right: 28px;
+}
+
+
+/*-------------------- OUR PRODUCT -------------------*/
+.our-product {
+    padding: 50px 0;
+}
+
+.our-product .single-product {
+    background: #fff;
+    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.our-product .single-product .product-info {
+    position: relative;
+    height: 410px;
+}
+
+.our-product.newest .single-product .product-info {
+    height: 230px;
+}
+
+.our-product .single-product .product-info:before {
+    content: url(../images/home/shape2.png);
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.our-product.newest .single-product .product-info:before {
+    content: none;
+}
+
+.our-product .single-product .product-info .product-img {
+    display: inline-block;
+    position: relative;
+    padding: 70px 0 30px;
+}
+
+.our-product .single-product .product-info .product-img {
+    padding: 40px 0 30px;
+}
+
+.our-product .single-product .product-info .product-img .badge-tag {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: var(--p-color);
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    z-index: 1;
+}
+
+.our-product .single-product .product-info .product-img img {
+    height: 260px;
+    transition: all 0.6s ease-in-out;
+}
+
+.our-product.newest .single-product .product-info .product-img img {
+    height: 160px;
+}
+
+.our-product .single-product:hover .product-info .product-img img {
+    transform: scale3d(1.1,1.1,1);
+}
+
+.our-product .single-product .product-info .name {
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+}
+
+.our-product.newest .single-product .product-info .name {
+    font-size: 14px;
+}
+
+.our-product .single-product .product-info .name span {
+    color: var(--p-color);
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.our-product .single-product .product-info .name span {
+    font-size: 14px;
+}
+
+.our-product .single-product .button-group li {
+    float: left;
+    width: 50%;
+    height: 60px;
+}
+
+.our-product .single-product .product-price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    line-height: 60px;
+}
+
+.our-product.newest .single-product .product-price {
+    font-size: 14px;
+}
+
+.rating {
+    margin-bottom: 4px;
+}
+
+.rating a {
+    padding: 0;
+    font-size: 14px;
+    margin-right: 3px;
+    text-decoration: none;
+}
+
+.rating i {
+    background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-  /* Set the fixed height of the footer here */
+    /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
 }
