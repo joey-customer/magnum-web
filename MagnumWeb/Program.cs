@@ -31,11 +31,13 @@ namespace MagnumWeb
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
-        {            
+        {
+            string certMode = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_ON");
+
             var builder = WebHost.CreateDefaultBuilder(args)   
                 .UseStartup<Startup>();
-/*
-            if (!env.IsDevelopment())
+
+            if (certMode.Equals("Y"))
             {
                 //.pfx file
                 string certFile = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_FILE");
@@ -43,13 +45,13 @@ namespace MagnumWeb
 
                 builder.ConfigureKestrel((context, options) =>
                 {
-                    options.Listen(IPAddress.Any, 5001, listenOptions =>
+                    options.Listen(IPAddress.Loopback, 5001, listenOptions =>
                     {
                         listenOptions.UseHttps(certFile, password);
                     });
                 }); 
             }
- */
+ 
             return builder;
         }
     }
