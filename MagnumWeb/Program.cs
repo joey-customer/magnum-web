@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 using Magnum.Api.NoSql;
 using Magnum.Api.Factories;
@@ -35,8 +30,27 @@ namespace MagnumWeb
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {            
+            var builder = WebHost.CreateDefaultBuilder(args)   
                 .UseStartup<Startup>();
+/*
+            if (!env.IsDevelopment())
+            {
+                //.pfx file
+                string certFile = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_FILE");
+                string password = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_PASSWORD");
+
+                builder.ConfigureKestrel((context, options) =>
+                {
+                    options.Listen(IPAddress.Any, 5001, listenOptions =>
+                    {
+                        listenOptions.UseHttps(certFile, password);
+                    });
+                }); 
+            }
+ */
+            return builder;
+        }
     }
 }
