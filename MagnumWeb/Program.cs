@@ -33,6 +33,10 @@ namespace MagnumWeb
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             string certMode = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_ON");
+            if (string.IsNullOrEmpty(certMode))
+            {
+                certMode = "Y";
+            }
 
             var builder = WebHost.CreateDefaultBuilder(args)   
                 .UseStartup<Startup>();
@@ -45,7 +49,7 @@ namespace MagnumWeb
 
                 builder.ConfigureKestrel((context, options) =>
                 {
-                    options.Listen(IPAddress.Loopback, 5001, listenOptions =>
+                    options.ListenAnyIP(443, listenOptions =>
                     {
                         listenOptions.UseHttps(certFile, password);
                     });
