@@ -24,7 +24,7 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
             string[] lines = File.ReadAllLines(TemplateFile);
             templateLines = new List<string>(lines);
 
-            htmlConverter.SetWidth(780);
+            htmlConverter.SetWidth(57);
             htmlConverter.SetImageFormat(1);
             htmlConverter.SetImageQuality(200);            
         }

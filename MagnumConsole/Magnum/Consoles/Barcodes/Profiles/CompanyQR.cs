@@ -13,7 +13,7 @@ namespace Magnum.Consoles.Barcodes.Profiles
             CompanyWebSite = "https://www.magnum-pharmacy.com";   
             
             Message1 = "Visit us or verify you product at";         
-            Message2 = "www.magnum-pharmacy.com";            
+            Message2 = "magnum-pharmacy.com";            
         }
     }
 }

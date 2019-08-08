@@ -119,7 +119,7 @@ namespace Magnum.Consoles.Barcodes
                 generator.RenderToFile(bc, fileName);
                 progressFunc(bc, dir);
 
-                Console.WriteLine("SerialNo=[{0}], Pin=[{1}]", bc.SerialNumber, bc.Pin);
+                Console.WriteLine("{0}|{1}|{2}|{3}|{4}", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
                 
                 if ((i % progressPerImage) == 0)
                 {
