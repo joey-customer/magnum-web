@@ -17,13 +17,6 @@ pipeline {
     }
 
     stages {
-        stage('Docker Packaging') {
-            steps {
-                sh "cd Docker; ./make_docker.bash"
-            }         
-        }                  
-
-
         stage('Start Code Analysis') {            
             steps {                
                 sh "${env.SONAR_SCANNER} begin \
@@ -57,6 +50,11 @@ pipeline {
                 sh "${env.SONAR_SCANNER} end /d:sonar.login=${params.SONAR_LOGIN_KEY}"
             }         
         } 
-
+        
+        stage('Docker Packaging') {
+            steps {
+                sh "cd Docker; ./make_docker.bash"
+            }         
+        }                  
     }
 }
