@@ -39,7 +39,7 @@ namespace MagnumWeb
 
             var builder = WebHost.CreateDefaultBuilder(args)   
                 .UseStartup<Startup>();
-
+            
             if (certMode.Equals("Y"))
             {
                 //.pfx file
@@ -47,7 +47,8 @@ namespace MagnumWeb
                 string password = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_PASSWORD");
 
                 builder.ConfigureKestrel((context, options) =>
-                {
+                {   
+                    options.ListenAnyIP(80);
                     options.ListenAnyIP(443, listenOptions =>
                     {
                         listenOptions.UseHttps(certFile, password);

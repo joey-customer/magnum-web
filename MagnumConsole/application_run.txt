@@ -27,7 +27,8 @@ dotnet run BarcodeReg \
 --ip=192.168.1.99 \
 --key=${MAGNUM_FIREBASE_KEY}
 
-
+#======
+https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md
 #======
 IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at:
