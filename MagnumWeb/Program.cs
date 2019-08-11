@@ -20,7 +20,7 @@ namespace MagnumWeb
             ctx = new FirebaseNoSqlContext();
             ctx.Authenticate(host, key, user, password);
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
         }
 
         public static void Main(string[] args)

@@ -85,7 +85,7 @@ namespace Magnum.Consoles.Barcodes
                 ctx = GetNoSqlContext("firebase", host, key, user, password);
             }
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());

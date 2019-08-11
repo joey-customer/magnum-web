@@ -39,9 +39,9 @@ namespace Magnum.Api.Factories
         {
             INoSqlContext fbContext = new MockedNoSqlContext();
             fbContext.Authenticate(url, key, "", "");
-            FactoryBusinessOperation.SetContext(fbContext);
+            FactoryBusinessOperation.SetNoSqlContext(fbContext);
 
-            INoSqlContext ctx = FactoryBusinessOperation.GetContext();
+            INoSqlContext ctx = FactoryBusinessOperation.GetNoSqlContext();
             Assert.IsNotNull(ctx, "Object must not be null!!!");
         } 
 
@@ -50,10 +50,10 @@ namespace Magnum.Api.Factories
         {
             INoSqlContext fbContext = new MockedNoSqlContext();
             fbContext.Authenticate(url, key, "", "");
-            FactoryBusinessOperation.SetContext(fbContext);
+            FactoryBusinessOperation.SetNoSqlContext(fbContext);
 
             BusinessOperationBase opt = (BusinessOperationBase) FactoryBusinessOperation.CreateBusinessOperationObject(apiName);
-            Assert.AreEqual(fbContext, opt.GetContext(), "Context must be the same object!!!");
+            Assert.AreEqual(fbContext, opt.GetNoSqlContext(), "Context must be the same object!!!");
         }              
     }    
 }

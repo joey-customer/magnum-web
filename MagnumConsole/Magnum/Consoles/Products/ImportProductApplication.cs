@@ -6,6 +6,7 @@ using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
 using Magnum.Api.Businesses.Products;
 using Magnum.Api.NoSql;
+using Magnum.Api.Storages;
 
 using NDesk.Options;
 
@@ -28,8 +29,10 @@ namespace Magnum.Consoles.Products
             string basedir = args["basedir"].ToString();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
+            IStorageContext storageCtx = GetStorageContextWithAuthen("firebase");
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetStorageContext(storageCtx);
             SaveProduct opr = (SaveProduct) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
 
             MProduct param = new MProduct();

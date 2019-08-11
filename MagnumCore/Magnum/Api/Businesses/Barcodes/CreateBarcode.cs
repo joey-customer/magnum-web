@@ -27,7 +27,7 @@ namespace Magnum.Api.Businesses.Barcodes
 
             string path = string.Format("asset_barcodes/{0}/{1}-{2}", bc.Path, bc.SerialNumber, bc.Pin);
             
-            var ctx = GetContext();
+            var ctx = GetNoSqlContext();
             ctx.PostData(path, bc);
 
             return bc;

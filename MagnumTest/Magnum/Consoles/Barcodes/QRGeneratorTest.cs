@@ -63,7 +63,9 @@ namespace Magnum.Consoles.Barcodes
             MemoryStream ms = new MemoryStream();
 
             string tmpDir = Path.GetTempPath();
-            string tmpPath = string.Format("{0}/{1}", tmpDir, "dummy.bmp");
+            string[] paths = {tmpDir, "dummy.bmp"};
+            string tmpPath = Path.Combine(paths);
+
             using (Bitmap bitmap = new Bitmap(100, 100))
             {
                 bitmap.Save(tmpPath);

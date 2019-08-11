@@ -17,7 +17,7 @@ namespace Magnum.Api.Businesses.Products
             GetProductInfo opr = (GetProductInfo) FactoryBusinessOperation.CreateBusinessOperationObject("GetProductInfo");
             MProduct prd = opr.Apply(dat);
 
-            var ctx = GetContext();
+            var ctx = GetNoSqlContext();
             string path = string.Format("products/{0}/{1}", dat.Code, dat.Language);
 
             if (prd == null)

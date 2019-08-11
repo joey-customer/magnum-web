@@ -23,7 +23,7 @@ namespace Magnum.Api.Businesses.Products
         public void GetProductWithEmptyTest(string key, string code, string language)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("GetProductInfo");
             
@@ -50,7 +50,7 @@ namespace Magnum.Api.Businesses.Products
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             ctx.SetReturnObjectByKey(prdReturned);
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("GetProductInfo");
             
             MProduct pd = new MProduct();
@@ -72,7 +72,7 @@ namespace Magnum.Api.Businesses.Products
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             ctx.SetReturnObjectByKey(prdReturned);
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("GetProductInfo");
             
             MProduct pd = new MProduct();

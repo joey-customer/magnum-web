@@ -13,7 +13,7 @@ namespace Magnum.Api.Businesses.Products
                 throw(new ArgumentException("Language, Code and Key must not be null!!!"));
             }
 
-            var ctx = GetContext();
+            var ctx = GetNoSqlContext();
             string prdPath = string.Format("products/{0}/{1}", dat.Code, dat.Language);
             MProduct prd = ctx.GetObjectByKey<MProduct>(prdPath);
 

@@ -23,7 +23,7 @@ namespace Magnum.Api.Businesses.Products
         public void DeleteProductWithEmptyTest(string key, string code, string language)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             var opt = (IBusinessOperationManipulate<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("DeleteProduct");
             
@@ -48,7 +48,7 @@ namespace Magnum.Api.Businesses.Products
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             var opt = (IBusinessOperationManipulate<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("DeleteProduct");
             
             MProduct pd = new MProduct();
