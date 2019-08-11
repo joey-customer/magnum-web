@@ -3,7 +3,6 @@ using System.IO;
 using System.Threading.Tasks;
 
 using Firebase.Storage;
-using Firebase.Database.Query;
 using Firebase.Auth;
 
 namespace Magnum.Api.Storages

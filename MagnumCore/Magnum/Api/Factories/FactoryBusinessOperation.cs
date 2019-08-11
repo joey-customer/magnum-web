@@ -49,11 +49,6 @@ namespace Magnum.Api.Factories
             storageContext = ctx;
         }        
 
-        public static IStorageContext GetStorageContext()
-        {
-            return storageContext;
-        } 
-
         public static IBusinessOperation CreateBusinessOperationObject(string name)
         {        
             string className = (string)classMaps[name];
