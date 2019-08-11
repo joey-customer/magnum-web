@@ -35,25 +35,21 @@
                         </div>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item dropdown active submenu">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Home
-                                    </a>
-                                </li>
+                                <li class="nav-item">@Html.ActionLink( "Home", "Index", "Home", null, new { @class = "nav-link" } )</li>
                                 <li class="nav-item dropdown submenu">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Products <i class="fa fa-angle-down" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="#l">Injections</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#l">Orals</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#l">Peptides & GH</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#l">Sexual Performance</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#l">Extreme Series</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#l">Ergogenics</a></li>
+                                        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="Products">Products</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Orals</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Peptides & GH</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Sexual Performance</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Extreme Series</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Ergogenics</a></li>
                                     </ul>
                                 <li class="nav-item"><a class="nav-link" href="#verify">Verify Product</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                                <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
                                 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                             </ul>
                         </div>
@@ -66,9 +62,9 @@
 
     @RenderBody()
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-center">
         <div class="container">
-            &copy; 2019 - MagnumWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2019 - Magnum
         </div>
     </footer>
 
