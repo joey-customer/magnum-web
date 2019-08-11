@@ -1,6 +1,6 @@
 using System;
 
-namespace MagnumWeb.Models
+namespace Magnum.Web.Models
 {
     public class ErrorViewModel
     {
