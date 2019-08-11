@@ -39,12 +39,15 @@ namespace Magnum.Consoles.Products
             param.Code = "PJAMENAJA0002";
             param.Name = "Pjame test product naja";
             param.Language = "EN";
+            param.Image1LocalPath = @"D:\temp\Oxandro10_KH0009_20190807180124\000000\8801137657-6868401728.png";
 
             MProductComposition comp = new MProductComposition() 
             {
                 Code = "CompCode001",
                 Name = "Name001"
             };
+//var url = storageCtx.UploadFile("products/xxxx/test.jpg", @"D:\temp\Oxandro10_KH0009_20190807180124\000000\1496338935-9755010661.png");
+//Console.WriteLine(url);
 
             param.Compositions.Add(comp);
 
@@ -59,9 +62,6 @@ namespace Magnum.Consoles.Products
                 {
                     Console.WriteLine("Done update existing product [{0}] [{1}]", param.Code, param.Name);
                 }
-
-                DeleteProduct delOpr = (DeleteProduct) FactoryBusinessOperation.CreateBusinessOperationObject("DeleteProduct");
-                delOpr.Apply(prd);
             }
             catch (Exception e)
             {

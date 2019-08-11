@@ -8,7 +8,7 @@ namespace Magnum.Api.Businesses.Products
 	{
         public MProduct Apply(MProduct dat)
         {
-            if (!dat.IsKeyIdentifiable() || !dat.IsKeyExist())
+            if (!dat.IsKeyIdentifiable())
             {
                 throw(new ArgumentException("Language, Code and Key must not be null!!!"));
             }

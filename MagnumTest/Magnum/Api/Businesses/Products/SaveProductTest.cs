@@ -14,7 +14,6 @@ namespace Magnum.Api.Businesses.Products
         {
         }
 
-
         [TestCase("", "", "")]
         [TestCase("", "CODE0001", "")]
         [TestCase("KEY0001", "", "")]
@@ -24,7 +23,9 @@ namespace Magnum.Api.Businesses.Products
         public void SaveProductWithEmptyTest(string key, string code, string language)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
+            MockedStorageContext storageCtx = new MockedStorageContext();
             FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetStorageContext(storageCtx);
 
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
             
@@ -51,10 +52,12 @@ namespace Magnum.Api.Businesses.Products
             MProduct prdReturned = new MProduct();
             prdReturned.Code = code;
 
+            MockedStorageContext storageCtx = new MockedStorageContext();
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             ctx.SetReturnObjectByKey(prdReturned);
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetStorageContext(storageCtx);
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
             
             MProduct pd = new MProduct();
@@ -71,10 +74,13 @@ namespace Magnum.Api.Businesses.Products
         {
             MProduct prdReturned = null;
 
+            MockedStorageContext storageCtx = new MockedStorageContext();
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            ctx.SetReturnObjectByKey(prdReturned);
+            ctx.SetReturnObjectByKey(prdReturned);            
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetStorageContext(storageCtx);
+
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
             
             MProduct pd = new MProduct();

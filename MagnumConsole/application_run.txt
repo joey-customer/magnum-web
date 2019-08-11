@@ -30,6 +30,7 @@ dotnet run BarcodeReg \
 dotnet run ImportProduct \
 --if='NandroPlex300.xml' \
 --b="." \
+--bucket=compute-engine-vm-test.appspot.com \
 --h=https://compute-engine-vm-test.firebaseio.com/ \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \

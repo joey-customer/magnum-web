@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-using Firebase.Database;
+using Firebase.Storage;
 using Firebase.Database.Query;
 using Firebase.Auth;
 
@@ -10,7 +10,7 @@ namespace Magnum.Api.Storages
 {    
 	public class FirebaseStorageContext : IStorageContext
 	{
-        private FirebaseClient fbClient = null;
+        private FirebaseAuthLink token = null;
         private string authKey = "";
 
         private string bucketUrl = "";
@@ -22,21 +22,24 @@ namespace Magnum.Api.Storages
             FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig(authKey));
             string firebaseUsername = bucketUser;
             string firebasePassword = bucketPassword;
-            var token = await authProvider.SignInWithEmailAndPasswordAsync(firebaseUsername, firebasePassword);
-
-            fbClient = new FirebaseClient(
-                bucketUrl,
-                new FirebaseOptions
-                {
-                    AuthTokenAsyncFactory = () => Task.FromResult(token.FirebaseToken)
-                });            
+            token = await authProvider.SignInWithEmailAndPasswordAsync(firebaseUsername, firebasePassword);    
         }
 
-        private async Task PostFirebaseData(string path, object data)
+        private async Task<string> UploadStorageData(string storagePath, Stream fileStream)
         {
-            await fbClient
-                .Child(path)
-                .PostAsync(data, true);
+            var opt = new FirebaseStorageOptions
+            {
+                AuthTokenAsyncFactory = () => Task.FromResult(token.FirebaseToken),
+                ThrowOnCancel = true
+            };
+
+            var storage = new FirebaseStorage(bucketUrl, opt);
+
+            var downloadUrl = await storage
+                .Child(storagePath)
+                .PutAsync(fileStream);  
+
+            return downloadUrl;          
         }
 
         public void Authenticate(string url, string key, string user, string passwd)
@@ -49,13 +52,19 @@ namespace Magnum.Api.Storages
             AuthenToFirebase().Wait();
         }
 
-        public void UploadFile(string bucketPath, string filePath)
+        public string UploadFile(string bucketPath, string filePath)
         {
+            var stream = File.Open(filePath, FileMode.Open);
+            var url = UploadFile(bucketPath, stream);
+
+            return url;
         }
 
-        public void UploadFile(string bucketPath, Stream fileStream)
+        public string UploadFile(string bucketPath, Stream fileStream)
         {
-
+            var t = UploadStorageData(bucketPath, fileStream);
+            var url = t.Result;
+            return url;
         }
 
         public void DownloadFile(string bucketPath, string fileLocalPath)
