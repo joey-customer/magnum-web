@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
+using Magnum.Api.Storages;
 using Magnum.Api.NoSql;
 using Magnum.Api.Factories;
 
@@ -15,11 +16,16 @@ namespace MagnumWeb
             string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
             string user = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
             string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
+            string bucket = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_BUCKET");
 
             INoSqlContext ctx = null;
             ctx = new FirebaseNoSqlContext();
             ctx.Authenticate(host, key, user, password);
 
+            var storageCtx = new FirebaseStorageContext();
+            storageCtx.Authenticate(bucket, key, user, password);
+
+            FactoryBusinessOperation.SetStorageContext(storageCtx);
             FactoryBusinessOperation.SetNoSqlContext(ctx);
         }
 
