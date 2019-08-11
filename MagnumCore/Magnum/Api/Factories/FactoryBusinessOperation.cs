@@ -26,6 +26,10 @@ namespace Magnum.Api.Factories
         {
             addClassConfig("CreateBarcode", "Magnum.Api.Businesses.Barcodes.CreateBarcode");
             addClassConfig("CreateRegistration", "Magnum.Api.Businesses.Registrations.CreateRegistration");                        
+            
+            addClassConfig("SaveProduct", "Magnum.Api.Businesses.Products.SaveProduct");
+            addClassConfig("DeleteProduct", "Magnum.Api.Businesses.Products.DeleteProduct");
+            addClassConfig("GetProductInfo", "Magnum.Api.Businesses.Products.GetProductInfo");
         }
 
         public static void SetContext(INoSqlContext ctx)

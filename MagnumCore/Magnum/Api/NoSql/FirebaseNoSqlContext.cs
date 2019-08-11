@@ -47,6 +47,14 @@ namespace Magnum.Api.NoSql
                 .PutAsync(data);
         }
 
+        private async Task DeleteFirebaseData(string path, string key)
+        {
+            await fbClient
+                .Child(path)
+                .Child(key)
+                .DeleteAsync();
+        }
+
         private async Task<T> GetFirebaseData<T>(string path)
         {
             var items = await fbClient
@@ -86,6 +94,13 @@ namespace Magnum.Api.NoSql
             PutFirebaseData(path, key, data).Wait();
             return data;
         } 
+
+        public int DeleteData(string path, BaseModel data)
+        {
+            DeleteFirebaseData(path, data.Key).Wait();
+            return 1;
+        } 
+
 
         public T GetObjectByKey<T>(string path) where T : BaseModel
         {

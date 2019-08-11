@@ -99,6 +99,27 @@ namespace Magnum.Api.NoSql
         }  
 
         [TestCase]
+        public void NoDataToDeleteTest()
+        {
+            //Just to cover the test coverage
+
+            INoSqlContext ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+
+            try
+            {
+                MProduct prd = new MProduct();
+                prd.Key = "faked_key";
+                ctx.DeleteData("unit_testing", prd);
+            }
+            catch (Exception e)
+            {
+                //Do nothing
+                Assert.Fail(e.Message);                
+            }
+        }          
+
+        [TestCase]
         public void GetObjectByKeyTest()
         {
             //Just to cover the test coverage

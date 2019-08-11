@@ -13,6 +13,8 @@ namespace Magnum.Api.Models
         {
             models.Add(new MBarcode());
             models.Add(new MRegistration());
+            models.Add(new MProduct());
+            models.Add(new MProductComposition());
         }
 
         [TestCase]

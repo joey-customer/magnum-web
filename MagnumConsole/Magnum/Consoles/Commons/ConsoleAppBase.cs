@@ -51,6 +51,21 @@ namespace Magnum.Consoles.Commons
             return context;
         }
 
+        public INoSqlContext GetNoSqlContextWithAuthen(string provider)
+        {
+            INoSqlContext ctx = context;
+            if (context == null)
+            {
+                string host = (string) arguments["host"];
+                string key = (string) arguments["key"];
+                string user = (string) arguments["user"];
+                string password = (string) arguments["password"];
+                ctx = GetNoSqlContext(provider, host, key, user, password);
+            }
+
+            return ctx;
+        }
+
         public int Run()
         {
             int code = Execute();
