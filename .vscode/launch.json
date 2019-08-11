@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/MagnumWeb/bin/Debug/netcoreapp2.2/MagnumWeb.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/MagnumWeb/Magnum/Web",
+            "cwd": "${workspaceFolder}/MagnumWeb",
             "stopAtEntry": false,
             "serverReadyAction": {
                "action": "openExternally",
@@ -21,7 +21,7 @@
                "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-               "/Views": "${workspaceFolder}/MagnumWeb/Web/Views"
+               "/Views": "${workspaceFolder}/MagnumWeb/Views"
            }        
         },
 
