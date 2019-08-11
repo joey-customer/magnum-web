@@ -1,4 +1,5 @@
 #To generate barcode
+#export ASPNETCORE_URLS='https://*:443'
 #https://localhost:5001/verification/Oxandro10_KH0009_20190803223419/000000/1271951675/6856314405
 
 dotnet run BarcodeGen --h=https://compute-engine-vm-test.firebaseio.com/ \
@@ -25,3 +26,16 @@ dotnet run BarcodeReg \
 --path=Oxandro10_KH0009_20190801230949/000000 \
 --ip=192.168.1.99 \
 --key=${MAGNUM_FIREBASE_KEY}
+
+dotnet run ImportProduct \
+--if='NandroPlex300.xml' \
+--b="." \
+--bucket=compute-engine-vm-test.appspot.com \
+--h=https://compute-engine-vm-test.firebaseio.com/ \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
+#======
+https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md
+#======

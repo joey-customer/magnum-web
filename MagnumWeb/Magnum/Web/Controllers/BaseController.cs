@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MagnumWeb.Controllers
+namespace Magnum.Web.Controllers
 {
     public class BaseController : Controller
     {

@@ -144,6 +144,7 @@ sub parse_pom
     open(my $oh, '>', $pom) or die "Could not open file '$pom' $!";
 
     my $found_version = false;
+    my $found_docker_version = false;
 
     my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
     my $time_stamp = sprintf("%02d/%02d/%04d %02d:%02d:%02d", $mon, $mday, $year+1900, $hour, $min, $sec);
@@ -163,6 +164,16 @@ sub parse_pom
             print("Replaced [$old_version] with [$version]\n");
             $found_version = true;
         }
+        elsif (($line =~ /^\s*DOCKER_VERSION\s*=\s*'(.+)'\s*$/) && (!$found_docker_version))
+        { 
+            #Replace only first occurence            
+
+            my $old_version = $1;
+            $new_line =~ s/$old_version/$version/ig;
+
+            print("Replaced [$old_version] with [$version]\n");
+            $found_docker_version = true;
+        }        
         elsif ($line =~ /^\s*PUBLISH_FLAG\s*=\s*'(.+)'\s*$/)
         { 
             my $keyword = $1;

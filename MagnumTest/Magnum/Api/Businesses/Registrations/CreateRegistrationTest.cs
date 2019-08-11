@@ -17,7 +17,7 @@ namespace Magnum.Api.Businesses.Registrations
         public void CreateRegistrationWithCodeNotEmptyTest(string ip, string serial, string pin, string path)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             var opt = (IBusinessOperationManipulate<MRegistration>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
             
@@ -46,7 +46,7 @@ namespace Magnum.Api.Businesses.Registrations
         public void CreateRegistrationWithEmptyTest(string ip, string serial, string pin, string path)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             var opt = (IBusinessOperationManipulate<MRegistration>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
             
@@ -67,13 +67,13 @@ namespace Magnum.Api.Businesses.Registrations
             }
         } 
 
-        [TestCase(false, null, "Barcode not found")]
-        [TestCase(true, true, "Barcode was already registered")]
+        [TestCase(false, null, "Serial number and PIN not found")]
+        [TestCase(true, true, "Serial number and PIN has already been registered")]
         [TestCase(true, false, "")]
         public void CreateRegistrationWithCodeNotFoundTest(bool barcodeFound, bool isActivated, string keyword)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             if (barcodeFound)
             {

@@ -52,6 +52,7 @@ namespace MagnumWeb
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseHsts();
 
             app.UseMvc(routes =>
             {

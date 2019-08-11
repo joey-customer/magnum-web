@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
+using Magnum.Api.Storages;
 using Magnum.Api.NoSql;
 using Magnum.Api.Factories;
 
@@ -21,12 +16,17 @@ namespace MagnumWeb
             string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
             string user = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
             string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
+            string bucket = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_BUCKET");
 
             INoSqlContext ctx = null;
             ctx = new FirebaseNoSqlContext();
             ctx.Authenticate(host, key, user, password);
 
-            FactoryBusinessOperation.SetContext(ctx);
+            var storageCtx = new FirebaseStorageContext();
+            storageCtx.Authenticate(bucket, key, user, password);
+
+            FactoryBusinessOperation.SetStorageContext(storageCtx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
         }
 
         public static void Main(string[] args)
@@ -35,8 +35,34 @@ namespace MagnumWeb
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            string certMode = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_ON");
+            if (string.IsNullOrEmpty(certMode))
+            {
+                certMode = "Y";
+            }
+
+            var builder = WebHost.CreateDefaultBuilder(args)   
                 .UseStartup<Startup>();
+            
+            if (certMode.Equals("Y"))
+            {
+                //.pfx file
+                string certFile = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_FILE");
+                string password = Environment.GetEnvironmentVariable("MAGNUM_CERTIFICATE_PASSWORD");
+
+                builder.ConfigureKestrel((context, options) =>
+                {   
+                    options.ListenAnyIP(80);
+                    options.ListenAnyIP(443, listenOptions =>
+                    {
+                        listenOptions.UseHttps(certFile, password);
+                    });
+                }); 
+            }
+ 
+            return builder;
+        }
     }
 }

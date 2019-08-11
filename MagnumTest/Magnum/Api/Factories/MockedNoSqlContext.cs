@@ -28,6 +28,11 @@ namespace Magnum.Api.Factories
             return null;
         }
 
+        public int DeleteData(string path, BaseModel data)
+        {
+            return 1;
+        }
+
         public T GetObjectByKey<T>(string path) where T : BaseModel
         {
             return (T) m;

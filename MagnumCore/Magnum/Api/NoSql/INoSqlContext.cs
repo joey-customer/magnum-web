@@ -10,5 +10,6 @@ namespace Magnum.Api.NoSql
         object PostData(string path, object data);
         object PutData(string path, string key, object data);
         T GetObjectByKey<T>(string path) where T : BaseModel;
+        int DeleteData(string path, BaseModel data);
     }    
 }
