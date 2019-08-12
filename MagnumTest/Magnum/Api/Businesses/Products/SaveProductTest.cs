@@ -14,13 +14,8 @@ namespace Magnum.Api.Businesses.Products
         {
         }
 
-        [TestCase("", "", "")]
-        [TestCase("", "CODE0001", "")]
-        [TestCase("KEY0001", "", "")]
-        [TestCase("KEY0001", "CODE0001", "")]
-        [TestCase("KEY0001", "", "EN")]
-        [TestCase("", "", "EN")]
-        public void SaveProductWithEmptyTest(string key, string code, string language)
+        [TestCase("")]
+        public void SaveProductWithEmptyTest(string code)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             MockedStorageContext storageCtx = new MockedStorageContext();
@@ -30,8 +25,6 @@ namespace Magnum.Api.Businesses.Products
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
             
             MProduct pd = new MProduct();
-            pd.Key = key;
-            pd.Language = language;
             pd.Code = code;
             
             try
@@ -61,7 +54,6 @@ namespace Magnum.Api.Businesses.Products
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
             
             MProduct pd = new MProduct();
-            pd.Language = "EN";
             pd.Code = "MockedCode";
             pd.Key = "FAKED_NOTFOUNDKEY";
 
@@ -84,7 +76,6 @@ namespace Magnum.Api.Businesses.Products
             var opt = (IBusinessOperationGetInfo<MProduct>) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
             
             MProduct pd = new MProduct();
-            pd.Language = "EN";
             pd.Code = "MockedCode";
             pd.Key = "FAKED_NOTFOUNDKEY";
 

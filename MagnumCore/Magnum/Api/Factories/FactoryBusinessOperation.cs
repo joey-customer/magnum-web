@@ -32,6 +32,7 @@ namespace Magnum.Api.Factories
             addClassConfig("SaveProduct", "Magnum.Api.Businesses.Products.SaveProduct");
             addClassConfig("DeleteProduct", "Magnum.Api.Businesses.Products.DeleteProduct");
             addClassConfig("GetProductInfo", "Magnum.Api.Businesses.Products.GetProductInfo");
+            addClassConfig("GetProductList", "Magnum.Api.Businesses.Products.GetProductList");   
         }
 
         public static void SetNoSqlContext(INoSqlContext ctx)

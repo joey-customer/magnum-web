@@ -10,12 +10,11 @@ namespace Magnum.Api.Businesses.Products
         {
             if (!dat.IsKeyIdentifiable())
             {
-                throw(new ArgumentException("Language, Code and Key must not be null!!!"));
+                throw(new ArgumentException("Code and Key must not be null!!!"));
             }
 
             var ctx = GetNoSqlContext();
-            string prdPath = string.Format("products/{0}/{1}", dat.Code, dat.Language);
-            MProduct prd = ctx.GetObjectByKey<MProduct>(prdPath);
+            MProduct prd = ctx.GetSingleObject<MProduct>("products", dat.Code);
 
             return prd;
         }

@@ -8,13 +8,13 @@ namespace Magnum.Api.Businesses.Products
 	{
         public int Apply(MProduct dat)
         {
-            if (!dat.IsKeyIdentifiable() || !dat.IsKeyExist())
+            if (!dat.IsKeyIdentifiable())
             {
-                throw(new ArgumentException("Language, Code, Key must not be null!!!"));
+                throw(new ArgumentException("Code must not be null!!!"));
             }
 
             var ctx = GetNoSqlContext();
-            string prdPath = string.Format("products/{0}/{1}", dat.Code, dat.Language);
+            string prdPath = string.Format("products/{0}", dat.Code);
             int rowAffected = ctx.DeleteData(prdPath, dat);
 
             return rowAffected;
