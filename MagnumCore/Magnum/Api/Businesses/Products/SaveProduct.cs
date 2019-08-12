@@ -25,7 +25,7 @@ namespace Magnum.Api.Businesses.Products
         {
             if (!dat.IsKeyIdentifiable())
             {
-                throw(new ArgumentException("Language and Code must not be null!!!"));
+                throw(new ArgumentException("Code must not be null!!!"));
             }
 
             GetProductInfo opr = (GetProductInfo)FactoryBusinessOperation.CreateBusinessOperationObject("GetProductInfo");
@@ -36,16 +36,20 @@ namespace Magnum.Api.Businesses.Products
             PopulateImageProperty(dat, "Image1");
             dat.LastUpdateDate = DateTime.Now;
 
-            string path = string.Format("products/{0}/{1}", dat.Code, dat.Language);  
+             
             if (prd == null)
             {
                 //Does not exist then create new one
-                ctx.PostData(path, dat);
+                string path = string.Format("products/{0}", dat.Code);                 
+                string newkey = ctx.PostData(path, dat);
+
+                //Put again to eliminate the GUI_ID key
+                ctx.PutData(path, "", dat);  
             }
             else
             {
                 dat.Key = prd.Key;
-                ctx.PutData(path, dat.Key, dat);  
+                ctx.PutData("products", dat.Code, dat);  
             }        
 
             //Return null indicates create new one, not null indicates update the existing one            

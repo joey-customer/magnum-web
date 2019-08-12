@@ -6,7 +6,7 @@ using Magnum.Api.Storages;
 using Magnum.Api.NoSql;
 using Magnum.Api.Factories;
 
-namespace MagnumWeb
+namespace Magnum.Web
 {
     public static class Program
     {
@@ -45,7 +45,7 @@ namespace MagnumWeb
 
             var builder = WebHost.CreateDefaultBuilder(args)   
                 .UseStartup<Startup>();
-            
+
             if (certMode.Equals("Y"))
             {
                 //.pfx file

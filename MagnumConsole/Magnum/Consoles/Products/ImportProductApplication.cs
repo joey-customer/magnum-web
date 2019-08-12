@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
@@ -35,33 +36,42 @@ namespace Magnum.Consoles.Products
             FactoryBusinessOperation.SetStorageContext(storageCtx);
             SaveProduct opr = (SaveProduct) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");
 
+GetProductList listOpr = (GetProductList) FactoryBusinessOperation.CreateBusinessOperationObject("GetProductList");
+
             MProduct param = new MProduct();
-            param.Code = "PJAMENAJA0002";
-            param.Name = "Pjame test product naja";
-            param.Language = "EN";
+            param.Code = "PJAMENAJA0004";
             param.Image1LocalPath = @"D:\temp\Oxandro10_KH0009_20190807180124\000000\8801137657-6868401728.png";
 
             MProductComposition comp = new MProductComposition() 
             {
-                Code = "CompCode001",
-                Name = "Name001"
+                Code = "CompCode002",
             };
-//var url = storageCtx.UploadFile("products/xxxx/test.jpg", @"D:\temp\Oxandro10_KH0009_20190807180124\000000\1496338935-9755010661.png");
-//Console.WriteLine(url);
+
+            MGenericDescription desc = new MGenericDescription() 
+            {
+                Language = "TH",
+                Name = "Name_TH",
+            };            
 
             param.Compositions.Add(comp);
+            param.Descriptions.Add(desc.Language, desc);
 
             try
             {
+IEnumerable<MProduct> products = listOpr.Apply(param, null);
+foreach (MProduct prod in products)
+{
+    Console.WriteLine("DEBUG : [{0}] [{1}]", prod.Code, prod.Descriptions.Count);
+}
                 MProduct prd = opr.Apply(param);
                 if (prd == null)
                 {
-                    Console.WriteLine("Done add new product [{0}] [{1}]", param.Code, param.Name);
+                    Console.WriteLine("Done add new product [{0}]", param.Code);
                 }
                 else
                 {
-                    Console.WriteLine("Done update existing product [{0}] [{1}]", param.Code, param.Name);
-                }
+                    Console.WriteLine("Done update existing product [{0}]", param.Code);
+                }   
             }
             catch (Exception e)
             {

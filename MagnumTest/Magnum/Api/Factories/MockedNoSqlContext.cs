@@ -1,5 +1,5 @@
 using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using Magnum.Api.NoSql;
 using Magnum.Api.Models;
 
@@ -18,9 +18,9 @@ namespace Magnum.Api.Factories
             m = obj;
         }
 
-        public object PostData(string path, object data)
+        public string PostData(string path, object data)
         {
-            return null;
+            return "";
         }
 
         public object PutData(string path, string key, object data)
@@ -37,5 +37,15 @@ namespace Magnum.Api.Factories
         {
             return (T) m;
         }
+
+        public T GetSingleObject<T>(string path, string key) where T : BaseModel
+        {
+            return (T) m;
+        }
+
+        public IEnumerable<T> GetObjectList<T>(string path) where T : BaseModel
+        {
+            return null;
+        }        
     }
 }

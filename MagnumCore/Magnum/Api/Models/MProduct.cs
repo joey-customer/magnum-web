@@ -6,12 +6,8 @@ namespace Magnum.Api.Models
 	public class MProduct : BaseModel
 	{
         public string Code {get; set;}
-        public string Name {get; set;}
-        public string ShortDescription {get; set;}
-        public string LongDescription {get; set;}
         public int Rating {get; set;}
         public string ProductType {get; set;}
-        public string Language {get; set;}
 
         public string Image1Url {get; set;}
         public string Image1LocalPath {get; set;}
@@ -20,22 +16,18 @@ namespace Magnum.Api.Models
         public DateTime LastUpdateDate {get; set;}
 
         public List<MProductComposition> Compositions {get; set;}
+        public Dictionary<string, MGenericDescription> Descriptions {get; set;}
 
         public MProduct()
         {
             Compositions = new List<MProductComposition>();
+            Descriptions = new Dictionary<string, MGenericDescription>();
         }
 
         public bool IsKeyIdentifiable()
         {
-            bool isError = string.IsNullOrEmpty(Code) || string.IsNullOrEmpty(Language);
+            bool isError = string.IsNullOrEmpty(Code);
             return !isError;
-        }
-
-        public bool IsKeyExist()
-        {
-            bool isError = string.IsNullOrEmpty(Key);
-            return !isError;
-        }        
+        }   
     }
 }
