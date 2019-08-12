@@ -165,6 +165,9 @@ body {
         left: -23px;
         opacity: 0;
         border-top: 2px solid rgb(213, 0, 0);
+        -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -571,67 +574,133 @@ body {
             font-weight: normal;
         }
 
-        .our-product.newest .single-product .product-info .name span {
-            font-size: 14px;
-        }
+.our-product.newest .single-product .product-info .name span {
+    font-size: 14px;
+}
 
-        .our-product .single-product .button-group li {
-            float: left;
-            width: 50%;
-            height: 60px;
-        }
+.our-product .single-product .button-group li {
+    float: left;
+    width: 50%;
+    height: 60px;
+}
 
-        .our-product .single-product .product-price {
-            display: block;
-            font-size: 18px;
-            font-weight: 700;
-            color: #333;
-            line-height: 60px;
-        }
+.our-product .single-product .product-price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    line-height: 60px;
+}
 
-        .our-product.newest .single-product .product-price {
-            font-size: 14px;
-        }
+.our-product.newest .single-product .product-price {
+    font-size: 14px;
+}
 
-    .rating {
-        margin-bottom: 4px;
-    }
+.rating {
+    margin-bottom: 4px;
+}
 
-        .rating a {
-            padding: 0;
-            font-size: 14px;
-            margin-right: 3px;
-            text-decoration: none;
-        }
+.rating a {
+    padding: 0;
+    font-size: 14px;
+    margin-right: 3px;
+    text-decoration: none;
+}
 
-        .rating i {
-            background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.rating i {
+    background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    #verify {
-        position: relative;
-    }
+#verify {
+    position: relative;
+}
 
-        #verify .bg-overlay {
-            position: absolute;
-            width: 100%;
-            height: 50%;
-            background: #333;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
+#verify .bg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #333;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
 
-    .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background: #333;
-        white-space: nowrap;
-        /* Set the fixed height of the footer here */
-        height: 60px;
-        line-height: 60px; /* Vertically center the text there */
-        color: #6c757d;
-    }
+.etu-form {
+    padding: 100px;
+}
+
+.etu-form .form-area {
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+}
+
+.etu-form .form-area h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2d2d43;
+    text-align: center;
+    margin-bottom: 23px;
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+
+.etu-form .form-area form .single-input-box {
+    margin-bottom: 25px;
+}
+
+.etu-form .form-area form .single-input-box label {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #2d2d43;
+    display: block;
+    margin-bottom: 13px;
+    font-weight: 500;
+}
+
+.etu-form .form-area form .single-input-box input,
+.etu-form .form-area form .single-input-box select,
+.etu-form .form-area form .single-input-box textarea {
+    text-transform: capitalize;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.etu-form .form-area form .single-input-box textarea {
+    height: 274px;
+    padding: 10px 10px;
+}
+
+.etu-form .form-area form button {
+    background-image: -webkit-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#d50000,#611b32,#082d2a 119%);
+    color: #fff;
+    border-radius: 4px;
+    height: 50px;
+    width: 20%;
+    outline: none;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    color: #6c757d;
+}
