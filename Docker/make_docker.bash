@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Clear all images
+docker rmi $(docker images -a -q)
+
 PACAKGE=pjamenaja/magnum-web:${DOCKER_VERSION}
 
 docker build -f ./Dockerfile -t ${PACAKGE} ..
