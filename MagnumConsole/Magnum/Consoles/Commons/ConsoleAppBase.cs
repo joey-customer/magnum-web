@@ -11,7 +11,7 @@ namespace Magnum.Consoles.Commons
 	{
         private readonly Hashtable arguments = new Hashtable();
         private INoSqlContext context = null;
-        private IStorageContext storageContext = null;
+        private readonly IStorageContext storageContext = null;
         
         protected abstract int Execute();
 

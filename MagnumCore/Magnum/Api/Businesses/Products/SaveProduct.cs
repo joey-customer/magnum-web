@@ -8,9 +8,9 @@ namespace Magnum.Api.Businesses.Products
 {
 	public class SaveProduct : BusinessOperationBase, IBusinessOperationGetInfo<MProduct>
 	{
-        private void PopulateImageProperty(MProduct dat, string fieldName)
+        private void PopulateImageProperty(MProduct dat)
         {
-            //In the future if we have more than 1 image field then we should change this function 
+            //In the future if we have more than 1 image field then we should pass field name to this function 
             var storageCtx = GetStorageContext();
 
             string image1Ext = Path.GetExtension(dat.Image1LocalPath);
@@ -33,7 +33,7 @@ namespace Magnum.Api.Businesses.Products
 
             var ctx = GetNoSqlContext();            
 
-            PopulateImageProperty(dat, "Image1");
+            PopulateImageProperty(dat);
             dat.LastUpdateDate = DateTime.Now;
 
              
@@ -41,8 +41,6 @@ namespace Magnum.Api.Businesses.Products
             {
                 //Does not exist then create new one
                 string path = string.Format("products/{0}", dat.Code);                 
-                string newkey = ctx.PostData(path, dat);
-
                 //Put again to eliminate the GUI_ID key
                 ctx.PutData(path, "", dat);  
             }

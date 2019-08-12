@@ -13,8 +13,7 @@ namespace Magnum.Api.Businesses.Products
         {
             //Parameter "dat" can be use for create the filter in the future
             var ctx = GetNoSqlContext();
-            string prdPath = string.Format("products");
-            IEnumerable<MProduct> products = ctx.GetObjectList<MProduct>(prdPath);
+            IEnumerable<MProduct> products = ctx.GetObjectList<MProduct>("products");
 
             return products;
         }

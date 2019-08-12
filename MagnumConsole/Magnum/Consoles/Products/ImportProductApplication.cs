@@ -26,8 +26,6 @@ namespace Magnum.Consoles.Products
         protected override int Execute()
         {
             Hashtable args = GetArguments();
-            string infile = args["infile"].ToString();
-            string basedir = args["basedir"].ToString();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
             IStorageContext storageCtx = GetStorageContextWithAuthen("firebase");

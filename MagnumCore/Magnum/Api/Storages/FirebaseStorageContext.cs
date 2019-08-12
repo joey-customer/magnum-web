@@ -68,7 +68,7 @@ namespace Magnum.Api.Storages
 
         public void DownloadFile(string bucketPath, string fileLocalPath)
         {
-
+            //Do nothing
         }
     }
 }

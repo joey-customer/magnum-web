@@ -9,7 +9,7 @@ namespace Magnum.Api.Models
         public double Quantity {get; set;}
         public string Unit {get; set;}
 
-        public Dictionary<string, MGenericDescription> Descriptions;
+        public Dictionary<string, MGenericDescription> Descriptions {get; set;}
 
         public MProductComposition()
         {

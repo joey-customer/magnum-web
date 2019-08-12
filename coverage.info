@@ -91,28 +91,28 @@ FN:26,System.Int32 Magnum.Consoles.Products.ImportProductApplication::Execute()
 FNDA:0,System.Int32 Magnum.Consoles.Products.ImportProductApplication::Execute()
 DA:27,0
 DA:28,0
-DA:29,0
 DA:30,0
-DA:32,0
+DA:31,0
 DA:33,0
+DA:34,0
 DA:35,0
-DA:36,0
 DA:37,0
 DA:39,0
+DA:40,0
 DA:41,0
-DA:42,0
 DA:43,0
+DA:44,0
 DA:45,0
 DA:46,0
-DA:47,0
 DA:48,0
+DA:49,0
 DA:50,0
 DA:51,0
 DA:52,0
-DA:53,0
 DA:54,0
-DA:56,0
-DA:57,0
+DA:55,0
+DA:58,0
+DA:59,0
 DA:60,0
 DA:61,0
 DA:62,0
@@ -122,23 +122,21 @@ DA:65,0
 DA:66,0
 DA:67,0
 DA:68,0
-DA:69,0
 DA:70,0
+DA:71,0
 DA:72,0
 DA:73,0
 DA:74,0
 DA:75,0
 DA:76,0
 DA:77,0
-DA:78,0
 DA:79,0
-DA:81,0
-DA:82,0
-BRDA:62,314,1,0
-BRDA:62,314,0,0
-BRDA:67,351,0,0
-BRDA:67,351,1,0
-LF:50
+DA:80,0
+BRDA:60,277,1,0
+BRDA:60,277,0,0
+BRDA:65,313,0,0
+BRDA:65,313,1,0
+LF:48
 LH:0
 BRF:4
 BRH:0
@@ -1480,18 +1478,21 @@ DA:9,2
 FN:9,System.String Magnum.Api.Models.MProductComposition::get_Unit()
 FNDA:2,System.String Magnum.Api.Models.MProductComposition::get_Unit()
 DA:10,2
+FN:11,System.Collections.Generic.Dictionary`2<System.String,Magnum.Api.Models.MGenericDescription> Magnum.Api.Models.MProductComposition::get_Descriptions()
+FNDA:3,System.Collections.Generic.Dictionary`2<System.String,Magnum.Api.Models.MGenericDescription> Magnum.Api.Models.MProductComposition::get_Descriptions()
+DA:12,3
 FN:13,System.Void Magnum.Api.Models.MProductComposition::.ctor()
 FNDA:1,System.Void Magnum.Api.Models.MProductComposition::.ctor()
 DA:14,1
 DA:15,1
 DA:16,1
 DA:17,1
-LF:7
-LH:7
+LF:8
+LH:8
 BRF:0
 BRH:0
-FNF:4
-FNH:4
+FNF:5
+FNH:5
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProfile.cs
 FN:6,System.String Magnum.Api.Models.MProfile::get_Message1()
@@ -1897,19 +1898,18 @@ FNDA:1,System.Collections.Generic.IEnumerable`1<Magnum.Api.Models.MProduct> Magn
 DA:13,1
 DA:15,1
 DA:16,1
-DA:17,1
+DA:18,1
 DA:19,1
-DA:20,1
-LF:6
-LH:6
+LF:5
+LH:5
 BRF:0
 BRH:0
 FNF:1
 FNH:1
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\SaveProduct.cs
-FN:11,System.Void Magnum.Api.Businesses.Products.SaveProduct::PopulateImageProperty(Magnum.Api.Models.MProduct,System.String)
-FNDA:3,System.Void Magnum.Api.Businesses.Products.SaveProduct::PopulateImageProperty(Magnum.Api.Models.MProduct,System.String)
+FN:11,System.Void Magnum.Api.Businesses.Products.SaveProduct::PopulateImageProperty(Magnum.Api.Models.MProduct)
+FNDA:3,System.Void Magnum.Api.Businesses.Products.SaveProduct::PopulateImageProperty(Magnum.Api.Models.MProduct)
 DA:12,3
 DA:14,3
 DA:16,3
@@ -1932,21 +1932,20 @@ DA:37,3
 DA:40,3
 DA:41,1
 DA:43,1
-DA:44,1
-DA:47,1
-DA:48,1
+DA:45,1
+DA:46,1
+DA:48,2
+DA:49,2
 DA:50,2
 DA:51,2
-DA:52,2
-DA:53,2
-DA:56,3
-DA:57,3
+DA:54,3
+DA:55,3
 BRDA:26,12,0,1
 BRDA:26,12,1,3
-BRDA:40,90,0,1
-BRDA:40,90,1,2
-LF:29
-LH:29
+BRDA:40,85,0,1
+BRDA:40,85,1,2
+LF:28
+LH:28
 BRF:4
 BRH:4
 FNF:2
@@ -2136,25 +2135,35 @@ FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeControl
 DA:19,0
 DA:20,0
 DA:21,0
-FN:23,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Seubpong()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Seubpong()
+FN:23,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::About()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::About()
 DA:24,0
 DA:25,0
 DA:26,0
-FN:29,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
+FN:28,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Contact()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Contact()
+DA:29,0
 DA:30,0
 DA:31,0
-DA:32,0
-BRDA:31,14,0,0
-BRDA:31,14,1,0
-BRDA:31,26,0,0
-BRDA:31,26,1,0
-LF:12
+FN:33,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Seubpong()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Seubpong()
+DA:34,0
+DA:35,0
+DA:36,0
+FN:39,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
+FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
+DA:40,0
+DA:41,0
+DA:42,0
+BRDA:41,14,0,0
+BRDA:41,14,1,0
+BRDA:41,26,0,0
+BRDA:41,26,1,0
+LF:18
 LH:0
 BRF:4
 BRH:0
-FNF:4
+FNF:6
 FNH:0
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\VerificationController.cs
@@ -2195,6 +2204,36 @@ BRF:6
 BRH:6
 FNF:2
 FNH:2
+end_of_record
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\About.cshtml
+FN:1,System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()
+DA:2,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Contact.cshtml
+FN:1,System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__8::MoveNext()
+FNDA:0,System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__8::MoveNext()
+DA:2,0
+BRDA:2,14,0,0
+BRDA:2,323,0,0
+BRDA:2,323,1,0
+BRDA:2,426,0,0
+BRDA:2,459,0,0
+BRDA:2,14,1,0
+BRDA:2,459,1,0
+BRDA:2,426,1,0
+LF:1
+LH:0
+BRF:8
+BRH:0
+FNF:1
+FNH:0
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Index.cshtml
 FN:1,System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__0::MoveNext()
@@ -2268,10 +2307,11 @@ BRDA:6,1672,1,0
 FN:37,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_1>d::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_1>d::MoveNext()
 DA:38,0
+DA:51,0
 DA:52,0
-DA:63,0
-DA:87,0
-DA:89,0
+DA:62,0
+DA:86,0
+DA:88,0
 BRDA:38,8,0,0
 BRDA:38,622,0,0
 BRDA:38,8,1,0
@@ -2281,33 +2321,33 @@ BRDA:38,758,0,0
 BRDA:38,8,2,0
 BRDA:38,758,1,0
 BRDA:38,725,1,0
-BRDA:63,1425,0,0
+BRDA:62,1560,0,0
 BRDA:38,8,3,0
-BRDA:63,1425,1,0
-BRDA:63,1532,0,0
-BRDA:63,1565,0,0
+BRDA:62,1560,1,0
+BRDA:62,1667,0,0
+BRDA:62,1700,0,0
 BRDA:38,8,4,0
-BRDA:63,1565,1,0
-BRDA:63,1532,1,0
-BRDA:63,1983,0,0
+BRDA:62,1700,1,0
+BRDA:62,1667,1,0
+BRDA:62,2118,0,0
 BRDA:38,8,5,0
-BRDA:63,1983,1,0
-BRDA:63,2090,0,0
-BRDA:63,2123,0,0
+BRDA:62,2118,1,0
+BRDA:62,2225,0,0
+BRDA:62,2258,0,0
 BRDA:38,8,6,0
-BRDA:63,2123,1,0
-BRDA:63,2090,1,0
-BRDA:63,2372,0,0
-BRDA:63,2372,1,0
-BRDA:87,2669,0,0
+BRDA:62,2258,1,0
+BRDA:62,2225,1,0
+BRDA:62,2507,0,0
+BRDA:62,2507,1,0
+BRDA:86,2804,0,0
 BRDA:38,8,7,0
-BRDA:87,2669,1,0
-BRDA:87,2776,0,0
-BRDA:87,2809,0,0
+BRDA:86,2804,1,0
+BRDA:86,2911,0,0
+BRDA:86,2944,0,0
 BRDA:38,8,8,0
-BRDA:87,2809,1,0
-BRDA:87,2776,1,0
-LF:6
+BRDA:86,2944,1,0
+BRDA:86,2911,1,0
+LF:7
 LH:0
 BRF:62
 BRH:0
