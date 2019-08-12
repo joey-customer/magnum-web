@@ -35,7 +35,7 @@
                         </div>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">@Html.ActionLink( "Home", "Index", "Home", null, new { @class = "nav-link" } )</li>
+                                <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                                 <li class="nav-item dropdown submenu">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Products <i class="fa fa-angle-down" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
@@ -48,6 +48,7 @@
                                         <li class="nav-item"><a class="nav-link" href="#">Extreme Series</a></li>
                                         <li class="nav-item"><a class="nav-link" href="#">Ergogenics</a></li>
                                     </ul>
+                                <li class="nav-item"><a class="nav-link" href="#verify">Verify Product</a></li>
                                 <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
                                 <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
                             </ul>
@@ -60,6 +61,70 @@
 
 
     @RenderBody()
+
+
+    <section class="fact-counter text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 counter-block">
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: slideInUp;">
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="235">1,000,000</span>
+                        </div>
+                        <div class="text">Order Shipped</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 counter-block">
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: slideInUp;">
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="687">150,000</span>
+                        </div>
+                        <div class="text">Satisfied Clients</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 counter-block">
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: slideInUp;">
+                        <div class="count-outer count-box counted">
+                            <span class="count-text" data-speed="1500" data-stop="582">1998</span>
+                        </div>
+                        <div class="text">Since</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacing" id="verify">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center verificationContainer">
+                <div class="col-md-8 col-12">
+                    <div class="row justify-content-center text-center containerCard">
+                        <div class="col-md-12 col-12 p-5">
+                            <h1 class="primaryTitle" style="margin-bottom: 0">Verify your product</h1>
+                            <h4 class="secondaryTitle">Please specify your serial and pin</h4>
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 col-12" style="position:relative">
+                                    <div class="row form-group formContainer" style="margin-bottom: 0">
+                                        <input type="text" class="col-md-12 form-control reqdField" placeholder="SN">
+                                    </div>
+                                    <div class="row form-group formContainer" style="margin-bottom: 0">
+                                        <input type="text" class="col-md-12 form-control reqdField" placeholder="PIN">
+                                    </div>
+                                </div>
+                                <div class="col-12" style="bottom: -30px;">
+                                    <div class="row justify-content-center form-group" style="padding: 0">
+                                        <button class="col-md-3 btn verificationSubmit" type="button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="footer text-center">
         <div class="container">
