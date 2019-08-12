@@ -25,8 +25,6 @@ namespace Magnum.Consoles.Products
 
         protected override int Execute()
         {
-            Hashtable args = GetArguments();
-
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
             IStorageContext storageCtx = GetStorageContextWithAuthen("firebase");
 
