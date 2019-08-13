@@ -13,6 +13,13 @@ a.navbar-brand {
     word-break: break-all;
 }
 
+.navbar-brand img {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -59,9 +66,9 @@ body {
     background: rgb(244, 244, 244);
 }
 
-    .intro .container {
-        max-width: 930px;
-    }
+.intro .container {
+    max-width: 930px;
+}
 
 .overlay {
     position: absolute;
@@ -76,7 +83,7 @@ body {
     z-index: 1000;
     left: 0px;
     width: 100%;
-    padding-top: 15px;
+    padding: 5px 0;
     background-color: #151515;
 }
 
@@ -85,13 +92,13 @@ body {
     padding: 0px;
 }
 
-    .navbar h1 {
-        color: #fff;
-    }
+.navbar h1 {
+    color: #fff;
+}
 
-    .navbar .navbar-collapse {
-        text-align: right;
-    }
+.navbar .navbar-collapse {
+    text-align: right;
+}
 
 @media (min-width: 992px) {
     .navbar .navbar-collapse {
@@ -106,11 +113,11 @@ body {
         text-align: right;
     }
 
-        .navbar .navbar-nav > .nav-item {
-            display: inline-block;
-            margin-right: 40px;
-            padding: 25px 0px;
-        }
+    .navbar .navbar-nav > .nav-item {
+        display: inline-block;
+        margin-right: 40px;
+        padding: 25px 0px;
+    }
 }
 
 .navbar .navbar-nav > .nav-item > .nav-link {
@@ -145,9 +152,9 @@ body {
     background: #333;
 }
 
-    .navbar .navbar-nav > .nav-item.submenu .dropdown-menu a {
-        color: #1D5DF9;
-    }
+.navbar .navbar-nav > .nav-item.submenu .dropdown-menu a {
+    color: #1D5DF9;
+}
 
 @media (min-width: 992px) {
     .navbar .navbar-nav > .nav-item.submenu .dropdown-menu {
@@ -175,18 +182,18 @@ body {
     display: block;
 }
 
-    .navbar .navbar-nav > .nav-item.submenu .dropdown-menu li a {
-        display: block;
-        line-height: 36px;
-        font-size: 15px;
-        padding: 5px 15px;
-        text-transform: inherit;
-        -webkit-transition: all 200ms linear 0s;
-        transition: all 200ms linear 0s;
-        font-weight: 400;
-        text-shadow: none;
-        color: #ccc;
-    }
+.navbar .navbar-nav > .nav-item.submenu .dropdown-menu li a {
+    display: block;
+    line-height: 36px;
+    font-size: 15px;
+    padding: 5px 15px;
+    text-transform: inherit;
+    -webkit-transition: all 200ms linear 0s;
+    transition: all 200ms linear 0s;
+    font-weight: 400;
+    text-shadow: none;
+    color: #ccc;
+}
 
 @media (min-width: 992px) {
     .navbar .navbar-nav > .nav-item.submenu .dropdown-menu li a {
@@ -206,9 +213,9 @@ body {
     background: #ffffff;
 }
 
-    .header-2.navbar_fixed .navbar .navbar-nav > .nav-item > .nav-link {
-        color: #57667e;
-    }
+.header-2.navbar_fixed .navbar .navbar-nav > .nav-item > .nav-link {
+    color: #57667e;
+}
 
 @media (min-width: 992px) {
     .navbar .navbar-nav > .nav-item:hover.submenu .dropdown-menu {
@@ -265,9 +272,9 @@ body {
         background-color: #fff;
     }
 
-        .navbar-toggler .icon-bar + .icon-bar {
-            margin-top: 4px;
-        }
+    .navbar-toggler .icon-bar + .icon-bar {
+        margin-top: 4px;
+    }
 
 
     .navbar-toggler:focus {
@@ -334,8 +341,6 @@ body {
     padding-left: 0;
     padding-right: 0;
     border-radius: 5px;
-    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -410,9 +415,9 @@ body {
     background-image: -webkit-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#d50000,#611b32,#082d2a 119%);
 }
 
-    .verificationSubmit:hover {
-        color: #fff;
-    }
+.verificationSubmit:hover {
+    color: #fff;
+}
 
 @media (min-width: 768px) {
     .formContainer {
@@ -450,28 +455,26 @@ body {
 
 .our-service .single-service {
     background: #fff;
-    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
     padding: 50px 30px 50px 40px;
     margin-top: 50px;
     border-radius: 5px;
 }
 
-    .our-service .single-service h6 {
-        padding-bottom: 30px;
-        font-size: 20px;
-    }
+.our-service .single-service h6 {
+    padding-bottom: 30px;
+    font-size: 20px;
+}
 
-    .our-service .single-service .count {
-        font-family: 'Oswald', sans-serif;
-        font-size: 63px;
-        font-weight: 700;
-        color: rgba(0,0,0,0.03);
-        position: absolute;
-        top: 50px;
-        right: 28px;
-    }
+.our-service .single-service .count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 63px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.03);
+    position: absolute;
+    top: 50px;
+    right: 28px;
+}
 
 
 /*-------------------- OUR PRODUCT -------------------*/
@@ -479,25 +482,23 @@ body {
     padding: 50px 0;
 }
 
-    .our-product .single-product {
-        background: #fff;
-        -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
-        -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
-        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
-        overflow: hidden;
-        margin-top: 30px;
-        text-align: center;
-        border-radius: 5px;
-    }
+.our-product .single-product {
+    background: #fff;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
 
-        .our-product .single-product .product-info {
-            position: relative;
-            height: 410px;
-        }
+.our-product .single-product .product-info {
+    position: relative;
+    height: 410px;
+}
 
-    .our-product.newest .single-product .product-info {
-        height: 230px;
-    }
+.our-product.newest .single-product .product-info {
+    height: 230px;
+}
 
     .our-product .single-product .product-info:before {
         content: url(../images/home/shape2.png);
@@ -617,15 +618,15 @@ body {
     margin-top: 50px;
 }
 
-    #verify .bg-overlay {
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        background: #333;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
+#verify .bg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #333;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
 
 @media (min-width: 992px) {
     .etu-form {
@@ -637,8 +638,6 @@ body {
     padding: 30px;
     background-color: #fff;
     border-radius: 5px;
-    -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -662,29 +661,29 @@ body {
     margin-bottom: 25px;
 }
 
-    .etu-form .form-area form .single-input-box label {
-        text-transform: capitalize;
-        font-size: 16px;
-        color: #2d2d43;
-        display: block;
-        margin-bottom: 13px;
-        font-weight: 500;
-    }
+.etu-form .form-area form .single-input-box label {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #2d2d43;
+    display: block;
+    margin-bottom: 13px;
+    font-weight: 500;
+}
 
-    .etu-form .form-area form .single-input-box input,
-    .etu-form .form-area form .single-input-box select,
-    .etu-form .form-area form .single-input-box textarea {
-        text-transform: capitalize;
-        width: 100%;
-        height: 50px;
-        padding: 0 10px;
-        border: 1px solid #e5e5e5;
-    }
+.etu-form .form-area form .single-input-box input,
+.etu-form .form-area form .single-input-box select,
+.etu-form .form-area form .single-input-box textarea {
+    text-transform: capitalize;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #e5e5e5;
+}
 
-    .etu-form .form-area form .single-input-box textarea {
-        height: 274px;
-        padding: 10px 10px;
-    }
+.etu-form .form-area form .single-input-box textarea {
+    height: 274px;
+    padding: 10px 10px;
+}
 
 .etu-form .form-area form button {
     background-image: -webkit-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#d50000,#611b32,#082d2a 119%);
