@@ -79,11 +79,7 @@ namespace Magnum.Consoles.Barcodes
 
             BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
 
-            INoSqlContext ctx = GetNoSqlContext();
-            if (ctx == null)
-            {
-                ctx = GetNoSqlContext("firebase", host, key, user, password);
-            }
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");

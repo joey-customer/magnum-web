@@ -39,11 +39,7 @@ namespace Magnum.Consoles.Registrations
             string password = args["password"].ToString();
             string path = args["path"].ToString();
 
-            INoSqlContext ctx = GetNoSqlContext();
-            if (ctx == null)
-            {
-                ctx = GetNoSqlContext("firebase", host, key, user, password);
-            }
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             CreateRegistration opr = (CreateRegistration) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");

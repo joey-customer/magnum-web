@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Collections;
-using System.Collections.Generic;
 
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
@@ -24,7 +23,7 @@ namespace Magnum.Consoles.ProductTypes
             
             return options;
         }
-
+        
         protected override int Execute()
         {
             Hashtable args = GetArguments();

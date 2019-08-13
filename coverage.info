@@ -1,4 +1,4 @@
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Program.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Program.cs
 FN:11,System.Void Magnum.Consoles.Program::Main(System.String[])
 FNDA:2,System.Void Magnum.Consoles.Program::Main(System.String[])
 DA:12,2
@@ -21,7 +21,7 @@ BRH:2
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Registration\RegisterBarcodeApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Registration\RegisterBarcodeApplication.cs
 FN:20,NDesk.Options.OptionSet Magnum.Consoles.Registrations.RegisterBarcodeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
 FNDA:3,NDesk.Options.OptionSet Magnum.Consoles.Registrations.RegisterBarcodeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
 DA:21,3
@@ -44,105 +44,96 @@ DA:38,2
 DA:39,2
 DA:40,2
 DA:42,2
-DA:43,2
-DA:44,0
-DA:45,0
-DA:46,0
+DA:44,2
+DA:45,2
+DA:47,2
 DA:48,2
 DA:49,2
+DA:50,2
 DA:51,2
-DA:52,2
-DA:53,2
 DA:54,2
 DA:55,2
+DA:56,0
+DA:57,0
 DA:58,2
 DA:59,2
-DA:60,0
-DA:61,0
-DA:62,2
+DA:60,2
+DA:61,2
 DA:63,2
 DA:64,2
-DA:65,2
-DA:67,2
-DA:68,2
-BRDA:43,166,0,0
-BRDA:43,166,1,2
 FN:15,System.Void Magnum.Consoles.Registrations.RegisterBarcodeApplication::.ctor()
 FNDA:3,System.Void Magnum.Consoles.Registrations.RegisterBarcodeApplication::.ctor()
 DA:16,3
 DA:17,3
 DA:18,3
-LF:42
-LH:37
-BRF:2
-BRH:1
+LF:38
+LH:36
+BRF:0
+BRH:0
 FNF:3
 FNH:3
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Products\ImportProductApplication.cs
-FN:18,NDesk.Options.OptionSet Magnum.Consoles.Products.ImportProductApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
-FNDA:0,NDesk.Options.OptionSet Magnum.Consoles.Products.ImportProductApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
-DA:19,0
-DA:20,0
-DA:21,0
-DA:23,0
-DA:24,0
-FN:26,System.Int32 Magnum.Consoles.Products.ImportProductApplication::Execute()
-FNDA:0,System.Int32 Magnum.Consoles.Products.ImportProductApplication::Execute()
-DA:27,0
-DA:28,0
-DA:29,0
-DA:31,0
-DA:32,0
-DA:33,0
-DA:35,0
-DA:37,0
-DA:38,0
-DA:39,0
-DA:41,0
-DA:42,0
-DA:43,0
-DA:44,0
-DA:46,0
-DA:47,0
-DA:48,0
-DA:49,0
-DA:50,0
-DA:52,0
-DA:53,0
-DA:56,0
-DA:57,0
-DA:58,0
-DA:59,0
-DA:60,0
-DA:61,0
-DA:62,0
-DA:63,0
-DA:64,0
-DA:65,0
-DA:66,0
-DA:68,0
-DA:69,0
-DA:70,0
-DA:71,0
-DA:72,0
-DA:73,0
-DA:74,0
-DA:75,0
-DA:77,0
-DA:78,0
-BRDA:58,268,1,0
-BRDA:58,268,0,0
-BRDA:63,304,0,0
-BRDA:63,304,1,0
-LF:47
-LH:0
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\ProductTypes\ImportProductTypeApplication.cs
+FN:19,NDesk.Options.OptionSet Magnum.Consoles.ProductTypes.ImportProductTypeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
+FNDA:3,NDesk.Options.OptionSet Magnum.Consoles.ProductTypes.ImportProductTypeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
+DA:20,3
+DA:21,6
+DA:22,6
+DA:24,3
+DA:25,3
+FN:27,System.Int32 Magnum.Consoles.ProductTypes.ImportProductTypeApplication::Execute()
+FNDA:2,System.Int32 Magnum.Consoles.ProductTypes.ImportProductTypeApplication::Execute()
+DA:28,2
+DA:29,2
+DA:30,2
+DA:31,2
+DA:33,2
+DA:34,2
+DA:35,2
+DA:37,2
+DA:38,2
+DA:39,2
+DA:41,2
+DA:42,2
+DA:44,2
+DA:47,2
+DA:48,2
+DA:49,9
+DA:50,2
+DA:51,2
+DA:52,2
+DA:54,2
+DA:55,7
+DA:56,1
+DA:57,1
+DA:58,1
+DA:59,1
+DA:60,1
+DA:61,1
+DA:63,1
+DA:64,1
+DA:65,1
+DA:67,1
+DA:68,1
+DA:69,1
+DA:70,1
+DA:71,1
+DA:72,1
+DA:73,1
+DA:75,2
+DA:76,2
+BRDA:49,444,1,2
+BRDA:55,397,1,1
+BRDA:55,397,0,1
+BRDA:49,444,0,1
+LF:44
+LH:44
 BRF:4
-BRH:0
+BRH:4
 FNF:2
-FNH:0
+FNH:2
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Miscs\DummyApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Miscs\DummyApplication.cs
 FN:9,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
 FNDA:1,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
 DA:10,1
@@ -169,7 +160,7 @@ BRH:0
 FNF:3
 FNH:3
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Factories\FactoryConsoleApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Factories\FactoryConsoleApplication.cs
 FN:13,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
 FNDA:5,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
 DA:14,5
@@ -181,22 +172,22 @@ DA:24,1
 DA:25,1
 DA:26,1
 DA:27,1
-DA:28,1
-DA:30,1
+DA:29,1
 DA:31,1
-FN:33,Magnum.Consoles.Commons.IConsoleApp Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
-FNDA:11,Magnum.Consoles.Commons.IConsoleApp Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
-DA:34,11
-DA:35,11
-DA:36,11
-DA:37,1
+DA:32,1
+FN:34,Magnum.Consoles.Commons.IConsoleApp Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
+FNDA:14,Magnum.Consoles.Commons.IConsoleApp Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
+DA:35,14
+DA:36,14
+DA:37,14
 DA:38,1
-DA:41,10
-DA:42,10
-DA:44,10
-DA:45,10
-BRDA:36,24,0,1
-BRDA:36,24,1,10
+DA:39,1
+DA:42,13
+DA:43,13
+DA:45,13
+DA:46,13
+BRDA:37,24,0,1
+BRDA:37,24,1,13
 FN:10,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::.cctor()
 FNDA:1,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::.cctor()
 DA:11,1
@@ -210,133 +201,133 @@ BRH:2
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Commons\ConsoleAppBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Commons\ConsoleAppBase.cs
 FN:20,NDesk.Options.OptionSet Magnum.Consoles.Commons.ConsoleAppBase::CreateOptionSet()
-FNDA:8,NDesk.Options.OptionSet Magnum.Consoles.Commons.ConsoleAppBase::CreateOptionSet()
-DA:21,8
-DA:22,8
-DA:24,8
-DA:26,14
-DA:27,8
-DA:28,14
-DA:29,14
-DA:30,14
-DA:32,8
-DA:34,8
-DA:35,8
+FNDA:11,NDesk.Options.OptionSet Magnum.Consoles.Commons.ConsoleAppBase::CreateOptionSet()
+DA:21,11
+DA:22,11
+DA:24,11
+DA:26,20
+DA:27,11
+DA:28,20
+DA:29,20
+DA:30,20
+DA:32,11
+DA:34,11
+DA:35,11
 FN:37,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
-FNDA:9,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
-DA:38,9
-DA:39,9
-DA:40,9
+FNDA:12,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
+DA:38,12
+DA:39,12
+DA:40,12
 FN:42,System.Void Magnum.Consoles.Commons.ConsoleAppBase::AddArgument(System.String,System.String)
-FNDA:60,System.Void Magnum.Consoles.Commons.ConsoleAppBase::AddArgument(System.String,System.String)
-DA:43,60
-DA:44,60
-DA:45,60
+FNDA:98,System.Void Magnum.Consoles.Commons.ConsoleAppBase::AddArgument(System.String,System.String)
+DA:43,98
+DA:44,98
+DA:45,98
 FN:47,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-FNDA:4,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-DA:48,4
-DA:49,4
-DA:50,4
+FNDA:10,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
+DA:48,10
+DA:49,10
+DA:50,10
 FN:52,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
-FNDA:4,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
-DA:53,4
-DA:54,4
-DA:55,4
+FNDA:2,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
+DA:53,2
+DA:54,2
+DA:55,2
 FN:57,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContextWithAuthen(System.String)
-FNDA:0,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContextWithAuthen(System.String)
-DA:58,0
-DA:59,0
-DA:60,0
-DA:61,0
-DA:62,0
-DA:63,0
-DA:64,0
-DA:65,0
-DA:66,0
-DA:67,0
-DA:69,0
-DA:70,0
-BRDA:60,19,0,0
-BRDA:60,19,1,0
+FNDA:8,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContextWithAuthen(System.String)
+DA:58,8
+DA:59,8
+DA:60,8
+DA:61,2
+DA:62,2
+DA:63,2
+DA:64,2
+DA:65,2
+DA:66,2
+DA:67,2
+DA:69,8
+DA:70,8
+BRDA:60,19,0,2
+BRDA:60,19,1,8
 FN:72,Magnum.Api.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContextWithAuthen(System.String)
-FNDA:0,Magnum.Api.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContextWithAuthen(System.String)
-DA:73,0
-DA:74,0
-DA:75,0
-DA:76,0
-DA:77,0
-DA:78,0
-DA:79,0
-DA:80,0
-DA:81,0
-DA:82,0
-DA:84,0
-DA:85,0
-BRDA:75,19,0,0
-BRDA:75,19,1,0
+FNDA:2,Magnum.Api.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContextWithAuthen(System.String)
+DA:73,2
+DA:74,2
+DA:75,2
+DA:76,2
+DA:77,2
+DA:78,2
+DA:79,2
+DA:80,2
+DA:81,2
+DA:82,2
+DA:84,2
+DA:85,2
+BRDA:75,19,0,2
+BRDA:75,19,1,2
 FN:87,System.Int32 Magnum.Consoles.Commons.ConsoleAppBase::Run()
-FNDA:8,System.Int32 Magnum.Consoles.Commons.ConsoleAppBase::Run()
-DA:88,8
-DA:89,8
-DA:90,7
-DA:91,7
+FNDA:10,System.Int32 Magnum.Consoles.Commons.ConsoleAppBase::Run()
+DA:88,10
+DA:89,10
+DA:90,9
+DA:91,9
 FN:93,System.Void Magnum.Consoles.Commons.ConsoleAppBase::DumpParameter()
-FNDA:3,System.Void Magnum.Consoles.Commons.ConsoleAppBase::DumpParameter()
-DA:94,3
-DA:95,47
-DA:96,19
-DA:97,19
-DA:98,19
-DA:99,19
-DA:100,3
-BRDA:95,72,1,19
-BRDA:95,72,0,3
+FNDA:4,System.Void Magnum.Consoles.Commons.ConsoleAppBase::DumpParameter()
+DA:94,4
+DA:95,62
+DA:96,25
+DA:97,25
+DA:98,25
+DA:99,25
+DA:100,4
+BRDA:95,72,1,25
+BRDA:95,72,0,4
 FN:102,System.Collections.Hashtable Magnum.Consoles.Commons.ConsoleAppBase::GetArguments()
-FNDA:8,System.Collections.Hashtable Magnum.Consoles.Commons.ConsoleAppBase::GetArguments()
-DA:103,8
-DA:104,8
-DA:105,8
+FNDA:11,System.Collections.Hashtable Magnum.Consoles.Commons.ConsoleAppBase::GetArguments()
+DA:103,11
+DA:104,11
+DA:105,11
 FN:107,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext(System.String,System.String,System.String,System.String,System.String)
-FNDA:2,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext(System.String,System.String,System.String,System.String,System.String)
-DA:108,2
-DA:109,2
-DA:110,2
-DA:111,1
-DA:112,1
-DA:113,1
-DA:114,0
-DA:116,1
-DA:117,1
-BRDA:110,16,0,1
-BRDA:110,16,1,1
+FNDA:4,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext(System.String,System.String,System.String,System.String,System.String)
+DA:108,4
+DA:109,4
+DA:110,4
+DA:111,2
+DA:112,2
+DA:113,2
+DA:114,1
+DA:116,3
+DA:117,3
+BRDA:110,16,0,2
+BRDA:110,16,1,3
 FN:119,Magnum.Api.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext(System.String,System.String,System.String,System.String,System.String)
-FNDA:0,Magnum.Api.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext(System.String,System.String,System.String,System.String,System.String)
-DA:120,0
-DA:121,0
-DA:122,0
-DA:123,0
-DA:124,0
-DA:125,0
-DA:126,0
-DA:128,0
-DA:129,0
-BRDA:122,16,0,0
-BRDA:122,16,1,0
+FNDA:2,Magnum.Api.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext(System.String,System.String,System.String,System.String,System.String)
+DA:120,2
+DA:121,2
+DA:122,2
+DA:123,1
+DA:124,1
+DA:125,1
+DA:126,1
+DA:128,2
+DA:129,2
+BRDA:122,16,0,1
+BRDA:122,16,1,2
 FN:11,System.Void Magnum.Consoles.Commons.ConsoleAppBase::.ctor()
-FNDA:12,System.Void Magnum.Consoles.Commons.ConsoleAppBase::.ctor()
-DA:12,12
-DA:13,12
-DA:14,12
+FNDA:19,System.Void Magnum.Consoles.Commons.ConsoleAppBase::.ctor()
+DA:12,19
+DA:13,19
+DA:14,19
 LF:82
-LH:48
+LH:82
 BRF:10
-BRH:4
+BRH:10
 FNF:13
-FNH:10
+FNH:13
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\BarcodeGeneratorApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\BarcodeGeneratorApplication.cs
 FN:33,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
 FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
 DA:34,2
@@ -384,55 +375,49 @@ DA:77,2
 DA:78,2
 DA:80,2
 DA:82,2
-DA:83,2
-DA:84,0
-DA:85,0
-DA:86,0
-DA:88,2
+DA:84,2
+DA:85,2
+DA:87,2
 DA:89,2
+DA:90,2
 DA:91,2
 DA:93,2
-DA:94,2
 DA:95,2
-DA:97,2
-DA:99,2
-DA:100,2
-DA:102,10
+DA:96,2
+DA:98,10
+DA:99,3
+DA:100,3
+DA:101,3
+DA:102,3
 DA:103,3
-DA:104,3
-DA:105,3
-DA:106,3
-DA:107,3
-DA:108,2
-DA:109,2
-DA:110,2
+DA:104,2
+DA:105,2
+DA:106,2
+DA:108,3
+DA:109,3
+DA:110,3
+DA:111,3
 DA:112,3
-DA:113,3
 DA:114,3
 DA:115,3
 DA:116,3
 DA:118,3
-DA:119,3
 DA:120,3
-DA:122,3
-DA:124,3
-DA:125,1
-DA:126,1
-DA:127,1
-DA:128,1
-DA:129,3
-DA:131,2
-DA:132,2
-DA:133,2
-DA:134,2
-BRDA:83,162,0,0
-BRDA:83,162,1,2
-BRDA:102,714,1,3
-BRDA:107,437,0,2
-BRDA:107,437,1,3
-BRDA:124,658,0,1
-BRDA:124,658,1,3
-BRDA:102,714,0,2
+DA:121,1
+DA:122,1
+DA:123,1
+DA:124,1
+DA:125,3
+DA:127,2
+DA:128,2
+DA:129,2
+DA:130,2
+BRDA:98,688,1,3
+BRDA:103,411,0,2
+BRDA:103,411,1,3
+BRDA:120,632,0,1
+BRDA:120,632,1,3
+BRDA:98,688,0,2
 FN:20,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::.ctor()
 FNDA:4,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::.ctor()
 DA:21,4
@@ -443,14 +428,14 @@ DA:28,4
 DA:29,4
 DA:30,4
 DA:31,4
-LF:82
-LH:79
-BRF:8
-BRH:7
+LF:78
+LH:78
+BRF:6
+BRH:6
 FNF:8
 FNH:8
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\QRGeneratorApplication.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\QRGeneratorApplication.cs
 FN:21,System.Void Magnum.Consoles.Barcodes.QRGeneratorApplication::SetQrGnerator(Magnum.Consoles.Barcodes.ImageGenerators.QRGenerator)
 FNDA:1,System.Void Magnum.Consoles.Barcodes.QRGeneratorApplication::SetQrGnerator(Magnum.Consoles.Barcodes.ImageGenerators.QRGenerator)
 DA:22,1
@@ -497,7 +482,7 @@ BRH:0
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\CompanyQR.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\CompanyQR.cs
 FN:10,System.Void Magnum.Consoles.Barcodes.Profiles.CompanyQR::CustomSetting()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.Profiles.CompanyQR::CustomSetting()
 DA:11,2
@@ -513,7 +498,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\ForQrTestingOnly.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\ForQrTestingOnly.cs
 FN:10,System.Void Magnum.Consoles.Barcodes.Profiles.ForQrTestingOnly::CustomSetting()
 FNDA:3,System.Void Magnum.Consoles.Barcodes.Profiles.ForQrTestingOnly::CustomSetting()
 DA:11,3
@@ -540,7 +525,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\ForTestingOnly.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\ForTestingOnly.cs
 FN:10,System.Void Magnum.Consoles.Barcodes.Profiles.ForTestingOnly::CustomSetting()
 FNDA:5,System.Void Magnum.Consoles.Barcodes.Profiles.ForTestingOnly::CustomSetting()
 DA:11,5
@@ -568,7 +553,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\NandroPlex300.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\NandroPlex300.cs
 FN:9,System.Void Magnum.Consoles.Barcodes.Profiles.NandroPlex300::CustomSetting()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.Profiles.NandroPlex300::CustomSetting()
 DA:10,2
@@ -582,7 +567,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\Oxandro10.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\Oxandro10.cs
 FN:9,System.Void Magnum.Consoles.Barcodes.Profiles.Oxandro10::CustomSetting()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.Profiles.Oxandro10::CustomSetting()
 DA:10,2
@@ -596,7 +581,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\TestPlex300.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Profiles\TestPlex300.cs
 FN:9,System.Void Magnum.Consoles.Barcodes.Profiles.TestPlex300::CustomSetting()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.Profiles.TestPlex300::CustomSetting()
 DA:10,2
@@ -610,7 +595,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\ImageGenerators\LabelGenerator.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\ImageGenerators\LabelGenerator.cs
 FN:21,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomSetup()
 FNDA:2,System.Void Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator::CustomSetup()
 DA:22,2
@@ -702,7 +687,7 @@ BRH:10
 FNF:8
 FNH:8
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\ImageGenerators\QRGenerator.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\ImageGenerators\QRGenerator.cs
 FN:21,System.Void Magnum.Consoles.Barcodes.ImageGenerators.QRGenerator::CustomSetup()
 FNDA:1,System.Void Magnum.Consoles.Barcodes.ImageGenerators.QRGenerator::CustomSetup()
 DA:22,1
@@ -782,7 +767,7 @@ BRH:6
 FNF:8
 FNH:8
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\HtmlConverters\Html2ImageConverter.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\HtmlConverters\Html2ImageConverter.cs
 FN:13,System.Void Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::SetWidth(System.Int32)
 FNDA:1,System.Void Magnum.Consoles.Barcodes.HtmlConverters.Html2ImageConverter::SetWidth(System.Int32)
 DA:14,1
@@ -825,7 +810,7 @@ BRH:2
 FNF:5
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\BarcodeProfileBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\BarcodeProfileBase.cs
 FN:6,System.String Magnum.Consoles.Barcodes.Commons.BarcodeProfileBase::get_TemplateFile()
 FNDA:18,System.String Magnum.Consoles.Barcodes.Commons.BarcodeProfileBase::get_TemplateFile()
 DA:7,18
@@ -852,7 +837,7 @@ BRH:0
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\BarcodeProfileFactory.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\BarcodeProfileFactory.cs
 FN:11,System.Void Magnum.Consoles.Barcodes.Commons.BarcodeProfileFactory::addClassConfig(System.String,System.String)
 FNDA:6,System.Void Magnum.Consoles.Barcodes.Commons.BarcodeProfileFactory::addClassConfig(System.String,System.String)
 DA:12,6
@@ -900,7 +885,7 @@ BRH:2
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\ImageGeneratorBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\ImageGeneratorBase.cs
 FN:15,System.String Magnum.Consoles.Barcodes.Commons.ImageGeneratorBase::get_TemplateFile()
 FNDA:6,System.String Magnum.Consoles.Barcodes.Commons.ImageGeneratorBase::get_TemplateFile()
 DA:16,6
@@ -964,7 +949,7 @@ BRH:2
 FNF:6
 FNH:6
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\QRProfileBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\Commons\QRProfileBase.cs
 FN:6,System.String Magnum.Consoles.Barcodes.Commons.QRProfileBase::get_TemplateFile()
 FNDA:6,System.String Magnum.Consoles.Barcodes.Commons.QRProfileBase::get_TemplateFile()
 DA:7,6
@@ -989,7 +974,7 @@ BRH:0
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\LibSetting.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\LibSetting.cs
 FN:19,Magnum.Api.Utils.LibSetting Magnum.Api.Utils.LibSetting::GetInstance()
 FNDA:2,Magnum.Api.Utils.LibSetting Magnum.Api.Utils.LibSetting::GetInstance()
 DA:20,2
@@ -1057,7 +1042,7 @@ BRH:0
 FNF:11
 FNH:11
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\RandomUtils.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\RandomUtils.cs
 FN:8,System.String Magnum.Api.Utils.RandomUtils::RandomString(System.Int32)
 FNDA:56,System.String Magnum.Api.Utils.RandomUtils::RandomString(System.Int32)
 DA:9,56
@@ -1095,7 +1080,7 @@ BRH:4
 FNF:2
 FNH:2
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\VersionUtils.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\VersionUtils.cs
 FN:8,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
 FNDA:1,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
 DA:9,1
@@ -1109,16 +1094,229 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Storages\FirebaseStorageContext.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\Serializers\CRoot.cs
+FN:21,Magnum.Api.Commons.Table.CTable Magnum.Api.Utils.Serializers.CRoot::get_Param()
+FNDA:13,Magnum.Api.Commons.Table.CTable Magnum.Api.Utils.Serializers.CRoot::get_Param()
+DA:22,13
+DA:23,13
+DA:24,13
+FN:26,System.Void Magnum.Api.Utils.Serializers.CRoot::set_Param(Magnum.Api.Commons.Table.CTable)
+FNDA:14,System.Void Magnum.Api.Utils.Serializers.CRoot::set_Param(Magnum.Api.Commons.Table.CTable)
+DA:27,14
+DA:28,14
+DA:29,14
+FN:34,Magnum.Api.Commons.Table.CTable Magnum.Api.Utils.Serializers.CRoot::get_Data()
+FNDA:14,Magnum.Api.Commons.Table.CTable Magnum.Api.Utils.Serializers.CRoot::get_Data()
+DA:35,14
+DA:36,14
+DA:37,14
+FN:39,System.Void Magnum.Api.Utils.Serializers.CRoot::set_Data(Magnum.Api.Commons.Table.CTable)
+FNDA:14,System.Void Magnum.Api.Utils.Serializers.CRoot::set_Data(Magnum.Api.Commons.Table.CTable)
+DA:40,14
+DA:41,14
+DA:42,14
+FN:9,System.Void Magnum.Api.Utils.Serializers.CRoot::.ctor(Magnum.Api.Commons.Table.CTable,Magnum.Api.Commons.Table.CTable)
+FNDA:15,System.Void Magnum.Api.Utils.Serializers.CRoot::.ctor(Magnum.Api.Commons.Table.CTable,Magnum.Api.Commons.Table.CTable)
+DA:10,15
+DA:11,15
+DA:13,15
+DA:14,15
+DA:15,15
+DA:16,15
+DA:17,15
+LF:19
+LH:19
+BRF:0
+BRH:0
+FNF:5
+FNH:5
+end_of_record
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\Serializers\CTableToXml.cs
+FN:18,System.String Magnum.Api.Utils.Serializers.CTableToXml::Serialize()
+FNDA:4,System.String Magnum.Api.Utils.Serializers.CTableToXml::Serialize()
+DA:19,4
+DA:20,4
+DA:21,4
+DA:22,4
+FN:24,System.Xml.XmlElement Magnum.Api.Utils.Serializers.CTableToXml::createElementFromTable(System.Xml.XmlDocument,Magnum.Api.Commons.Table.CTable)
+FNDA:12,System.Xml.XmlElement Magnum.Api.Utils.Serializers.CTableToXml::createElementFromTable(System.Xml.XmlDocument,Magnum.Api.Commons.Table.CTable)
+DA:25,12
+DA:26,12
+DA:27,12
+DA:28,12
+DA:30,68
+DA:31,16
+DA:32,16
+DA:33,16
+DA:34,16
+DA:35,16
+DA:37,16
+DA:38,16
+DA:40,12
+DA:41,40
+DA:42,2
+DA:43,2
+DA:45,2
+DA:46,2
+DA:47,2
+DA:49,14
+DA:50,4
+DA:52,4
+DA:53,4
+DA:54,4
+DA:55,2
+DA:57,12
+DA:58,12
+BRDA:30,130,1,16
+BRDA:30,130,0,12
+BRDA:41,338,1,2
+BRDA:49,304,1,4
+BRDA:49,304,0,2
+BRDA:41,338,0,12
+FN:60,System.String Magnum.Api.Utils.Serializers.CTableToXml::createXMLString(Magnum.Api.Utils.Serializers.CRoot)
+FNDA:4,System.String Magnum.Api.Utils.Serializers.CTableToXml::createXMLString(Magnum.Api.Utils.Serializers.CRoot)
+DA:61,4
+DA:62,4
+DA:63,4
+DA:64,4
+DA:65,4
+DA:67,4
+DA:69,4
+DA:70,4
+DA:72,4
+DA:73,4
+DA:75,4
+DA:76,4
+DA:77,4
+FN:10,System.Void Magnum.Api.Utils.Serializers.CTableToXml::.ctor(Magnum.Api.Utils.Serializers.CRoot)
+FNDA:4,System.Void Magnum.Api.Utils.Serializers.CTableToXml::.ctor(Magnum.Api.Utils.Serializers.CRoot)
+DA:11,4
+DA:13,4
+DA:14,4
+DA:15,4
+DA:16,4
+LF:49
+LH:49
+BRF:6
+BRH:6
+FNF:4
+FNH:4
+end_of_record
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\Serializers\XmlToCTable.cs
+FN:18,Magnum.Api.Utils.Serializers.CRoot Magnum.Api.Utils.Serializers.XmlToCTable::Deserialize()
+FNDA:15,Magnum.Api.Utils.Serializers.CRoot Magnum.Api.Utils.Serializers.XmlToCTable::Deserialize()
+DA:19,15
+DA:20,15
+DA:21,15
+DA:22,15
+FN:24,Magnum.Api.Utils.Serializers.CRoot Magnum.Api.Utils.Serializers.XmlToCTable::XMLToRootObject()
+FNDA:15,Magnum.Api.Utils.Serializers.CRoot Magnum.Api.Utils.Serializers.XmlToCTable::XMLToRootObject()
+DA:25,15
+DA:26,15
+DA:28,15
+DA:29,15
+DA:30,15
+DA:31,14
+DA:32,14
+DA:33,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:38,1
+DA:39,1
+DA:41,1
+DA:42,1
+DA:44,15
+DA:45,15
+FN:48,Magnum.Api.Commons.Table.CTable Magnum.Api.Utils.Serializers.XmlToCTable::populateTableObject(System.Xml.XmlNode)
+FNDA:43,Magnum.Api.Commons.Table.CTable Magnum.Api.Utils.Serializers.XmlToCTable::populateTableObject(System.Xml.XmlNode)
+DA:49,43
+DA:50,43
+DA:52,255
+DA:53,63
+DA:54,63
+DA:55,54
+DA:56,54
+DA:57,54
+DA:58,9
+DA:59,9
+DA:60,9
+DA:62,9
+DA:63,9
+DA:65,57
+DA:66,15
+DA:68,15
+DA:69,15
+DA:71,15
+DA:72,15
+DA:73,15
+DA:74,15
+DA:75,9
+DA:76,63
+DA:78,43
+DA:79,43
+BRDA:52,305,1,63
+BRDA:54,77,0,54
+BRDA:54,77,1,9
+BRDA:58,140,0,9
+BRDA:65,271,1,15
+BRDA:68,239,0,15
+BRDA:68,239,1,15
+BRDA:65,271,0,9
+BRDA:58,140,1,63
+BRDA:52,305,0,43
+FN:81,Magnum.Api.Utils.Serializers.CRoot Magnum.Api.Utils.Serializers.XmlToCTable::getRootObject(System.Xml.XmlNode)
+FNDA:14,Magnum.Api.Utils.Serializers.CRoot Magnum.Api.Utils.Serializers.XmlToCTable::getRootObject(System.Xml.XmlNode)
+DA:82,14
+DA:83,14
+DA:84,14
+DA:85,14
+DA:87,14
+DA:88,98
+DA:89,28
+DA:90,28
+DA:91,14
+DA:92,14
+DA:93,14
+DA:94,14
+DA:95,14
+DA:96,14
+DA:97,14
+DA:99,28
+DA:100,28
+DA:102,14
+DA:103,14
+DA:105,14
+DA:106,14
+BRDA:88,102,1,28
+BRDA:90,54,0,14
+BRDA:90,54,1,14
+BRDA:94,77,0,14
+BRDA:94,77,1,28
+BRDA:88,102,0,14
+FN:12,System.Void Magnum.Api.Utils.Serializers.XmlToCTable::.ctor(System.String)
+FNDA:15,System.Void Magnum.Api.Utils.Serializers.XmlToCTable::.ctor(System.String)
+DA:13,15
+DA:14,15
+DA:15,15
+DA:16,15
+LF:71
+LH:71
+BRF:16
+BRH:16
+FNF:5
+FNH:5
+end_of_record
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Storages\FirebaseStorageContext.cs
 FN:44,System.Void Magnum.Api.Storages.FirebaseStorageContext::Authenticate(System.String,System.String,System.String,System.String)
-FNDA:4,System.Void Magnum.Api.Storages.FirebaseStorageContext::Authenticate(System.String,System.String,System.String,System.String)
-DA:45,4
-DA:46,4
-DA:47,4
-DA:48,4
-DA:49,4
-DA:51,4
-DA:52,3
+FNDA:5,System.Void Magnum.Api.Storages.FirebaseStorageContext::Authenticate(System.String,System.String,System.String,System.String)
+DA:45,5
+DA:46,5
+DA:47,5
+DA:48,5
+DA:49,5
+DA:51,5
+DA:52,4
 FN:54,System.String Magnum.Api.Storages.FirebaseStorageContext::UploadFile(System.String,System.String)
 FNDA:1,System.String Magnum.Api.Storages.FirebaseStorageContext::UploadFile(System.String,System.String)
 DA:55,1
@@ -1141,22 +1339,22 @@ FN:30,System.Threading.Tasks.Task`1<System.String> Magnum.Api.Storages.FirebaseS
 FNDA:4,System.Threading.Tasks.Task`1<System.String> Magnum.Api.Storages.FirebaseStorageContext::<UploadStorageData>b__6_0()
 DA:31,4
 FN:11,System.Void Magnum.Api.Storages.FirebaseStorageContext::.ctor()
-FNDA:4,System.Void Magnum.Api.Storages.FirebaseStorageContext::.ctor()
-DA:12,4
-DA:13,4
-DA:15,4
-DA:16,4
-DA:17,4
+FNDA:5,System.Void Magnum.Api.Storages.FirebaseStorageContext::.ctor()
+DA:12,5
+DA:13,5
+DA:15,5
+DA:16,5
+DA:17,5
 FN:19,System.Void Magnum.Api.Storages.FirebaseStorageContext/<AuthenToFirebase>d__5::MoveNext()
-FNDA:4,System.Void Magnum.Api.Storages.FirebaseStorageContext/<AuthenToFirebase>d__5::MoveNext()
-DA:20,4
-DA:21,4
-DA:22,4
-DA:23,4
-DA:24,4
-DA:25,3
-BRDA:24,115,0,4
-BRDA:24,115,1,4
+FNDA:5,System.Void Magnum.Api.Storages.FirebaseStorageContext/<AuthenToFirebase>d__5::MoveNext()
+DA:20,5
+DA:21,5
+DA:22,5
+DA:23,5
+DA:24,5
+DA:25,4
+BRDA:24,115,0,5
+BRDA:24,115,1,5
 FN:27,System.Void Magnum.Api.Storages.FirebaseStorageContext/<UploadStorageData>d__6::MoveNext()
 FNDA:2,System.Void Magnum.Api.Storages.FirebaseStorageContext/<UploadStorageData>d__6::MoveNext()
 DA:28,2
@@ -1179,16 +1377,16 @@ BRH:4
 FNF:8
 FNH:8
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\NoSql\FirebaseNoSqlContext.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\NoSql\FirebaseNoSqlContext.cs
 FN:109,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
-FNDA:9,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
-DA:110,9
-DA:111,9
-DA:112,9
-DA:113,9
-DA:114,9
-DA:116,9
-DA:117,7
+FNDA:10,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
+DA:110,10
+DA:111,10
+DA:112,10
+DA:113,10
+DA:114,10
+DA:116,10
+DA:117,8
 FN:119,System.String Magnum.Api.NoSql.FirebaseNoSqlContext::PostData(System.String,System.Object)
 FNDA:3,System.String Magnum.Api.NoSql.FirebaseNoSqlContext::PostData(System.String,System.Object)
 DA:120,3
@@ -1226,30 +1424,30 @@ DA:151,2
 DA:152,2
 DA:153,2
 FN:13,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::.ctor()
-FNDA:10,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::.ctor()
-DA:14,10
-DA:15,10
-DA:17,10
-DA:18,10
-DA:19,10
+FNDA:11,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::.ctor()
+DA:14,11
+DA:15,11
+DA:17,11
+DA:18,11
+DA:19,11
 FN:31,System.Threading.Tasks.Task`1<System.String> Magnum.Api.NoSql.FirebaseNoSqlContext/<>c__DisplayClass5_0::<AuthenToFirebase>b__0()
-FNDA:15,System.Threading.Tasks.Task`1<System.String> Magnum.Api.NoSql.FirebaseNoSqlContext/<>c__DisplayClass5_0::<AuthenToFirebase>b__0()
-DA:32,15
+FNDA:16,System.Threading.Tasks.Task`1<System.String> Magnum.Api.NoSql.FirebaseNoSqlContext/<>c__DisplayClass5_0::<AuthenToFirebase>b__0()
+DA:32,16
 FN:21,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<AuthenToFirebase>d__5::MoveNext()
-FNDA:9,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<AuthenToFirebase>d__5::MoveNext()
-DA:22,9
-DA:23,9
-DA:24,9
-DA:25,9
-DA:26,9
-DA:28,7
-DA:29,7
-DA:30,7
-DA:31,7
-DA:33,7
-DA:34,7
-BRDA:26,126,0,9
-BRDA:26,126,1,9
+FNDA:10,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<AuthenToFirebase>d__5::MoveNext()
+DA:22,10
+DA:23,10
+DA:24,10
+DA:25,10
+DA:26,10
+DA:28,8
+DA:29,8
+DA:30,8
+DA:31,8
+DA:33,8
+DA:34,8
+BRDA:26,126,0,10
+BRDA:26,126,1,10
 FN:36,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PostFirebaseData>d__6::MoveNext()
 FNDA:3,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PostFirebaseData>d__6::MoveNext()
 DA:37,3
@@ -1344,7 +1542,7 @@ BRH:24
 FNF:16
 FNH:16
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\BaseModel.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\BaseModel.cs
 FN:7,System.String Magnum.Api.Models.BaseModel::get_Key()
 FNDA:36,System.String Magnum.Api.Models.BaseModel::get_Key()
 DA:8,36
@@ -1358,7 +1556,7 @@ BRH:0
 FNF:2
 FNH:2
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MBarcode.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MBarcode.cs
 FN:8,System.String Magnum.Api.Models.MBarcode::get_Barcode()
 FNDA:22,System.String Magnum.Api.Models.MBarcode::get_Barcode()
 DA:9,22
@@ -1402,19 +1600,19 @@ BRH:0
 FNF:12
 FNH:12
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MGenericDescription.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MGenericDescription.cs
 FN:6,System.String Magnum.Api.Models.MGenericDescription::get_Language()
-FNDA:2,System.String Magnum.Api.Models.MGenericDescription::get_Language()
-DA:7,2
+FNDA:4,System.String Magnum.Api.Models.MGenericDescription::get_Language()
+DA:7,4
 FN:7,System.String Magnum.Api.Models.MGenericDescription::get_Name()
-FNDA:2,System.String Magnum.Api.Models.MGenericDescription::get_Name()
-DA:8,2
+FNDA:4,System.String Magnum.Api.Models.MGenericDescription::get_Name()
+DA:8,4
 FN:8,System.String Magnum.Api.Models.MGenericDescription::get_ShortDescription()
-FNDA:2,System.String Magnum.Api.Models.MGenericDescription::get_ShortDescription()
-DA:9,2
+FNDA:3,System.String Magnum.Api.Models.MGenericDescription::get_ShortDescription()
+DA:9,3
 FN:9,System.String Magnum.Api.Models.MGenericDescription::get_LongDescription()
-FNDA:2,System.String Magnum.Api.Models.MGenericDescription::get_LongDescription()
-DA:10,2
+FNDA:3,System.String Magnum.Api.Models.MGenericDescription::get_LongDescription()
+DA:10,3
 LF:4
 LH:4
 BRF:0
@@ -1422,7 +1620,7 @@ BRH:0
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProduct.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProduct.cs
 FN:7,System.String Magnum.Api.Models.MProduct::get_Code()
 FNDA:47,System.String Magnum.Api.Models.MProduct::get_Code()
 DA:8,47
@@ -1470,7 +1668,7 @@ BRH:0
 FNF:11
 FNH:11
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProductComposition.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProductComposition.cs
 FN:7,System.String Magnum.Api.Models.MProductComposition::get_Code()
 FNDA:2,System.String Magnum.Api.Models.MProductComposition::get_Code()
 DA:8,2
@@ -1496,25 +1694,25 @@ BRH:0
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProductType.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProductType.cs
 FN:7,System.String Magnum.Api.Models.MProductType::get_Code()
-FNDA:39,System.String Magnum.Api.Models.MProductType::get_Code()
-DA:8,39
+FNDA:46,System.String Magnum.Api.Models.MProductType::get_Code()
+DA:8,46
 FN:9,System.Collections.Generic.Dictionary`2<System.String,Magnum.Api.Models.MGenericDescription> Magnum.Api.Models.MProductType::get_Descriptions()
-FNDA:16,System.Collections.Generic.Dictionary`2<System.String,Magnum.Api.Models.MGenericDescription> Magnum.Api.Models.MProductType::get_Descriptions()
-DA:10,16
+FNDA:19,System.Collections.Generic.Dictionary`2<System.String,Magnum.Api.Models.MGenericDescription> Magnum.Api.Models.MProductType::get_Descriptions()
+DA:10,19
 FN:17,System.Boolean Magnum.Api.Models.MProductType::IsKeyIdentifiable()
-FNDA:11,System.Boolean Magnum.Api.Models.MProductType::IsKeyIdentifiable()
-DA:18,11
-DA:19,11
-DA:20,11
-DA:21,11
+FNDA:13,System.Boolean Magnum.Api.Models.MProductType::IsKeyIdentifiable()
+DA:18,13
+DA:19,13
+DA:20,13
+DA:21,13
 FN:11,System.Void Magnum.Api.Models.MProductType::.ctor()
-FNDA:14,System.Void Magnum.Api.Models.MProductType::.ctor()
-DA:12,14
-DA:13,14
-DA:14,14
-DA:15,14
+FNDA:16,System.Void Magnum.Api.Models.MProductType::.ctor()
+DA:12,16
+DA:13,16
+DA:14,16
+DA:15,16
 LF:10
 LH:10
 BRF:0
@@ -1522,7 +1720,7 @@ BRH:0
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProfile.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MProfile.cs
 FN:6,System.String Magnum.Api.Models.MProfile::get_Message1()
 FNDA:2,System.String Magnum.Api.Models.MProfile::get_Message1()
 DA:7,2
@@ -1539,7 +1737,7 @@ BRH:0
 FNF:3
 FNH:3
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MRegistration.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MRegistration.cs
 FN:6,System.String Magnum.Api.Models.MRegistration::get_SerialNumber()
 FNDA:29,System.String Magnum.Api.Models.MRegistration::get_SerialNumber()
 DA:7,29
@@ -1565,7 +1763,7 @@ BRH:0
 FNF:6
 FNH:6
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Factories\FactoryBusinessOperation.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Factories\FactoryBusinessOperation.cs
 FN:17,System.Void Magnum.Api.Factories.FactoryBusinessOperation::addClassConfig(System.String,System.String)
 FNDA:9,System.Void Magnum.Api.Factories.FactoryBusinessOperation::addClassConfig(System.String,System.String)
 DA:18,9
@@ -1585,10 +1783,10 @@ DA:38,1
 DA:39,1
 DA:40,1
 FN:42,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-FNDA:36,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-DA:43,36
-DA:44,36
-DA:45,36
+FNDA:38,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
+DA:43,38
+DA:44,38
+DA:45,38
 FN:47,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Factories.FactoryBusinessOperation::GetNoSqlContext()
 FNDA:1,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Factories.FactoryBusinessOperation::GetNoSqlContext()
 DA:48,1
@@ -1600,20 +1798,20 @@ DA:53,4
 DA:54,4
 DA:55,4
 FN:57,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
-FNDA:44,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
-DA:58,44
-DA:59,44
-DA:60,44
+FNDA:47,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
+DA:58,47
+DA:59,47
+DA:60,47
 DA:61,1
 DA:62,1
-DA:65,43
-DA:66,43
-DA:68,43
-DA:69,43
-DA:71,43
-DA:72,43
+DA:65,46
+DA:66,46
+DA:68,46
+DA:69,46
+DA:71,46
+DA:72,46
 BRDA:60,24,0,1
-BRDA:60,24,1,43
+BRDA:60,24,1,46
 FN:12,System.Void Magnum.Api.Factories.FactoryBusinessOperation::.cctor()
 FNDA:1,System.Void Magnum.Api.Factories.FactoryBusinessOperation::.cctor()
 DA:13,1
@@ -1629,29 +1827,29 @@ BRH:2
 FNF:7
 FNH:7
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Table\CField.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Table\CField.cs
 FN:16,System.String Magnum.Api.Commons.Table.CField::GetValue()
-FNDA:9,System.String Magnum.Api.Commons.Table.CField::GetValue()
-DA:17,9
-DA:18,9
-DA:19,9
+FNDA:48,System.String Magnum.Api.Commons.Table.CField::GetValue()
+DA:17,48
+DA:18,48
+DA:19,48
 FN:21,System.String Magnum.Api.Commons.Table.CField::GetName()
-FNDA:3,System.String Magnum.Api.Commons.Table.CField::GetName()
-DA:22,3
-DA:23,3
-DA:24,3
+FNDA:19,System.String Magnum.Api.Commons.Table.CField::GetName()
+DA:22,19
+DA:23,19
+DA:24,19
 FN:26,System.Void Magnum.Api.Commons.Table.CField::SetValue(System.String)
 FNDA:15,System.Void Magnum.Api.Commons.Table.CField::SetValue(System.String)
 DA:27,15
 DA:28,15
 DA:29,15
 FN:9,System.Void Magnum.Api.Commons.Table.CField::.ctor(System.String,System.String,System.String)
-FNDA:25,System.Void Magnum.Api.Commons.Table.CField::.ctor(System.String,System.String,System.String)
-DA:10,25
-DA:11,25
-DA:12,25
-DA:13,25
-DA:14,25
+FNDA:81,System.Void Magnum.Api.Commons.Table.CField::.ctor(System.String,System.String,System.String)
+DA:10,81
+DA:11,81
+DA:12,81
+DA:13,81
+DA:14,81
 LF:14
 LH:14
 BRF:0
@@ -1659,12 +1857,12 @@ BRH:0
 FNF:4
 FNH:4
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Table\CTable.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Table\CTable.cs
 FN:23,System.Void Magnum.Api.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
-FNDA:3,System.Void Magnum.Api.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
-DA:24,3
-DA:25,3
-DA:26,3
+FNDA:12,System.Void Magnum.Api.Commons.Table.CTable::AddChildArray(System.String,System.Collections.ArrayList)
+DA:24,12
+DA:25,12
+DA:26,12
 FN:28,System.Void Magnum.Api.Commons.Table.CTable::RemoveChildArray(System.String)
 FNDA:1,System.Void Magnum.Api.Commons.Table.CTable::RemoveChildArray(System.String)
 DA:29,1
@@ -1676,36 +1874,36 @@ DA:34,1
 BRDA:30,15,0,1
 BRDA:30,15,1,1
 FN:36,System.Collections.ArrayList Magnum.Api.Commons.Table.CTable::GetChildArray(System.String)
-FNDA:2,System.Collections.ArrayList Magnum.Api.Commons.Table.CTable::GetChildArray(System.String)
-DA:37,2
-DA:38,2
-DA:39,2
+FNDA:10,System.Collections.ArrayList Magnum.Api.Commons.Table.CTable::GetChildArray(System.String)
+DA:37,10
+DA:38,10
+DA:39,10
 FN:41,System.Collections.Hashtable Magnum.Api.Commons.Table.CTable::GetChildHash()
-FNDA:3,System.Collections.Hashtable Magnum.Api.Commons.Table.CTable::GetChildHash()
-DA:42,3
-DA:43,3
-DA:44,3
+FNDA:15,System.Collections.Hashtable Magnum.Api.Commons.Table.CTable::GetChildHash()
+DA:42,15
+DA:43,15
+DA:44,15
 FN:46,System.Void Magnum.Api.Commons.Table.CTable::AddField(System.String,System.String,System.String)
-FNDA:25,System.Void Magnum.Api.Commons.Table.CTable::AddField(System.String,System.String,System.String)
-DA:47,25
-DA:48,25
-DA:49,25
-DA:50,25
-DA:51,25
+FNDA:81,System.Void Magnum.Api.Commons.Table.CTable::AddField(System.String,System.String,System.String)
+DA:47,81
+DA:48,81
+DA:49,81
+DA:50,81
+DA:51,81
 FN:53,System.Void Magnum.Api.Commons.Table.CTable::SetFieldValue(System.String,System.String)
-FNDA:37,System.Void Magnum.Api.Commons.Table.CTable::SetFieldValue(System.String,System.String)
-DA:54,37
-DA:55,37
+FNDA:93,System.Void Magnum.Api.Commons.Table.CTable::SetFieldValue(System.String,System.String)
+DA:54,93
+DA:55,93
 DA:56,15
 DA:57,15
 DA:58,15
 DA:59,15
-DA:61,22
-DA:62,22
-DA:63,22
-DA:64,37
+DA:61,78
+DA:62,78
+DA:63,78
+DA:64,93
 BRDA:55,15,0,15
-BRDA:55,15,1,22
+BRDA:55,15,1,78
 FN:66,System.Void Magnum.Api.Commons.Table.CTable::SetFieldValue(System.String,System.Int32)
 FNDA:2,System.Void Magnum.Api.Commons.Table.CTable::SetFieldValue(System.String,System.Int32)
 DA:67,2
@@ -1717,15 +1915,15 @@ DA:72,1
 DA:73,1
 DA:74,1
 FN:76,System.String Magnum.Api.Commons.Table.CTable::GetFieldValue(System.String)
-FNDA:7,System.String Magnum.Api.Commons.Table.CTable::GetFieldValue(System.String)
-DA:77,7
-DA:78,7
-DA:79,6
-DA:80,6
-DA:81,6
+FNDA:30,System.String Magnum.Api.Commons.Table.CTable::GetFieldValue(System.String)
+DA:77,30
+DA:78,30
+DA:79,29
+DA:80,29
+DA:81,29
 DA:84,1
-DA:85,7
-BRDA:78,15,0,6
+DA:85,30
+BRDA:78,15,0,29
 BRDA:78,15,1,1
 FN:87,System.Int32 Magnum.Api.Commons.Table.CTable::GetFieldValueInt(System.String)
 FNDA:1,System.Int32 Magnum.Api.Commons.Table.CTable::GetFieldValueInt(System.String)
@@ -1734,15 +1932,15 @@ DA:89,1
 DA:90,1
 DA:91,1
 FN:93,System.String Magnum.Api.Commons.Table.CTable::GetTableName()
-FNDA:1,System.String Magnum.Api.Commons.Table.CTable::GetTableName()
-DA:94,1
-DA:95,1
-DA:96,1
+FNDA:13,System.String Magnum.Api.Commons.Table.CTable::GetTableName()
+DA:94,13
+DA:95,13
+DA:96,13
 FN:98,System.Collections.ArrayList Magnum.Api.Commons.Table.CTable::GetTableFields()
-FNDA:3,System.Collections.ArrayList Magnum.Api.Commons.Table.CTable::GetTableFields()
-DA:99,3
-DA:100,3
-DA:101,3
+FNDA:15,System.Collections.ArrayList Magnum.Api.Commons.Table.CTable::GetTableFields()
+DA:99,15
+DA:100,15
+DA:101,15
 FN:103,Magnum.Api.Commons.Table.CTable Magnum.Api.Commons.Table.CTable::CloneAll()
 FNDA:3,Magnum.Api.Commons.Table.CTable Magnum.Api.Commons.Table.CTable::CloneAll()
 DA:104,3
@@ -1772,15 +1970,15 @@ BRDA:120,225,1,2
 BRDA:120,225,0,1
 BRDA:113,259,0,3
 FN:7,System.Void Magnum.Api.Commons.Table.CTable::.ctor(System.String)
-FNDA:16,System.Void Magnum.Api.Commons.Table.CTable::.ctor(System.String)
-DA:8,16
-DA:9,16
-DA:11,16
-DA:12,16
-DA:14,4
-DA:15,4
-DA:16,4
-DA:17,4
+FNDA:61,System.Void Magnum.Api.Commons.Table.CTable::.ctor(System.String)
+DA:8,61
+DA:9,61
+DA:11,61
+DA:12,61
+DA:14,49
+DA:15,49
+DA:16,49
+DA:17,49
 FN:18,System.Void Magnum.Api.Commons.Table.CTable::.ctor()
 FNDA:12,System.Void Magnum.Api.Commons.Table.CTable::.ctor()
 DA:19,12
@@ -1793,31 +1991,31 @@ BRH:12
 FNF:15
 FNH:15
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Business\BusinessOperationBase.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Business\BusinessOperationBase.cs
 FN:12,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-FNDA:43,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-DA:13,43
-DA:14,43
-DA:15,43
+FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
+DA:13,46
+DA:14,46
+DA:15,46
 FN:17,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Commons.Business.BusinessOperationBase::GetNoSqlContext()
-FNDA:33,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Commons.Business.BusinessOperationBase::GetNoSqlContext()
-DA:18,33
-DA:19,33
-DA:20,33
+FNDA:35,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Commons.Business.BusinessOperationBase::GetNoSqlContext()
+DA:18,35
+DA:19,35
+DA:20,35
 FN:22,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetStorageContext(Magnum.Api.Storages.IStorageContext)
-FNDA:43,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetStorageContext(Magnum.Api.Storages.IStorageContext)
-DA:23,43
-DA:24,43
-DA:25,43
+FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetStorageContext(Magnum.Api.Storages.IStorageContext)
+DA:23,46
+DA:24,46
+DA:25,46
 FN:27,Magnum.Api.Storages.IStorageContext Magnum.Api.Commons.Business.BusinessOperationBase::GetStorageContext()
 FNDA:3,Magnum.Api.Storages.IStorageContext Magnum.Api.Commons.Business.BusinessOperationBase::GetStorageContext()
 DA:28,3
 DA:29,3
 DA:30,3
 FN:8,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
-FNDA:43,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
-DA:9,43
-DA:10,43
+FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
+DA:9,46
+DA:10,46
 LF:14
 LH:14
 BRF:0
@@ -1825,7 +2023,7 @@ BRH:0
 FNF:5
 FNH:5
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Registrations\CreateRegistration.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Registrations\CreateRegistration.cs
 FN:9,System.Int32 Magnum.Api.Businesses.Registrations.CreateRegistration::Apply(Magnum.Api.Models.MRegistration)
 FNDA:11,System.Int32 Magnum.Api.Businesses.Registrations.CreateRegistration::Apply(Magnum.Api.Models.MRegistration)
 DA:10,11
@@ -1882,19 +2080,19 @@ BRH:12
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ProductTypes\GetProductTypeInfo.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ProductTypes\GetProductTypeInfo.cs
 FN:9,Magnum.Api.Models.MProductType Magnum.Api.Businesses.ProductTypes.GetProductTypeInfo::Apply(Magnum.Api.Models.MProductType)
-FNDA:7,Magnum.Api.Models.MProductType Magnum.Api.Businesses.ProductTypes.GetProductTypeInfo::Apply(Magnum.Api.Models.MProductType)
-DA:10,7
-DA:11,7
+FNDA:8,Magnum.Api.Models.MProductType Magnum.Api.Businesses.ProductTypes.GetProductTypeInfo::Apply(Magnum.Api.Models.MProductType)
+DA:10,8
+DA:11,8
 DA:12,1
 DA:13,1
-DA:16,6
-DA:17,6
-DA:19,6
-DA:20,6
+DA:16,7
+DA:17,7
+DA:19,7
+DA:20,7
 BRDA:11,12,0,1
-BRDA:11,12,1,6
+BRDA:11,12,1,7
 LF:8
 LH:8
 BRF:2
@@ -1902,7 +2100,7 @@ BRH:2
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ProductTypes\GetProductTypeList.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ProductTypes\GetProductTypeList.cs
 FN:12,System.Collections.Generic.IEnumerable`1<Magnum.Api.Models.MProductType> Magnum.Api.Businesses.ProductTypes.GetProductTypeList::Apply(Magnum.Api.Models.MProductType,Magnum.Api.Commons.Table.CTable)
 FNDA:1,System.Collections.Generic.IEnumerable`1<Magnum.Api.Models.MProductType> Magnum.Api.Businesses.ProductTypes.GetProductTypeList::Apply(Magnum.Api.Models.MProductType,Magnum.Api.Commons.Table.CTable)
 DA:13,1
@@ -1917,30 +2115,30 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ProductTypes\SaveProductType.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ProductTypes\SaveProductType.cs
 FN:11,Magnum.Api.Models.MProductType Magnum.Api.Businesses.ProductTypes.SaveProductType::Apply(Magnum.Api.Models.MProductType)
-FNDA:4,Magnum.Api.Models.MProductType Magnum.Api.Businesses.ProductTypes.SaveProductType::Apply(Magnum.Api.Models.MProductType)
-DA:12,4
-DA:13,4
+FNDA:5,Magnum.Api.Models.MProductType Magnum.Api.Businesses.ProductTypes.SaveProductType::Apply(Magnum.Api.Models.MProductType)
+DA:12,5
+DA:13,5
 DA:14,1
 DA:15,1
-DA:18,3
-DA:19,3
-DA:21,3
-DA:23,3
-DA:24,1
-DA:26,1
-DA:28,1
-DA:29,1
+DA:18,4
+DA:19,4
+DA:21,4
+DA:23,4
+DA:24,2
+DA:26,2
+DA:28,2
+DA:29,2
 DA:31,2
 DA:32,2
 DA:33,2
 DA:34,2
-DA:37,3
-DA:38,3
+DA:37,4
+DA:38,4
 BRDA:13,12,0,1
-BRDA:13,12,1,3
-BRDA:23,65,0,1
+BRDA:13,12,1,4
+BRDA:23,65,0,2
 BRDA:23,65,1,2
 LF:18
 LH:18
@@ -1949,7 +2147,7 @@ BRH:4
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\DeleteProduct.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\DeleteProduct.cs
 FN:9,System.Int32 Magnum.Api.Businesses.Products.DeleteProduct::Apply(Magnum.Api.Models.MProduct)
 FNDA:2,System.Int32 Magnum.Api.Businesses.Products.DeleteProduct::Apply(Magnum.Api.Models.MProduct)
 DA:10,2
@@ -1970,7 +2168,7 @@ BRH:2
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\GetProductInfo.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\GetProductInfo.cs
 FN:9,Magnum.Api.Models.MProduct Magnum.Api.Businesses.Products.GetProductInfo::Apply(Magnum.Api.Models.MProduct)
 FNDA:7,Magnum.Api.Models.MProduct Magnum.Api.Businesses.Products.GetProductInfo::Apply(Magnum.Api.Models.MProduct)
 DA:10,7
@@ -1990,7 +2188,7 @@ BRH:2
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\GetProductList.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\GetProductList.cs
 FN:12,System.Collections.Generic.IEnumerable`1<Magnum.Api.Models.MProduct> Magnum.Api.Businesses.Products.GetProductList::Apply(Magnum.Api.Models.MProduct,Magnum.Api.Commons.Table.CTable)
 FNDA:1,System.Collections.Generic.IEnumerable`1<Magnum.Api.Models.MProduct> Magnum.Api.Businesses.Products.GetProductList::Apply(Magnum.Api.Models.MProduct,Magnum.Api.Commons.Table.CTable)
 DA:13,1
@@ -2005,7 +2203,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\SaveProduct.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Products\SaveProduct.cs
 FN:11,System.Void Magnum.Api.Businesses.Products.SaveProduct::PopulateImageProperty(Magnum.Api.Models.MProduct)
 FNDA:3,System.Void Magnum.Api.Businesses.Products.SaveProduct::PopulateImageProperty(Magnum.Api.Models.MProduct)
 DA:12,3
@@ -2049,7 +2247,7 @@ BRH:4
 FNF:2
 FNH:2
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Barcodes\CreateBarcode.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Barcodes\CreateBarcode.cs
 FN:10,Magnum.Api.Models.MBarcode Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
 FNDA:5,Magnum.Api.Models.MBarcode Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
 DA:11,5
@@ -2078,7 +2276,7 @@ BRH:0
 FNF:1
 FNH:1
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Program.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Program.cs
 FN:13,System.Void Magnum.Web.Program::SetFirebaseContext()
 FNDA:0,System.Void Magnum.Web.Program::SetFirebaseContext()
 DA:14,0
@@ -2137,7 +2335,7 @@ BRH:0
 FNF:3
 FNH:0
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Startup.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Startup.cs
 FN:19,Microsoft.Extensions.Configuration.IConfiguration Magnum.Web.Startup::get_Configuration()
 FNDA:0,Microsoft.Extensions.Configuration.IConfiguration Magnum.Web.Startup::get_Configuration()
 DA:20,0
@@ -2194,7 +2392,7 @@ BRH:0
 FNF:4
 FNH:0
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Models\ErrorViewModel.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Models\ErrorViewModel.cs
 FN:6,System.String Magnum.Web.Models.ErrorViewModel::get_RequestId()
 FNDA:0,System.String Magnum.Web.Models.ErrorViewModel::get_RequestId()
 DA:7,0
@@ -2208,7 +2406,7 @@ BRH:0
 FNF:2
 FNH:0
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Utils\VersionUtils.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Utils\VersionUtils.cs
 FN:8,System.String Magnum.Web.Utils.VersionUtils::GetVersion()
 FNDA:0,System.String Magnum.Web.Utils.VersionUtils::GetVersion()
 DA:9,0
@@ -2222,7 +2420,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\HomeController.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\HomeController.cs
 FN:13,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Index()
 FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Index()
 DA:14,0
@@ -2264,7 +2462,7 @@ BRH:0
 FNF:6
 FNH:0
 end_of_record
-SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\VerificationController.cs
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\VerificationController.cs
 FN:13,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.VerificationController::Check(System.String,System.String,System.String,System.String)
 FNDA:2,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.VerificationController::Check(System.String,System.String,System.String,System.String)
 DA:14,2
@@ -2303,7 +2501,7 @@ BRH:6
 FNF:2
 FNH:2
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\About.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\About.cshtml
 FN:1,System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Home_About/<ExecuteAsync>d__0::MoveNext()
 DA:2,0
@@ -2314,7 +2512,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Contact.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Contact.cshtml
 FN:1,System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__8::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Home_Contact/<ExecuteAsync>d__8::MoveNext()
 DA:2,0
@@ -2333,7 +2531,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Index.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Index.cshtml
 FN:1,System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Home_Index/<ExecuteAsync>d__0::MoveNext()
 DA:2,0
@@ -2344,7 +2542,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Privacy.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Home\Privacy.cshtml
 FN:1,System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Home_Privacy/<ExecuteAsync>d__0::MoveNext()
 DA:2,0
@@ -2356,7 +2554,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Shared\Error.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Shared\Error.cshtml
 FN:2,System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Shared_Error/<ExecuteAsync>d__0::MoveNext()
 DA:3,0
@@ -2371,88 +2569,58 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Shared\_Layout.cshtml
-FN:5,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_0>d::MoveNext()
-FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_0>d::MoveNext()
-DA:6,0
-BRDA:6,8,0,0
-BRDA:6,452,0,0
-BRDA:6,8,1,0
-BRDA:6,452,1,0
-BRDA:6,555,0,0
-BRDA:6,588,0,0
-BRDA:6,8,2,0
-BRDA:6,588,1,0
-BRDA:6,555,1,0
-BRDA:6,1006,0,0
-BRDA:6,8,3,0
-BRDA:6,1006,1,0
-BRDA:6,1113,0,0
-BRDA:6,1146,0,0
-BRDA:6,8,4,0
-BRDA:6,1146,1,0
-BRDA:6,1113,1,0
-BRDA:6,1395,0,0
-BRDA:6,1395,1,0
-BRDA:6,1565,0,0
-BRDA:6,8,5,0
-BRDA:6,1565,1,0
-BRDA:6,1672,0,0
-BRDA:6,1705,0,0
-BRDA:6,8,6,0
-BRDA:6,1705,1,0
-BRDA:6,1672,1,0
-FN:37,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_1>d::MoveNext()
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Shared\_Layout.cshtml
+FN:39,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_1>d::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Shared__Layout/<<ExecuteAsync>b__39_1>d::MoveNext()
-DA:38,0
-DA:51,0
-DA:52,0
-DA:62,0
-DA:86,0
-DA:88,0
-BRDA:38,8,0,0
-BRDA:38,622,0,0
-BRDA:38,8,1,0
-BRDA:38,622,1,0
-BRDA:38,725,0,0
-BRDA:38,758,0,0
-BRDA:38,8,2,0
-BRDA:38,758,1,0
-BRDA:38,725,1,0
-BRDA:62,1560,0,0
-BRDA:38,8,3,0
-BRDA:62,1560,1,0
-BRDA:62,1667,0,0
-BRDA:62,1700,0,0
-BRDA:38,8,4,0
-BRDA:62,1700,1,0
-BRDA:62,1667,1,0
-BRDA:62,2118,0,0
-BRDA:38,8,5,0
-BRDA:62,2118,1,0
-BRDA:62,2225,0,0
-BRDA:62,2258,0,0
-BRDA:38,8,6,0
-BRDA:62,2258,1,0
-BRDA:62,2225,1,0
-BRDA:62,2507,0,0
-BRDA:62,2507,1,0
-BRDA:86,2804,0,0
-BRDA:38,8,7,0
-BRDA:86,2804,1,0
-BRDA:86,2911,0,0
-BRDA:86,2944,0,0
-BRDA:38,8,8,0
-BRDA:86,2944,1,0
-BRDA:86,2911,1,0
-LF:7
+DA:40,0
+DA:54,0
+DA:55,0
+DA:65,0
+DA:153,0
+DA:155,0
+BRDA:40,8,0,0
+BRDA:40,622,0,0
+BRDA:40,8,1,0
+BRDA:40,622,1,0
+BRDA:40,725,0,0
+BRDA:40,758,0,0
+BRDA:40,8,2,0
+BRDA:40,758,1,0
+BRDA:40,725,1,0
+BRDA:65,1628,0,0
+BRDA:40,8,3,0
+BRDA:65,1628,1,0
+BRDA:65,1735,0,0
+BRDA:65,1768,0,0
+BRDA:40,8,4,0
+BRDA:65,1768,1,0
+BRDA:65,1735,1,0
+BRDA:65,2186,0,0
+BRDA:40,8,5,0
+BRDA:65,2186,1,0
+BRDA:65,2293,0,0
+BRDA:65,2326,0,0
+BRDA:40,8,6,0
+BRDA:65,2326,1,0
+BRDA:65,2293,1,0
+BRDA:65,2575,0,0
+BRDA:65,2575,1,0
+BRDA:153,2872,0,0
+BRDA:40,8,7,0
+BRDA:153,2872,1,0
+BRDA:153,2979,0,0
+BRDA:153,3012,0,0
+BRDA:40,8,8,0
+BRDA:153,3012,1,0
+BRDA:153,2979,1,0
+LF:6
 LH:0
-BRF:62
+BRF:35
 BRH:0
-FNF:2
+FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Verification\Fail.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Verification\Fail.cshtml
 FN:1,System.Void AspNetCore.Views_Verification_Fail/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Verification_Fail/<ExecuteAsync>d__0::MoveNext()
 DA:2,0
@@ -2466,7 +2634,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Verification\Success.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\Verification\Success.cshtml
 FN:1,System.Void AspNetCore.Views_Verification_Success/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views_Verification_Success/<ExecuteAsync>d__0::MoveNext()
 DA:2,0
@@ -2484,7 +2652,7 @@ BRH:0
 FNF:1
 FNH:0
 end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\_ViewStart.cshtml
+SF:d:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Views\_ViewStart.cshtml
 FN:1,System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()
 FNDA:0,System.Void AspNetCore.Views__ViewStart/<ExecuteAsync>d__0::MoveNext()
 DA:2,0
