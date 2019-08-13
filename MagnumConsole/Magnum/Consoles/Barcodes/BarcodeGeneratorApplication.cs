@@ -69,10 +69,6 @@ namespace Magnum.Consoles.Barcodes
         protected override int Execute()
         {
             Hashtable args = GetArguments();
-            string key = args["key"].ToString();
-            string host = args["host"].ToString();
-            string user = args["user"].ToString();
-            string password = args["password"].ToString();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
             string prof = args["profile"].ToString();

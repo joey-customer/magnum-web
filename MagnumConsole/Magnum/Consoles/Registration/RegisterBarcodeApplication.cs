@@ -30,13 +30,9 @@ namespace Magnum.Consoles.Registrations
         protected override int Execute()
         {
             Hashtable args = GetArguments();
-            string key = args["key"].ToString();
-            string host = args["host"].ToString();
             string serial = args["serial"].ToString();
             string pin = args["pin"].ToString();
             string ip = args["ip"].ToString();
-            string user = args["user"].ToString();
-            string password = args["password"].ToString();
             string path = args["path"].ToString();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
