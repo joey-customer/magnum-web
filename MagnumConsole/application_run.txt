@@ -36,6 +36,15 @@ dotnet run ImportProduct \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
+dotnet run ImportProductType \
+--if='product_types.xml' \
+--b="./configs/imports/product_types" \
+--bucket=compute-engine-vm-test.appspot.com \
+--h=https://compute-engine-vm-test.firebaseio.com/ \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
 #======
 https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md
 #======
