@@ -1,6 +1,7 @@
 using System;
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
+using Magnum.Api.Smtp;
 
 namespace Magnum.Api.Commons.Business
 {    
@@ -8,6 +9,7 @@ namespace Magnum.Api.Commons.Business
 	{
         private INoSqlContext noSqlContext = null;
         private IStorageContext storageContext = null;
+        private ISmtpContext smtpContext = null;
 
         public void SetNoSqlContext(INoSqlContext context)
         {
@@ -23,6 +25,16 @@ namespace Magnum.Api.Commons.Business
         {
             storageContext = context;
         }
+
+        public void SetSmtpContext(ISmtpContext context)
+        {
+            smtpContext = context;
+        }
+
+        public ISmtpContext GetSmtpContext()
+        {
+            return smtpContext;
+        }  
 
         public IStorageContext GetStorageContext()
         {

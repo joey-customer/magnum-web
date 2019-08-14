@@ -3,6 +3,7 @@ using System.Collections;
 using System.Reflection;
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
+using Magnum.Api.Smtp;
 
 using Magnum.Api.Commons.Business;
 
@@ -13,6 +14,7 @@ namespace Magnum.Api.Factories
         private static Hashtable classMaps = new Hashtable();
         private static INoSqlContext noSqlContext = null;
         private static IStorageContext storageContext = null;
+        private static ISmtpContext smtpContext = null;
 
         private static void addClassConfig(string apiName, string fqdn)
         {
@@ -54,6 +56,11 @@ namespace Magnum.Api.Factories
             storageContext = ctx;
         }        
 
+        public static void SetSmtpContext(ISmtpContext ctx)
+        {
+            smtpContext = ctx;
+        }  
+
         public static IBusinessOperation CreateBusinessOperationObject(string name)
         {        
             string className = (string)classMaps[name];
@@ -67,6 +74,7 @@ namespace Magnum.Api.Factories
             
             obj.SetNoSqlContext(noSqlContext);
             obj.SetStorageContext(storageContext);
+            obj.SetSmtpContext(smtpContext);
 
             return(obj);
         }
