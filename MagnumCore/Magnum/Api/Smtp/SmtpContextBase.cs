@@ -6,12 +6,16 @@ namespace Magnum.Api.Smtp
 {
 	public abstract class SmtpContextBase : ISmtpContext
 	{
-        private readonly string smtpHost = "";
-        private readonly int smtpPort = 0;
-        private readonly string smtpUser = "";
-        private readonly string smtpPassword = "";
+        private string smtpHost = "";
+        private int smtpPort = 0;
+        private string smtpUser = "";
+        private string smtpPassword = "";
 
-        public SmtpContextBase(string host, int port, string user, string password)
+        public SmtpContextBase()
+        {
+        }
+
+        protected void SetSmtpConfig(string host, int port, string user, string password)
         {
             smtpHost = host;
             smtpPort = port;
