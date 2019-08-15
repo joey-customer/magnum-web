@@ -9,7 +9,6 @@ namespace Magnum.Api.Storages
 {    
 	public class FirebaseStorageContext : IStorageContext
 	{
-        private FirebaseAuthLink token = null;
         private FirebaseStorage fbStorage = null;
 
         private string authKey = "";

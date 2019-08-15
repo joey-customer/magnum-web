@@ -104,12 +104,10 @@ namespace Magnum.Consoles.Barcodes
                 string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(6, '0');
                 string urlPath = string.Format("{0}_{1}_{2}/{3}", prof, param.BatchNo, timeStamp, chunk);
                 string dir = string.Format("{0}/{1}", args["outpath"].ToString(), urlPath);
-                if (!Directory.Exists(dir))
+                
+                if (!Directory.Exists(dir) && imageGenerate)
                 {
-                    if (imageGenerate)
-                    {
-                        Directory.CreateDirectory(dir);
-                    }
+                    Directory.CreateDirectory(dir);
                 }
 
                 param.Path = urlPath;
