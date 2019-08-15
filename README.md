@@ -4,6 +4,8 @@
 
 It is the good idea not to hardcode any sensitive data such as username, password or key in the source code. We should pass the neccessary setting via environment variables. Below are the environment variables needed for the application.
 
+In general we can set MAGNUM_CERTIFICATE_ON to 'N' or remove it in the development environment then the MAGNUM_CERTIFICATE_FILE and MAGNUM_CERTIFICATE_PASSWORD can be discarded as well.
+
 * MAGNUM_CERTIFICATE_FILE - Https .pfx certificate file location. This one can be blank if MAGNUM_CERTIFICATE_ON is 'N'.
 * MAGNUM_CERTIFICATE_ON - Set it to 'Y' in the production mode, set to 'N' in development. If missing then it is equivalent to set it to 'N'.
 * MAGNUM_CERTIFICATE_PASSWORD - Password to access .pfx file defined by MAGNUM_CERTIFICATE_FILE.
