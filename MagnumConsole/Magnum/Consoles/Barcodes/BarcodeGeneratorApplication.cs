@@ -69,23 +69,15 @@ namespace Magnum.Consoles.Barcodes
         protected override int Execute()
         {
             Hashtable args = GetArguments();
-            string key = args["key"].ToString();
-            string host = args["host"].ToString();
-            string user = args["user"].ToString();
-            string password = args["password"].ToString();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
             string prof = args["profile"].ToString();
 
             BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
 
-            INoSqlContext ctx = GetNoSqlContext();
-            if (ctx == null)
-            {
-                ctx = GetNoSqlContext("firebase", host, key, user, password);
-            }
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());

@@ -99,6 +99,27 @@ namespace Magnum.Api.NoSql
         }  
 
         [TestCase]
+        public void NoDataToDeleteTest()
+        {
+            //Just to cover the test coverage
+
+            INoSqlContext ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+
+            try
+            {
+                MProduct prd = new MProduct();
+                prd.Key = "faked_key";
+                ctx.DeleteData("unit_testing", prd);
+            }
+            catch (Exception e)
+            {
+                //Do nothing
+                Assert.Fail(e.Message);                
+            }
+        }          
+
+        [TestCase]
         public void GetObjectByKeyTest()
         {
             //Just to cover the test coverage
@@ -116,6 +137,45 @@ namespace Magnum.Api.NoSql
                 //Do nothing
                 Assert.Fail(e.Message);                
             }
-        }                         
+        }     
+
+        [TestCase("faked_nodes_not_found")]
+        [TestCase("products")]
+        public void GetObjectList(string node)
+        {
+            //Just to cover the test coverage
+
+            INoSqlContext ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+
+            try
+            {
+                ctx.GetObjectList<BaseModel>(node);
+            }
+            catch (Exception e)
+            {
+                //Do nothing
+                Assert.Fail(e.Message);                
+            }
+        }  
+
+        [TestCase]
+        public void GetSingleObjectTest()
+        {
+            //Just to cover the test coverage
+
+            INoSqlContext ctx = new FirebaseNoSqlContext();
+            Authen(ctx);
+
+            try
+            {
+                ctx.GetSingleObject<BaseModel>("faked_nodes_not_found", "faked_key_not_found");
+            }
+            catch (Exception e)
+            {
+                //Do nothing
+                Assert.Fail(e.Message);                
+            }
+        }                                    
     }
 }

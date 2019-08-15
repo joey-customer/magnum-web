@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ProductTypeImport">
+        <ITEMS name="ProductTypes">
+
+            <OBJECT name="ProductType">
+                <FIELD name="Code">001</FIELD>
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Orals</FIELD>
+                        <FIELD name="ShortDescription">Orals 01</FIELD>
+                        <FIELD name="LongDescription">Orals 001</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="ProductType">
+                <FIELD name="Code">002</FIELD>
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Peptids &amp; GH</FIELD>
+                        <FIELD name="ShortDescription">Peptids &amp; GH 02</FIELD>
+                        <FIELD name="LongDescription">Peptids &amp; GH 002</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="ProductType">
+                <FIELD name="Code">003</FIELD>
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Sexual Performance</FIELD>
+                        <FIELD name="ShortDescription">Sexual Performance 03</FIELD>
+                        <FIELD name="LongDescription">Sexual Performance 003</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>         
+            
+            <OBJECT name="ProductType">
+                <FIELD name="Code">004</FIELD>
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Extreme Series</FIELD>
+                        <FIELD name="ShortDescription">Extreme Series 04</FIELD>
+                        <FIELD name="LongDescription">Extreme Series 004</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>          
+            
+            <OBJECT name="ProductType">
+                <FIELD name="Code">005</FIELD>
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Ergogenics</FIELD>
+                        <FIELD name="ShortDescription">Ergogenics 05</FIELD>
+                        <FIELD name="LongDescription">Ergogenics 005</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>                      
+        </ITEMS>
+    </OBJECT>
+</API>

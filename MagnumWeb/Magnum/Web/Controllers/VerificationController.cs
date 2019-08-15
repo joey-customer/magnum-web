@@ -5,7 +5,7 @@ using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using System.Net;
 
-namespace MagnumWeb.Controllers
+namespace Magnum.Web.Controllers
 {
     public class VerificationController : BaseController
     {
