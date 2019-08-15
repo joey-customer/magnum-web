@@ -34,7 +34,7 @@ namespace Magnum.Api.Smtp
             mailMessage.To.Add(mail.To);
             mailMessage.Body = mail.Body;
             mailMessage.Subject = mail.Subject;
-            client.Send(mailMessage);
+            // Will need to add - client dot Send(mailMessage); here
         }
     }    
 }

@@ -12,7 +12,7 @@ namespace Magnum.Api.Smtp
         {
         }
 
-        [TestCase("pjame.fb@gmail.com", "noreply@xxxx.com")]
+        [TestCase("pjame.fb@gmail.com", "noreply@magnum-pharmacy.com")]
         public void SendEmailTest(string to, string from)
         {
             SendGridSmtpContext ctx = new SendGridSmtpContext();
