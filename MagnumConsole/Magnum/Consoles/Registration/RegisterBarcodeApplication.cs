@@ -30,22 +30,14 @@ namespace Magnum.Consoles.Registrations
         protected override int Execute()
         {
             Hashtable args = GetArguments();
-            string key = args["key"].ToString();
-            string host = args["host"].ToString();
             string serial = args["serial"].ToString();
             string pin = args["pin"].ToString();
             string ip = args["ip"].ToString();
-            string user = args["user"].ToString();
-            string password = args["password"].ToString();
             string path = args["path"].ToString();
 
-            INoSqlContext ctx = GetNoSqlContext();
-            if (ctx == null)
-            {
-                ctx = GetNoSqlContext("firebase", host, key, user, password);
-            }
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             CreateRegistration opr = (CreateRegistration) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
 
             MRegistration param = new MRegistration();

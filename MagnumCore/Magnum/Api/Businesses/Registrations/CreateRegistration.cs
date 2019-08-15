@@ -16,7 +16,7 @@ namespace Magnum.Api.Businesses.Registrations
                 throw(new ArgumentException("IP, SerialNumber, Path, PIN must not be null!!!"));
             }
 
-            var ctx = GetContext();
+            var ctx = GetNoSqlContext();
 
             string barcode = string.Format("{0}-{1}", dat.SerialNumber, dat.Pin);
             string bcPath = string.Format("asset_barcodes/{0}/{1}", dat.Path, barcode);

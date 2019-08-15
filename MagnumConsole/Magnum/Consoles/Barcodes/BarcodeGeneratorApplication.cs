@@ -51,7 +51,8 @@ namespace Magnum.Consoles.Barcodes
             .Add("u=|url=", "QR scan URL", s => AddArgument("url", s))
             .Add("o=|outpath=", "QR image file output directory (folder)", s => AddArgument("outpath", s))
             .Add("profile=", "Product profile", s => AddArgument("profile", s))
-            .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));
+            .Add("g=|generate=", "Image generation flag", s => AddArgument("generate", s))
+            .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));            
 
             return options;
         }
@@ -69,23 +70,22 @@ namespace Magnum.Consoles.Barcodes
         protected override int Execute()
         {
             Hashtable args = GetArguments();
-            string key = args["key"].ToString();
-            string host = args["host"].ToString();
-            string user = args["user"].ToString();
-            string password = args["password"].ToString();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
             string prof = args["profile"].ToString();
+            string generate = (string) args["generate"];
+            if (generate == null)
+            {
+                generate = "";
+            }
+
+            bool imageGenerate = generate.Equals("Y");
 
             BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
 
-            INoSqlContext ctx = GetNoSqlContext();
-            if (ctx == null)
-            {
-                ctx = GetNoSqlContext("firebase", host, key, user, password);
-            }
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());
@@ -104,7 +104,8 @@ namespace Magnum.Consoles.Barcodes
                 string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(6, '0');
                 string urlPath = string.Format("{0}_{1}_{2}/{3}", prof, param.BatchNo, timeStamp, chunk);
                 string dir = string.Format("{0}/{1}", args["outpath"].ToString(), urlPath);
-                if (!Directory.Exists(dir))
+                
+                if (!Directory.Exists(dir) && imageGenerate)
                 {
                     Directory.CreateDirectory(dir);
                 }
@@ -116,7 +117,10 @@ namespace Magnum.Consoles.Barcodes
                 MBarcode bc = opr.Apply(param);                
 
                 string fileName = string.Format("{0}/{1}-{2}.png", dir, bc.SerialNumber, bc.Pin);
-                generator.RenderToFile(bc, fileName);
+                if (imageGenerate)
+                {
+                    generator.RenderToFile(bc, fileName);
+                }
                 progressFunc(bc, dir);
 
                 Console.WriteLine("{0}|{1}|{2}|{3}|{4}", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);

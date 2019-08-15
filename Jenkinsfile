@@ -7,8 +7,9 @@ pipeline {
     
     environment {
         PRODUCT_NAME = 'MagnumWeb'
-        PUBLISH_FLAG = 'FALSE'
-        BUILT_VERSION = '1.1.1-SNAPSHOT'
+        PUBLISH_FLAG = 'TRUE'
+        BUILT_VERSION = '1.0.14'
+        DOCKER_VERSION = '1.0.14'
         SONAR_SCANNER = '/home/tomcat/.dotnet/tools/dotnet-sonarscanner'
         COVERLET = '/home/tomcat/.dotnet/tools/coverlet'
         UNIT_TEST_ASSEMBLY = './MagnumTest/bin/Debug/netcoreapp2.2/MagnumTest.dll'
@@ -48,6 +49,12 @@ pipeline {
             steps {
                 sh "${env.SONAR_SCANNER} end /d:sonar.login=${params.SONAR_LOGIN_KEY}"
             }         
-        }        
+        } 
+        
+        stage('Docker Packaging') {
+            steps {
+                sh "cd Docker; ./make_docker.bash"
+            }         
+        }                  
     }
 }

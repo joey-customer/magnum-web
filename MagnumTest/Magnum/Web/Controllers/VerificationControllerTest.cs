@@ -1,5 +1,4 @@
 using System;
-using MagnumWeb.Controllers;
 using NUnit.Framework;
 using Moq;
 using Magnum.Api.Businesses.Registrations;
@@ -10,7 +9,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using System.Net;
 
-namespace Magnum.Consoles
+namespace Magnum.Web.Controllers
 {
     public class VerificationControllerTest
     {

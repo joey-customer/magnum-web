@@ -18,7 +18,7 @@ namespace Magnum.Api.Businesses.Barcodes
         public void CreateBarcodeWithRandomStringTest()
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
-            FactoryBusinessOperation.SetContext(ctx);
+            FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             var opt = (IBusinessOperationGetInfo<MBarcode>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
             MBarcode bc = new MBarcode();
