@@ -18,19 +18,22 @@ namespace Magnum.Api.NoSql
         private string dbUser = "";
         private string dbPassword = "";
 
-        private async Task AuthenToFirebase()
+        private void AuthenToFirebase()
         {
             FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig(authKey));
-            string firebaseUsername = dbUser;
-            string firebasePassword = dbPassword;
-            var token = await authProvider.SignInWithEmailAndPasswordAsync(firebaseUsername, firebasePassword);
 
             fbClient = new FirebaseClient(
                 dbUrl,
                 new FirebaseOptions
                 {
-                    AuthTokenAsyncFactory = () => Task.FromResult(token.FirebaseToken)
+                    AuthTokenAsyncFactory = () => LoginAsync(authProvider)                    
                 });            
+        }
+
+        private async Task<string> LoginAsync(FirebaseAuthProvider authProvider)
+        {
+            var token = await authProvider.SignInWithEmailAndPasswordAsync(dbUser, dbPassword);
+            return token.FirebaseToken;
         }
 
         private async Task<string> PostFirebaseData(string path, object data)
@@ -113,7 +116,7 @@ namespace Magnum.Api.NoSql
             dbUser = user;
             dbPassword = passwd;
 
-            AuthenToFirebase().Wait();
+            AuthenToFirebase();
         }
 
         public string PostData(string path, object data)

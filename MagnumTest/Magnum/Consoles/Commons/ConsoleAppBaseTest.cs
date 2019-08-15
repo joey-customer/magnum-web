@@ -17,15 +17,8 @@ namespace Magnum.Consoles.Commons
             ConsoleAppBaseMocked mocked = new ConsoleAppBaseMocked(provider);
             mocked.CreateOptionSet();
             
-            try
-            {
-                int cd = mocked.Run();                
-                Assert.AreEqual(0, cd);
-            }
-            catch
-            {
-                Assert.AreEqual("firebase", provider);
-            }
+            int cd = mocked.Run();                
+            Assert.AreEqual(retCode, cd);
         }  
 
         private void AddAuthenArguments(ConsoleAppBaseMocked mocked)

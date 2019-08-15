@@ -10,31 +10,34 @@ namespace Magnum.Api.Storages
 	public class FirebaseStorageContext : IStorageContext
 	{
         private FirebaseAuthLink token = null;
-        private string authKey = "";
+        private FirebaseStorage fbStorage = null;
 
+        private string authKey = "";
         private string bucketUrl = "";
         private string bucketUser = "";
-        private string bucketPassword = "";
+        private string bucketPassword = "";        
 
-        private async Task AuthenToFirebase()
+        private void AuthenToFirebase()
         {
             FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig(authKey));
-            string firebaseUsername = bucketUser;
-            string firebasePassword = bucketPassword;
-            token = await authProvider.SignInWithEmailAndPasswordAsync(firebaseUsername, firebasePassword);    
+            var opt = new FirebaseStorageOptions
+            {
+                AuthTokenAsyncFactory = () => LoginAsync(authProvider),
+                ThrowOnCancel = true
+            };
+
+            fbStorage = new FirebaseStorage(bucketUrl, opt);              
+        }
+
+        private async Task<string> LoginAsync(FirebaseAuthProvider authProvider)
+        {
+            var token = await authProvider.SignInWithEmailAndPasswordAsync(bucketUser, bucketPassword);
+            return token.FirebaseToken;
         }
 
         private async Task<string> UploadStorageData(string storagePath, Stream fileStream)
         {
-            var opt = new FirebaseStorageOptions
-            {
-                AuthTokenAsyncFactory = () => Task.FromResult(token.FirebaseToken),
-                ThrowOnCancel = true
-            };
-
-            var storage = new FirebaseStorage(bucketUrl, opt);
-
-            var downloadUrl = await storage
+            var downloadUrl = await fbStorage
                 .Child(storagePath)
                 .PutAsync(fileStream);  
 
@@ -48,7 +51,7 @@ namespace Magnum.Api.Storages
             bucketUser = user;
             bucketPassword = passwd;
 
-            AuthenToFirebase().Wait();
+            AuthenToFirebase();
         }
 
         public string UploadFile(string bucketPath, string filePath)
