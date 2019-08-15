@@ -11,7 +11,7 @@ namespace Magnum.Api.Smtp
         private string smtpUser = "";
         private string smtpPassword = "";
 
-        public SmtpContextBase()
+        protected SmtpContextBase()
         {
         }
 
@@ -25,7 +25,7 @@ namespace Magnum.Api.Smtp
 
         public void Send(Mail mail)
         {                   
-            SmtpClient client = new SmtpClient(smtpHost);
+            SmtpClient client = new SmtpClient(smtpHost, smtpPort);
             client.UseDefaultCredentials = false;
             client.Credentials = new NetworkCredential(smtpUser, smtpPassword);
             
