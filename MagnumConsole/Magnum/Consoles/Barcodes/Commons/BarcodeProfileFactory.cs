@@ -23,9 +23,24 @@ namespace Magnum.Consoles.Barcodes.Commons
             addClassConfig("ForTestingOnly", "Magnum.Consoles.Barcodes.Profiles.ForTestingOnly"); 
             addClassConfig("ForQrTestingOnly", "Magnum.Consoles.Barcodes.Profiles.ForQrTestingOnly"); 
 
-            addClassConfig("Oxandro10", "Magnum.Consoles.Barcodes.Profiles.Oxandro10"); 
-            addClassConfig("NandroPlex300", "Magnum.Consoles.Barcodes.Profiles.NandroPlex300"); 
-            addClassConfig("TestPlex300", "Magnum.Consoles.Barcodes.Profiles.TestPlex300"); 
+            addClassConfig("MgnmAnastrol", "Magnum.Consoles.Barcodes.Profiles.MgnmAnastrol"); 
+            addClassConfig("MgnmBold300", "Magnum.Consoles.Barcodes.Profiles.MgnmBold300"); 
+            addClassConfig("MgnmClen40", "Magnum.Consoles.Barcodes.Profiles.MgnmClen40"); 
+            addClassConfig("MgnmDbol10", "Magnum.Consoles.Barcodes.Profiles.MgnmDbol10"); 
+            addClassConfig("MgnmDropstanP100", "Magnum.Consoles.Barcodes.Profiles.MgnmDropstanP100"); 
+            addClassConfig("MgnmMagJack250", "Magnum.Consoles.Barcodes.Profiles.MgnmMagJack250"); 
+            addClassConfig("MgnmNandroPlex300", "Magnum.Consoles.Barcodes.Profiles.MgnmNandroPlex300"); 
+            addClassConfig("MgnmOxandro10", "Magnum.Consoles.Barcodes.Profiles.MgnmOxandro10"); 
+            addClassConfig("MgnmPrimo100", "Magnum.Consoles.Barcodes.Profiles.MgnmPrimo100"); 
+            addClassConfig("MgnmStanol10", "Magnum.Consoles.Barcodes.Profiles.MgnmStanol10"); 
+            addClassConfig("MgnmStanolAQ100", "Magnum.Consoles.Barcodes.Profiles.MgnmStanolAQ100");
+            addClassConfig("MgnmTestC300", "Magnum.Consoles.Barcodes.Profiles.MgnmTestC300"); 
+            addClassConfig("MgnmTestE300", "Magnum.Consoles.Barcodes.Profiles.MgnmTestE300"); 
+            addClassConfig("MgnmTestPlex300", "Magnum.Consoles.Barcodes.Profiles.MgnmTestPlex300"); 
+            addClassConfig("MgnmTestProp100", "Magnum.Consoles.Barcodes.Profiles.MgnmTestProp100"); 
+            addClassConfig("MgnmTrenA100", "Magnum.Consoles.Barcodes.Profiles.MgnmTrenA100");    
+            addClassConfig("MgnmTrenE200", "Magnum.Consoles.Barcodes.Profiles.MgnmTrenE200");             
+
             addClassConfig("CompanyQR", "Magnum.Consoles.Barcodes.Profiles.CompanyQR"); 
         }  
 

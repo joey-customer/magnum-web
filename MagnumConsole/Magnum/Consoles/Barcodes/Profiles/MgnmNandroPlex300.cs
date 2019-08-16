@@ -4,7 +4,7 @@ using Magnum.Consoles.Barcodes.Commons;
 
 namespace Magnum.Consoles.Barcodes.Profiles
 {
-	public class NandroPlex300 : BarcodeProfileBase
+	public class MgnmNandroPlex300 : BarcodeProfileBase
 	{
         protected override void CustomSetting()
         {

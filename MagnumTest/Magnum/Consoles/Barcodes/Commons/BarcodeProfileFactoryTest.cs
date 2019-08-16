@@ -41,7 +41,7 @@ namespace Magnum.Consoles.Barcodes.Commons
             {
                 IBarcodeProfile opt = BarcodeProfileFactory.CreateBarcodeProfileObject(profileName);
                 opt.Setup();
-                Assert.IsNotNull(opt, "Object must not be null!!!");
+                Assert.IsNotNull(opt, "Object must not be null!!! [{0}]", profileName);
             }            
         }                          
     }    

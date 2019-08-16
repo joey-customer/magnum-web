@@ -2,15 +2,17 @@
 #export ASPNETCORE_URLS='https://*:443'
 #https://localhost:5001/verification/Oxandro10_KH0009_20190803223419/000000/1271951675/6856314405
 
-dotnet run BarcodeGen --h=https://compute-engine-vm-test.firebaseio.com/ \
+dotnet run BarcodeGen \
+--h=https://compute-engine-vm-test.firebaseio.com/ \
 --q=1 \
---b=KH0009 \
---u=https://magnum-pharmacy-verify.com \
+--b=000001 \
+--u=https://development.magnum-pharmacy.com \
 --o='/d/temp' \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY} \
---profile="Oxandro10"
+--generate=Y \
+--profile="MgnmAnastrol"
 
 
 dotnet run QrGen \
