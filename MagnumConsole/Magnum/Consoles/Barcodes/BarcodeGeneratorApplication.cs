@@ -18,6 +18,9 @@ namespace Magnum.Consoles.Barcodes
 
 	public class BarcodeGeneratorApplication : ConsoleAppBase
 	{
+        private StreamWriter csvStream;
+        private StreamWriter txtStream;
+                
         private LabelGenerator generator = new LabelGenerator();
 
         private int imgPerFolder = 100;
@@ -67,13 +70,48 @@ namespace Magnum.Consoles.Barcodes
             progressPerImage = num;
         }
 
+        private void CreateExportFile(string profile, MBarcode param, string outputPath, string timeStamp)
+        {
+            string exportFile = string.Format("{0}_{1}_{2}", profile, param.BatchNo, timeStamp);
+            string[] paths = {outputPath, exportFile};
+            string exportPath = Path.Combine(paths);
+
+            string csvFile = String.Format("{0}.csv", exportPath);
+            string txtFile = String.Format("{0}.txt", exportPath);
+
+            txtStream = new StreamWriter(txtFile);
+            txtStream.WriteLine("Serial, PIN, QR (Url), Barcode, Web Site");
+
+            csvStream = new StreamWriter(csvFile);
+            csvStream.WriteLine("Serial, PIN, QR (Url), Barcode, Web Site");
+        }
+
+        private void CloseExportFiles()
+        {
+            csvStream.Close();
+            txtStream.Close();
+        }
+
+        private void WriteExportFile(BarcodeProfileBase prf, MBarcode bc, MBarcode param)
+        {
+            string csvLine = String.Format("=\"{0}\",=\"{1}\",\"{2}\",\"{3}\",\"{4}\"", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
+            string txtLine = String.Format("{0},{1},{2},{3},{4}", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
+
+            Console.WriteLine(txtLine);
+
+            txtStream.WriteLine(txtLine);
+            csvStream.WriteLine(csvLine);
+        }
+
         protected override int Execute()
         {
             Hashtable args = GetArguments();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
             string prof = args["profile"].ToString();
-            string generate = (string) args["generate"];
+            string outputPath = args["outpath"].ToString();
+
+            string generate = (string) args["generate"];            
             if (generate == null)
             {
                 generate = "";
@@ -99,11 +137,13 @@ namespace Magnum.Consoles.Barcodes
             generator.TemplateFile = prf.TemplateFile;
             generator.Setup();
 
+            CreateExportFile(prof, param, outputPath, timeStamp);
+
             for (int i=1; i<=quantity; i++)
             {
                 string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(6, '0');
                 string urlPath = string.Format("{0}_{1}_{2}/{3}", prof, param.BatchNo, timeStamp, chunk);
-                string dir = string.Format("{0}/{1}", args["outpath"].ToString(), urlPath);
+                string dir = string.Format("{0}/{1}", outputPath, urlPath);
                 
                 if (!Directory.Exists(dir) && imageGenerate)
                 {
@@ -121,10 +161,10 @@ namespace Magnum.Consoles.Barcodes
                 {
                     generator.RenderToFile(bc, fileName);
                 }
-                progressFunc(bc, dir);
 
-                Console.WriteLine("{0}|{1}|{2}|{3}|{4}", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
-                
+                progressFunc(bc, dir);
+                WriteExportFile(prf, bc, param);
+
                 if ((i % progressPerImage) == 0)
                 {
                     int remain = quantity - i;
@@ -132,6 +172,8 @@ namespace Magnum.Consoles.Barcodes
                 }                
             }
             
+            CloseExportFiles();
+
             generator.Cleanup();
             Console.WriteLine("Done generating {0} barcodes.", quantity);
             return 0;

@@ -4,7 +4,7 @@
 
 dotnet run BarcodeGen \
 --h=https://compute-engine-vm-test.firebaseio.com/ \
---q=1 \
+--q=10 \
 --b=000001 \
 --u=https://development.magnum-pharmacy.com \
 --o='/d/temp' \
