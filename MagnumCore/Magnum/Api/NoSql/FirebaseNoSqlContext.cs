@@ -26,7 +26,7 @@ namespace Magnum.Api.NoSql
                 dbUrl,
                 new FirebaseOptions
                 {
-                    AuthTokenAsyncFactory = () => LoginAsync(authProvider)                    
+                    AuthTokenAsyncFactory = () => LoginAsync(authProvider)               
                 });            
         }
 

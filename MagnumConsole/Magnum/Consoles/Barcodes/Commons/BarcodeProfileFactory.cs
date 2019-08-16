@@ -22,6 +22,7 @@ namespace Magnum.Consoles.Barcodes.Commons
         {                        
             addClassConfig("ForTestingOnly", "Magnum.Consoles.Barcodes.Profiles.ForTestingOnly"); 
             addClassConfig("ForQrTestingOnly", "Magnum.Consoles.Barcodes.Profiles.ForQrTestingOnly"); 
+            addClassConfig("DoNotUse", "Magnum.Consoles.Barcodes.Profiles.DoNotUse"); 
 
             addClassConfig("MgnmAnastrol", "Magnum.Consoles.Barcodes.Profiles.MgnmAnastrol"); 
             addClassConfig("MgnmBold300", "Magnum.Consoles.Barcodes.Profiles.MgnmBold300"); 
