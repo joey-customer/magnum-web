@@ -1,14 +1,4 @@
 using System;
-using System.IO;
-using System.Collections;
-using System.Drawing;
-
-using QRCoder;
-using Magnum.Api.Models;
-using Magnum.Consoles.Commons;
-using Magnum.Api.Factories;
-using Magnum.Api.Businesses.Barcodes;
-using Magnum.Api.NoSql;
 
 using NDesk.Options;
 

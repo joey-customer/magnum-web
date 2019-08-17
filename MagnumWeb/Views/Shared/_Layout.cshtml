@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="/"><img src="../images/logo.png" alt="Magnum | Logo"></a>
+                        <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Magnum | Logo"></a>
                         <div class="mobile_toggle">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="icon-bar"></span>
@@ -44,7 +44,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="Products">Products</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Orals</a></li>
+                                        <li class="nav-item">@Html.ActionLink("Orals", "Privacy", "Home", null, new { @class = "nav-link" })</li>
                                         <li class="nav-item"><a class="nav-link" href="#">Peptides & GH</a></li>
                                         <li class="nav-item"><a class="nav-link" href="#">Sexual Performance</a></li>
                                         <li class="nav-item"><a class="nav-link" href="#">Extreme Series</a></li>

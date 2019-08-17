@@ -20,12 +20,12 @@ namespace Magnum.Consoles.Commons
             try
             {
                 int cd = mocked.Run();                
-                Assert.AreEqual(0, cd);
+                Assert.AreEqual(retCode, cd);              
             }
-            catch
+            catch (Exception)
             {
-                Assert.AreEqual("firebase", provider);
-            }
+                Assert.AreEqual(1, retCode, "Expected to get exception once provider is known !!!");              
+            }            
         }  
 
         private void AddAuthenArguments(ConsoleAppBaseMocked mocked)
