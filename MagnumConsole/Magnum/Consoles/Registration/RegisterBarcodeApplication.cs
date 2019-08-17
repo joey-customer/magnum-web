@@ -6,6 +6,7 @@ using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
 using Magnum.Api.Businesses.Registrations;
 using Magnum.Api.NoSql;
+using Magnum.Consoles.Factories;
 
 using NDesk.Options;
 
@@ -38,6 +39,7 @@ namespace Magnum.Consoles.Registrations
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());
             CreateRegistration opr = (CreateRegistration) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
 
             MRegistration param = new MRegistration();

@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Reflection;
 
+using Microsoft.Extensions.Logging;
+
 using Magnum.Consoles.Commons;
 
 namespace Magnum.Consoles.Factories
 {   
     public static class FactoryConsoleApplication
     {
+        private static ILoggerFactory loggerFactory = null;
+
         private static Hashtable classMaps = new Hashtable();
 
         private static void addClassConfig(string apiName, string fqdn)
@@ -41,8 +45,23 @@ namespace Magnum.Consoles.Factories
             Assembly asm = Assembly.GetExecutingAssembly();
             IConsoleApp obj = (IConsoleApp)asm.CreateInstance(className);
 
+            Type t = obj.GetType();
+            ILogger logger = loggerFactory.CreateLogger(t);
+
+            obj.SetLogger(logger);
+
             return(obj);
         }
+
+        public static void SetLoggerFactory(ILoggerFactory logFact)
+        {
+            loggerFactory = logFact;
+        }
+
+        public static ILoggerFactory GetLoggerFactory()
+        {
+            return loggerFactory;
+        }  
     }
  
 }

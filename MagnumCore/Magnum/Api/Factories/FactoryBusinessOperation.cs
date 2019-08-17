@@ -5,12 +5,16 @@ using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
 using Magnum.Api.Smtp;
 
+using Microsoft.Extensions.Logging;
+
 using Magnum.Api.Commons.Business;
 
 namespace Magnum.Api.Factories
 {   
     public static class FactoryBusinessOperation
     {
+        private static ILoggerFactory loggerFactory = null;
+
         private static Hashtable classMaps = new Hashtable();
         private static INoSqlContext noSqlContext = null;
         private static IStorageContext storageContext = null;
@@ -78,8 +82,20 @@ namespace Magnum.Api.Factories
             obj.SetStorageContext(storageContext);
             obj.SetSmtpContext(smtpContext);
 
+            if (loggerFactory != null)
+            {
+                Type t = obj.GetType();
+                ILogger logger = loggerFactory.CreateLogger(t);
+                obj.SetLogger(logger);
+            }
+
             return(obj);
         }
+
+        public static void SetLoggerFactory(ILoggerFactory logFact)
+        {
+            loggerFactory = logFact;
+        }         
     }
  
 }

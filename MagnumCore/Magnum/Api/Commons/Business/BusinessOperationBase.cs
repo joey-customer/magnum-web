@@ -3,10 +3,14 @@ using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
 using Magnum.Api.Smtp;
 
+using Microsoft.Extensions.Logging;
+
 namespace Magnum.Api.Commons.Business
 {    
 	public class BusinessOperationBase : IBusinessOperation
 	{
+        private ILogger appLogger;
+
         private INoSqlContext noSqlContext = null;
         private IStorageContext storageContext = null;
         private ISmtpContext smtpContext = null;
@@ -39,6 +43,16 @@ namespace Magnum.Api.Commons.Business
         public IStorageContext GetStorageContext()
         {
             return storageContext;
-        }        
+        }
+
+        public void SetLogger(ILogger logger)
+        {
+            appLogger = logger;
+        }
+
+        public ILogger GetLogger()
+        {
+            return appLogger;
+        }         
     }
 }

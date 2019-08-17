@@ -76,6 +76,9 @@ namespace Magnum.Consoles.Registrations
 
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             app.SetNoSqlContext(ctx);
+            
+            //To cover test coverage
+            app.GetLogger();
 
             app.Run();
             Assert.True(true);
