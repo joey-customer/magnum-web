@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh "cd Docker; ./make_docker.bash"
             }    
-
+        }
 
         stage('Start Code Analysis') {            
             steps {                
