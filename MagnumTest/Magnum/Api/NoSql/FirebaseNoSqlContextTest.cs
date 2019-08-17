@@ -216,6 +216,10 @@ namespace Magnum.Api.NoSql
 
             Authen(ctx);
 
+            //Must not die if pass null
+            ctx.SetLogger(null);
+            ctx.GetLogger();
+
             DateTime lastRefreshDtm = DateTime.Now.AddTicks(-1 * tickEarlier);
             ctx.SetLastRefreshDtm(lastRefreshDtm);
 

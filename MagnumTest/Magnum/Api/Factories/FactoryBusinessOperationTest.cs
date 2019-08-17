@@ -41,6 +41,9 @@ namespace Magnum.Api.Factories
             fbContext.Authenticate(url, key, "", "");
             FactoryBusinessOperation.SetNoSqlContext(fbContext);
 
+            //Must not die if pass null
+            FactoryBusinessOperation.SetSmtpContext(null);
+
             INoSqlContext ctx = FactoryBusinessOperation.GetNoSqlContext();
             Assert.IsNotNull(ctx, "Object must not be null!!!");
         } 
