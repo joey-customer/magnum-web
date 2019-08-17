@@ -5,6 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Magnum.Web.Models;
+using Magnum.Api.Models;
+using Magnum.Api.Commons.Business;
+using Magnum.Api.Factories;
+using Magnum.Api.Businesses.ContactUs;
+using System.Net;
+using Magnum.Web.Utils;
 
 namespace Magnum.Web.Controllers
 {
@@ -30,6 +36,24 @@ namespace Magnum.Web.Controllers
             return View();
         }
 
+        [HttpPost("Home/Contact/Save")]
+        public IActionResult SaveContactUs(MContactUs form)
+        {
+            SaveContactUs operation = GetSaveContactUsOperation();
+            IPAddress remoteIPAddress = ControllerContext.HttpContext.Connection.RemoteIpAddress;
+            form.IP = remoteIPAddress.ToString();
+            form.Name = StringUtils.StripTagsRegex(form.Name);
+            form.Subject = StringUtils.StripTagsRegex(form.Subject);
+            form.Email = StringUtils.StripTagsRegex(form.Email);
+            form.Message = StringUtils.StripTagsRegex(form.Message);
+
+            operation.Apply(form);
+
+            ViewBag.Message = "Thank you for contacting us – we will get back to you soon!";
+
+            return View("Contact");
+        }
+
         public IActionResult Seubpong()
         {
             return View();
@@ -39,6 +63,11 @@ namespace Magnum.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public virtual SaveContactUs GetSaveContactUsOperation()
+        {
+            return (SaveContactUs)FactoryBusinessOperation.CreateBusinessOperationObject("SaveContactUs");
         }
     }
 }
