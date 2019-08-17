@@ -17,6 +17,12 @@ pipeline {
     }
 
     stages {
+        stage('Docker XXX Packaging') {
+            steps {
+                sh "cd Docker; ./make_docker.bash"
+            }    
+
+
         stage('Start Code Analysis') {            
             steps {                
                 sh "${env.SONAR_SCANNER} begin \
