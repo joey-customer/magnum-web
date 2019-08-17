@@ -1726,51 +1726,51 @@ FNF:3
 FNH:3
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\NoSql\FirebaseNoSqlContext.cs
-FN:113,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
+FN:107,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
 FNDA:10,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::Authenticate(System.String,System.String,System.String,System.String)
+DA:108,10
+DA:109,10
+DA:110,10
+DA:111,10
+DA:112,10
 DA:114,10
-DA:115,10
-DA:116,10
-DA:117,10
-DA:118,10
-DA:120,10
-DA:121,8
-FN:123,System.String Magnum.Api.NoSql.FirebaseNoSqlContext::PostData(System.String,System.Object)
+DA:115,8
+FN:117,System.String Magnum.Api.NoSql.FirebaseNoSqlContext::PostData(System.String,System.Object)
 FNDA:3,System.String Magnum.Api.NoSql.FirebaseNoSqlContext::PostData(System.String,System.Object)
-DA:124,3
-DA:125,3
-DA:126,2
-DA:127,2
-FN:129,System.Object Magnum.Api.NoSql.FirebaseNoSqlContext::PutData(System.String,System.String,System.Object)
+DA:118,3
+DA:119,3
+DA:120,2
+DA:121,2
+FN:123,System.Object Magnum.Api.NoSql.FirebaseNoSqlContext::PutData(System.String,System.String,System.Object)
 FNDA:1,System.Object Magnum.Api.NoSql.FirebaseNoSqlContext::PutData(System.String,System.String,System.Object)
+DA:124,1
+DA:125,1
+DA:126,1
+DA:127,1
+FN:129,System.Int32 Magnum.Api.NoSql.FirebaseNoSqlContext::DeleteData(System.String,Magnum.Api.Models.BaseModel)
+FNDA:1,System.Int32 Magnum.Api.NoSql.FirebaseNoSqlContext::DeleteData(System.String,Magnum.Api.Models.BaseModel)
 DA:130,1
 DA:131,1
 DA:132,1
 DA:133,1
-FN:135,System.Int32 Magnum.Api.NoSql.FirebaseNoSqlContext::DeleteData(System.String,Magnum.Api.Models.BaseModel)
-FNDA:1,System.Int32 Magnum.Api.NoSql.FirebaseNoSqlContext::DeleteData(System.String,Magnum.Api.Models.BaseModel)
+FN:135,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectByKey(System.String)
+FNDA:1,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectByKey(System.String)
 DA:136,1
 DA:137,1
 DA:138,1
 DA:139,1
-FN:141,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectByKey(System.String)
-FNDA:1,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectByKey(System.String)
+FN:141,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
+FNDA:1,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
 DA:142,1
 DA:143,1
 DA:144,1
 DA:145,1
-FN:147,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
-FNDA:1,T Magnum.Api.NoSql.FirebaseNoSqlContext::GetSingleObject(System.String,System.String)
-DA:148,1
-DA:149,1
-DA:150,1
-DA:151,1
-FN:153,System.Collections.Generic.IEnumerable`1<T> Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectList(System.String)
+FN:147,System.Collections.Generic.IEnumerable`1<T> Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectList(System.String)
 FNDA:2,System.Collections.Generic.IEnumerable`1<T> Magnum.Api.NoSql.FirebaseNoSqlContext::GetObjectList(System.String)
-DA:154,2
-DA:155,2
-DA:156,2
-DA:157,2
+DA:148,2
+DA:149,2
+DA:150,2
+DA:151,2
 FN:13,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::.ctor()
 FNDA:11,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext::.ctor()
 DA:14,11
@@ -1794,106 +1794,98 @@ DA:31,8
 DA:32,8
 BRDA:24,99,0,10
 BRDA:24,99,1,10
-FN:34,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<LoginAsync>d__6::MoveNext()
-FNDA:0,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<LoginAsync>d__6::MoveNext()
-DA:35,0
-DA:36,0
-DA:37,0
-DA:38,0
-BRDA:36,61,0,0
-BRDA:36,61,1,0
-FN:40,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PostFirebaseData>d__7::MoveNext()
-FNDA:3,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PostFirebaseData>d__7::MoveNext()
-DA:41,3
-DA:42,3
-DA:43,3
-DA:44,3
-DA:46,2
-DA:47,2
-BRDA:42,62,0,2
-BRDA:42,62,1,2
-FN:49,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PutFirebaseData>d__8::MoveNext()
-FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PutFirebaseData>d__8::MoveNext()
-DA:50,1
-DA:51,1
+FN:34,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PostFirebaseData>d__6::MoveNext()
+FNDA:3,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PostFirebaseData>d__6::MoveNext()
+DA:35,3
+DA:36,3
+DA:37,3
+DA:38,3
+DA:40,2
+DA:41,2
+BRDA:36,62,0,2
+BRDA:36,62,1,2
+FN:43,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PutFirebaseData>d__7::MoveNext()
+FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<PutFirebaseData>d__7::MoveNext()
+DA:44,1
+DA:45,1
+DA:46,1
+DA:47,1
+DA:48,1
+DA:49,1
+BRDA:45,72,0,1
+BRDA:45,72,1,1
+FN:51,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<DeleteFirebaseData>d__8::MoveNext()
+FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<DeleteFirebaseData>d__8::MoveNext()
 DA:52,1
 DA:53,1
 DA:54,1
 DA:55,1
-BRDA:51,72,0,1
-BRDA:51,72,1,1
-FN:57,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<DeleteFirebaseData>d__9::MoveNext()
-FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<DeleteFirebaseData>d__9::MoveNext()
-DA:58,1
-DA:59,1
+DA:56,1
+DA:57,1
+BRDA:53,75,0,1
+BRDA:53,75,1,1
+FN:59,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseData>d__9`1::MoveNext()
+FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseData>d__9`1::MoveNext()
 DA:60,1
 DA:61,1
 DA:62,1
 DA:63,1
-BRDA:59,75,0,1
-BRDA:59,75,1,1
-FN:65,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseData>d__10`1::MoveNext()
-FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseData>d__10`1::MoveNext()
-DA:66,1
+DA:64,1
+DA:65,1
 DA:67,1
-DA:68,1
+DA:68,5
 DA:69,1
 DA:70,1
 DA:71,1
-DA:73,1
-DA:74,5
+DA:72,1
+DA:74,1
 DA:75,1
-DA:76,1
-DA:77,1
+BRDA:60,8,0,1
+BRDA:61,75,0,1
+BRDA:60,8,1,1
+BRDA:61,75,1,1
+BRDA:68,296,1,1
+BRDA:68,296,0,1
+FN:77,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseSingleData>d__10`1::MoveNext()
+FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseSingleData>d__10`1::MoveNext()
 DA:78,1
+DA:79,1
 DA:80,1
 DA:81,1
-BRDA:66,8,0,1
-BRDA:67,75,0,1
-BRDA:66,8,1,1
-BRDA:67,75,1,1
-BRDA:74,296,1,1
-BRDA:74,296,0,1
-FN:83,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseSingleData>d__11`1::MoveNext()
-FNDA:1,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<GetFirebaseSingleData>d__11`1::MoveNext()
+DA:82,1
 DA:84,1
 DA:85,1
-DA:86,1
-DA:87,1
-DA:88,1
-DA:90,1
-DA:91,1
-BRDA:84,8,0,1
-BRDA:85,75,0,1
-BRDA:84,8,1,1
-BRDA:85,75,1,1
-FN:93,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<ListFirebaseData>d__12`1::MoveNext()
-FNDA:2,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<ListFirebaseData>d__12`1::MoveNext()
+BRDA:78,8,0,1
+BRDA:79,75,0,1
+BRDA:78,8,1,1
+BRDA:79,75,1,1
+FN:87,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<ListFirebaseData>d__11`1::MoveNext()
+FNDA:2,System.Void Magnum.Api.NoSql.FirebaseNoSqlContext/<ListFirebaseData>d__11`1::MoveNext()
+DA:88,2
+DA:89,2
+DA:91,2
+DA:92,2
+DA:93,2
 DA:94,2
-DA:95,2
-DA:97,2
-DA:98,2
-DA:99,2
-DA:100,2
-DA:102,14
-DA:103,4
-DA:104,4
-DA:105,4
-DA:107,4
-DA:108,4
-DA:110,2
-DA:111,2
-BRDA:94,8,0,2
-BRDA:97,80,0,2
-BRDA:94,8,1,2
-BRDA:97,80,1,2
-BRDA:102,319,1,4
-BRDA:102,319,0,2
-LF:103
+DA:96,14
+DA:97,4
+DA:98,4
+DA:99,4
+DA:101,4
+DA:102,4
+DA:104,2
+DA:105,2
+BRDA:88,8,0,2
+BRDA:91,80,0,2
+BRDA:88,8,1,2
+BRDA:91,80,1,2
+BRDA:96,319,1,4
+BRDA:96,319,0,2
+LF:99
 LH:99
-BRF:26
+BRF:24
 BRH:24
-FNF:17
+FNF:16
 FNH:16
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\BaseModel.cs

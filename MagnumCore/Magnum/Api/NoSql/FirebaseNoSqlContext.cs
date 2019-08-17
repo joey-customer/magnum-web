@@ -31,12 +31,6 @@ namespace Magnum.Api.NoSql
                 });            
         }
 
-        private async Task<string> LoginAsync(FirebaseAuthProvider authProvider)
-        {
-            var token = await authProvider.SignInWithEmailAndPasswordAsync(dbUser, dbPassword);
-            return token.FirebaseToken;
-        }
-
         private async Task<string> PostFirebaseData(string path, object data)
         {
             var obj = await fbClient
