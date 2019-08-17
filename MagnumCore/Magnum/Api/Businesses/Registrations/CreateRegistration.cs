@@ -1,6 +1,9 @@
 using System;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Models;
+using Magnum.Api.Utils;
+
+using Microsoft.Extensions.Logging;
 
 namespace Magnum.Api.Businesses.Registrations
 {
@@ -8,6 +11,8 @@ namespace Magnum.Api.Businesses.Registrations
 	{
         public int Apply(MRegistration dat)
         {
+            ILogger logger = GetLogger();
+
             if (string.IsNullOrEmpty(dat.IP) || 
                 string.IsNullOrEmpty(dat.SerialNumber) || 
                 string.IsNullOrEmpty(dat.Path) || 
@@ -32,6 +37,8 @@ namespace Magnum.Api.Businesses.Registrations
                 ctx.PostData(path, dat);
 
                 string msg = string.Format("Serial number and PIN not found [{0}]", barcode);
+                LogUtils.LogInformation(logger, msg);
+
                 throw(new ArgumentException(msg));
             }
 
@@ -42,6 +49,8 @@ namespace Magnum.Api.Businesses.Registrations
                 ctx.PostData(path, dat);
 
                 string msg = string.Format("Serial number and PIN has already been registered [{0}] since [{1}]", barcode, bc.ActivatedDate);
+                LogUtils.LogInformation(logger, msg);
+
                 throw(new ArgumentException(msg));
             }
 

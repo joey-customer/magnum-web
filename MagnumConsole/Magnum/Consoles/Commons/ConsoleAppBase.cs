@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 
+using Microsoft.Extensions.Logging;
+
 using NDesk.Options;
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
@@ -9,6 +11,7 @@ namespace Magnum.Consoles.Commons
 {
 	public abstract class ConsoleAppBase : IConsoleApp
 	{
+        private ILogger appLogger;
         private readonly Hashtable arguments = new Hashtable();
         private INoSqlContext context = null;
         private readonly IStorageContext storageContext = null;
@@ -47,6 +50,16 @@ namespace Magnum.Consoles.Commons
         public void SetNoSqlContext(INoSqlContext context)
         {
             this.context = context;
+        }
+
+        public void SetLogger(ILogger logger)
+        {
+            appLogger = logger;
+        }
+
+        public ILogger GetLogger()
+        {
+            return appLogger;
         }
 
         public INoSqlContext GetNoSqlContext()

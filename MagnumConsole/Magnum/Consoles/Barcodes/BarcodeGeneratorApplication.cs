@@ -2,6 +2,8 @@ using System;
 using System.IO;
 using System.Collections;
 
+using Microsoft.Extensions.Logging;
+
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
@@ -9,6 +11,7 @@ using Magnum.Api.Businesses.Barcodes;
 using Magnum.Api.NoSql;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.ImageGenerators;
+using Magnum.Consoles.Factories;
 
 using NDesk.Options;
 
@@ -124,6 +127,7 @@ namespace Magnum.Consoles.Barcodes
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());

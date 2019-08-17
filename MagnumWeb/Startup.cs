@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Magnum.Api.Factories;
 
 namespace Magnum.Web
 {
@@ -13,7 +14,6 @@ namespace Magnum.Web
     {
         public Startup(IConfiguration configuration, ILogger<Startup> logger)
         {
-            logger.LogError("this is error message");
             Configuration = configuration;
         }
 
@@ -29,8 +29,13 @@ namespace Magnum.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddLogging(builder => builder.AddConsole());
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            var serviceProvider = services.BuildServiceProvider();
+            var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+
+            FactoryBusinessOperation.SetLoggerFactory(loggerFactory);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
