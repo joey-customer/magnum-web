@@ -20,11 +20,12 @@ namespace Magnum.Api.NoSql
 
             try
             {
-                ctx.Authenticate("", "", "", "");                
+                ctx.Authenticate("", "", "", "");
+                Assert.Fail("Exception should be thrown for failed authen !!!");                
             }
             catch
             {
-                Assert.Fail("Exception should not be thrown for failed authen !!!");
+                //Do nothing
             }
         } 
 

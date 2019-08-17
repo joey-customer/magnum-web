@@ -17,8 +17,15 @@ namespace Magnum.Consoles.Commons
             ConsoleAppBaseMocked mocked = new ConsoleAppBaseMocked(provider);
             mocked.CreateOptionSet();
             
-            int cd = mocked.Run();                
-            Assert.AreEqual(retCode, cd);
+            try
+            {
+                int cd = mocked.Run();                
+                Assert.AreEqual(retCode, cd);              
+            }
+            catch (Exception)
+            {
+                Assert.AreEqual(1, retCode, "Expected to get exception once provider is known !!!");              
+            }            
         }  
 
         private void AddAuthenArguments(ConsoleAppBaseMocked mocked)
