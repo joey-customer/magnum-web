@@ -7,27 +7,32 @@
         <div class="row justify-content-center">
             <div class="col-xl-12 col-lg-12">
                 <div class="form-area">
+                    @if (ViewBag.Message != null)
+                    {
+                        <table><tr><td bgcolor="yellow">@ViewBag.Message</td></tr></table>
+                    }
                     <h2>Send Your Message To Us</h2>
-                    <form>
+                    <form method="post" action="Contact/Save">
+                        <input type="hidden" name="Action" value="Save">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <div class="single-input-box">
                                     <label>Name</label>
-                                    <input type="text" placeholder="Your Name">
+                                    <input type="text" name="Name" placeholder="Your Name">
                                 </div>
                                 <div class="single-input-box">
                                     <label>Subject</label>
-                                    <input type="text" placeholder="Your Subject">
+                                    <input type="text" name="Subject" placeholder="Your Subject">
                                 </div>
                                 <div class="single-input-box">
                                     <label>Email Address</label>
-                                    <input type="text" placeholder="Your Email Address">
+                                    <input type="text" name="Email" placeholder="Your Email Address">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
                                 <div class="single-input-box">
                                     <label>Message</label>
-                                    <textarea placeholder="Write Your Message"></textarea>
+                                    <textarea name="Message" placeholder="Write Your Message"></textarea>
                                 </div>
                             </div>
                         </div>

@@ -7,17 +7,17 @@ namespace Magnum.Api.Businesses.ContactUs
 {
 	public class SaveContactUs : BusinessOperationBase, IBusinessOperationGetInfo<MContactUs>
 	{
-        public MContactUs Apply(MContactUs data)
+        public MContactUs Apply(MContactUs dat)
         {
             DateTime currentDate = DateTime.Now;
-            data.LastMaintDate = currentDate;
+            dat.LastMaintDate = currentDate;
 
             string path = string.Format("contactus/{0}/{1}", currentDate.Year, currentDate.Month);
             
             var ctx = GetNoSqlContext();
-            ctx.PostData(path, data);
+            ctx.PostData(path, dat);
 
-            return data;
+            return dat;
         }
     }
 }
