@@ -2,15 +2,20 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
+using Microsoft.Extensions.Logging;
+
 using Firebase.Database;
 using Firebase.Database.Query;
 using Firebase.Auth;
 using Magnum.Api.Models;
+using Magnum.Api.Utils;
 
 namespace Magnum.Api.NoSql
 {    
 	public class FirebaseNoSqlContext : INoSqlContext, ITokenRefreshAble
 	{
+        private ILogger appLogger;
+
         private FirebaseClient fbClient = null;
         private string authKey = "";
 
@@ -32,8 +37,10 @@ namespace Magnum.Api.NoSql
                     AuthTokenAsyncFactory = () => Task.FromResult(token.FirebaseToken)               
                 });   
 
+            string message = String.Format("Authenticate to [{0}], last refresh date time is [{1}]", dbUrl, lastRefreshDtm.ToString());
             lastRefreshDtm = DateTime.Now; 
-            //Should log something here
+            
+            LogUtils.LogInformation(appLogger, message);
         }
 
         private FirebaseClient GetFirebaseRefresh()
@@ -183,5 +190,14 @@ namespace Magnum.Api.NoSql
             return arr;
         }
 
+        public void SetLogger(ILogger logger)
+        {
+            appLogger = logger;
+        }
+
+        public ILogger GetLogger()
+        {
+            return appLogger;
+        }   
     }
 }
