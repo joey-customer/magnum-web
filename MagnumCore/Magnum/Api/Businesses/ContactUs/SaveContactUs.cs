@@ -5,9 +5,9 @@ using Magnum.Api.Utils;
 
 namespace Magnum.Api.Businesses.ContactUs
 {
-	public class SaveContactUs : BusinessOperationBase, IBusinessOperationGetInfo<MContactUs>
+	public class SaveContactUs : BusinessOperationBase, IBusinessOperationManipulate<MContactUs>
 	{
-        public MContactUs Apply(MContactUs dat)
+        public int Apply(MContactUs dat)
         {
             DateTime currentDate = DateTime.Now;
             dat.LastMaintDate = currentDate;
@@ -17,7 +17,7 @@ namespace Magnum.Api.Businesses.ContactUs
             var ctx = GetNoSqlContext();
             ctx.PostData(path, dat);
 
-            return dat;
+            return 0;
         }
     }
 }
