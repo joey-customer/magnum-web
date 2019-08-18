@@ -7,6 +7,9 @@ using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using NDesk.Options;
 
+using Serilog;
+using Serilog.Sinks.Elasticsearch;
+
 namespace Magnum.Consoles
 {
     public static class Program
@@ -22,10 +25,15 @@ namespace Magnum.Consoles
             string appName = args[0];
 
             var serviceCollection = new ServiceCollection();
-            serviceCollection.AddLogging(builder => builder.AddConsole());
+            serviceCollection.AddLogging(builder => builder.AddSerilog());
         
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+
+            Log.Logger = new LoggerConfiguration()
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
 
             FactoryConsoleApplication.SetLoggerFactory(loggerFactory);
             IConsoleApp app = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);    
