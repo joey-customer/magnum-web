@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Magnum.Web.Models;
 using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Factories;
-using Magnum.Api.Businesses.ContactUs;
-using System.Net;
 using Magnum.Web.Utils;
+using Magnum.Api.Utils;
 
 namespace Magnum.Web.Controllers
 {
@@ -39,9 +34,8 @@ namespace Magnum.Web.Controllers
         [HttpPost("Home/Contact/Save")]
         public IActionResult SaveContactUs(MContactUs form)
         {
-            SaveContactUs operation = GetSaveContactUsOperation();
-            IPAddress remoteIPAddress = ControllerContext.HttpContext.Connection.RemoteIpAddress;
-            form.IP = remoteIPAddress.ToString();
+            IBusinessOperationManipulate<MContactUs> operation = GetSaveContactUsOperation();
+            form.IP = RemoteUtils.GetRemoteIPAddress(ControllerContext);
             form.Name = StringUtils.StripTagsRegex(form.Name);
             form.Subject = StringUtils.StripTagsRegex(form.Subject);
             form.Email = StringUtils.StripTagsRegex(form.Email);
@@ -54,20 +48,15 @@ namespace Magnum.Web.Controllers
             return View("Contact");
         }
 
-        public IActionResult Seubpong()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public virtual SaveContactUs GetSaveContactUsOperation()
+        public virtual IBusinessOperationManipulate<MContactUs> GetSaveContactUsOperation()
         {
-            return (SaveContactUs)FactoryBusinessOperation.CreateBusinessOperationObject("SaveContactUs");
+            return (IBusinessOperationManipulate<MContactUs>)FactoryBusinessOperation.CreateBusinessOperationObject("SaveContactUs");
         }
     }
 }
