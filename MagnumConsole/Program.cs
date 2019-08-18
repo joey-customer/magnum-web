@@ -8,7 +8,6 @@ using Magnum.Consoles.Factories;
 using NDesk.Options;
 
 using Serilog;
-using Serilog.Sinks.Elasticsearch;
 
 namespace Magnum.Consoles
 {

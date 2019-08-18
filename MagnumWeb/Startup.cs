@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Magnum.Api.Factories;
 
+using Serilog;
+
 using Magnum.Api.Storages;
 using Magnum.Api.NoSql;
 
@@ -17,13 +19,18 @@ namespace Magnum.Web
     {
         private static void SetupFactory(ILoggerFactory logFactory)
         {
+            Log.Logger = new LoggerConfiguration()
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
+                            
             string host = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_URL");
             string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
             string user = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
             string password = Environment.GetEnvironmentVariable("MAGNUM_DB_PASSWORD");
             string bucket = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_BUCKET");
 
-            ILogger logger = logFactory.CreateLogger<FirebaseNoSqlContext>();
+            Microsoft.Extensions.Logging.ILogger logger = logFactory.CreateLogger<FirebaseNoSqlContext>();
 
             FirebaseNoSqlContext ctx = new FirebaseNoSqlContext();
             ctx.SetLogger(logger);            
@@ -54,7 +61,7 @@ namespace Magnum.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddLogging(builder => builder.AddConsole());
+            services.AddLogging(builder => builder.AddSerilog());
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             var serviceProvider = services.BuildServiceProvider();

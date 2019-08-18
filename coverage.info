@@ -1,28 +1,32 @@
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Program.cs
-FN:14,System.Void Magnum.Consoles.Program::Main(System.String[])
+FN:17,System.Void Magnum.Consoles.Program::Main(System.String[])
 FNDA:2,System.Void Magnum.Consoles.Program::Main(System.String[])
-DA:15,2
-DA:16,2
-DA:17,1
-DA:18,1
-DA:19,1
+DA:18,2
+DA:19,2
+DA:20,1
+DA:21,1
 DA:22,1
-DA:24,1
-DA:25,2
+DA:25,1
 DA:27,1
-DA:28,1
+DA:28,2
 DA:30,1
 DA:31,1
 DA:33,1
 DA:34,1
+DA:35,1
 DA:36,1
-DA:37,2
-BRDA:16,10,0,1
-BRDA:16,10,1,1
-BRDA:25,43,0,1
-BRDA:25,43,1,1
-LF:16
-LH:16
+DA:38,1
+DA:39,1
+DA:41,1
+DA:42,1
+DA:44,1
+DA:45,2
+BRDA:19,10,0,1
+BRDA:19,10,1,1
+BRDA:28,46,0,1
+BRDA:28,46,1,1
+LF:20
+LH:20
 BRF:4
 BRH:4
 FNF:1
@@ -254,10 +258,10 @@ DA:56,13
 DA:57,13
 DA:58,13
 FN:60,Microsoft.Extensions.Logging.ILogger Magnum.Consoles.Commons.ConsoleAppBase::GetLogger()
-FNDA:2,Microsoft.Extensions.Logging.ILogger Magnum.Consoles.Commons.ConsoleAppBase::GetLogger()
-DA:61,2
-DA:62,2
-DA:63,2
+FNDA:4,Microsoft.Extensions.Logging.ILogger Magnum.Consoles.Commons.ConsoleAppBase::GetLogger()
+DA:61,4
+DA:62,4
+DA:63,4
 FN:65,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
 FNDA:2,Magnum.Api.NoSql.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
 DA:66,2
@@ -356,150 +360,151 @@ FNF:15
 FNH:15
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\BarcodeGeneratorApplication.cs
-FN:39,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
+FN:42,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
 FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Magnum.Api.Models.MBarcode,System.String)
-DA:40,2
-DA:42,2
-FN:44,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetUpdateProgressFunc(Magnum.Consoles.Barcodes.BarcodeGenerateProgress)
+DA:43,2
+DA:45,2
+FN:47,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetUpdateProgressFunc(Magnum.Consoles.Barcodes.BarcodeGenerateProgress)
 FNDA:1,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetUpdateProgressFunc(Magnum.Consoles.Barcodes.BarcodeGenerateProgress)
-DA:45,1
-DA:46,1
-DA:47,1
-FN:49,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetLabelGnerator(Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator)
+DA:48,1
+DA:49,1
+DA:50,1
+FN:52,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetLabelGnerator(Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator)
 FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetLabelGnerator(Magnum.Consoles.Barcodes.ImageGenerators.LabelGenerator)
-DA:50,2
-DA:51,2
-DA:52,2
-FN:54,NDesk.Options.OptionSet Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
+DA:53,2
+DA:54,2
+DA:55,2
+FN:57,NDesk.Options.OptionSet Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
 FNDA:3,NDesk.Options.OptionSet Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
-DA:55,3
-DA:56,6
-DA:57,6
-DA:58,6
+DA:58,3
 DA:59,6
-DA:60,3
+DA:60,6
 DA:61,6
+DA:62,6
 DA:63,3
-DA:64,3
-FN:66,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetFilePerFolder(System.Int32)
+DA:64,6
+DA:66,3
+DA:67,3
+FN:69,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetFilePerFolder(System.Int32)
 FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetFilePerFolder(System.Int32)
-DA:67,2
-DA:68,2
-DA:69,2
-FN:71,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetProgressPerImage(System.Int32)
-FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetProgressPerImage(System.Int32)
+DA:70,2
+DA:71,2
 DA:72,2
-DA:73,2
-DA:74,2
-FN:76,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CreateExportFile(System.String,Magnum.Api.Models.MBarcode,System.String,System.String)
-FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CreateExportFile(System.String,Magnum.Api.Models.MBarcode,System.String,System.String)
+FN:74,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetProgressPerImage(System.Int32)
+FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::SetProgressPerImage(System.Int32)
+DA:75,2
+DA:76,2
 DA:77,2
-DA:78,2
-DA:79,2
+FN:79,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CreateExportFile(System.String,Magnum.Api.Models.MBarcode,System.String,System.String)
+FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CreateExportFile(System.String,Magnum.Api.Models.MBarcode,System.String,System.String)
 DA:80,2
+DA:81,2
 DA:82,2
 DA:83,2
 DA:85,2
 DA:86,2
 DA:88,2
 DA:89,2
-DA:90,2
-FN:92,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CloseExportFiles()
-FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CloseExportFiles()
+DA:91,2
+DA:92,2
 DA:93,2
-DA:94,2
-DA:95,2
+FN:95,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CloseExportFiles()
+FNDA:2,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::CloseExportFiles()
 DA:96,2
-FN:98,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::WriteExportFile(Magnum.Consoles.Barcodes.Commons.BarcodeProfileBase,Magnum.Api.Models.MBarcode,Magnum.Api.Models.MBarcode)
+DA:97,2
+DA:98,2
+DA:99,2
+FN:101,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::WriteExportFile(Magnum.Consoles.Barcodes.Commons.BarcodeProfileBase,Magnum.Api.Models.MBarcode,Magnum.Api.Models.MBarcode)
 FNDA:3,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::WriteExportFile(Magnum.Consoles.Barcodes.Commons.BarcodeProfileBase,Magnum.Api.Models.MBarcode,Magnum.Api.Models.MBarcode)
-DA:99,3
-DA:100,3
-DA:101,3
+DA:102,3
 DA:103,3
-DA:105,3
+DA:104,3
 DA:106,3
-DA:107,3
-FN:109,System.Int32 Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::Execute()
+DA:108,3
+DA:109,3
+DA:110,3
+FN:112,System.Int32 Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::Execute()
 FNDA:2,System.Int32 Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::Execute()
-DA:110,2
-DA:111,2
-DA:112,2
 DA:113,2
 DA:114,2
-DA:115,2
+DA:116,2
 DA:117,2
 DA:118,2
-DA:119,1
-DA:120,1
-DA:121,1
+DA:119,2
+DA:120,2
+DA:122,2
 DA:123,2
-DA:125,2
-DA:127,2
-DA:129,2
+DA:124,1
+DA:125,1
+DA:126,1
+DA:128,2
 DA:130,2
 DA:131,2
 DA:133,2
+DA:134,2
 DA:135,2
-DA:136,2
 DA:137,2
 DA:139,2
+DA:140,2
 DA:141,2
-DA:142,2
-DA:144,2
-DA:146,10
-DA:147,3
-DA:148,3
-DA:149,3
-DA:150,3
+DA:143,2
+DA:145,2
+DA:146,2
+DA:148,2
+DA:150,10
+DA:151,3
 DA:152,3
-DA:153,1
-DA:154,1
-DA:155,1
-DA:157,3
-DA:158,3
-DA:159,3
-DA:160,3
+DA:153,3
+DA:154,3
+DA:156,3
+DA:157,1
+DA:158,1
+DA:159,1
 DA:161,3
+DA:162,3
 DA:163,3
 DA:164,3
-DA:165,1
-DA:166,1
-DA:167,1
-DA:169,3
-DA:170,3
-DA:172,3
-DA:173,1
-DA:174,1
-DA:175,1
-DA:176,1
-DA:177,3
-DA:179,2
-DA:181,2
-DA:182,2
+DA:165,3
+DA:167,3
+DA:168,3
+DA:169,1
+DA:170,1
+DA:171,1
+DA:173,3
+DA:174,3
+DA:176,3
+DA:177,1
+DA:178,1
+DA:179,1
+DA:180,1
+DA:181,3
 DA:183,2
-DA:184,2
-BRDA:118,104,0,1
-BRDA:118,104,1,2
-BRDA:146,652,1,3
-BRDA:152,419,0,1
-BRDA:152,419,1,3
-BRDA:164,531,0,1
-BRDA:164,531,1,3
-BRDA:172,596,0,1
-BRDA:172,596,1,3
-BRDA:146,652,0,2
-FN:26,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::.ctor()
+DA:185,2
+DA:186,2
+DA:188,2
+DA:189,2
+BRDA:123,116,0,1
+BRDA:123,116,1,2
+BRDA:150,682,1,3
+BRDA:156,431,0,1
+BRDA:156,431,1,3
+BRDA:168,543,0,1
+BRDA:168,543,1,3
+BRDA:176,608,0,1
+BRDA:176,608,1,3
+BRDA:150,682,0,2
+FN:29,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::.ctor()
 FNDA:4,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::.ctor()
-DA:27,4
-DA:29,4
 DA:30,4
 DA:32,4
-DA:34,4
+DA:33,4
 DA:35,4
-DA:36,4
 DA:37,4
-LF:110
-LH:110
+DA:38,4
+DA:39,4
+DA:40,4
+LF:111
+LH:111
 BRF:10
 BRH:10
 FNF:11
@@ -1339,21 +1344,21 @@ FNF:11
 FNH:11
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\LogUtils.cs
-FN:9,System.Void Magnum.Api.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
-FNDA:19,System.Void Magnum.Api.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
-DA:10,19
-DA:11,19
-DA:12,2
-DA:13,2
-DA:14,2
-DA:15,19
-BRDA:11,7,0,2
-BRDA:11,7,1,19
-FN:17,System.Void Magnum.Api.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String)
-FNDA:19,System.Void Magnum.Api.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String)
-DA:18,19
-DA:19,19
-DA:20,19
+FN:9,System.Void Magnum.Api.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
+FNDA:25,System.Void Magnum.Api.Utils.LogUtils::Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Object[])
+DA:10,25
+DA:11,25
+DA:12,8
+DA:13,8
+DA:14,8
+DA:15,25
+BRDA:11,7,0,8
+BRDA:11,7,1,25
+FN:17,System.Void Magnum.Api.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
+FNDA:25,System.Void Magnum.Api.Utils.LogUtils::LogInformation(Microsoft.Extensions.Logging.ILogger,System.String,System.Object[])
+DA:18,25
+DA:19,25
+DA:20,25
 LF:9
 LH:9
 BRF:2
@@ -1400,12 +1405,12 @@ FNF:2
 FNH:2
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Utils\VersionUtils.cs
-FN:8,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
+FN:7,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
 FNDA:1,System.String Magnum.Api.Utils.VersionUtils::GetVersion()
+DA:8,1
 DA:9,1
 DA:10,1
 DA:11,1
-DA:12,1
 LF:4
 LH:4
 BRF:0
@@ -1992,8 +1997,8 @@ FN:7,System.String Magnum.Api.Models.BaseModel::get_Key()
 FNDA:38,System.String Magnum.Api.Models.BaseModel::get_Key()
 DA:8,38
 FN:8,System.DateTime Magnum.Api.Models.BaseModel::get_LastMaintDate()
-FNDA:15,System.DateTime Magnum.Api.Models.BaseModel::get_LastMaintDate()
-DA:9,15
+FNDA:16,System.DateTime Magnum.Api.Models.BaseModel::get_LastMaintDate()
+DA:9,16
 LF:2
 LH:2
 BRF:0
@@ -2047,20 +2052,20 @@ FNH:12
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Models\MContactUs.cs
 FN:7,System.String Magnum.Api.Models.MContactUs::get_Name()
-FNDA:2,System.String Magnum.Api.Models.MContactUs::get_Name()
-DA:8,2
+FNDA:5,System.String Magnum.Api.Models.MContactUs::get_Name()
+DA:8,5
 FN:8,System.String Magnum.Api.Models.MContactUs::get_Subject()
-FNDA:2,System.String Magnum.Api.Models.MContactUs::get_Subject()
-DA:9,2
+FNDA:5,System.String Magnum.Api.Models.MContactUs::get_Subject()
+DA:9,5
 FN:9,System.String Magnum.Api.Models.MContactUs::get_Email()
-FNDA:2,System.String Magnum.Api.Models.MContactUs::get_Email()
-DA:10,2
+FNDA:5,System.String Magnum.Api.Models.MContactUs::get_Email()
+DA:10,5
 FN:10,System.String Magnum.Api.Models.MContactUs::get_Message()
-FNDA:2,System.String Magnum.Api.Models.MContactUs::get_Message()
-DA:11,2
+FNDA:5,System.String Magnum.Api.Models.MContactUs::get_Message()
+DA:11,5
 FN:11,System.String Magnum.Api.Models.MContactUs::get_IP()
-FNDA:2,System.String Magnum.Api.Models.MContactUs::get_IP()
-DA:12,2
+FNDA:4,System.String Magnum.Api.Models.MContactUs::get_IP()
+DA:12,4
 LF:5
 LH:5
 BRF:0
@@ -2252,10 +2257,10 @@ DA:45,1
 DA:47,1
 DA:48,1
 FN:50,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-FNDA:38,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-DA:51,38
-DA:52,38
-DA:53,38
+FNDA:39,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
+DA:51,39
+DA:52,39
+DA:53,39
 FN:55,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Factories.FactoryBusinessOperation::GetNoSqlContext()
 FNDA:1,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Factories.FactoryBusinessOperation::GetNoSqlContext()
 DA:56,1
@@ -2272,29 +2277,29 @@ DA:66,1
 DA:67,1
 DA:68,1
 FN:70,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
-FNDA:47,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
-DA:71,47
-DA:72,47
-DA:73,47
+FNDA:49,Magnum.Api.Commons.Business.IBusinessOperation Magnum.Api.Factories.FactoryBusinessOperation::CreateBusinessOperationObject(System.String)
+DA:71,49
+DA:72,49
+DA:73,49
 DA:74,1
 DA:75,1
-DA:78,46
-DA:79,46
-DA:81,46
-DA:82,46
-DA:83,46
-DA:85,46
-DA:86,8
-DA:87,8
-DA:88,8
-DA:89,8
-DA:90,8
-DA:92,46
-DA:93,46
+DA:78,48
+DA:79,48
+DA:81,48
+DA:82,48
+DA:83,48
+DA:85,48
+DA:86,9
+DA:87,9
+DA:88,9
+DA:89,9
+DA:90,9
+DA:92,48
+DA:93,48
 BRDA:73,24,0,1
-BRDA:73,24,1,46
-BRDA:85,111,0,8
-BRDA:85,111,1,46
+BRDA:73,24,1,48
+BRDA:85,111,0,9
+BRDA:85,111,1,48
 FN:95,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
 FNDA:4,System.Void Magnum.Api.Factories.FactoryBusinessOperation::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
 DA:96,4
@@ -2483,25 +2488,25 @@ FNH:15
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Commons\Business\BusinessOperationBase.cs
 FN:18,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
-DA:19,46
-DA:20,46
-DA:21,46
+FNDA:48,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetNoSqlContext(Magnum.Api.NoSql.INoSqlContext)
+DA:19,48
+DA:20,48
+DA:21,48
 FN:23,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Commons.Business.BusinessOperationBase::GetNoSqlContext()
-FNDA:35,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Commons.Business.BusinessOperationBase::GetNoSqlContext()
-DA:24,35
-DA:25,35
-DA:26,35
+FNDA:36,Magnum.Api.NoSql.INoSqlContext Magnum.Api.Commons.Business.BusinessOperationBase::GetNoSqlContext()
+DA:24,36
+DA:25,36
+DA:26,36
 FN:28,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetStorageContext(Magnum.Api.Storages.IStorageContext)
-FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetStorageContext(Magnum.Api.Storages.IStorageContext)
-DA:29,46
-DA:30,46
-DA:31,46
+FNDA:48,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetStorageContext(Magnum.Api.Storages.IStorageContext)
+DA:29,48
+DA:30,48
+DA:31,48
 FN:33,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetSmtpContext(Magnum.Api.Smtp.ISmtpContext)
-FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetSmtpContext(Magnum.Api.Smtp.ISmtpContext)
-DA:34,46
-DA:35,46
-DA:36,46
+FNDA:48,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetSmtpContext(Magnum.Api.Smtp.ISmtpContext)
+DA:34,48
+DA:35,48
+DA:36,48
 FN:38,Magnum.Api.Smtp.ISmtpContext Magnum.Api.Commons.Business.BusinessOperationBase::GetSmtpContext()
 FNDA:0,Magnum.Api.Smtp.ISmtpContext Magnum.Api.Commons.Business.BusinessOperationBase::GetSmtpContext()
 DA:39,0
@@ -2513,20 +2518,20 @@ DA:44,3
 DA:45,3
 DA:46,3
 FN:48,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
-FNDA:8,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
-DA:49,8
-DA:50,8
-DA:51,8
+FNDA:9,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
+DA:49,9
+DA:50,9
+DA:51,9
 FN:53,Microsoft.Extensions.Logging.ILogger Magnum.Api.Commons.Business.BusinessOperationBase::GetLogger()
 FNDA:11,Microsoft.Extensions.Logging.ILogger Magnum.Api.Commons.Business.BusinessOperationBase::GetLogger()
 DA:54,11
 DA:55,11
 DA:56,11
 FN:13,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
-FNDA:46,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
-DA:14,46
-DA:15,46
-DA:16,46
+FNDA:48,System.Void Magnum.Api.Commons.Business.BusinessOperationBase::.ctor()
+DA:14,48
+DA:15,48
+DA:16,48
 LF:27
 LH:24
 BRF:0
@@ -2585,8 +2590,8 @@ BRDA:16,65,0,5
 BRDA:16,65,1,6
 BRDA:33,164,0,4
 BRDA:33,164,1,2
-BRDA:45,249,0,1
-BRDA:45,249,1,1
+BRDA:45,254,0,1
+BRDA:45,254,1,1
 LF:38
 LH:38
 BRF:12
@@ -2762,22 +2767,22 @@ FNF:2
 FNH:2
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\ContactUs\SaveContactUs.cs
-FN:10,Magnum.Api.Models.MContactUs Magnum.Api.Businesses.ContactUs.SaveContactUs::Apply(Magnum.Api.Models.MContactUs)
-FNDA:0,Magnum.Api.Models.MContactUs Magnum.Api.Businesses.ContactUs.SaveContactUs::Apply(Magnum.Api.Models.MContactUs)
-DA:11,0
-DA:12,0
-DA:13,0
-DA:15,0
-DA:17,0
-DA:18,0
-DA:20,0
-DA:21,0
+FN:10,System.Int32 Magnum.Api.Businesses.ContactUs.SaveContactUs::Apply(Magnum.Api.Models.MContactUs)
+FNDA:1,System.Int32 Magnum.Api.Businesses.ContactUs.SaveContactUs::Apply(Magnum.Api.Models.MContactUs)
+DA:11,1
+DA:12,1
+DA:13,1
+DA:15,1
+DA:17,1
+DA:18,1
+DA:20,1
+DA:21,1
 LF:8
-LH:0
+LH:8
 BRF:0
 BRH:0
 FNF:1
-FNH:0
+FNH:1
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumCore\Magnum\Api\Businesses\Barcodes\CreateBarcode.cs
 FN:10,Magnum.Api.Models.MBarcode Magnum.Api.Businesses.Barcodes.CreateBarcode::Apply(Magnum.Api.Models.MBarcode)
@@ -2803,6 +2808,21 @@ DA:33,5
 DA:34,5
 LF:19
 LH:19
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Utils\RemoteUtils.cs
+FN:9,System.String Magnum.Api.Utils.RemoteUtils::GetRemoteIPAddress(Microsoft.AspNetCore.Mvc.ControllerContext)
+FNDA:3,System.String Magnum.Api.Utils.RemoteUtils::GetRemoteIPAddress(Microsoft.AspNetCore.Mvc.ControllerContext)
+DA:10,3
+DA:11,3
+DA:12,3
+DA:13,3
+DA:14,3
+LF:5
+LH:5
 BRF:0
 BRH:0
 FNF:1
@@ -2932,30 +2952,30 @@ FNH:0
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Models\ErrorViewModel.cs
 FN:6,System.String Magnum.Web.Models.ErrorViewModel::get_RequestId()
-FNDA:0,System.String Magnum.Web.Models.ErrorViewModel::get_RequestId()
-DA:7,0
+FNDA:1,System.String Magnum.Web.Models.ErrorViewModel::get_RequestId()
+DA:7,1
 FN:8,System.Boolean Magnum.Web.Models.ErrorViewModel::get_ShowRequestId()
 FNDA:0,System.Boolean Magnum.Web.Models.ErrorViewModel::get_ShowRequestId()
 DA:9,0
 LF:2
-LH:0
+LH:1
 BRF:0
 BRH:0
 FNF:2
-FNH:0
+FNH:1
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Utils\StringUtils.cs
 FN:7,System.String Magnum.Web.Utils.StringUtils::StripTagsRegex(System.String)
-FNDA:0,System.String Magnum.Web.Utils.StringUtils::StripTagsRegex(System.String)
-DA:8,0
-DA:9,0
-DA:10,0
+FNDA:8,System.String Magnum.Web.Utils.StringUtils::StripTagsRegex(System.String)
+DA:8,8
+DA:9,8
+DA:10,8
 LF:3
-LH:0
+LH:3
 BRF:0
 BRH:0
 FNF:1
-FNH:0
+FNH:1
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Utils\VersionUtils.cs
 FN:8,System.String Magnum.Web.Utils.VersionUtils::GetVersion()
@@ -2972,72 +2992,65 @@ FNF:1
 FNH:0
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\HomeController.cs
-FN:19,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Index()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Index()
-DA:20,0
-DA:21,0
-DA:22,0
-FN:24,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Privacy()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Privacy()
-DA:25,0
-DA:26,0
-DA:27,0
-FN:29,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::About()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::About()
-DA:30,0
-DA:31,0
-DA:32,0
-FN:34,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Contact()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Contact()
-DA:35,0
-DA:36,0
-DA:37,0
-FN:40,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::SaveContactUs(Magnum.Api.Models.MContactUs)
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::SaveContactUs(Magnum.Api.Models.MContactUs)
-DA:41,0
-DA:42,0
-DA:43,0
-DA:44,0
-DA:45,0
-DA:46,0
-DA:47,0
-DA:48,0
-DA:50,0
-DA:52,0
-DA:54,0
-DA:55,0
-BRDA:52,128,1,0
-BRDA:52,128,0,0
-FN:57,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Seubpong()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Seubpong()
-DA:58,0
-DA:59,0
-DA:60,0
-FN:63,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
-FNDA:0,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
-DA:64,0
-DA:65,0
-DA:66,0
-BRDA:65,14,0,0
-BRDA:65,14,1,0
-BRDA:65,26,0,0
-BRDA:65,26,1,0
-FN:68,Magnum.Api.Businesses.ContactUs.SaveContactUs Magnum.Web.Controllers.HomeController::GetSaveContactUsOperation()
-FNDA:0,Magnum.Api.Businesses.ContactUs.SaveContactUs Magnum.Web.Controllers.HomeController::GetSaveContactUsOperation()
-DA:69,0
-DA:70,0
-DA:71,0
-LF:33
-LH:0
+FN:14,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Index()
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Index()
+DA:15,1
+DA:16,1
+DA:17,1
+FN:19,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Privacy()
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Privacy()
+DA:20,1
+DA:21,1
+DA:22,1
+FN:24,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::About()
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::About()
+DA:25,1
+DA:26,1
+DA:27,1
+FN:29,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Contact()
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Contact()
+DA:30,1
+DA:31,1
+DA:32,1
+FN:35,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::SaveContactUs(Magnum.Api.Models.MContactUs)
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::SaveContactUs(Magnum.Api.Models.MContactUs)
+DA:36,1
+DA:37,1
+DA:38,1
+DA:39,1
+DA:40,1
+DA:41,1
+DA:42,1
+DA:44,1
+DA:46,1
+DA:48,1
+DA:49,1
+BRDA:46,111,1,1
+BRDA:46,111,0,1
+FN:52,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
+FNDA:1,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.HomeController::Error()
+DA:53,1
+DA:54,1
+DA:55,1
+BRDA:54,14,0,1
+BRDA:54,14,1,0
+BRDA:54,26,0,1
+BRDA:54,26,1,1
+FN:57,Magnum.Api.Commons.Business.IBusinessOperationManipulate`1<Magnum.Api.Models.MContactUs> Magnum.Web.Controllers.HomeController::GetSaveContactUsOperation()
+FNDA:1,Magnum.Api.Commons.Business.IBusinessOperationManipulate`1<Magnum.Api.Models.MContactUs> Magnum.Web.Controllers.HomeController::GetSaveContactUsOperation()
+DA:58,1
+DA:59,1
+DA:60,1
+LF:29
+LH:29
 BRF:6
-BRH:0
-FNF:8
-FNH:0
+BRH:5
+FNF:7
+FNH:7
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumWeb\Magnum\Web\Controllers\VerificationController.cs
-FN:13,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.VerificationController::Check(System.String,System.String,System.String,System.String)
+FN:14,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.VerificationController::Check(System.String,System.String,System.String,System.String)
 FNDA:2,Microsoft.AspNetCore.Mvc.IActionResult Magnum.Web.Controllers.VerificationController::Check(System.String,System.String,System.String,System.String)
-DA:14,2
 DA:15,2
 DA:16,2
 DA:17,2
@@ -3055,19 +3068,19 @@ DA:31,1
 DA:32,1
 DA:33,1
 DA:35,2
-BRDA:26,99,1,1
-BRDA:26,99,0,1
-BRDA:27,193,1,1
-BRDA:27,193,0,1
-BRDA:32,305,1,1
-BRDA:32,305,0,1
+BRDA:26,82,1,1
+BRDA:26,82,0,1
+BRDA:27,176,1,1
+BRDA:27,176,0,1
+BRDA:32,287,1,1
+BRDA:32,287,0,1
 FN:37,Magnum.Api.Commons.Business.IBusinessOperationManipulate`1<Magnum.Api.Models.MRegistration> Magnum.Web.Controllers.VerificationController::GetCreateRegistrationOperation()
 FNDA:1,Magnum.Api.Commons.Business.IBusinessOperationManipulate`1<Magnum.Api.Models.MRegistration> Magnum.Web.Controllers.VerificationController::GetCreateRegistrationOperation()
 DA:38,1
 DA:39,1
 DA:40,1
-LF:21
-LH:21
+LF:20
+LH:20
 BRF:6
 BRH:6
 FNF:2
