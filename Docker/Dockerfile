@@ -15,7 +15,7 @@ COPY MagnumTest/. ./publish/MagnumTest
 WORKDIR /app/publish
 
 RUN dotnet restore
-RUN dotnet publish -c Release -o out --version-suffix $VERSION_NUMBER
+RUN dotnet publish -c Release -o out -p:Version=$VERSION_NUMBER
 
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
