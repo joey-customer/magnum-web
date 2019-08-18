@@ -11,6 +11,7 @@ using Magnum.Api.Factories;
 using Magnum.Api.Businesses.ContactUs;
 using System.Net;
 using Magnum.Web.Utils;
+using Magnum.Api.Utils;
 
 namespace Magnum.Web.Controllers
 {
@@ -40,8 +41,7 @@ namespace Magnum.Web.Controllers
         public IActionResult SaveContactUs(MContactUs form)
         {
             SaveContactUs operation = GetSaveContactUsOperation();
-            IPAddress remoteIPAddress = ControllerContext.HttpContext.Connection.RemoteIpAddress;
-            form.IP = remoteIPAddress.ToString();
+            form.IP = RemoteUtils.GetRemoteIPAddress(ControllerContext);
             form.Name = StringUtils.StripTagsRegex(form.Name);
             form.Subject = StringUtils.StripTagsRegex(form.Subject);
             form.Email = StringUtils.StripTagsRegex(form.Email);
