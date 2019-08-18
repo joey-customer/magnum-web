@@ -2,6 +2,8 @@ using System;
 using System.IO;
 using System.Collections;
 
+using Microsoft.Extensions.Logging;
+
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
@@ -9,6 +11,8 @@ using Magnum.Api.Businesses.Barcodes;
 using Magnum.Api.NoSql;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.ImageGenerators;
+using Magnum.Consoles.Factories;
+using Magnum.Api.Utils;
 
 using NDesk.Options;
 
@@ -18,6 +22,8 @@ namespace Magnum.Consoles.Barcodes
 
 	public class BarcodeGeneratorApplication : ConsoleAppBase
 	{
+        private ILogger logger;
+
         private StreamWriter csvStream;
         private StreamWriter txtStream;
                 
@@ -97,7 +103,7 @@ namespace Magnum.Consoles.Barcodes
             string csvLine = String.Format("=\"{0}\",=\"{1}\",\"{2}\",\"{3}\",\"{4}\"", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
             string txtLine = String.Format("{0},{1},{2},{3},{4}", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
 
-            Console.WriteLine(txtLine);
+            LogUtils.LogInformation(logger , txtLine); 
 
             txtStream.WriteLine(txtLine);
             csvStream.WriteLine(csvLine);
@@ -105,6 +111,8 @@ namespace Magnum.Consoles.Barcodes
 
         protected override int Execute()
         {
+            logger = GetLogger();
+
             Hashtable args = GetArguments();
             string payloadUrl = args["url"].ToString();
             string batch = args["batch"].ToString();
@@ -120,10 +128,10 @@ namespace Magnum.Consoles.Barcodes
             bool imageGenerate = generate.Equals("Y");
 
             BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
-
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
+            FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());
             CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());
@@ -168,14 +176,15 @@ namespace Magnum.Consoles.Barcodes
                 if ((i % progressPerImage) == 0)
                 {
                     int remain = quantity - i;
-                    Console.WriteLine("Generated {0} barcodes, {1} barcodes to go...", i, remain);
+                    LogUtils.LogInformation(logger , "Generated {0} barcodes, {1} barcodes to go...", i, remain);   
                 }                
             }
             
             CloseExportFiles();
 
             generator.Cleanup();
-            Console.WriteLine("Done generating {0} barcodes.", quantity);
+            LogUtils.LogInformation(logger , "Done generating {0} barcodes.", quantity); 
+
             return 0;
         }
     }

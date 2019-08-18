@@ -4,7 +4,7 @@ using System.Net;
 
 namespace Magnum.Api.Smtp
 {
-	public abstract class SmtpContextBase : ISmtpContext
+	public abstract class SmtpContextBase : ISmtpContext 
 	{
         private string smtpHost = "";
         private int smtpPort = 0;

@@ -16,7 +16,8 @@ namespace Magnum.Api.Models
             models.Add(new MProduct());
             models.Add(new MProductComposition());
             models.Add(new MGenericDescription());
-            models.Add(new MProductType());            
+            models.Add(new MProductType()); 
+            models.Add(new MContactUs());            
         }
 
         [TestCase]

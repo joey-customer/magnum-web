@@ -2,21 +2,28 @@ using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
+using Microsoft.Extensions.Logging;
+
 using Firebase.Database;
 using Firebase.Database.Query;
 using Firebase.Auth;
 using Magnum.Api.Models;
+using Magnum.Api.Utils;
 
 namespace Magnum.Api.NoSql
 {    
-	public class FirebaseNoSqlContext : INoSqlContext
+	public class FirebaseNoSqlContext : INoSqlContext, ITokenRefreshAble
 	{
+        private ILogger appLogger;
+
         private FirebaseClient fbClient = null;
         private string authKey = "";
 
         private string dbUrl = "";
         private string dbUser = "";
         private string dbPassword = "";
+        private DateTime lastRefreshDtm = DateTime.Now;        
+        private long refreshInterval = TimeSpan.TicksPerHour / 2;
 
         private async Task AuthenToFirebase()
         {
@@ -28,12 +35,30 @@ namespace Magnum.Api.NoSql
                 new FirebaseOptions
                 {
                     AuthTokenAsyncFactory = () => Task.FromResult(token.FirebaseToken)               
-                });            
+                });   
+
+            string message = String.Format("Authenticate to [{0}], last refresh date time is [{1}]", dbUrl, lastRefreshDtm.ToString());
+            lastRefreshDtm = DateTime.Now; 
+            
+            LogUtils.LogInformation(appLogger, message);
+        }
+
+        private FirebaseClient GetFirebaseRefresh()
+        {
+            long lastTick = lastRefreshDtm.Ticks;
+            long currentTick = DateTime.Now.Ticks;
+
+            if (currentTick - lastTick > refreshInterval)
+            {
+                AuthenToFirebase().Wait();
+            }
+
+            return fbClient;
         }
 
         private async Task<string> PostFirebaseData(string path, object data)
         {
-            var obj = await fbClient
+            var obj = await GetFirebaseRefresh()
                 .Child(path)
                 .PostAsync(data, true);
             
@@ -42,7 +67,7 @@ namespace Magnum.Api.NoSql
 
         private async Task PutFirebaseData(string path, string key, object data)
         {
-            await fbClient
+            await GetFirebaseRefresh()
                 .Child(path)
                 .Child(key)
                 .PutAsync(data);
@@ -50,7 +75,7 @@ namespace Magnum.Api.NoSql
 
         private async Task DeleteFirebaseData(string path, string key)
         {
-            await fbClient
+            await GetFirebaseRefresh()
                 .Child(path)
                 .Child(key)
                 .DeleteAsync();
@@ -58,7 +83,7 @@ namespace Magnum.Api.NoSql
 
         private async Task<T> GetFirebaseData<T>(string path)
         {
-            var items = await fbClient
+            var items = await GetFirebaseRefresh()
                 .Child(path)
                 .OrderByKey()
                 .LimitToFirst(1)
@@ -76,7 +101,7 @@ namespace Magnum.Api.NoSql
 
         private async Task<T> GetFirebaseSingleData<T>(string path, string key)
         {
-            var o = await fbClient
+            var o = await GetFirebaseRefresh()
                 .Child(path)
                 .Child(key)
                 .OnceSingleAsync<T>();
@@ -88,7 +113,7 @@ namespace Magnum.Api.NoSql
         {
             List<T> arr = new List<T>();
 
-            var items = await fbClient
+            var items = await GetFirebaseRefresh()
                 .Child(path)
                 .OrderByKey()
                 .OnceAsync<T>();
@@ -103,6 +128,21 @@ namespace Magnum.Api.NoSql
 
             return arr;
         }
+
+        public DateTime GetLastRefreshDtm()
+        {
+            return lastRefreshDtm;
+        } 
+
+        public void SetLastRefreshDtm(DateTime refreshDtm)
+        {
+            lastRefreshDtm = refreshDtm;
+        }
+
+        public void SetRefreshInterval(long refreshRate)
+        {
+            refreshInterval = refreshRate;
+        } 
 
         public void Authenticate(string url, string key, string user, string passwd)
         {
@@ -150,5 +190,14 @@ namespace Magnum.Api.NoSql
             return arr;
         }
 
+        public void SetLogger(ILogger logger)
+        {
+            appLogger = logger;
+        }
+
+        public ILogger GetLogger()
+        {
+            return appLogger;
+        }   
     }
 }

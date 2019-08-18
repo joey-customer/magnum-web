@@ -4,6 +4,7 @@ using Magnum.Api.Factories;
 using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using System.Net;
+using Magnum.Api.Utils;
 
 namespace Magnum.Web.Controllers
 {
@@ -14,8 +15,7 @@ namespace Magnum.Web.Controllers
         {
             IBusinessOperationManipulate<MRegistration> operation = GetCreateRegistrationOperation();
             MRegistration param = new MRegistration();
-            IPAddress remoteIPAddress = ControllerContext.HttpContext.Connection.RemoteIpAddress;
-            param.IP = remoteIPAddress.ToString();
+            param.IP = RemoteUtils.GetRemoteIPAddress(ControllerContext);
             param.Pin = pin;
             param.SerialNumber = serial;
             param.Path = string.Format("{0}/{1}", product, group);
