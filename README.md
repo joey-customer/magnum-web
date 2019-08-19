@@ -17,3 +17,4 @@ In general we can set MAGNUM_CERTIFICATE_ON to 'N' or remove it in the developme
 * MAGNUM_SMTP_PASSWORD - SMTP password.
 * MAGNUM_SMTP_PORT - SMTP port.
 * MAGNUM_SMTP_USER - SMTP user.
+* MAGNUM_LOG_PATH - Log path, setting value like "/app/log/app.log" will create "/app/log/appYYYYMMDD.log"

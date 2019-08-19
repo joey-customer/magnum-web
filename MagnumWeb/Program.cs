@@ -19,7 +19,7 @@ namespace Magnum.Web
                 certMode = "Y";
             }
 
-            var builder = WebHost.CreateDefaultBuilder(args)   
+            var builder = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
 
             if (certMode.Equals("Y"))

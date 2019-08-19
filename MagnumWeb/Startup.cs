@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Magnum.Api.Factories;
+using Magnum.Web.Utils;
 
 using Serilog;
 
@@ -19,11 +20,6 @@ namespace Magnum.Web
     {
         private static void SetupFactory(ILoggerFactory logFactory)
         {
-            Log.Logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .WriteTo.Console()
-                .CreateLogger();
-                            
             string host = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_URL");
             string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
             string user = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
@@ -46,6 +42,18 @@ namespace Magnum.Web
 
         public Startup(IConfiguration configuration, ILogger<Startup> logger)
         {
+            string logPath = Environment.GetEnvironmentVariable("MAGNUM_LOG_PATH");
+
+            LoggerConfiguration logConfig = new LoggerConfiguration();
+            logConfig.Enrich.FromLogContext();
+            if (logPath != null)
+            {
+                logConfig.WriteTo.File(logPath, rollingInterval: RollingInterval.Day);
+            }
+
+            Log.Logger = logConfig.CreateLogger();
+            Log.Logger.Information("MagnumWeb version {Version} started", VersionUtils.GetVersion());
+
             Configuration = configuration;
         }
 
