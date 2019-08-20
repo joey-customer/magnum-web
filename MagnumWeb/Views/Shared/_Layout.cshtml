@@ -44,12 +44,11 @@
                                         Products <i class="fa fa-angle-down" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a asp-area="" asp-controller="Products" asp-action="Products">Products</a></li>
-                                        <li class="nav-item">@Html.ActionLink("Orals", "Privacy", "Home", null, new { @class = "nav-link" })</li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Peptides & GH</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Sexual Performance</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Extreme Series</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Ergogenics</a></li>
+                                        <li class="nav-item">@Html.ActionLink("Orals", "Products", "Home", null, new { @class = "nav-link" })</li>
+                                        <li class="nav-item">@Html.ActionLink("Peptides & GH", "Products", "Home", null, new { @class = "nav-link" })</li>
+                                        <li class="nav-item">@Html.ActionLink("Sexual Performance", "Products", "Home", null, new { @class = "nav-link" })</li>
+                                        <li class="nav-item">@Html.ActionLink("Extreme Series", "Products", "Home", null, new { @class = "nav-link" })</li>
+                                        <li class="nav-item">@Html.ActionLink("Ergogenics", "Products", "Home", null, new { @class = "nav-link" })</li>
                                     </ul>
                                 <li class="nav-item"><a class="nav-link" href="#verify">Verify Product</a></li>
                                 <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>

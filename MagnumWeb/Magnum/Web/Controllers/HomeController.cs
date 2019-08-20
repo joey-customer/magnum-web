@@ -22,6 +22,11 @@ namespace Magnum.Web.Controllers
             return View();
         }
 
+        public IActionResult Products()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             return View();
