@@ -53,7 +53,7 @@ namespace Magnum.Web
 
             if (logPath != null)
             {
-                logConfig.WriteTo.File(logPath, rollingInterval: RollingInterval.Day);
+                logConfig.WriteTo.File(logPath, rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7);
             }
 
             Log.Logger = logConfig.CreateLogger();
