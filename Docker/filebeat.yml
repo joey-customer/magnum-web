@@ -24,4 +24,3 @@ output.elasticsearch:
   protocol: "https"
   username: "${MAGNUM_ELASTIC_USERNAME}"
   password: "${MAGNUM_ELASTIC_PASSWORD}"
-

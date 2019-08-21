@@ -24,9 +24,9 @@ RUN  apt-get update \
   && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.2.0-amd64.deb
-RUN dpkg -i filebeat-5.2.0-amd64.deb
-RUN rm filebeat-5.2.0-amd64.deb
+RUN wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.3.0-amd64.deb
+RUN dpkg -i filebeat-7.3.0-amd64.deb
+RUN rm filebeat-7.3.0-amd64.deb
 
 COPY --from=build /app/publish/MagnumWeb/out ./
 COPY Docker/filebeat.yml /etc/filebeat/filebeat.yml
