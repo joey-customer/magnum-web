@@ -33,8 +33,8 @@ COPY Docker/filebeat.yml /etc/filebeat/filebeat.yml
 
 RUN mkdir -p /logs
 
-#RUN echo "service filebeat start" >> /app/start.bash
-RUN echo "dotnet MagnumWeb.dll" >> /app/start.bash
+RUN echo "service filebeat start" >> /app/start.bash
+RUN echo "dotnet /app/MagnumWeb.dll" >> /app/start.bash
 RUN chmod 755 /app/start.bash
 
 ENTRYPOINT ["/app/start.bash"]
