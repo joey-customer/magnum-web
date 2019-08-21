@@ -20,13 +20,18 @@ RUN dotnet publish -c Release -o out -p:Version=$VERSION_NUMBER
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
 
-RUN wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.3.0-amd64.deb
-RUN dpkg -i filebeat-7.3.0-amd64.deb
-RUN rm filebeat-7.3.0-amd64.deb
+RUN  apt-get update \
+  && apt-get install -y wget \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.2.0-amd64.deb
+RUN dpkg -i filebeat-5.2.0-amd64.deb
+RUN rm filebeat-5.2.0-amd64.deb
 
 COPY --from=build /app/publish/MagnumWeb/out ./
-COPY filebeat.yml /etc/filebeat/filebeat.yml
+COPY Docker/filebeat.yml /etc/filebeat/filebeat.yml
 
 RUN mkdir -p /logs
 
+CMD service filebeat start
 ENTRYPOINT ["dotnet", "MagnumWeb.dll"]
