@@ -1,6 +1,6 @@
 # magnum-web
 
-## Environment Variables
+## Environment Variables (to run app locally)
 
 It is the good idea not to hardcode any sensitive data such as username, password or key in the source code. We should pass the neccessary setting via environment variables. Below are the environment variables needed for the application.
 
@@ -18,3 +18,12 @@ In general we can set MAGNUM_CERTIFICATE_ON to 'N' or remove it in the developme
 * MAGNUM_SMTP_PORT - SMTP port.
 * MAGNUM_SMTP_USER - SMTP user.
 * MAGNUM_LOG_PATH - Log path, setting value like "/app/log/app.log" will create "/app/log/appYYYYMMDD.log"
+
+## Environment Variables (to run in docker)
+
+In order to run the application in docker there are additional envirnoment variables need to be defined. 
+
+* MAGNUM_ENVIRONMENT - To define the environment where the app is running.
+* MAGNUM_ELASTIC_HOST - Elastic host like xabcdefghiyyyyy.us-central1.gcp.cloud.es.io::9243
+* MAGNUM_ELASTIC_USERNAME - Elastic username
+* MAGNUM_ELASTIC_PASSWORD - Elastic password
