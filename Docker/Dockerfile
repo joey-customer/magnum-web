@@ -33,4 +33,4 @@ COPY Docker/filebeat.yml /etc/filebeat/filebeat.yml
 
 RUN mkdir -p /logs
 
-ENTRYPOINT ["service filebeat start;", "dotnet", "MagnumWeb.dll"]
+ENTRYPOINT ["dotnet", "MagnumWeb.dll"]
