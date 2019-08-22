@@ -22,6 +22,9 @@ WORKDIR /app
 
 RUN  apt-get update \
   && apt-get install -y wget \
+  && apt-get install -y supervisor \
+  && mkdir -p /var/log/supervisor \
+  && mkdir -p /etc/supervisor/conf.d \
   && rm -rf /var/lib/apt/lists/*
 
 RUN wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.3.0-amd64.deb
@@ -30,7 +33,8 @@ RUN rm filebeat-7.3.0-amd64.deb
 
 COPY --from=build /app/publish/MagnumWeb/out ./
 COPY Docker/filebeat.yml /etc/filebeat/filebeat.yml
+COPY Docker/supervisor.conf /etc/supervisor.conf
 
 RUN mkdir -p /logs
 
-ENTRYPOINT ["dotnet", "MagnumWeb.dll"]
+CMD ["supervisord", "-c", "/etc/supervisor.conf"]
