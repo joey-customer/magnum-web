@@ -19,9 +19,8 @@ namespace Magnum.Web
                 certMode = "Y";
             }
 
-            var builder = WebHost.CreateDefaultBuilder(args)   
-                .UseStartup<Startup>();
-
+            var builder = WebHost.CreateDefaultBuilder(args);
+            builder.UseStartup<Startup>();
             if (certMode.Equals("Y"))
             {
                 //.pfx file

@@ -7,8 +7,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Magnum.Api.Factories;
+using Magnum.Web.Utils;
 
 using Serilog;
+using Serilog.Events;
 
 using Magnum.Api.Storages;
 using Magnum.Api.NoSql;
@@ -17,13 +19,10 @@ namespace Magnum.Web
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         private static void SetupFactory(ILoggerFactory logFactory)
         {
-            Log.Logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .WriteTo.Console()
-                .CreateLogger();
-                            
             string host = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_URL");
             string key = Environment.GetEnvironmentVariable("MAGNUM_FIREBASE_KEY");
             string user = Environment.GetEnvironmentVariable("MAGNUM_DB_USERNAME");
@@ -44,12 +43,24 @@ namespace Magnum.Web
             FactoryBusinessOperation.SetLoggerFactory(logFactory);
         }
 
-        public Startup(IConfiguration configuration, ILogger<Startup> logger)
+        public Startup(IConfiguration configuration)
         {
+            string logPath = Environment.GetEnvironmentVariable("MAGNUM_LOG_PATH");
+
+            LoggerConfiguration logConfig = new LoggerConfiguration();
+            logConfig.MinimumLevel.Is(LogEventLevel.Information);
+            logConfig.Enrich.FromLogContext();
+
+            if (logPath != null)
+            {
+                logConfig.WriteTo.File(logPath, rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7);
+            }
+
+            Log.Logger = logConfig.CreateLogger();
+            Log.Logger.Information("MagnumWeb version {Version} started", VersionUtils.GetVersion());
+
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
