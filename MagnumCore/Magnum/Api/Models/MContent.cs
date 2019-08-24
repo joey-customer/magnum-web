@@ -9,6 +9,10 @@ namespace Magnum.Api.Models
         public string Type { get; set; }
         public Dictionary<String, String> Value { get; set; }
 
+        public MContent()
+        {
+            Value = new Dictionary<string, string>();
+        }
         public bool IsKeyIdentifiable()
         {
             bool isError = string.IsNullOrEmpty(Name);
