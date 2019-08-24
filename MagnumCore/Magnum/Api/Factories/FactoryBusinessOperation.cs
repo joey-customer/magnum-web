@@ -45,6 +45,9 @@ namespace Magnum.Api.Factories
             addClassConfig("SaveProductType", "Magnum.Api.Businesses.ProductTypes.SaveProductType");
 
             addClassConfig("SaveContactUs", "Magnum.Api.Businesses.ContactUs.SaveContactUs");
+
+            addClassConfig("GetContentList", "Magnum.Api.Businesses.Contents.GetContentList");
+            addClassConfig("SaveContent", "Magnum.Api.Businesses.Contents.SaveContent");
         }
 
         public static void SetNoSqlContext(INoSqlContext ctx)
