@@ -12,8 +12,14 @@ namespace Magnum.Web.Controllers
 {
     public class HomeController : Controller
     {
+        public virtual ContentCacheUtils GetContentCacheUtils()
+        {
+            return ContentCacheUtils.GetInstance();
+        }
+
         public IActionResult Index()
         {
+            ViewBag.Contents = GetContentCacheUtils().GetContents();
             return View();
         }
 
@@ -29,6 +35,7 @@ namespace Magnum.Web.Controllers
 
         public IActionResult About()
         {
+            ViewBag.Contents = GetContentCacheUtils().GetContents();
             return View();
         }
 

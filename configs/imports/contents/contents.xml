@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ContentImport">
+        <ITEMS name="Contents">
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Banner_Header</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Gain Muscle Quickly</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Banner_Text</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Semper et vehicula. Ac vestibulum, in quis mollis metus, mattis ipsum gnissim proin. Nibh mollis mauris nunc mollis quam.</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_1_Head</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Energy Grow Up</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+            
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_1_Body</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_2_Head</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Calorie Build Up</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+            
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_2_Body</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_3_Head</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Fit The Body</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+            
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_3_Body</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_BestSeller_Text</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Best Seller</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_BestSeller_Desc</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_NewArrival_Text</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">New Arrivals</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_NewArrival_Desc</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">About</FIELD>
+                <FIELD name="Type">img</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">../images/about-2.jpg</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">About_Banner</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">About Magnum</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">About_Header</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Quality of life for men.</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">About_P1</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Magnum Pharmaceuticals is a privately held pharmaceutical company.</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">About_P2</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Established in 2012, our objective is to improve the quality of life for men that desire to reach their highest physical potential and enjoy life to the fullest.</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">About_P3</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Magnum Pharmaceuticals offers the most extensive line of anti-aging formulations and specialty pharmaceuticals, as well as a wide range of natural rejuvenation compounds.</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+        </ITEMS>
+    </OBJECT>
+</API>
