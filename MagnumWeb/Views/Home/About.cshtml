@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "About Page";
+    String lang = "EN";
 }
 
 <section class="about-section style-two about-page-1">
@@ -8,24 +9,18 @@
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12">
                     <div>
-                        <figure class="image"><img src="../images/about-2.jpg" alt=""></figure>
+                        <figure class="image"><img src="@ViewBag.Contents["img/About"][lang]" alt=""></figure>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-12 col-sm-12 content-column">
                     <div class="content-box">
                         <div class="sec-title">
-                            <h4>About Magnum</h4>
-                            <h1>Quality of life for men.</h1>
+                            <h4>@ViewBag.Contents["txt/About_Banner"][lang]</h4>
+                            <h1>@ViewBag.Contents["txt/About_Header"][lang]</h1>
                         </div>
-                        <p class="text">
-                            Magnum Pharmaceuticals is a privately held pharmaceutical company.
-                        </p>
-                        <p class="text">
-                            Established in 2012, our objective is to improve the quality of life for men that desire to reach their highest physical potential and enjoy life to the fullest.
-                        </p>
-                        <p class="text">
-                            Magnum Pharmaceuticals offers the most extensive line of anti-aging formulations and specialty pharmaceuticals, as well as a wide range of natural rejuvenation compounds.
-                        </p>
+                        <p class="text">@ViewBag.Contents["txt/About_P1"][lang]</p>
+                        <p class="text">@ViewBag.Contents["txt/About_P2"][lang]</p>
+                        <p class="text">@ViewBag.Contents["txt/About_P3"][lang]</p>
                 </div>
             </div>
         </div>

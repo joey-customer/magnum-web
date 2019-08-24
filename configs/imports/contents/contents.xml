@@ -25,7 +25,97 @@
             </OBJECT>
 
             <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_1_Head</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Energy Grow Up</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+            
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_1_Body</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_2_Head</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Calorie Build Up</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+            
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_2_Body</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_3_Head</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Fit The Body</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+            
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_Hilight_3_Body</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
                 <FIELD name="Name">Home_BestSeller_Text</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Best Seller</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_BestSeller_Desc</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_NewArrival_Text</FIELD>
+                <FIELD name="Type">txt</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">New Arrivals</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
+                <FIELD name="Name">Home_NewArrival_Desc</FIELD>
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">

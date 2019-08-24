@@ -7,13 +7,22 @@ using Magnum.Api.Factories;
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
 using System;
+using System.Collections.Generic;
+using Magnum.Api.Businesses.Contents;
 
 namespace Magnum.Web.Controllers
 {
     public class HomeController : Controller
     {
+        ContentCacheUtils contentCacheUtils;
+
+        public HomeController()
+        {
+            contentCacheUtils = ContentCacheUtils.GetInstance();
+        }
         public IActionResult Index()
         {
+            ViewBag.Contents = contentCacheUtils.GetContents();
             return View();
         }
 
@@ -29,6 +38,7 @@ namespace Magnum.Web.Controllers
 
         public IActionResult About()
         {
+            ViewBag.Contents = contentCacheUtils.GetContents();
             return View();
         }
 
