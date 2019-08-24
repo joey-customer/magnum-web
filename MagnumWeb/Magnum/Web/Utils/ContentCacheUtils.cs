@@ -44,15 +44,15 @@ namespace Magnum.Api.Utils
 
         private Dictionary<string, Dictionary<string, string>> LoadContents()
         {
-            Dictionary<string, Dictionary<string, string>> contents = new Dictionary<string, Dictionary<string, string>>();
+            Dictionary<string, Dictionary<string, string>> map = new Dictionary<string, Dictionary<string, string>>();
 
             GetContentList opr = (GetContentList)FactoryBusinessOperation.CreateBusinessOperationObject("GetContentList");
             IEnumerable<MContent> mContents = opr.Apply(null, null);
             foreach (var item in mContents)
             {
-                contents[item.Type + "/" + item.Name] = item.Value;
+                map[item.Type + "/" + item.Name] = item.Value;
             }
-            return contents;
+            return map;
         }
     }
 }
