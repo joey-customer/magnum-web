@@ -14,16 +14,12 @@ namespace Magnum.Api.Utils
 
         static ContentCacheUtils instance = new ContentCacheUtils();
 
-        private ContentCacheUtils()
-        {
-        }
-
         public static ContentCacheUtils GetInstance()
         {
             return instance;
         }
 
-        public Dictionary<string, Dictionary<string, string>> GetContents()
+        public virtual Dictionary<string, Dictionary<string, string>> GetContents()
         {
             if (this.contents == null || IsRefreshTime())
             {

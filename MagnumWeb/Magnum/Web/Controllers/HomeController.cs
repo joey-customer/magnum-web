@@ -7,19 +7,23 @@ using Magnum.Api.Factories;
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
 using System;
-using System.Collections.Generic;
-using Magnum.Api.Businesses.Contents;
 
 namespace Magnum.Web.Controllers
 {
     public class HomeController : Controller
     {
-        ContentCacheUtils contentCacheUtils;
+        private ContentCacheUtils contentCacheUtils;
 
         public HomeController()
         {
-            contentCacheUtils = ContentCacheUtils.GetInstance();
+            contentCacheUtils = GetContentCacheUtils();
         }
+
+        public virtual ContentCacheUtils GetContentCacheUtils()
+        {
+            return ContentCacheUtils.GetInstance();
+        }
+
         public IActionResult Index()
         {
             ViewBag.Contents = contentCacheUtils.GetContents();
