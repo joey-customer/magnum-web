@@ -819,7 +819,8 @@ body {
 	display: none; 
 }
 .shop-page .shop-product-wrap .product-list-item {
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
 	padding: 25px;
 	margin-bottom: 30px;
 	border-radius: 5px;
@@ -901,10 +902,6 @@ body {
 .shop-page .shop-product-wrap .product-item .product-content p i, 
 .shop-page .shop-product-wrap .product-list-item .product-content p i {
 	color: #ecb341; 
-}
-.shop-page .shop-product-wrap .product-list-item {
-	display: flex;
-	flex-wrap: wrap; 
 }
 .shop-page .shop-product-wrap .product-list-item .product-thumb {
 	width: 100%; 
