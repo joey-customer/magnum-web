@@ -37,7 +37,7 @@ namespace Magnum.Web.Controllers
 
             var mockContentCacheUtils = new Mock<ContentCacheUtils>();
             mockController.Setup(foo => foo.GetContentCacheUtils()).Returns(mockContentCacheUtils.Object);
-            
+
             controller = mockController.Object;
 
             controller.ControllerContext = controllerContext;
@@ -61,6 +61,13 @@ namespace Magnum.Web.Controllers
         public void IndexTest()
         {
             ViewResult result = (ViewResult)controller.Index();
+            Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public void ProductsTest()
+        {
+            ViewResult result = (ViewResult)controller.Products();
             Assert.IsNotNull(result);
         }
 
@@ -131,6 +138,13 @@ namespace Magnum.Web.Controllers
 
             SaveContactUs result = (SaveContactUs)controller.GetSaveContactUsOperation();
             Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public void get()
+        {
+            var util = new HomeController().GetContentCacheUtils();
+            Assert.NotNull(util);
         }
     }
 }

@@ -12,10 +12,6 @@ namespace Magnum.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public virtual ContentCacheUtils GetContentCacheUtils()
-        {
-            return ContentCacheUtils.GetInstance();
-        }
 
         public IActionResult Index()
         {
@@ -99,6 +95,12 @@ namespace Magnum.Web.Controllers
         public virtual IBusinessOperationManipulate<MContactUs> GetSaveContactUsOperation()
         {
             return (IBusinessOperationManipulate<MContactUs>)FactoryBusinessOperation.CreateBusinessOperationObject("SaveContactUs");
+        }
+
+        
+        public virtual ContentCacheUtils GetContentCacheUtils()
+        {
+            return ContentCacheUtils.GetInstance();
         }
     }
 }
