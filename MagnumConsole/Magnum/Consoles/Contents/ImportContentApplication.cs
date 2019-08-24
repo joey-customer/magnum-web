@@ -20,7 +20,7 @@ namespace Magnum.Consoles.Contents
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("if=|infile=", "XML Import file", s => AddArgument("infile", s))
-            .Add("b=|basedir=", "Local image base directory", s => AddArgument("basedir", s));
+            .Add("b=|basedir=", "Local XML base directory", s => AddArgument("basedir", s));
 
             return options;
         }
