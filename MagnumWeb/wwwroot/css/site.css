@@ -606,7 +606,7 @@ body {
 }
 
 .rating i {
-	background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+	background: #db3e45;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -927,7 +927,8 @@ body {
 		padding-top: 0;
 	} 
 }
-.shop-page .shop-product-wrap .product-list-item .product-content p {
+.shop-page .shop-product-wrap .product-list-item .product-content p,
+.shop-page .modal .modal-dialog .modal-content .product-content p{
 	color: #6d6d6d; 
 	font-size: 14px;
     margin: 5px 0 15px 0px;
@@ -997,7 +998,7 @@ body {
 
 .product-content span {
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .price {
