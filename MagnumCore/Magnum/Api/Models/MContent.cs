@@ -7,11 +7,11 @@ namespace Magnum.Api.Models
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public Dictionary<String, String> Value { get; set; }
+        public Dictionary<String, String> Values { get; set; }
 
         public MContent()
         {
-            Value = new Dictionary<string, string>();
+            Values = new Dictionary<string, string>();
         }
         public bool IsKeyIdentifiable()
         {

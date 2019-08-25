@@ -25,7 +25,7 @@ namespace Magnum.Api.Businesses.Contents
             MContent dat = new MContent();
             dat.Name = "001";
             dat.Type = "txt";
-            dat.Value["EN"] = "one";
+            dat.Values["EN"] = "one";
             try
             {
                 int result = opt.Apply(dat);

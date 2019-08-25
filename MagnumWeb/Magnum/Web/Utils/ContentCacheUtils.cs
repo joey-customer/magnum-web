@@ -51,7 +51,7 @@ namespace Magnum.Api.Utils
             var mContents = opr.Apply(null, null);
             foreach (var item in mContents)
             {
-                map[item.Type + "/" + item.Name] = item.Value;
+                map[item.Type + "/" + item.Name] = item.Values;
             }
             return map;
         }

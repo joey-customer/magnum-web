@@ -88,12 +88,12 @@ namespace Magnum.Web.Utils
             var content1 = new MContent();
             content1.Name = "001";
             content1.Type = "txt";
-            content1.Value["EN"] = "one";
+            content1.Values["EN"] = "one";
 
             var content2 = new MContent();
             content2.Name = "002";
             content2.Type = "jpg";
-            content2.Value["EN"] = "two";
+            content2.Values["EN"] = "two";
 
             var list = new List<MContent>();
             list.Add(content1);

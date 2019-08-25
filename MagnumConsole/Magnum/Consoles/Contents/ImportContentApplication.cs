@@ -1,17 +1,18 @@
 using System;
 using System.IO;
 using System.Collections;
+using System.Collections.Generic;
 
 using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
 using Magnum.Api.Factories;
 using Magnum.Api.NoSql;
 using Magnum.Api.Commons.Table;
-using Magnum.Api.Utils.Serializers;
-
-using NDesk.Options;
 using Magnum.Api.Businesses.Contents;
-using System.Collections.Generic;
+using Magnum.Api.Utils;
+
+using Microsoft.Extensions.Logging;
+using NDesk.Options;
 
 namespace Magnum.Consoles.Contents
 {
@@ -27,17 +28,8 @@ namespace Magnum.Consoles.Contents
 
         protected override int Execute()
         {
-            Hashtable args = GetArguments();
-            string infile = args["infile"].ToString();
-            string basedir = args["basedir"].ToString();
-
-            string[] paths = { basedir, infile };
-            string importFile = Path.Combine(paths);
-            string xml = File.ReadAllText(importFile);
-
-            XmlToCTable ds = new XmlToCTable(xml);
-            CRoot root = ds.Deserialize();
-            CTable t = root.Data;
+            ILogger logger = GetLogger();
+            CTable t = XmlToCTable();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
             FactoryBusinessOperation.SetNoSqlContext(ctx);
@@ -59,9 +51,10 @@ namespace Magnum.Consoles.Contents
                     {
                         string lang = "EN";
                         string txt = value.GetFieldValue(lang);
-                        mc.Value = new Dictionary<string, string>();
-                        mc.Value[lang] = txt;
-                        Console.WriteLine("Adding content : [{0}][{1}]", mc.Type, mc.Name);
+                        mc.Values = new Dictionary<string, string>();
+                        mc.Values[lang] = txt;
+
+                        LogUtils.LogInformation(logger , "Adding content : [{0}][{1}]", mc.Type, mc.Name);
                     }
 
                     opr.Apply(mc);

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ProductImport">
+        <ITEMS name="Products">
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Oral-AAA-001</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">001</FIELD>
+                <FIELD name="Price">200</FIELD>
+                <FIELD name="Image1LocalPath">Orals/pro-img1.png</FIELD>
+                
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">PRODUCT TITLE HERE #1</FIELD>
+                        <FIELD name="ShortDescription">Product Long Name, 300 mg/ml – 10 x 1ml Amps</FIELD>
+                        <FIELD name="LongDescription1">Qnteate Supple Chan Though Marke Poston Bestng Practcese Marke Supple Chan Though Marke Poston Bestng Practces Chain Throuh Practces eractve Fashion Fashion Economically And Sound</FIELD>
+                        <FIELD name="LongDescription2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Compositions">
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effect</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>                    
+                </ITEMS>                
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Oral-AAA-002</FIELD>
+                <FIELD name="Rating">5</FIELD>
+                <FIELD name="ProductType">001</FIELD>
+                <FIELD name="Price">250</FIELD>
+                <FIELD name="Image1LocalPath">Orals/pro-img2.png</FIELD>
+                
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">PRODUCT TITLE HERE #2</FIELD>
+                        <FIELD name="ShortDescription">Product Long Name, 300 mg/ml – 10 x 2ml Amps</FIELD>
+                        <FIELD name="LongDescription1">Qnteate Supple Chan Though Marke Poston Bestng Practcese Marke Supple Chan Though Marke Poston Bestng Practces Chain Throuh Practces eractve Fashion Fashion Economically And Sound</FIELD>
+                        <FIELD name="LongDescription2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Compositions">
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effect</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>                    
+                </ITEMS>                
+            </OBJECT>
+
+        </ITEMS>
+    </OBJECT>
+</API>

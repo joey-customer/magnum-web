@@ -41,6 +41,8 @@ namespace Magnum.Web
             FactoryBusinessOperation.SetStorageContext(storageCtx);
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(logFactory);
+
+            FactoryCache.SetLoggerFactory(logFactory);
         }
 
         public Startup(IConfiguration configuration)

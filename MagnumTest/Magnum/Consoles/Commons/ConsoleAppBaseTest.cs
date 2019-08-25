@@ -80,6 +80,7 @@ namespace Magnum.Consoles.Commons
 
             var ctx1 = mocked.GetNoSqlContextWithAuthen(provider);
             var ctx2 = mocked.GetNoSqlContext();
+            var ctx3 = mocked.GetStorageContext();
 
             Assert.AreEqual(null, ctx1, "Returned context must be null!!!");
             Assert.AreEqual(null, ctx2, "Returned context must be null!!!");
