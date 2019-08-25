@@ -30,9 +30,9 @@ namespace Magnum.Consoles.Factories
             addClassConfig("QrGen", "Magnum.Consoles.Barcodes.QRGeneratorApplication");             
             addClassConfig("BarcodeReg", "Magnum.Consoles.Registrations.RegisterBarcodeApplication");         
             addClassConfig("ImportProductType", "Magnum.Consoles.ProductTypes.ImportProductTypeApplication"); 
+            addClassConfig("ImportProduct", "Magnum.Consoles.Products.ImportProductApplication");
             addClassConfig("ImportContent", "Magnum.Consoles.Contents.ImportContentApplication"); 
             
-
             addClassConfig("DummyApp", "Magnum.Consoles.Miscs.DummyApplication");       
         }  
 

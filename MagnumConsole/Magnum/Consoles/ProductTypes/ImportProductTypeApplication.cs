@@ -58,7 +58,7 @@ namespace Magnum.Consoles.ProductTypes
                         mdc.Language = desc.GetFieldValue("Language");
                         mdc.Name = desc.GetFieldValue("Name");    
                         mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
-                        mdc.LongDescription = desc.GetFieldValue("LongDescription");                        
+                        mdc.LongDescription1 = desc.GetFieldValue("LongDescription");                        
 
                         mpt.Descriptions.Add(mdc.Language, mdc);
                         Console.WriteLine("Adding product type : [{0}] [{1}]", mpt.Code, mdc.Name);

@@ -47,6 +47,15 @@ dotnet run ImportProductType \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
+dotnet run -p MagnumConsole ImportProduct \
+--if='products.xml' \
+--b="./configs/imports/products" \
+--bucket=compute-engine-vm-test.appspot.com \
+--h=https://compute-engine-vm-test.firebaseio.com/ \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
 dotnet run ImportContent \
 --if='contents.xml' \
 --b="./configs/imports/contents" \
