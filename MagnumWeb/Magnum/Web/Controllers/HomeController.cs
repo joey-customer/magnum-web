@@ -106,11 +106,5 @@ namespace Magnum.Web.Controllers
         {
             return (IBusinessOperationManipulate<MContactUs>)FactoryBusinessOperation.CreateBusinessOperationObject("SaveContactUs");
         }
-
-        
-        public virtual ContentCacheUtils GetContentCacheUtils()
-        {
-            return ContentCacheUtils.GetInstance();
-        }
     }
 }
