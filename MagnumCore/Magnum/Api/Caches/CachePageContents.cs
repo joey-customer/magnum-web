@@ -9,11 +9,11 @@ namespace Magnum.Api.Caches
 {
     public class CachePageContents : CacheBase
     {
-        private readonly IBusinessOperationQuery<MContent> opr;
+        private IBusinessOperationQuery<MContent> opr;
 
         public CachePageContents()
         {
-            opr = GetContentListOperation();
+            opr = (IBusinessOperationQuery<MContent>)FactoryBusinessOperation.CreateBusinessOperationObject("GetContentList");
         }
 
         protected override Dictionary<string, BaseModel> LoadContents()
@@ -29,10 +29,9 @@ namespace Magnum.Api.Caches
             return map;
         }
 
-        public virtual IBusinessOperationQuery<MContent> GetContentListOperation()
+        public void SetOperation(IBusinessOperationQuery<MContent> opr)
         {
-            var opr = (IBusinessOperationQuery<MContent>)FactoryBusinessOperation.CreateBusinessOperationObject("GetContentList");
-            return opr;
+            this.opr = opr; 
         }
     }
 }

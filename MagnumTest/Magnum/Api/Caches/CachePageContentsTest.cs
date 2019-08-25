@@ -23,8 +23,8 @@ namespace Magnum.Web.Utils
             mockOpr = new Mock<IBusinessOperationQuery<MContent>>();
             mockOpr.Setup(foo => foo.Apply(null, null)).Returns(dummy);
             mockCache = new Mock<CachePageContents>() { CallBase = true };
-            mockCache.Setup(foo => foo.GetContentListOperation()).Returns(mockOpr.Object);
             cache = mockCache.Object;
+            cache.SetOperation(mockOpr.Object);
             realCache = new CachePageContents();
         }
 
@@ -66,13 +66,6 @@ namespace Magnum.Web.Utils
             var contents = cache.GetValues();
 
             Assert.AreEqual(0, contents.Count);
-        }
-
-        [Test]
-        public void GetContentListOperation()
-        {
-            var opr = realCache.GetContentListOperation();
-            Assert.NotNull(opr);
         }
 
         private IEnumerable<MContent> getDummyContents()
