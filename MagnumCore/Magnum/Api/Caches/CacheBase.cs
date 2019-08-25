@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 
+using Magnum.Api.Utils;
 using Magnum.Api.Models;
 
 namespace Magnum.Api.Caches
@@ -42,13 +43,16 @@ namespace Magnum.Api.Caches
 
         public Dictionary<string, BaseModel> GetValues()
         {
-            if (this.contents == null || IsRefreshTime())
-            {
-                this.contents = LoadContents();
+            if (contents == null || IsRefreshTime())
+            {                                
+                contents = LoadContents();
+                int cnt = contents.Count;
                 SetLastRefreshDtm(DateTime.Now);
+
+                LogUtils.LogInformation(appLogger, "Refreshed [{0}] item(s) by [{1}], tick count = [{2}]", cnt, this.GetType().Name, tc);
             }
 
-            return this.contents;
+            return contents;
         }
 
         public BaseModel GetValue(string key)
