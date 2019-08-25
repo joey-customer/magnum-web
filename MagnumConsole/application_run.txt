@@ -38,7 +38,7 @@ dotnet run ImportProduct \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
-dotnet run ImportProductType \
+dotnet run -p MagnumConsole ImportProductType \
 --if='product_types.xml' \
 --b="./configs/imports/product_types" \
 --bucket=compute-engine-vm-test.appspot.com \

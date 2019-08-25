@@ -8,7 +8,7 @@ namespace Magnum.Api.Caches
 {
     public class CachePageContents : CacheBase
     {
-        private  GetContentList opr;              
+        private readonly GetContentList opr;              
 
         public CachePageContents()
         {

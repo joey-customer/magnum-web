@@ -47,11 +47,13 @@ namespace Magnum.Consoles.Factories
             Assembly asm = Assembly.GetExecutingAssembly();
             IConsoleApp obj = (IConsoleApp)asm.CreateInstance(className);
 
-            Type t = obj.GetType();
-            ILogger logger = loggerFactory.CreateLogger(t);
-
-            obj.SetLogger(logger);
-
+            if (loggerFactory != null)
+            {
+                Type t = obj.GetType();
+                ILogger logger = loggerFactory.CreateLogger(t);
+                obj.SetLogger(logger);
+            }
+            
             return(obj);
         }
 

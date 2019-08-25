@@ -54,7 +54,7 @@ namespace Magnum.Api.Caches
         public BaseModel GetValue(string key)
         {
             var values = GetValues();
-            BaseModel content = (BaseModel) values[key];
+            BaseModel content = values[key];
 
             return content;
         }

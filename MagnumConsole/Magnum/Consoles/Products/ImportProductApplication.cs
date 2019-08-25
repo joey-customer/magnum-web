@@ -9,14 +9,18 @@ using Magnum.Api.Businesses.Products;
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
 using Magnum.Api.Commons.Table;
-using Magnum.Api.Utils.Serializers;
+using Magnum.Api.Utils;
+
+using Microsoft.Extensions.Logging;
 
 using NDesk.Options;
 
 namespace Magnum.Consoles.Products
 {
 	public class ImportProductApplication : ConsoleAppBase
-	{        
+	{       
+        private ILogger logger;
+
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("if=|infile=", "XML Import file", s => AddArgument("infile", s))
@@ -27,17 +31,12 @@ namespace Magnum.Consoles.Products
         
         protected override int Execute()
         {
+            logger = GetLogger();
+            
             Hashtable args = GetArguments();
-            string infile = args["infile"].ToString();
             string basedir = args["basedir"].ToString();
 
-            string[] paths = {basedir, infile};
-            string importFile = Path.Combine(paths);
-            string xml = File.ReadAllText(importFile);
-
-            XmlToCTable ds = new XmlToCTable(xml);
-            CRoot root = ds.Deserialize();
-            CTable t = root.Data;
+            CTable t = XmlToCTable();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
             FactoryBusinessOperation.SetNoSqlContext(ctx);
@@ -98,7 +97,7 @@ namespace Magnum.Consoles.Products
                         }                         
                     } 
 
-                    Console.WriteLine("Adding product : [{0}]", mpd.Code);
+                    LogUtils.LogInformation(logger , "Adding product : [{0}]", mpd.Code);
                     opr.Apply(mpd);                  
                 }                 
             }
