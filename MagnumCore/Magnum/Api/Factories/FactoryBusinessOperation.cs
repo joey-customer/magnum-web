@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 using System.Reflection;
+
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
 using Magnum.Api.Smtp;
+using Magnum.Api.Commons.Business;
 
 using Microsoft.Extensions.Logging;
-
-using Magnum.Api.Commons.Business;
 
 namespace Magnum.Api.Factories
 {   

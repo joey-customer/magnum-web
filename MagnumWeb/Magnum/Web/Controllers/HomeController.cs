@@ -6,12 +6,19 @@ using Magnum.Api.Commons.Business;
 using Magnum.Api.Factories;
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
+using Magnum.Api.Caches;
+
 using System;
 
 namespace Magnum.Web.Controllers
 {
     public class HomeController : Controller
     {
+        public virtual ICache GetContentCache()
+        {
+            return FactoryCache.GetCacheObject("CachePageContents");
+        }
+
         public virtual ContentCacheUtils GetContentCacheUtils()
         {
             return ContentCacheUtils.GetInstance();
@@ -36,6 +43,8 @@ namespace Magnum.Web.Controllers
         public IActionResult About()
         {
             ViewBag.Contents = GetContentCacheUtils().GetContents();
+            //Call GetContentCache() here and return values
+            
             return View();
         }
 
