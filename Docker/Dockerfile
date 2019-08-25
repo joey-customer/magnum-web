@@ -34,6 +34,7 @@ RUN rm filebeat-7.3.0-amd64.deb
 COPY --from=build /app/publish/MagnumWeb/out ./
 COPY Docker/filebeat.yml /etc/filebeat/filebeat.yml
 COPY Docker/supervisor.conf /etc/supervisor.conf
+COPY configs/. ./configs/
 
 RUN mkdir -p /logs
 
