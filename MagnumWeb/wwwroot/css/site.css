@@ -855,6 +855,14 @@ body {
 	transition: all 0.3s ease; 
 }
 
+.shop-page .shop-product-wrap .product-list-item .product-thumb img {
+	transition: all 0.6s ease-in-out;
+}
+
+.shop-page .shop-product-wrap .product-list-item .product-thumb:hover img {
+	transform: scale3d(1.1,1.1,1);
+}
+
 .shop-page .shop-product-wrap .product-list-item .product-content h5,
 .modal .product-content h5{
 	margin: 0;
@@ -906,6 +914,7 @@ body {
 .shop-page .shop-product-wrap .product-list-item .product-thumb {
 	width: 100%; 
 	text-align: center;
+	padding: 15px 0;
 }
 @media (min-width: 768px) {
 	.shop-page .shop-product-wrap .product-list-item .product-thumb {
