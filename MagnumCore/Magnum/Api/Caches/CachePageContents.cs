@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Magnum.Api.Businesses.Contents;
+using Magnum.Api.Commons.Business;
 using Magnum.Api.Factories;
 using Magnum.Api.Models;
 
@@ -8,11 +9,11 @@ namespace Magnum.Api.Caches
 {
     public class CachePageContents : CacheBase
     {
-        private readonly GetContentList opr;              
+        private readonly IBusinessOperationQuery<MContent> opr;
 
         public CachePageContents()
         {
-            opr = (GetContentList) FactoryBusinessOperation.CreateBusinessOperationObject("GetContentList");
+            opr = GetContentListOperation();
         }
 
         protected override Dictionary<string, BaseModel> LoadContents()
@@ -26,6 +27,12 @@ namespace Magnum.Api.Caches
             }
 
             return map;
+        }
+
+        public virtual IBusinessOperationQuery<MContent> GetContentListOperation()
+        {
+            var opr = (IBusinessOperationQuery<MContent>)FactoryBusinessOperation.CreateBusinessOperationObject("GetContentList");
+            return opr;
         }
     }
 }

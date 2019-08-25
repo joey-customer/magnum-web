@@ -12,7 +12,7 @@ namespace Magnum.Api.Caches
         private ILogger appLogger;
         private long tc = TimeSpan.TicksPerMinute * 5;
         private DateTime lastRefreshTime;
-        private Dictionary<string, BaseModel> contents;  
+        private Dictionary<string, BaseModel> contents;
 
         protected abstract Dictionary<string, BaseModel> LoadContents();
 
@@ -44,7 +44,7 @@ namespace Magnum.Api.Caches
         public Dictionary<string, BaseModel> GetValues()
         {
             if (contents == null || IsRefreshTime())
-            {                                
+            {
                 contents = LoadContents();
                 int cnt = contents.Count;
                 SetLastRefreshDtm(DateTime.Now);
@@ -70,6 +70,11 @@ namespace Magnum.Api.Caches
 
             bool isExpire = (diff.Ticks > tc);
             return isExpire;
-        }        
+        }
+
+        public void SetContents(Dictionary<string, BaseModel> contents)
+        {
+            this.contents = contents;
+        }
     }
 }
