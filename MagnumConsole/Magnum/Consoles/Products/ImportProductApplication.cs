@@ -19,8 +19,6 @@ namespace Magnum.Consoles.Products
 {
 	public class ImportProductApplication : ConsoleAppBase
 	{       
-        private ILogger logger;
-
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("if=|infile=", "XML Import file", s => AddArgument("infile", s))
@@ -31,7 +29,7 @@ namespace Magnum.Consoles.Products
         
         protected override int Execute()
         {
-            logger = GetLogger();
+            ILogger logger = GetLogger();
             
             Hashtable args = GetArguments();
             string basedir = args["basedir"].ToString();

@@ -17,8 +17,6 @@ namespace Magnum.Consoles.ProductTypes
 {
 	public class ImportProductTypeApplication : ConsoleAppBase
 	{        
-        private ILogger logger;
-
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("if=|infile=", "XML Import file", s => AddArgument("infile", s))
@@ -29,7 +27,7 @@ namespace Magnum.Consoles.ProductTypes
         
         protected override int Execute()
         {
-            logger = GetLogger();
+            ILogger logger = GetLogger();
             CTable t = XmlToCTable();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");

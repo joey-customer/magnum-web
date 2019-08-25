@@ -56,7 +56,7 @@ dotnet run -p MagnumConsole ImportProduct \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
-dotnet run ImportContent \
+dotnet run -p MagnumConsole ImportContent \
 --if='contents.xml' \
 --b="./configs/imports/contents" \
 --bucket=compute-engine-vm-test.appspot.com \
