@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 using System.Reflection;
+
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
 using Magnum.Api.Smtp;
+using Magnum.Api.Commons.Business;
 
 using Microsoft.Extensions.Logging;
-
-using Magnum.Api.Commons.Business;
 
 namespace Magnum.Api.Factories
 {   
@@ -45,6 +45,9 @@ namespace Magnum.Api.Factories
             addClassConfig("SaveProductType", "Magnum.Api.Businesses.ProductTypes.SaveProductType");
 
             addClassConfig("SaveContactUs", "Magnum.Api.Businesses.ContactUs.SaveContactUs");
+
+            addClassConfig("GetContentList", "Magnum.Api.Businesses.Contents.GetContentList");
+            addClassConfig("SaveContent", "Magnum.Api.Businesses.Contents.SaveContent");
         }
 
         public static void SetNoSqlContext(INoSqlContext ctx)

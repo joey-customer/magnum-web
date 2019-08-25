@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 
 using Microsoft.Extensions.Logging;
@@ -6,6 +7,8 @@ using Microsoft.Extensions.Logging;
 using NDesk.Options;
 using Magnum.Api.NoSql;
 using Magnum.Api.Storages;
+using Magnum.Api.Commons.Table;
+using Magnum.Api.Utils.Serializers;
 
 namespace Magnum.Consoles.Commons
 {
@@ -14,7 +17,7 @@ namespace Magnum.Consoles.Commons
         private ILogger appLogger;
         private readonly Hashtable arguments = new Hashtable();
         private INoSqlContext context = null;
-        private readonly IStorageContext storageContext = null;
+        private IStorageContext storageContext = null;
         
         protected abstract int Execute();
 
@@ -51,6 +54,16 @@ namespace Magnum.Consoles.Commons
         {
             this.context = context;
         }
+
+        public void SetStorageContext(IStorageContext context)
+        {
+            this.storageContext = context;
+        }
+
+        public IStorageContext GetStorageContext()
+        {
+            return storageContext;
+        }        
 
         public void SetLogger(ILogger logger)
         {
@@ -139,6 +152,23 @@ namespace Magnum.Consoles.Commons
             }
 
             return ctx;
-        }       
+        }   
+
+        protected CTable XmlToCTable()
+        {
+            Hashtable args = GetArguments();
+            string infile = args["infile"].ToString();
+            string basedir = args["basedir"].ToString();
+
+            string[] paths = {basedir, infile};
+            string importFile = Path.Combine(paths);
+            string xml = File.ReadAllText(importFile);
+
+            XmlToCTable ds = new XmlToCTable(xml);
+            CRoot root = ds.Deserialize();
+            CTable t = root.Data;
+
+            return t;        
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Collections;
 using NUnit.Framework;
@@ -10,9 +11,9 @@ using NDesk.Options;
 using Moq;
 using Microsoft.Extensions.Logging;
 
-namespace Magnum.Consoles.ProductTypes
+namespace Magnum.Consoles.Contents
 {
-    public class ImportProductTypeApplicationTest
+    public class ImportContentApplicationTest
     {
         private Hashtable h = null;
         private string[] args = null;
@@ -24,16 +25,15 @@ namespace Magnum.Consoles.ProductTypes
             string xml = @"<?xml version='1.0' encoding='UTF-8' ?>
 <API>
     <OBJECT name='PARAM'></OBJECT>
-    <OBJECT name='ProductTypeImport'>
-        <ITEMS name='ProductTypes'>
-            <OBJECT name='ProductType'>
-                <FIELD name='Code'>001</FIELD>
-                <ITEMS name='Descriptions'>
-                    <OBJECT name='Description'>
-                        <FIELD name='Language'>EN</FIELD>
-                        <FIELD name='Name'>Orals</FIELD>
-                        <FIELD name='ShortDescription'>Orals 01</FIELD>
-                        <FIELD name='LongDescription'>Orals 001</FIELD>
+
+    <OBJECT name='ContentImport'>
+        <ITEMS name='Contents'>
+            <OBJECT name='Content'>
+                <FIELD name='Name'>Home_Banner_Header</FIELD>
+                <FIELD name='Type'>txt</FIELD>
+                <ITEMS name='Values'>
+                    <OBJECT name='Value'>
+                        <FIELD name='EN'>Gain Muscle Quickly</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -64,6 +64,7 @@ namespace Magnum.Consoles.ProductTypes
         public void Setup()
         {
             FactoryConsoleApplication.SetLoggerFactory(new Mock<ILoggerFactory>().Object);
+            
             h = new Hashtable()
             {
                 {"host", "xxxx.firebase.com"},
@@ -74,46 +75,46 @@ namespace Magnum.Consoles.ProductTypes
                 {"password", "faked_password"},
             };
 
-            args = new string[] 
+            args = new string[]
             {
-                string.Format("--h={0}", h["host"]), 
-                string.Format("--k={0}", h["key"]), 
-                string.Format("--infile={0}", h["infile"]), 
-                string.Format("--basedir={0}", h["basedir"]), 
-                string.Format("--user={0}", h["user"]), 
-                string.Format("--password={0}", h["password"]), 
-            };                      
+                string.Format("--h={0}", h["host"]),
+                string.Format("--k={0}", h["key"]),
+                string.Format("--infile={0}", h["infile"]),
+                string.Format("--basedir={0}", h["basedir"]),
+                string.Format("--user={0}", h["user"]),
+                string.Format("--password={0}", h["password"]),
+            };
         }
 
-        [TestCase("ImportProductType")]
+        [TestCase("ImportContent")]
         public void ArgumentParsingTest(string appName)
         {
-            ConsoleAppBase app = (ConsoleAppBase) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
-            
+            ConsoleAppBase app = (ConsoleAppBase)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
             Hashtable values = app.GetArguments();
             foreach (string key in values.Keys)
             {
-                string value = (string) values[key];
+                string value = (string)values[key];
                 Assert.AreEqual(h[key].ToString(), value, "Arguments parsing incorrect!!!");
-            }  
+            }
 
             Assert.AreEqual(h.Count, values.Count, "Number of argument parsed is incorrect!!!");
 
             //Test to cover code coverage
             app.DumpParameter();
-        }  
+        }
 
-        [TestCase("ImportProductType")]
-        public void ImportProductTypeSuccessTest(string appName)
+        [TestCase("ImportContent")]
+        public void ImportContentSuccessTest(string appName)
         {
-            ImportProductTypeApplication app = (ImportProductTypeApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            ImportContentApplication app = (ImportContentApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            string[] paths = {tempPath, fileName};
+            string[] paths = { tempPath, fileName };
             string importFile = Path.Combine(paths);
             createSuccessXML(importFile);
 
@@ -125,14 +126,14 @@ namespace Magnum.Consoles.ProductTypes
         }
 
 
-        [TestCase("ImportProductType")]
+        [TestCase("ImportContent")]
         public void ImportProductTypeFailedTest(string appName)
         {
-            ImportProductTypeApplication app = (ImportProductTypeApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            ImportContentApplication app = (ImportContentApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            string[] paths = {tempPath, fileName};
+            string[] paths = { tempPath, fileName };
             string importFile = Path.Combine(paths);
             createFailedXML(importFile);
 
@@ -142,5 +143,5 @@ namespace Magnum.Consoles.ProductTypes
             app.Run();
             Assert.True(true);
         }
-    }    
+    }
 }

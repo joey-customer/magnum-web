@@ -1,5 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    String lang = "EN";
+    var Contents = ViewBag.Contents;
 }
 
 <div class="banner">
@@ -8,11 +10,8 @@
         <div class="row justify-content-between">
             <div class="col-xl-6 col-lg-6">
                 <div class="bannner-content">
-                    <h1>Gain Muscle Quickly</h1>
-                    <p>
-                        Semper et vehicula. Ac vestibulum, in quis mollis metus, mattis ipsum gnissim proin. Nibh mollis mauris nunc mollis
-                        quam.
-                    </p>
+                    <h1>@Contents["txt/Home_Banner_Header"].Values[lang]</h1>
+                    <p>@Contents["txt/Home_Banner_Text"].Values[lang]</p>
                     <a href="#">Learn More</a>
                 </div>
             </div>
@@ -27,22 +26,22 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="single-service">
                     <div class="count">01</div>
-                    <h6>Energy Grow Up</h6>
-                    <p>Metus lectus nonummy maecendolor phasellus torquent eget nunc </p>
+                    <h6>@Contents["txt/Home_Hilight_1_Head"].Values[lang]</h6>
+                    <p>@Contents["txt/Home_Hilight_1_Body"].Values[lang]</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="single-service">
                     <div class="count">02</div>
-                    <h6>Calorie Build Up</h6>
-                    <p>Metus lectus nonummy maecendolor phasellus torquent eget nunc </p>
+                    <h6>@Contents["txt/Home_Hilight_2_Head"].Values[lang]</h6>
+                    <p>@Contents["txt/Home_Hilight_2_Body"].Values[lang]</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="single-service">
                     <div class="count">03</div>
-                    <h6>Fit The Body</h6>
-                    <p>Metus lectus nonummy maecendolor phasellus torquent eget nunc </p>
+                    <h6>@Contents["txt/Home_Hilight_3_Head"].Values[lang]</h6>
+                    <p>@Contents["txt/Home_Hilight_3_Body"].Values[lang]</p>
                 </div>
             </div>
         </div>
@@ -52,8 +51,8 @@
 <div class="section-spacing our-product">
     <div class="container">
         <div class="text-left">
-            <h3 class="heading">Best Seller</h3>
-            <p class="sub-heading">Metus lectus nonummy maecendolor phasellus torquent eget nunc</p>
+            <h3 class="heading">@Contents["txt/Home_BestSeller_Text"].Values[lang]</h3>
+            <p class="sub-heading">@Contents["txt/Home_BestSeller_Desc"].Values[lang]</p>
         </div>
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -152,8 +151,8 @@
 <div class="section-spacing our-product" style="padding-top: 0; padding-bottom: 70px;">
     <div class="container">
         <div class="text-left">
-            <h3 class="heading">New Arrivals</h3>
-            <p class="sub-heading">Metus lectus nonummy maecendolor phasellus torquent eget nunc </p>
+            <h3 class="heading">@Contents["txt/Home_NewArrival_Text"].Values[lang]</h3>
+            <p class="sub-heading">@Contents["txt/Home_NewArrival_Desc"].Values[lang]</p>
         </div>
         <div class="row">
             <div class="col-lg-4 col-sm-6">

@@ -8,6 +8,7 @@ using System.Net;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Businesses.ContactUs;
 using Magnum.Web.Models;
+using Magnum.Api.Caches;
 
 namespace Magnum.Web.Controllers
 {
@@ -33,6 +34,10 @@ namespace Magnum.Web.Controllers
             mockOpr.Setup(foo => foo.Apply(It.IsAny<MContactUs>())).Returns(0);
 
             mockController.Setup(foo => foo.GetSaveContactUsOperation()).Returns(mockContactUsOpr);
+            var iCacheMock = new Mock<ICache>();
+            mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
+
+
             controller = mockController.Object;
 
             controller.ControllerContext = controllerContext;
@@ -56,6 +61,13 @@ namespace Magnum.Web.Controllers
         public void IndexTest()
         {
             ViewResult result = (ViewResult)controller.Index();
+            Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public void ProductsTest()
+        {
+            ViewResult result = (ViewResult)controller.Products();
             Assert.IsNotNull(result);
         }
 
@@ -126,6 +138,13 @@ namespace Magnum.Web.Controllers
 
             SaveContactUs result = (SaveContactUs)controller.GetSaveContactUsOperation();
             Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public void GetContentCache()
+        {
+            var cache = new HomeController().GetContentCache();
+            Assert.NotNull(cache);
         }
     }
 }

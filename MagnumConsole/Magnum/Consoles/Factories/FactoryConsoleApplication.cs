@@ -30,6 +30,8 @@ namespace Magnum.Consoles.Factories
             addClassConfig("QrGen", "Magnum.Consoles.Barcodes.QRGeneratorApplication");             
             addClassConfig("BarcodeReg", "Magnum.Consoles.Registrations.RegisterBarcodeApplication");         
             addClassConfig("ImportProductType", "Magnum.Consoles.ProductTypes.ImportProductTypeApplication"); 
+            addClassConfig("ImportProduct", "Magnum.Consoles.Products.ImportProductApplication");
+            addClassConfig("ImportContent", "Magnum.Consoles.Contents.ImportContentApplication"); 
             
             addClassConfig("DummyApp", "Magnum.Consoles.Miscs.DummyApplication");       
         }  
@@ -45,11 +47,13 @@ namespace Magnum.Consoles.Factories
             Assembly asm = Assembly.GetExecutingAssembly();
             IConsoleApp obj = (IConsoleApp)asm.CreateInstance(className);
 
-            Type t = obj.GetType();
-            ILogger logger = loggerFactory.CreateLogger(t);
-
-            obj.SetLogger(logger);
-
+            if (loggerFactory != null)
+            {
+                Type t = obj.GetType();
+                ILogger logger = loggerFactory.CreateLogger(t);
+                obj.SetLogger(logger);
+            }
+            
             return(obj);
         }
 
