@@ -9,7 +9,11 @@
                 <div class="form-area">
                     @if (ViewBag.Message != null)
                     {
-                        <table><tr><td style="background-color:yellow">@ViewBag.Message</td></tr></table>
+                        <table summary="Message box">
+                            <tr>
+                                <th id="msg" style="background-color:yellow">@ViewBag.Message</th>
+                            </tr>
+                        </table>
                     }
                     <h2>Send Your Message To Us</h2>
                     <form method="post" action="/Home/Contact/Save">
