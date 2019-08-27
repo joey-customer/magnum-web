@@ -2,7 +2,7 @@
 #export ASPNETCORE_URLS='https://*:443'
 #https://localhost:5001/verification/Oxandro10_KH0009_20190803223419/000000/1271951675/6856314405
 
-dotnet run BarcodeGen \
+dotnet run -p MagnumConsole BarcodeGen \
 --h=https://compute-engine-vm-test.firebaseio.com/ \
 --q=10 \
 --b=000001 \
@@ -59,8 +59,8 @@ dotnet run -p MagnumConsole ImportProduct \
 dotnet run -p MagnumConsole ImportContent \
 --if='contents.xml' \
 --b="./configs/imports/contents" \
---bucket=compute-engine-vm-test.appspot.com \
---h=https://compute-engine-vm-test.firebaseio.com/ \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
