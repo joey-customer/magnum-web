@@ -4,8 +4,8 @@
 // Write your JavaScript code.
 
 $(function() {
-    $('.view-modal').on('click', function(){
-        $('.modal').addClass('show');
+    $('.view-modal').on('click', function(e){
+        $($(e.currentTarget).data('target')).modal();
     })
     $('.close').on('click', function(){
         $('.modal').removeClass('show');
