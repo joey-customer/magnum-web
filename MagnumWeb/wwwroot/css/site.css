@@ -947,8 +947,6 @@ body {
 	visibility: visible;
 	pointer-events: visible;
 	z-index: 99999999;
-	-webkit-animation: slideInDown 0.4s forwards;
-	animation: slideInDown 0.4s forwards;
 	overflow-y: scroll;
 	background: #060000b0; 
 }
