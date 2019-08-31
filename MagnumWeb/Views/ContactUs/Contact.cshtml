@@ -9,11 +9,14 @@
                 <div class="form-area">
                     @if (ViewBag.Message != null)
                     {
-                        <table summary="Message box">
-                            <tr>
-                                <th id="msg" style="background-color:yellow">@ViewBag.Message</th>
-                            </tr>
-                        </table>
+                        <figure>
+                            <figcaption>Info:</figcaption>
+                            <table>
+                                <tr>
+                                    <th id="msg" style="background-color:yellow">@ViewBag.Message</th>
+                                </tr>
+                            </table>
+                        </figure>
                     }
                     <h2>Send Your Message To Us</h2>
                     <form method="post" action="/Home/Contact/Save">

@@ -1,4 +1,5 @@
 ﻿@using Magnum.Web.Utils;
+@using Magnum.Api.Models;
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,11 +48,9 @@
                                     Products <i class="fa fa-angle-down" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item">@Html.ActionLink("Orals", "Products", "Home", null, new { @class = "nav-link" })</li>
-                                    <li class="nav-item">@Html.ActionLink("Peptides & GH", "Products", "Home", null, new { @class = "nav-link" })</li>
-                                    <li class="nav-item">@Html.ActionLink("Sexual Performance", "Products", "Home", null, new { @class = "nav-link" })</li>
-                                    <li class="nav-item">@Html.ActionLink("Extreme Series", "Products", "Home", null, new { @class = "nav-link" })</li>
-                                    <li class="nav-item">@Html.ActionLink("Ergogenics", "Products", "Home", null, new { @class = "nav-link" })</li>
+                                    @foreach (MProductType productType in @ViewBag.ProductTypeList) {
+                                        <li class="nav-item">@Html.ActionLink(productType.Descriptions["EN"].Name, "Products", "Home", new {productType = productType.Code}, new { @class = "nav-link" })</li>
+                                    }
                                 </ul>
                             <li class="nav-item"><a class="nav-link" href="#verify">Verify Product</a></li>
                             <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>

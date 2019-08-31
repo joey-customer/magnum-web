@@ -1,4 +1,6 @@
-<div class="modal" id="quick_view">
+@using Magnum.Api.Models;
+@foreach (MProduct product in @ViewBag.ProductList) {
+<div class="modal" id="quick_view_@product.Code">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal">
@@ -14,45 +16,28 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="product-content">
-                                <h5>Product Title Here</h5>
-                                <span>Product Long Name, 300 mg/ml – 10 x 1ml Amps</span>
-                                <span>$200</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                </p>
+                                <h5>@product.Descriptions["EN"].Name</h5>
+                                <span>@product.Descriptions["EN"].ShortDescription</span>
+                                <span>$@product.Price</span>
+                                <p>@product.Descriptions["EN"].LongDescription2</p>
                             </div>
                             <h6>Composition</h6>
                             <div class="container" style="font-weight: 100; font-size: 14px; margin-bottom: 20px">
+                                @foreach (MProductComposition composition in product.Compositions) {
                                 <div class="row">
                                     <div class="col-lg-6 col-12">
-                                        Lorem ipsum
+                                        @composition.Descriptions["EN"].Name
                                     </div>
                                     <div class="col-lg-6 col-12">
-                                        40mg
+                                        @composition.Quantity@composition.Unit
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-12">
-                                        Lorem ipsum
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        40mg
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-12">
-                                        Lorem ipsum
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        40mg
-                                    </div>
-                                </div>
+                                }
                             </div>
                             <h6>Performance Chart</h6>
+                            @foreach (MProductPerformance performance in product.Performances) {
                             <div class="rating">
-                                <span class="title">Strength: </span>
+                                <span class="title">@performance.Descriptions["EN"].Name: </span>
                                 <a href="#">
                                     <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                 </a>
@@ -69,64 +54,12 @@
                                     <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                 </a>
                             </div>
-                            <div class="rating">
-                                <span class="title">Muscle: </span>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                            </div>
-                            <div class="rating">
-                                <span class="title">Fat/Water Loss: </span>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                            </div>
-                            <div class="rating">
-                                <span class="title">Side Effect: </span>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>   
+</div>
+}

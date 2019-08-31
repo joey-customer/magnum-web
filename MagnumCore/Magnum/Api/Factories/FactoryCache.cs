@@ -7,7 +7,7 @@ using Magnum.Api.Caches;
 using Microsoft.Extensions.Logging;
 
 namespace Magnum.Api.Factories
-{   
+{
     public static class FactoryCache
     {
         private static ILoggerFactory loggerFactory = null;
@@ -27,24 +27,26 @@ namespace Magnum.Api.Factories
         private static void initClassMap()
         {
             addClassConfig("CachePageContents", "Magnum.Api.Caches.CachePageContents");
+            addClassConfig("CacheProductTypeList", "Magnum.Api.Caches.CacheProductTypeList");
+            addClassConfig("CacheProductList", "Magnum.Api.Caches.CacheProductList");
         }
 
         public static ICache GetCacheObject(string name)
-        {        
-            string className = (string) classMaps[name];
+        {
+            string className = (string)classMaps[name];
             if (className == null)
             {
                 throw new ArgumentNullException(String.Format("Cache name not found [{0}]", name));
             }
 
-            ICache cacheObj = (ICache) objectMaps[name];
+            ICache cacheObj = (ICache)objectMaps[name];
             if (cacheObj == null)
             {
                 //Create just only one time and reuse it later
                 //Using lazy approach
 
                 Assembly asm = Assembly.GetExecutingAssembly();
-                cacheObj = (ICache) asm.CreateInstance(className);
+                cacheObj = (ICache)asm.CreateInstance(className);
 
                 objectMaps[name] = cacheObj;
 
@@ -53,16 +55,16 @@ namespace Magnum.Api.Factories
                     Type t = cacheObj.GetType();
                     ILogger logger = loggerFactory.CreateLogger(t);
                     cacheObj.SetLogger(logger);
-                }      
+                }
             }
-            
-            return(cacheObj);
+
+            return (cacheObj);
         }
 
         public static void SetLoggerFactory(ILoggerFactory logFact)
         {
             loggerFactory = logFact;
-        }         
+        }
     }
- 
+
 }

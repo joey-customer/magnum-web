@@ -25,6 +25,47 @@
                 <ITEMS name="Compositions">
                     <OBJECT name="Composition">
                         <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">10</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Lorem ipsum</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">20</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin C</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">30</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin B</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
                         <FIELD name="Quantity">3</FIELD>
                         <FIELD name="Unit">Star</FIELD>
 
@@ -36,7 +77,7 @@
                         </ITEMS>                        
                     </OBJECT>
 
-                    <OBJECT name="Composition">
+                    <OBJECT name="Performance">
                         <FIELD name="Code">2</FIELD>
                         <FIELD name="Quantity">4</FIELD>
                         <FIELD name="Unit">Star</FIELD>
@@ -49,7 +90,7 @@
                         </ITEMS>                        
                     </OBJECT>
 
-                    <OBJECT name="Composition">
+                    <OBJECT name="Performance">
                         <FIELD name="Code">3</FIELD>
                         <FIELD name="Quantity">3</FIELD>
                         <FIELD name="Unit">Star</FIELD>
@@ -62,7 +103,7 @@
                         </ITEMS>                        
                     </OBJECT>
 
-                    <OBJECT name="Composition">
+                    <OBJECT name="Performance">
                         <FIELD name="Code">4</FIELD>
                         <FIELD name="Quantity">2</FIELD>
                         <FIELD name="Unit">Star</FIELD>
@@ -74,7 +115,7 @@
                             </OBJECT>
                         </ITEMS>                        
                     </OBJECT>                    
-                </ITEMS>                
+                </ITEMS>
             </OBJECT>
 
             <OBJECT name="Product">
@@ -97,6 +138,47 @@
                 <ITEMS name="Compositions">
                     <OBJECT name="Composition">
                         <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">10</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Lorem ipsum</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">20</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin C</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">30</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin B</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
                         <FIELD name="Quantity">3</FIELD>
                         <FIELD name="Unit">Star</FIELD>
 
@@ -108,7 +190,7 @@
                         </ITEMS>                        
                     </OBJECT>
 
-                    <OBJECT name="Composition">
+                    <OBJECT name="Performance">
                         <FIELD name="Code">2</FIELD>
                         <FIELD name="Quantity">4</FIELD>
                         <FIELD name="Unit">Star</FIELD>
@@ -121,7 +203,7 @@
                         </ITEMS>                        
                     </OBJECT>
 
-                    <OBJECT name="Composition">
+                    <OBJECT name="Performance">
                         <FIELD name="Code">3</FIELD>
                         <FIELD name="Quantity">3</FIELD>
                         <FIELD name="Unit">Star</FIELD>
@@ -134,9 +216,9 @@
                         </ITEMS>                        
                     </OBJECT>
 
-                    <OBJECT name="Composition">
+                    <OBJECT name="Performance">
                         <FIELD name="Code">4</FIELD>
-                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
                         <FIELD name="Unit">Star</FIELD>
 
                         <ITEMS name="Descriptions">
@@ -146,7 +228,7 @@
                             </OBJECT>
                         </ITEMS>                        
                     </OBJECT>                    
-                </ITEMS>                
+                </ITEMS>            
             </OBJECT>
 
         </ITEMS>

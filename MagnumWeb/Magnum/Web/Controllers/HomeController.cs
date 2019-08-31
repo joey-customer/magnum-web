@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Magnum.Web.Models;
 using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
@@ -7,22 +8,20 @@ using Magnum.Api.Factories;
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
 using Magnum.Api.Caches;
+using System.Collections;
+using System.Collections.Generic;
 
 using System;
+using System.Linq;
 
 namespace Magnum.Web.Controllers
 {
-    public class HomeController : Controller
-    {
-        public virtual ICache GetContentCache()
-        {
-            return FactoryCache.GetCacheObject("CachePageContents");
-        }
+    // Custom controller.
 
+    public class HomeController : BaseController
+    {
         public IActionResult Index()
         {
-            var contentCache = GetContentCache();
-            ViewBag.Contents = contentCache.GetValues();
             return View();
         }
 
@@ -33,14 +32,25 @@ namespace Magnum.Web.Controllers
 
         public IActionResult Products()
         {
+            string productType = Request.Query["productType"].ToString();
+            var productsMap = GetProductsCache().GetValues();
+            var productList = productsMap.Select(kvp => kvp.Value).ToList();
+
+            ArrayList productsByType = new ArrayList();
+            foreach (var productBase in productList)
+            {
+                MProduct product = (MProduct)productBase;
+                if (productType.Equals(product.ProductType))
+                {
+                    productsByType.Add(product);
+                }
+            }
+            ViewBag.ProductList = productsByType;
             return View();
         }
 
         public IActionResult About()
         {
-            var contentCache = GetContentCache();
-            ViewBag.Contents = contentCache.GetValues();
-            
             return View();
         }
 

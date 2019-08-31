@@ -17,11 +17,14 @@ namespace Magnum.Api.Models
         public DateTime LastUpdateDate {get; set;}
 
         public List<MProductComposition> Compositions {get; set;}
+        public List<MProductPerformance> Performances {get; set;}
+        
         public Dictionary<string, MGenericDescription> Descriptions {get; set;}
 
         public MProduct()
         {
             Compositions = new List<MProductComposition>();
+            Performances = new List<MProductPerformance>();
             Descriptions = new Dictionary<string, MGenericDescription>();
         }
 

@@ -93,6 +93,30 @@ namespace Magnum.Consoles.Products
 
                             mpc.Descriptions.Add(mdc.Language, mdc);
                         }                         
+                    }
+
+                    ArrayList performances = pd.GetChildArray("Performances");
+                    foreach (CTable perf in performances)
+                    {
+                        MProductPerformance mpp = new MProductPerformance();
+                        mpp.Code = perf.GetFieldValue("Code");    
+                        mpp.Quantity = Double.Parse(perf.GetFieldValue("Quantity")); 
+                        mpp.Unit = perf.GetFieldValue("Unit");                      
+
+                        mpd.Performances.Add(mpp);
+
+                        ArrayList compositionDescs = perf.GetChildArray("Descriptions");
+                        foreach (CTable desc in compositionDescs)
+                        {
+                            MGenericDescription mdc = new MGenericDescription();
+                            mdc.Language = desc.GetFieldValue("Language");
+                            mdc.Name = desc.GetFieldValue("Name");    
+                            mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
+                            mdc.LongDescription1 = desc.GetFieldValue("LongDescription1");
+                            mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                        
+
+                            mpp.Descriptions.Add(mdc.Language, mdc);
+                        }                         
                     } 
 
                     LogUtils.LogInformation(logger , "Adding product : [{0}]", mpd.Code);
