@@ -38,21 +38,16 @@
                             @foreach (MProductPerformance performance in product.Performances) {
                             <div class="rating">
                                 <span class="title">@performance.Descriptions["EN"].Name: </span>
+                                @for(int i=0; i < performance.Quantity; i++) {
                                 <a href="#">
                                     <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                 </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
+                                }
+                                @for(int i=0; i < 5 - performance.Quantity; i++) {
                                 <a href="#">
                                     <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
                                 </a>
-                                <a href="#">
-                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
-                                </a>
+                                }
                             </div>
                             }
                         </div>
