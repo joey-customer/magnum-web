@@ -5,6 +5,7 @@
 
 $(function() {
     $('.view-modal').on('click', function(e){
+        e.preventDefault();
         $($(e.currentTarget).data('target')).modal();
     })
     $('.close').on('click', function(){
