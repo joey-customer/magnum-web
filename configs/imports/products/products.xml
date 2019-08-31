@@ -4,7 +4,7 @@
 
     <OBJECT name="ProductImport">
         <ITEMS name="Products">
-
+            <!--Orals-->
             <OBJECT name="Product">
                 <FIELD name="Code">Oral-AAA-001</FIELD>
                 <FIELD name="Rating">4</FIELD>
@@ -229,6 +229,234 @@
                         </ITEMS>                        
                     </OBJECT>                    
                 </ITEMS>            
+            </OBJECT>
+
+            <!--Peptids-->
+            <OBJECT name="Product">
+                <FIELD name="Code">Peptid-AAA-001</FIELD>
+                <FIELD name="Rating">1</FIELD>
+                <FIELD name="ProductType">002</FIELD>
+                <FIELD name="Price">24.99</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/pro-img3.png</FIELD>
+                
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">LAXO Elite</FIELD>
+                        <FIELD name="ShortDescription">Focused Nutrition, 300 mg/ml – 10 x 1ml Amps</FIELD>
+                        <FIELD name="LongDescription1">Qnteate Supple Chan Though Marke Poston Bestng Practcese Marke Supple Chan Though Marke Poston Bestng Practces Chain Throuh Practces eractve Fashion Fashion Economically And Sound</FIELD>
+                        <FIELD name="LongDescription2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Compositions">
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">10</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Protien</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">20</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin C</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">30</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin B</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effect</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>                    
+                </ITEMS>
+            </OBJECT>
+
+            <!--Sexuals-->
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-AAA-001</FIELD>
+                <FIELD name="Rating">5</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">19.99</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/pro-img1.png</FIELD>
+                
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Vaxin</FIELD>
+                        <FIELD name="ShortDescription">Protien Powder, 300 mg/ml – 10 x 1ml Amps</FIELD>
+                        <FIELD name="LongDescription1">Qnteate Supple Chan Though Marke Poston Bestng Practcese Marke Supple Chan Though Marke Poston Bestng Practces Chain Throuh Practces eractve Fashion Fashion Economically And Sound</FIELD>
+                        <FIELD name="LongDescription2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Compositions">
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">10</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Protien</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">20</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin C</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">30</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Vitamin B</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effect</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>                    
+                </ITEMS>
             </OBJECT>
 
         </ITEMS>
