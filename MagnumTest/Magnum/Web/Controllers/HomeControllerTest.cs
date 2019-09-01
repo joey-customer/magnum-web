@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Magnum.Web.Models;
 using Magnum.Api.Caches;
+using Magnum.Api.Models;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace Magnum.Web.Controllers
 {
@@ -27,8 +30,20 @@ namespace Magnum.Web.Controllers
             mockController.Setup(foo => foo.GetProductTypeCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductsCache()).Returns(iCacheMock.Object);
 
-            controller = mockController.Object;
+            MContent bestSellers = new MContent();
+            bestSellers.Values = new Dictionary<string, string>();
+            bestSellers.Values.Add("b1", "ITEM-001");
+            bestSellers.Values.Add("b2", "ITEM-002");
+            iCacheMock.Setup(foo => foo.GetValue("code/Best_Seller_Products")).Returns(bestSellers);
 
+            MContent newArrivals = new MContent();
+            newArrivals.Values = new Dictionary<string, string>();
+            newArrivals.Values.Add("n1", "ITEM-003");
+            newArrivals.Values.Add("n2", "ITEM-004");
+            newArrivals.Values.Add("n3", "ITEM-005");
+            iCacheMock.Setup(foo => foo.GetValue("code/New_Arrival_Products")).Returns(newArrivals);
+
+            controller = mockController.Object;
             controller.ControllerContext = controllerContext;
         }
 
@@ -49,17 +64,11 @@ namespace Magnum.Web.Controllers
         [Test]
         public void IndexTest()
         {
-            //TODO
-            // ViewResult result = (ViewResult)controller.Index();
-            // Assert.IsNotNull(result);
-        }
-
-        [Test]
-        public void ProductsTest()
-        {
-            //TODO
-            // ViewResult result = (ViewResult)controller.Products();
-            // Assert.IsNotNull(result);
+            ViewResult result = (ViewResult)controller.Index();
+            Assert.IsNotNull(result);
+            Assert.AreEqual(2, ((ArrayList)result.ViewData["BestSellerList"]).Count);
+            Assert.AreEqual(3, ((ArrayList)result.ViewData["NewArrivalList"]).Count);
+            Assert.AreEqual(5, ((ArrayList)result.ViewData["ProductList"]).Count);
         }
 
         [Test]
