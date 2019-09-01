@@ -1,1 +1,3 @@
-#dummy
+steps:
+- name: 'gcr.io/cloud-builders/dotnet'
+  args: ['build', '-p:Version=1.0.0']
