@@ -2,6 +2,12 @@ steps:
 - name: 'gcr.io/cloud-builders/dotnet'
   args: ['build', '-p:Version=1.0.0']
 
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--build-arg', 'VERSION_NUMBER=1.0.0', '-f', 'Docker/Dockerfile', '-t', 'pjamenaja/magnum-web:latest', '..']
+- name: 'nosinovacao/dotnet-sonar'
+  args: [
+          'begin', '/key:pjamenaja_magnum_web', '/o:pjamenaja', 
+          '/v:1.0.0', '/d:sonar.host.url=https://sonarcloud.io', '/d:sonar.branch.name=dev/test_cloud_build', 
+          '/d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml', 
+          '/d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** ',
+          '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
+        ]
 
