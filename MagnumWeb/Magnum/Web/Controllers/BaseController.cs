@@ -9,7 +9,7 @@ namespace Magnum.Web.Controllers
 {
     public class BaseController : Controller
     {
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
             LoadProductTypeList();
             LoadContents();
