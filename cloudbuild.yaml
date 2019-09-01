@@ -1,6 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/dotnet'
-  args: ['build', '-p:Version=1.0.0']
 
 - name: 'nosinovacao/dotnet-sonar'
   args: [
@@ -11,6 +9,9 @@ steps:
           '/d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** ',
           '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
+
+- name: 'gcr.io/cloud-builders/dotnet'
+  args: ['build', '-p:Version=1.0.0']
 
 - name: 'nosinovacao/dotnet-sonar'
   args: [
