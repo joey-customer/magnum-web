@@ -3,4 +3,4 @@ steps:
   args: ['build', '-p:Version=1.0.0']
 
 - name: 'ubuntu'
-  args: ['cd Docker', './make_docker.bash']
+  args: ['bash', 'cd Docker; ', './make_docker.bash']
