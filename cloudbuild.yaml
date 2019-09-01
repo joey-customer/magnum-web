@@ -2,5 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/dotnet'
   args: ['build', '-p:Version=1.0.0']
 
-- name: 'script-runner'
-  args: ['bash', 'cd Docker; ./make_docker.bash']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--build-arg', 'VERSION_NUMBER=1.0.0', '-f', 'Docker/Dockerfile', '-t', 'pjamenaja/magnum-web:latest', '..']
+
