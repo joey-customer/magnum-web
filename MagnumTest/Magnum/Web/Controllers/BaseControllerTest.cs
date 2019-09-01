@@ -14,6 +14,8 @@ namespace Magnum.Web.Controllers
     {
         BaseController controller;
 
+        BaseController realController = new BaseController();
+
         [SetUp]
         public void Setup()
         {
@@ -67,19 +69,21 @@ namespace Magnum.Web.Controllers
         [Test]
         public void GetContentCache()
         {
-            var cache = new BaseController().GetContentCache();
+            var cache = realController.GetContentCache();
             Assert.NotNull(cache);
         }
 
+        [Test]
         public void GetProductTypeCache()
         {
-            var cache = new BaseController().GetProductTypeCache();
+            var cache = realController.GetProductTypeCache();
             Assert.NotNull(cache);
         }
 
+        [Test]
         public void GetProductsCache()
         {
-            var cache = new BaseController().GetProductsCache();
+            var cache = realController.GetProductsCache();
             Assert.NotNull(cache);
         }
     }
