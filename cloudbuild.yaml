@@ -2,5 +2,5 @@ steps:
 - name: 'gcr.io/cloud-builders/dotnet'
   args: ['build', '-p:Version=1.0.0']
 
-- name: 'ubuntu'
-  args: ['bash', 'cd Docker; ', './make_docker.bash']
+- name: 'script-runner'
+  args: ['bash', 'cd Docker; ./make_docker.bash']
