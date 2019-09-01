@@ -11,13 +11,13 @@ namespace Magnum.Web.Controllers
 {
     public class ContactUsController : BaseController
     {
-        [HttpGet("Home/Contact")]
+        [HttpGet("Contact")]
         public IActionResult Contact()
         {
             return View();
         }
 
-        [HttpPost("Home/Contact/Save")]
+        [HttpPost("Contact/Save")]
         public IActionResult SaveContactUs(MContactUs form)
         {
             string validationMessage = ValidateContactUsForm(form);

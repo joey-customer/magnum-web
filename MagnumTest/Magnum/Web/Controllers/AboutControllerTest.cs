@@ -2,17 +2,15 @@ using NUnit.Framework;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Magnum.Web.Models;
 using Magnum.Api.Caches;
 using Magnum.Api.Models;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace Magnum.Web.Controllers
 {
-    public class HomeControllerTest
+    public class AboutControllerTest
     {
-        HomeController controller;
+        AboutController controller;
 
         [SetUp]
         public void Setup()
@@ -23,7 +21,7 @@ namespace Magnum.Web.Controllers
                 HttpContext = httpContext,
             };
 
-            var mockController = new Mock<HomeController>() { CallBase = true };
+            var mockController = new Mock<AboutController>() { CallBase = true };
 
             var iCacheMock = new Mock<ICache>();
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
@@ -48,35 +46,10 @@ namespace Magnum.Web.Controllers
         }
 
         [Test]
-        public void PrivacyTest()
+        public void AboutTest()
         {
-            ViewResult result = (ViewResult)controller.Privacy();
+            ViewResult result = (ViewResult)controller.About();
             Assert.IsNotNull(result);
-        }
-
-        [Test]
-        public void IndexTest()
-        {
-            ViewResult result = (ViewResult)controller.Index();
-            Assert.IsNotNull(result);
-            Assert.AreEqual(2, ((ArrayList)result.ViewData["BestSellerList"]).Count);
-            Assert.AreEqual(3, ((ArrayList)result.ViewData["NewArrivalList"]).Count);
-            Assert.AreEqual(5, ((ArrayList)result.ViewData["ProductList"]).Count);
-        }
-
-        [Test]
-        public void ErrorTest()
-        {
-            ViewResult result = (ViewResult)controller.Error();
-            ErrorViewModel evm = (ErrorViewModel)result.Model;
-            Assert.IsNotNull(evm);
-        }
-
-        [Test]
-        public void GetContentCache()
-        {
-            var cache = new HomeController().GetContentCache();
-            Assert.NotNull(cache);
         }
     }
 }
