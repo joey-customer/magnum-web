@@ -2,7 +2,7 @@ using System;
 
 namespace Magnum.Api.Commons.Table
 {
-	class CField
+	public class CField
 	{		
 		private readonly String name;
 		private String value;

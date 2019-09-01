@@ -49,11 +49,11 @@ namespace Magnum.Consoles.Contents
 
                     foreach (CTable value in values)
                     {
-                        string lang = "EN";
-                        string txt = value.GetFieldValue(lang);
                         mc.Values = new Dictionary<string, string>();
-                        mc.Values[lang] = txt;
-
+                        foreach(CField field in value.GetTableFields())
+                        {
+                            mc.Values[field.GetName()] = field.GetValue();
+                        }
                         LogUtils.LogInformation(logger , "Adding content : [{0}][{1}]", mc.Type, mc.Name);
                     }
 

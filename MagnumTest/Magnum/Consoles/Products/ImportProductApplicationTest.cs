@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using System.Collections;
 using NUnit.Framework;
@@ -57,7 +56,61 @@ namespace Magnum.Consoles.Products
                             </OBJECT>
                         </ITEMS>                        
                     </OBJECT>               
-                </ITEMS>                
+                </ITEMS>
+                
+                <ITEMS name='Performances'>
+                    <OBJECT name='Performance'>
+                        <FIELD name='Code'>1</FIELD>
+                        <FIELD name='Quantity'>3</FIELD>
+                        <FIELD name='Unit'>Star</FIELD>
+
+                        <ITEMS name='Descriptions'>
+                            <OBJECT name='Description'>
+                                <FIELD name='Language'>EN</FIELD>
+                                <FIELD name='Name'>Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name='Performance'>
+                        <FIELD name='Code'>2</FIELD>
+                        <FIELD name='Quantity'>4</FIELD>
+                        <FIELD name='Unit'>Star</FIELD>
+
+                        <ITEMS name='Descriptions'>
+                            <OBJECT name='Description'>
+                                <FIELD name='Language'>EN</FIELD>
+                                <FIELD name='Name'>Muscle</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name='Performance'>
+                        <FIELD name='Code'>3</FIELD>
+                        <FIELD name='Quantity'>3</FIELD>
+                        <FIELD name='Unit'>Star</FIELD>
+
+                        <ITEMS name='Descriptions'>
+                            <OBJECT name='Description'>
+                                <FIELD name='Language'>EN</FIELD>
+                                <FIELD name='Name'>Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>
+
+                    <OBJECT name='Performance'>
+                        <FIELD name='Code'>4</FIELD>
+                        <FIELD name='Quantity'>2</FIELD>
+                        <FIELD name='Unit'>Star</FIELD>
+
+                        <ITEMS name='Descriptions'>
+                            <OBJECT name='Description'>
+                                <FIELD name='Language'>EN</FIELD>
+                                <FIELD name='Name'>Side Effect</FIELD>
+                            </OBJECT>
+                        </ITEMS>                        
+                    </OBJECT>                    
+                </ITEMS>             
             </OBJECT>
         </ITEMS>
     </OBJECT>

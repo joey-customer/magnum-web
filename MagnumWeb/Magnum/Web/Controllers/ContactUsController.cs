@@ -1,24 +1,16 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using Magnum.Web.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Factories;
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
-using Magnum.Api.Caches;
 
 using System;
 
 namespace Magnum.Web.Controllers
 {
-    public class ContactUsController : Controller
+    public class ContactUsController : BaseController
     {
-        public virtual ICache GetContentCache()
-        {
-            return FactoryCache.GetCacheObject("CachePageContents");
-        }
-
         [HttpGet("Home/Contact")]
         public IActionResult Contact()
         {

@@ -2,27 +2,38 @@
 using Microsoft.AspNetCore.Mvc;
 using Magnum.Web.Models;
 using Magnum.Api.Models;
-using Magnum.Api.Commons.Business;
-using Magnum.Api.Factories;
-using Magnum.Web.Utils;
-using Magnum.Api.Utils;
-using Magnum.Api.Caches;
-
-using System;
+using System.Collections;
+using System.Linq;
 
 namespace Magnum.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        public virtual ICache GetContentCache()
-        {
-            return FactoryCache.GetCacheObject("CachePageContents");
-        }
-
         public IActionResult Index()
         {
-            var contentCache = GetContentCache();
-            ViewBag.Contents = contentCache.GetValues();
+            ArrayList bestSellerList = new ArrayList();
+            ArrayList newArrivalList = new ArrayList();
+            ArrayList productList = new ArrayList();
+
+            MContent bestSellerCodes = (MContent)GetContentCache().GetValue("code/Best_Seller_Products");
+            foreach (string code in bestSellerCodes.Values.Select(kvp => kvp.Value).ToList())
+            {
+                MProduct product = (MProduct)GetProductsCache().GetValue(code);
+                bestSellerList.Add(product);
+                productList.Add(product);
+            }
+
+            MContent newArrivalCodes = (MContent)GetContentCache().GetValue("code/New_Arrival_Products");
+
+            foreach (string code in newArrivalCodes.Values.Select(kvp => kvp.Value).ToList())
+            {
+                MProduct product = (MProduct)GetProductsCache().GetValue(code);
+                newArrivalList.Add(product);
+                productList.Add(product);
+            }
+            ViewBag.BestSellerList = bestSellerList;
+            ViewBag.NewArrivalList = newArrivalList;
+            ViewBag.ProductList = productList;
             return View();
         }
 
@@ -31,16 +42,8 @@ namespace Magnum.Web.Controllers
             return View();
         }
 
-        public IActionResult Products()
-        {
-            return View();
-        }
-
         public IActionResult About()
         {
-            var contentCache = GetContentCache();
-            ViewBag.Contents = contentCache.GetValues();
-            
             return View();
         }
 

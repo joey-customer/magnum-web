@@ -103,7 +103,7 @@ namespace Magnum.Web.Controllers
         [Test]
         public void GetContentCache()
         {
-            var cache = new HomeController().GetContentCache();
+            var cache = new ContactUsController().GetContentCache();
             Assert.NotNull(cache);
         }
     }

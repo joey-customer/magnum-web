@@ -1,0 +1,60 @@
+@using Magnum.Api.Models;
+@foreach (MProduct product in @ViewBag.ProductList) {
+<div class="modal" id="quick_view_@product.Code">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">
+                <i class="fas fa-window-close" aria-hidden="true"></i> <!-- Compliant icon fonts usage -->
+            </button>
+            <div class="modal-body">
+                <div class="product-details-inner">
+                    <div class="row">
+                        <div class="col-lg-5 col-12">
+                            <div class="product-thumb" style="text-align: center; padding-top: 30px;">
+                                <img src="@product.Image1Url" alt="shop">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="product-content">
+                                <h5>@product.Descriptions["EN"].Name</h5>
+                                <span>@product.Descriptions["EN"].ShortDescription</span>
+                                <span>$@product.Price</span>
+                                <p>@product.Descriptions["EN"].LongDescription2</p>
+                            </div>
+                            <h6>Composition</h6>
+                            <div class="container" style="font-weight: 100; font-size: 14px; margin-bottom: 20px">
+                                @foreach (MProductComposition composition in product.Compositions) {
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        @composition.Descriptions["EN"].Name
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        @composition.Quantity@composition.Unit
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                            <h6>Performance Chart</h6>
+                            @foreach (MProductPerformance performance in product.Performances) {
+                            <div class="rating">
+                                <span class="title">@performance.Descriptions["EN"].Name: </span>
+                                @for(int i=0; i < performance.Quantity; i++) {
+                                <a href="#">
+                                    <i class="fa fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
+                                </a>
+                                }
+                                @for(int i=0; i < 5 - performance.Quantity; i++) {
+                                <a href="#">
+                                    <i class="far fa-star" aria-hidden="true"></i>  <!-- Compliant icon fonts usage -->
+                                </a>
+                                }
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
