@@ -11,7 +11,7 @@ steps:
           '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
 
-- name: microsoft/dotnet:1.1-sdk
+- name: microsoft/dotnet:2.2-sdk
   entrypoint: dotnet
   args: ['build', '-p:Version=1.0.0']
 
