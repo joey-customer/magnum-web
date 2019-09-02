@@ -1,6 +1,6 @@
 steps:
 
-- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
+- name: 'cassiofariasmachado/dotnet-sonarscanner:2.2'
   args: [
           'dotnet', 'sonarscanner', 
           'begin', '/key:pjamenaja_magnum_web', '/o:pjamenaja', 
@@ -15,7 +15,7 @@ steps:
   entrypoint: dotnet
   args: ['build', '-p:Version=1.0.0']
 
-- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
+- name: 'cassiofariasmachado/dotnet-sonarscanner:2.2'
   args: [
           'dotnet', 'sonarscanner',
           'end', '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
