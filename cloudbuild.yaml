@@ -1,5 +1,5 @@
 steps:
 
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
-  args: ['/source/sonar.bash']
+  args: ['sonar.bash']
   dir: '/source'
