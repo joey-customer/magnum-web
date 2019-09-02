@@ -11,8 +11,9 @@ steps:
           '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
 
-- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
-  args: ['dotnet', 'build', '-p:Version=1.0.0']
+- name: microsoft/dotnet:1.1-sdk
+  entrypoint: dotnet
+  args: ['build', '-p:Version=1.0.0']
 
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
   args: [
