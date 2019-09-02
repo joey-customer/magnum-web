@@ -1,5 +1,13 @@
 steps:
 
+- name: 'ubuntu'
+  volumes:
+  - name: 'source'
+    path: '/source'
+  args: ['cat', '/source/sonar.bash']
+    
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
-  args: ['sonar.bash']
-  dir: '/source'
+  entrypoint: '/source/sonar.bash'
+  volumes:
+  - name: 'source'
+    path: '/source'
