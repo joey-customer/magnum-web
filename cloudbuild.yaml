@@ -9,7 +9,6 @@ steps:
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
   entrypoint: 'bash'
   args: ['/workspace/sonar.bash']
-
   volumes:
   - name: 'source'
     path: '/source'
