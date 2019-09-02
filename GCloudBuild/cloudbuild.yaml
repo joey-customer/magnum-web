@@ -5,9 +5,9 @@ steps:
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
-  
+
   env: 
-    - 'SONAR_KEY=6b3024e6cc1576028a5bba761b1009ffb850b6f5'
+    - 'SONAR_KEY=${_SONAR_KEY}'
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
