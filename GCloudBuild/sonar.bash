@@ -16,4 +16,6 @@ dotnet sonarscanner begin \
 
 dotnet build Magnum.sln
 
+coverlet './MagnumTest/bin/Debug/netcoreapp2.2/MagnumTest.dll' --target 'dotnet' --targetargs 'test . --no-build' --format opencover
+
 dotnet sonarscanner end /d:sonar.login=${SONAR_KEY}
