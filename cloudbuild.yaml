@@ -7,7 +7,9 @@ steps:
   args: ['cat', '/workspace/sonar.bash']
 
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
-  entrypoint: '/workspace/sonar.bash'
+  entrypoint: 'bash'
+  args: ['/workspace/sonar.bash']
+
   volumes:
   - name: 'source'
     path: '/source'
