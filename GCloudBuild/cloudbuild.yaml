@@ -12,6 +12,8 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', '${_PACAKGE}:${_DOCKER_VERSION}', '/workspace' ]
 
+images: ['${_PACAKGE}:${_DOCKER_VERSION}']
+
 #- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
 #  entrypoint: 'bash'
 #  args: ['/workspace/GCloudBuild/sonar.bash']
