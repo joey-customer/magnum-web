@@ -6,6 +6,9 @@ steps:
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
   
+  env: 
+    - 'SONAR_KEY=6b3024e6cc1576028a5bba761b1009ffb850b6f5'
+
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
   args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
