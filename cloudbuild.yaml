@@ -1,14 +1,12 @@
 steps:
 
 - name: 'ubuntu'
-  volumes:
-  - name: 'source'
-    path: '/source'
   args: ['cat', '/workspace/sonar.bash']
 
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
   entrypoint: 'bash'
   args: ['/workspace/sonar.bash']
-  volumes:
-  - name: 'source'
-    path: '/source'
+
+- name: 'microsoft/dotnet:2.2-sdk'
+  entrypoint: 'dotnet'
+  args: ['build', 'Magnum.sln', '-p:Version=1.0.1']
