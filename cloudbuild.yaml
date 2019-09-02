@@ -1,8 +1,8 @@
 steps:
 
-- name: 'nosinovacao/dotnet-sonar:19.08.0'
+- name: 'gcr.io/cloud-builders/dotnet'
   args: [
-          'dotnet', '/sonar-scanner/SonarScanner.MSBuild.dll', 
+          'sonarscanner', 
           'begin', '/key:pjamenaja_magnum_web', '/o:pjamenaja', 
           '/v:1.0.0', '/d:sonar.host.url=https://sonarcloud.io', 
           '/d:sonar.branch.name=dev/test_cloud_build', 
@@ -11,11 +11,11 @@ steps:
           '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
 
-- name: 'nosinovacao/dotnet-sonar:19.08.0'
-  args: ['dotnet', 'build', '-p:Version=1.0.0']
+- name: 'gcr.io/cloud-builders/dotnet'
+  args: ['build', '-p:Version=1.0.0']
 
-- name: 'nosinovacao/dotnet-sonar:19.08.0'
+- name: 'gcr.io/cloud-builders/dotnet'
   args: [
-          'dotnet', '/sonar-scanner/SonarScanner.MSBuild.dll', 
+          'sonarscanner',
           'end', '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
