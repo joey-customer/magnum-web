@@ -11,14 +11,14 @@ steps:
           '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
   volumes:
-    - name: '/workspace'
+    - name: 'workspace'
       path: '/source'
 
 - name: cassiofariasmachado/dotnet-sonarscanner:latest
   entrypoint: dotnet
   args: ['build', '-p:Version=1.0.0']
   volumes:  
-    - name: '/workspace'
+    - name: 'workspace'
       path: '/source'
 
 - name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
@@ -27,5 +27,5 @@ steps:
           'end', '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
   volumes:
-    - name: '/workspace'
+    - name: 'workspace'
       path: '/source'
