@@ -17,7 +17,7 @@ namespace Magnum.Consoles.ProductTypes
 {
 	public class ImportProductTypeApplication : ConsoleAppBase
 	{        
-        private int i = 0;
+        private int i = 1;
 
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
