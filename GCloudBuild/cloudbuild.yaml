@@ -8,10 +8,17 @@ steps:
   entrypoint: 'dotnet'
   args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
 
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/$PROJECT_ID/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
+- name: 'docker'
+  entrypoint: 'bash'
+  args: [ '/workspace/GCloudBuild/docker.bash']
+  env: 
+    - 'DOCKER_VERSION=${_DOCKER_VERSION}'
+    - 'BUILT_VERSION=${_VERSION}'
 
-images: ['gcr.io/$PROJECT_ID/magnum-web:${_DOCKER_VERSION}']
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/$PROJECT_ID/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
+
+#images: ['gcr.io/$PROJECT_ID/magnum-web:${_DOCKER_VERSION}']
 
 #- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
 #  entrypoint: 'bash'
