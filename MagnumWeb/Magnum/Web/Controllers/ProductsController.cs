@@ -7,7 +7,7 @@ namespace Magnum.Web.Controllers
 {
     public class ProductsController : BaseController
     {
-        [HttpGet("Home/Products")]
+        [HttpGet("Products")]
         public IActionResult Products()
         {
             string productType = Request.Query["productType"].ToString();
