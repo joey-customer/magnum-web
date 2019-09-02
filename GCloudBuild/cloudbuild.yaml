@@ -1,17 +1,26 @@
 substitutions:
   _VERSION: 1.0.1
+  _DOCKER_VERSION: latest
+  _PACAKGE: pjamenaja/magnum-web
 
 steps:
-- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
-  entrypoint: 'bash'
-  args: ['/workspace/GCloudBuild/sonar.bash']
-
-  env: 
-    - 'SONAR_KEY=${_SONAR_KEY}'
-    - 'BUILT_VERSION=${_VERSION}'
-    - 'BRANCH_NAME=$BRANCH_NAME'
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
   args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
 
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: ['/workspace/GCloudBuild/docker.bash']
+  env: 
+    - 'DOCKER_VERSION=${_DOCKER_VERSION}'
+    - 'BUILT_VERSION=${_VERSION}'
+    - 'PACAKGE=${_PACAKGE}'
+
+- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
+  entrypoint: 'bash'
+  args: ['/workspace/GCloudBuild/sonar.bash']
+  env: 
+    - 'SONAR_KEY=${_SONAR_KEY}'
+    - 'BUILT_VERSION=${_VERSION}'
+    - 'BRANCH_NAME=$BRANCH_NAME'
