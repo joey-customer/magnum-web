@@ -1,9 +1,9 @@
 substitutions:
-  _VERSION: 0.0.999
+  _VERSION: 0.0.909
   _DOCKER_VERSION: latest
 
 steps:
-- name: 'gcr.io/its-commons/dotnet-sonar:2.2-1'
+- name: 'gcr.io/its-commons/dotnet-sonar:2.2-2'
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
   env: 
