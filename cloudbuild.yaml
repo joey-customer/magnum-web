@@ -1,6 +1,6 @@
 steps:
 
-- name: 'nosinovacao/dotnet-sonar'
+- name: 'nosinovacao/dotnet-sonar:19.08.0'
   args: [
           'dotnet', '/sonar-scanner/SonarScanner.MSBuild.dll', 
           'begin', '/key:pjamenaja_magnum_web', '/o:pjamenaja', 
@@ -11,10 +11,10 @@ steps:
           '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
         ]
 
-- name: 'nosinovacao/dotnet-sonar'
+- name: 'nosinovacao/dotnet-sonar:19.08.0'
   args: ['dotnet', 'build', '-p:Version=1.0.0']
 
-- name: 'nosinovacao/dotnet-sonar'
+- name: 'nosinovacao/dotnet-sonar:19.08.0'
   args: [
           'dotnet', '/sonar-scanner/SonarScanner.MSBuild.dll', 
           'end', '/d:sonar.login=6b3024e6cc1576028a5bba761b1009ffb850b6f5', 
