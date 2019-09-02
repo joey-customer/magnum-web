@@ -1,0 +1,10 @@
+steps:
+
+- name: 'cassiofariasmachado/dotnet-sonarscanner:latest'
+  entrypoint: 'bash'
+  args: ['/workspace/GCloudBuild/sonar.bash']
+  
+- name: 'microsoft/dotnet:2.2-sdk'
+  entrypoint: 'dotnet'
+  args: ['build', 'Magnum.sln', '-p:Version=1.0.1']
+
