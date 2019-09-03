@@ -29,11 +29,22 @@ namespace Magnum.Web
 
                 builder.ConfigureKestrel((context, options) =>
                 {   
-                    options.ListenAnyIP(80);
-                    options.ListenAnyIP(443, listenOptions =>
+                    //Cloud Run will pass PORT to container
+                    string port = Environment.GetEnvironmentVariable("PORT");
+                    int portNum = 80;
+                    if (port != null)
                     {
-                        listenOptions.UseHttps(certFile, password);
-                    });
+                        portNum = Int32.Parse(port);
+                    }
+                    options.ListenAnyIP(portNum);
+
+                    if ((certFile != null) && (password != null))
+                    {
+                        options.ListenAnyIP(443, listenOptions =>
+                        {
+                            listenOptions.UseHttps(certFile, password);
+                        });
+                    }
                 }); 
             }
  

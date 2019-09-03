@@ -18,7 +18,7 @@ using NDesk.Options;
 namespace Magnum.Consoles.Products
 {
 	public class ImportProductApplication : ConsoleAppBase
-	{       
+	{               
         protected override OptionSet PopulateCustomOptionSet(OptionSet options)
         {
             options.Add("if=|infile=", "XML Import file", s => AddArgument("infile", s))

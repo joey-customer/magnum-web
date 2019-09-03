@@ -1,9 +1,6 @@
-#To generate barcode
-#export ASPNETCORE_URLS='https://*:443'
-#https://localhost:5001/verification/Oxandro10_KH0009_20190803223419/000000/1271951675/6856314405
 
 dotnet run -p MagnumConsole BarcodeGen \
---h=https://compute-engine-vm-test.firebaseio.com/ \
+--h=${MAGNUM_FIREBASE_URL} \
 --q=10 \
 --b=000001 \
 --u=https://development.magnum-pharmacy.com \
@@ -20,7 +17,7 @@ dotnet run QrGen \
 --profile="CompanyQR"
 
 dotnet run BarcodeReg \
---h=https://compute-engine-vm-test.firebaseio.com/ \
+--h=${MAGNUM_FIREBASE_URL} \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
 --serial=8275692980 \
@@ -29,20 +26,11 @@ dotnet run BarcodeReg \
 --ip=192.168.1.99 \
 --key=${MAGNUM_FIREBASE_KEY}
 
-dotnet run ImportProduct \
---if='NandroPlex300.xml' \
---b="." \
---bucket=compute-engine-vm-test.appspot.com \
---h=https://compute-engine-vm-test.firebaseio.com/ \
---user=${MAGNUM_DB_USERNAME} \
---password=${MAGNUM_DB_PASSWORD} \
---key=${MAGNUM_FIREBASE_KEY}
-
 dotnet run -p MagnumConsole ImportProductType \
 --if='product_types.xml' \
 --b="./configs/imports/product_types" \
---bucket=compute-engine-vm-test.appspot.com \
---h=https://compute-engine-vm-test.firebaseio.com/ \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
@@ -50,8 +38,8 @@ dotnet run -p MagnumConsole ImportProductType \
 dotnet run -p MagnumConsole ImportProduct \
 --if='products.xml' \
 --b="./configs/imports/products" \
---bucket=compute-engine-vm-test.appspot.com \
---h=https://compute-engine-vm-test.firebaseio.com/ \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
@@ -65,6 +53,3 @@ dotnet run -p MagnumConsole ImportContent \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
-#======
-https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetcore-docker-https.md
-#======
