@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Contact Page";
+}
+
+<div class="etu-form section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="form-area">
+                    @if (ViewBag.Message != null)
+                    {
+                        <figure>
+                            <figcaption>Info:</figcaption>
+                            <table>
+                                <tr>
+                                    <th id="msg" style="background-color:yellow">@ViewBag.Message</th>
+                                </tr>
+                            </table>
+                        </figure>
+                    }
+                    <h2>Send Your Message To Us</h2>
+                    <form method="post" action="/Contact/Save">
+                        <input type="hidden" name="Action" value="Save">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="single-input-box">
+                                    <label>Name</label>
+                                    <input type="text" name="Name" placeholder="Your Name">
+                                </div>
+                                <div class="single-input-box">
+                                    <label>Subject</label>
+                                    <input type="text" name="Subject" placeholder="Your Subject">
+                                </div>
+                                <div class="single-input-box">
+                                    <label>Email Address</label>
+                                    <input type="text" name="Email" placeholder="Your Email Address">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="single-input-box">
+                                    <label>Message</label>
+                                    <textarea name="Message" placeholder="Write Your Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

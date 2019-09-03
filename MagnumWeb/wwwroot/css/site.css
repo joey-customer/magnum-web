@@ -855,19 +855,36 @@ body {
 	transition: all 0.3s ease; 
 }
 
+.shop-page .shop-product-wrap .product-list-item .product-thumb img {
+	transition: all 0.6s ease-in-out;
+}
+
+.shop-page .shop-product-wrap .product-list-item .product-thumb:hover img {
+	transform: scale3d(1.1,1.1,1);
+}
+
 .shop-page .shop-product-wrap .product-list-item .product-content h5,
-.modal .product-content h5{
+.modal .product-content h5 {
+	width: max-content;
 	margin: 0;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-    background: #196f55;
-    width: max-content;
+	margin-bottom: 5px;
 	padding: 5px 9px;
-	/* transform: translate(-2%, 0); */
-	margin: 0;
-	margin-bottom: 5px; 
+	font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+	transform: translate(-2%, 0);
+}
+
+.product-content.product-type-001 h5 {
+	background: green;
+}
+
+.product-content.product-type-002 h5 {
+	background: yellowgreen
+}
+
+.product-content.product-type-003 h5 {
+	background: burlywood;
 }
 
 /* .shop-page .shop-product-wrap .product-list-item .product-content h5:after {
@@ -906,6 +923,7 @@ body {
 .shop-page .shop-product-wrap .product-list-item .product-thumb {
 	width: 100%; 
 	text-align: center;
+	padding: 15px 0;
 }
 @media (min-width: 768px) {
 	.shop-page .shop-product-wrap .product-list-item .product-thumb {
@@ -925,12 +943,12 @@ body {
 	} 
 }
 .shop-page .shop-product-wrap .product-list-item .product-content p,
-.shop-page .modal .modal-dialog .modal-content .product-content p{
+.modal .modal-dialog .modal-content .product-content p{
 	color: #6d6d6d; 
 	font-size: 14px;
     margin: 5px 0 15px 0px;
 }
-.shop-page .modal.show {
+.modal.show {
 	display: block;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -938,12 +956,10 @@ body {
 	visibility: visible;
 	pointer-events: visible;
 	z-index: 99999999;
-	-webkit-animation: slideInDown 0.4s forwards;
-	animation: slideInDown 0.4s forwards;
 	overflow-y: scroll;
 	background: #060000b0; 
 }
-  .shop-page .modal .modal-dialog .modal-content button.close {
+.modal .modal-dialog .modal-content button.close {
 	position: absolute;
 	opacity: 1;
 	z-index: 9;
@@ -955,59 +971,33 @@ body {
 	color: #5d9913;
 	text-shadow: none; 
 }
-.shop-page .modal .modal-dialog .modal-content button.close:hover {
+.modal .modal-dialog .modal-content button.close:hover {
 	color: #ff7555; 
 }
-.shop-page .modal .modal-dialog .modal-content .modal-body {
+.modal .modal-dialog .modal-content .modal-body {
 	background: #f6faf9;
 	border-radius: 8px; 
 }
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .popup-slide .slider-for .thumb img {
-	width: 100%; 
-}
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .popup-slide .slider-nav {
-	margin-top: 10px; 
-}
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .popup-slide .slider-nav .thumb {
-	padding: 5px 3px; 
-}
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .product-content {
+.modal .modal-dialog .modal-content .modal-body .product-details-inner .product-content {
 	margin-top: 30px; 
 }
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .cart-button {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center; 
-}
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .cart-button .cart-plus-minus {
-	margin: 0;
-	margin-top: 19px; 
-}
-.shop-page .modal .modal-dialog .modal-content .modal-body .product-details-inner .cart-button .defult-btn {
-	padding: 9.5px 30px;
-}
-
 .product-action-link a {
 	font-size: 14px;
 	font-weight: 600;
 	color:rgb(213, 0, 0);
 }
-
-.product-content span {
+.product-details-inner span {
 	font-size: 16px;
 	font-weight: 400;
 }
-
 .price {
 	color: rgb(213, 0, 0);
 }
-
-.product-content .rating .title {
+.product-details-inner .rating .title {
 	display: inline-block;
 	width: 120px;
 	font-size: 14px;
 }
-
-.product-content .rating {
+.product-details-inner .rating {
 	display: inline-block;
 }

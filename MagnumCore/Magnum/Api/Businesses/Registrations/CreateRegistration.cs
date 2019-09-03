@@ -62,6 +62,9 @@ namespace Magnum.Api.Businesses.Registrations
             dat.Status = "SUCCESS";
             path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
             ctx.PostData(path, dat);
+
+            string infoMsg = string.Format("Successfully registered serial number and PIN [{0}]", barcode);
+            LogUtils.LogInformation(logger, infoMsg);
             
             return 0;
         }

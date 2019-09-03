@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "About Page";
+    String lang = "EN";
+    var Contents = ViewBag.Contents;
+}
+
+<section class="about-section style-two about-page-1">
+    <div class="container">
+        <div class="top-content">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div>
+                        <figure class="image"><img src="@Contents["img/About"].Values[lang]" alt=""></figure>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 content-column">
+                    <div class="content-box">
+                        <div class="sec-title">
+                            <h4>@Contents["txt/About_Banner"].Values[lang]</h4>
+                            <h1>@Contents["txt/About_Header"].Values[lang]</h1>
+                        </div>
+                        <p class="text">@Contents["txt/About_P1"].Values[lang]</p>
+                        <p class="text">@Contents["txt/About_P2"].Values[lang]</p>
+                        <p class="text">@Contents["txt/About_P3"].Values[lang]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    
+

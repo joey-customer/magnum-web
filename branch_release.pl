@@ -17,7 +17,7 @@ my $TEMP_DIR = $ENV{'TEMP'}; #Temp directory
 my $SOURCE_BRANCH = 'trunk';
 
 my $REPO_NAME = 'magnum-web';
-my $POM_FILE = "$TEMP_DIR/$REPO_NAME/Jenkinsfile";
+my $POM_FILE = "$TEMP_DIR/$REPO_NAME/GCloudBuild/cloudbuild.yaml";
 my $SOURCE_REPO = 'https://github.com/pjamenaja/' . "$REPO_NAME.git";
 my $TARGET_BRANCH = 'master';
 my $RELEASE_PREFIX = 'release';
@@ -154,7 +154,7 @@ sub parse_pom
         my $line = $_;
         my $new_line = $line;
 
-        if (($line =~ /^\s*BUILT_VERSION\s*=\s*'(.+)'\s*$/) && (!$found_version))
+        if (($line =~ /^\s*_DOCKER_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_version))
         { 
             #Replace only first occurence            
 
@@ -164,23 +164,14 @@ sub parse_pom
             print("Replaced [$old_version] with [$version]\n");
             $found_version = true;
         }
-        elsif (($line =~ /^\s*DOCKER_VERSION\s*=\s*'(.+)'\s*$/) && (!$found_docker_version))
+        elsif (($line =~ /^\s*_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_docker_version))
         { 
-            #Replace only first occurence            
-
+            #Replace only first occurence                        
             my $old_version = $1;
             $new_line =~ s/$old_version/$version/ig;
 
             print("Replaced [$old_version] with [$version]\n");
             $found_docker_version = true;
-        }        
-        elsif ($line =~ /^\s*PUBLISH_FLAG\s*=\s*'(.+)'\s*$/)
-        { 
-            my $keyword = $1;
-            my $flag = 'TRUE';
-            $new_line =~ s/$keyword/$flag/ig;
-
-            print("Replaced PUBLISH_FLAG with [$flag]\n");
         }
 
         print($oh "$new_line");
