@@ -11,12 +11,12 @@ steps:
     - 'BUILT_VERSION=${_VERSION}'
     - 'BRANCH_NAME=${BRANCH_NAME}'
 
-- name: 'microsoft/dotnet:2.2-sdk'
-  entrypoint: 'dotnet'
-  args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
+#- name: 'microsoft/dotnet:2.2-sdk'
+#  entrypoint: 'dotnet'
+#  args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
 
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
 
-images: ['gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}']
+#images: ['gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}']
 
