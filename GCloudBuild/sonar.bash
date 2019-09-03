@@ -7,7 +7,7 @@ SOLUTION_DIR=$WORK_DIR/magnum-web
 
 mkdir -p ${WORK_DIR}
 cd ${WORK_DIR}
-git clone https://github.com/pjamenaja/magnum-web.git
+git clone https://github.com/pjamenaja/magnum-web.git --dept=10
 cd ${SOLUTION_DIR}
 git checkout ${COMMIT_SHA} -b ${COMMIT_SHA}
 
