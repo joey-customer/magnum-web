@@ -2,7 +2,14 @@
 
 #Be careful to set this file without \r
 
-cd /workspace
+WORK_DIR=/magnum
+SOLUTION_DIR=$WORK_DIR/magnum-web
+
+mkdir -p ${WORK_DIR}
+cd ${WORK_DIR}
+git clone https://github.com/pjamenaja/magnum-web.git
+cd ${SOLUTION_DIR}
+git checkout ${COMMIT_SHA} -b ${COMMIT_SHA}
 
 dotnet sonarscanner begin \
     /key:pjamenaja_magnum_web \
@@ -13,6 +20,7 @@ dotnet sonarscanner begin \
     /d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml \
     /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
     /d:sonar.verbose=true \
+    /d:sonar.scm.provider=git \
     /d:sonar.login=${SONAR_KEY}
 
 dotnet build Magnum.sln
