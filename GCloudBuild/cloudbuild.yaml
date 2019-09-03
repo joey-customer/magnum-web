@@ -9,7 +9,7 @@ steps:
   env: 
     - 'SONAR_KEY=${_SONAR_KEY}'
     - 'BUILT_VERSION=${_VERSION}'
-    - 'BRANCH_NAME=$BRANCH_NAME'
+    - 'BRANCH_NAME=${BRANCH_NAME}'
 
 - name: 'microsoft/dotnet:2.2-sdk'
   entrypoint: 'dotnet'
