@@ -3,7 +3,7 @@
 	ViewData["Title"] = "Prodcuts Page";
 }
 
-<section class="shop-page padding-tb">
+<section class="shop-page">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-12">
@@ -19,7 +19,7 @@
 									<img src="@product.Image1Url" alt="shop">
 								</a>
 							</div>
-							<div class="product-content">
+							<div class="product-content product-type-@product.ProductType">
 								<h5>@product.Descriptions["EN"].Name</h5>
 								<span>@product.Descriptions["EN"].ShortDescription</span>
 								<p>@product.Descriptions["EN"].LongDescription2</p>
