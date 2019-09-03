@@ -3,6 +3,9 @@ substitutions:
   _DOCKER_VERSION: latest
 
 steps:
+- name: gcr.io/cloud-builders/git
+  args: [fetch, --unshallow]
+  
 - name: 'gcr.io/its-commons/dotnet-sonar:2.2-2'
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
