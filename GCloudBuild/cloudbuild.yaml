@@ -1,6 +1,6 @@
 substitutions:
-  _VERSION: "1.0.21"
-  _DOCKER_VERSION: "1.0.21"
+  _VERSION: "1.0.22"
+  _DOCKER_VERSION: "1.0.22"
 
 steps:
 - name: 'gcr.io/its-commons/dotnet-sonar:2.2-3'
@@ -26,7 +26,7 @@ steps:
   args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
+  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/${PROJECT_ID}/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
 
-images: ['gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}']
+images: ['gcr.io/${PROJECT_ID}/magnum-web:${_DOCKER_VERSION}']
 
