@@ -3,12 +3,6 @@ substitutions:
   _DOCKER_VERSION: latest
 
 steps:
-- name: gcr.io/cloud-builders/git
-  args: ['fetch', '--unshallow']
-
-- name: gcr.io/cloud-builders/git
-  args: ['pull', 'origin', '${BRANCH_NAME}']
-  
 - name: 'gcr.io/its-commons/dotnet-sonar:2.2-2'
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
@@ -16,6 +10,7 @@ steps:
     - 'SONAR_KEY=${_SONAR_KEY}'
     - 'BUILT_VERSION=${_VERSION}'
     - 'BRANCH_NAME=${BRANCH_NAME}'
+    - 'COMMIT_SHA=${COMMIT_SHA}'
 
 #- name: 'microsoft/dotnet:2.2-sdk'
 #  entrypoint: 'dotnet'
