@@ -11,7 +11,12 @@ steps:
     - 'BUILT_VERSION=${_VERSION}'
     - 'BRANCH_NAME=${BRANCH_NAME}'
     - 'COMMIT_SHA=${COMMIT_SHA}'
-
+    - 'MAGNUM_FIREBASE_BUCKET=${_MAGNUM_FIREBASE_BUCKET}'
+    - 'MAGNUM_FIREBASE_URL=${_MAGNUM_FIREBASE_URL}'
+    - 'MAGNUM_FIREBASE_KEY=${_MAGNUM_FIREBASE_KEY}'
+    - 'MAGNUM_DB_USERNAME=${_MAGNUM_DB_USERNAME}'
+    - 'MAGNUM_DB_PASSWORD=${_MAGNUM_DB_PASSWORD}'
+    
 #- name: 'microsoft/dotnet:2.2-sdk'
 #  entrypoint: 'dotnet'
 #  args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
