@@ -1,0 +1,272 @@
+SonarScanner for MSBuild 4.6.2
+Using the .NET Core version of the Scanner for MSBuild
+Pre-processing started.
+Preparing working directories...
+02:50:58.427  Updating build integration targets...
+02:50:58.758  Fetching analysis configuration settings...
+02:51:08.571  Provisioning analyzer assemblies for cs...
+02:51:08.574  Installing required Roslyn analyzers...
+02:51:21.393  Provisioning analyzer assemblies for vbnet...
+02:51:21.394  Installing required Roslyn analyzers...
+02:51:21.427  Pre-processing succeeded.
+Microsoft (R) Build Engine version 16.2.32702+c4012a063 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 40.6 sec for /workspace/MagnumConsole/MagnumConsole.csproj.
+  Restore completed in 1.91 sec for /workspace/MagnumCore/MagnumCore.csproj.
+  Restore completed in 39.99 sec for /workspace/MagnumTest/MagnumTest.csproj.
+  Restore completed in 22.26 sec for /workspace/MagnumWeb/MagnumWeb.csproj.
+Magnum/Api/Utils/RandomUtils.cs(11,29): warning S2245: Make sure that using this pseudorandom number generator is safe here. [/workspace/MagnumCore/MagnumCore.csproj]
+Magnum/Api/Utils/RandomUtils.cs(26,29): warning S2245: Make sure that using this pseudorandom number generator is safe here. [/workspace/MagnumCore/MagnumCore.csproj]
+  MagnumCore -> /workspace/MagnumCore/bin/Debug/netstandard2.0/MagnumCore.dll
+Program.cs(9,28): warning S4823: Make sure that command line arguments are used safely here. [/workspace/MagnumWeb/MagnumWeb.csproj]
+Startup.cs(52,45): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumWeb/MagnumWeb.csproj]
+Startup.cs(77,13): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumWeb/MagnumWeb.csproj]
+  MagnumWeb -> /workspace/MagnumWeb/bin/Debug/netcoreapp2.2/MagnumWeb.dll
+  MagnumWeb -> /workspace/MagnumWeb/bin/Debug/netcoreapp2.2/MagnumWeb.Views.dll
+Magnum/Consoles/ProductTypes/ImportProductTypeApplication.cs(20,21): warning CS0414: The field 'ImportProductTypeApplication.i' is assigned but its value is never used [/workspace/MagnumConsole/MagnumConsole.csproj]
+Magnum/Consoles/ProductTypes/ImportProductTypeApplication.cs(20,9): warning S1144: Remove the unused private field 'i'. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Magnum/Consoles/ProductTypes/ImportProductTypeApplication.cs(20,21): warning S2933: Make 'i' 'readonly'. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Program.cs(16,28): warning S4823: Make sure that command line arguments are used safely here. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Program.cs(27,13): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Program.cs(32,26): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Magnum/Consoles/Barcodes/Commons/ImageGeneratorBase.cs(65,27): warning S4784: Make sure that using a regular expression is safe here. [/workspace/MagnumConsole/MagnumConsole.csproj]
+  MagnumConsole -> /workspace/MagnumConsole/bin/Debug/netcoreapp2.2/MagnumConsole.dll
+  MagnumTest -> /workspace/MagnumTest/bin/Debug/netcoreapp2.2/MagnumTest.dll
+
+Build succeeded.
+
+Magnum/Api/Utils/RandomUtils.cs(11,29): warning S2245: Make sure that using this pseudorandom number generator is safe here. [/workspace/MagnumCore/MagnumCore.csproj]
+Magnum/Api/Utils/RandomUtils.cs(26,29): warning S2245: Make sure that using this pseudorandom number generator is safe here. [/workspace/MagnumCore/MagnumCore.csproj]
+Program.cs(9,28): warning S4823: Make sure that command line arguments are used safely here. [/workspace/MagnumWeb/MagnumWeb.csproj]
+Startup.cs(52,45): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumWeb/MagnumWeb.csproj]
+Startup.cs(77,13): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumWeb/MagnumWeb.csproj]
+Magnum/Consoles/ProductTypes/ImportProductTypeApplication.cs(20,21): warning CS0414: The field 'ImportProductTypeApplication.i' is assigned but its value is never used [/workspace/MagnumConsole/MagnumConsole.csproj]
+Magnum/Consoles/ProductTypes/ImportProductTypeApplication.cs(20,9): warning S1144: Remove the unused private field 'i'. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Magnum/Consoles/ProductTypes/ImportProductTypeApplication.cs(20,21): warning S2933: Make 'i' 'readonly'. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Program.cs(16,28): warning S4823: Make sure that command line arguments are used safely here. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Program.cs(27,13): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Program.cs(32,26): warning S4792: Make sure that this logger's configuration is safe. [/workspace/MagnumConsole/MagnumConsole.csproj]
+Magnum/Consoles/Barcodes/Commons/ImageGeneratorBase.cs(65,27): warning S4784: Make sure that using a regular expression is safe here. [/workspace/MagnumConsole/MagnumConsole.csproj]
+    12 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:02:33.90
+SonarScanner for MSBuild 4.6.2
+Using the .NET Core version of the Scanner for MSBuild
+Post-processing started.
+WARNING: File '/root/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.dll' is not located under the root directory '/workspace' and will not be analyzed.
+WARNING: File '/root/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.pdb' is not located under the root directory '/workspace' and will not be analyzed.
+WARNING: File '/root/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/nunit.engine.netstandard.dll' is not located under the root directory '/workspace' and will not be analyzed.
+Calling the SonarQube Scanner...
+INFO: Scanner configuration file: /root/.dotnet/tools/.store/dotnet-sonarscanner/4.6.2/dotnet-sonarscanner/4.6.2/tools/netcoreapp2.1/any/sonar-scanner-3.3.0.1492/conf/sonar-scanner.properties
+INFO: Project root configuration file: /workspace/.sonarqube/out/sonar-project.properties
+INFO: SonarQube Scanner 3.3.0.1492
+INFO: Java 1.8.0_222 Oracle Corporation (64-bit)
+INFO: Linux 4.19.44+ amd64
+INFO: User cache: /root/.sonar/cache
+INFO: SonarQube server 8.0.0
+INFO: Default locale: "en_US", source code encoding: "US-ASCII" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=1653ms
+INFO: Server id: 74E9293D-AWHW8ct9-T_TB3XqouNu
+INFO: User cache: /root/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=429ms
+INFO: Load/download plugins (done) | time=39637ms
+INFO: Loaded core extensions: developer-scanner
+INFO: Process project properties
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=473ms
+INFO: Project key: pjamenaja_magnum_web
+INFO: Base dir: /workspace
+INFO: Working dir: /workspace/.sonarqube/out/.sonar
+INFO: Load project settings for component key: 'pjamenaja_magnum_web'
+INFO: Load project settings for component key: 'pjamenaja_magnum_web' (done) | time=327ms
+INFO: Load project branches
+INFO: Load project branches (done) | time=335ms
+INFO: Load project pull requests
+INFO: Load project pull requests (done) | time=307ms
+INFO: Load branch configuration
+INFO: Load branch configuration (done) | time=8ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=776ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=9335ms
+INFO: Organization key: pjamenaja
+INFO: Branch name: dev/test_sonar, type: short living
+INFO: SCM collecting changed files in the branch
+INFO: SCM collecting changed files in the branch (done) | time=1135ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO: Indexing files of module 'MagnumCore'
+INFO:   Base dir: /workspace/MagnumCore
+INFO:   Source paths: Magnum/Api/Businesses/Barcodes/CreateBarcode.cs, Magnum/Api/B...
+INFO: Indexing files of module 'MagnumTest'
+INFO:   Base dir: /workspace/MagnumTest
+INFO:   Test paths: Magnum/Api/Businesses/Barcodes/CreateBarcodeTest.cs, Magnum/Api...
+INFO: Indexing files of module 'MagnumConsole'
+INFO:   Base dir: /workspace/MagnumConsole
+INFO:   Source paths: Magnum/Consoles/Barcodes/BarcodeGeneratorApplication.cs, Magn...
+INFO: Indexing files of module 'MagnumWeb'
+INFO:   Base dir: /workspace/MagnumWeb
+INFO:   Source paths: Magnum/Web/Controllers/AboutController.cs, Magnum/Web/Control...
+INFO: Indexing files of module 'pjamenaja_magnum_web'
+INFO:   Base dir: /workspace
+INFO: 211 files indexed
+INFO: 0 files ignored because of scm ignore settings
+INFO: Quality profile for cs: Sonar way
+INFO: Quality profile for css: Sonar way
+INFO: Quality profile for js: Sonar way
+INFO: Quality profile for web: Sonar way
+INFO: ------------- Run sensors on module MagnumWeb
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=335ms
+INFO: Sensor SonarCSS Metrics [cssfamily]
+INFO: Sensor SonarCSS Metrics [cssfamily] (done) | time=1257ms
+INFO: Sensor SonarCSS Rules [cssfamily]
+INFO: Sensor SonarCSS Rules [cssfamily] (done) | time=8503ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=72ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=4ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=549ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=9ms
+INFO: Sensor SonarJS [javascript]
+INFO: 1 source files to be analyzed
+INFO: 1/1 source files have been analyzed
+INFO: Sensor SonarJS [javascript] (done) | time=514ms
+INFO: Sensor ESLint-based SonarJS [javascript]
+INFO: 1 source files to be analyzed
+INFO: 1/1 source files have been analyzed
+INFO: Sensor ESLint-based SonarJS [javascript] (done) | time=3875ms
+INFO: ------------- Run sensors on module MagnumConsole
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=1ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=0ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=1ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: ------------- Run sensors on module MagnumTest
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=3ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: ------------- Run sensors on module MagnumCore
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=2ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=0ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: ------------- Run sensors on module pjamenaja_magnum_web
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: Sensor C# [csharp]
+INFO: Importing results from 5 proto files in '/workspace/.sonarqube/out/1/output-cs'
+INFO: Importing results from 5 proto files in '/workspace/.sonarqube/out/2/output-cs'
+INFO: Importing results from 5 proto files in '/workspace/.sonarqube/out/3/output-cs'
+INFO: Importing results from 5 proto files in '/workspace/.sonarqube/out/0/output-cs'
+INFO: Importing 5 Roslyn reports
+INFO: Sensor C# [csharp] (done) | time=1671ms
+INFO: Sensor C# Tests Coverage Report Import [csharp]
+WARN: Could not find any coverage report file matching the pattern './coverage.opencover.xml'.
+INFO: Sensor C# Tests Coverage Report Import [csharp] (done) | time=2ms
+INFO: Sensor JavaSecuritySensor [security]
+INFO: Reading type hierarchy from: /workspace/.sonarqube/out/.sonar/ucfg2/java
+INFO: Read 0 type definitions
+INFO: Reading UCFGs from: /workspace/.sonarqube/out/.sonar/ucfg2/java
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor JavaSecuritySensor [security] (done) | time=28ms
+INFO: Sensor CSharpSecuritySensor [security]
+INFO: Reading type hierarchy from: /workspace/.sonarqube/out/ucfg_cs2
+INFO: Read 87 type definitions
+INFO: Reading UCFGs from: /workspace/.sonarqube/out/ucfg_cs2
+INFO: 02:55:58.1 Building Type propagation graph
+INFO: 02:55:58.167 Running Tarjan on 1221 nodes
+INFO: 02:55:58.188 Tarjan found 1221 components
+INFO: 02:55:58.202 Variable type analysis: done
+INFO: 02:55:58.205 Building Type propagation graph
+INFO: 02:55:58.254 Running Tarjan on 1223 nodes
+INFO: 02:55:58.255 Tarjan found 1223 components
+INFO: 02:55:58.263 Variable type analysis: done
+INFO: Analyzing 269 ucfgs to detect vulnerabilities.
+INFO: All rules entrypoints : 0 Retained UCFGs : 0
+INFO: rule: S5131, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S5131 done
+INFO: rule: S3649, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S3649 done
+INFO: rule: S2076, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S2076 done
+INFO: rule: S2091, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S2091 done
+INFO: rule: S2078, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S2078 done
+INFO: rule: S2631, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S2631 done
+INFO: rule: S2083, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S2083 done
+INFO: rule: S5167, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S5167 done
+INFO: rule: S5144, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S5144 done
+INFO: rule: S5145, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S5145 done
+INFO: rule: S5146, entrypoints: 0
+INFO: Visited 0 ucfgs in 0 ms, 0 steps
+INFO: rule: S5146 done
+INFO: Sensor CSharpSecuritySensor [security] (done) | time=7232ms
+INFO: Sensor PhpSecuritySensor [security]
+INFO: Reading type hierarchy from: /workspace/.sonarqube/out/.sonar/ucfg2/php
+INFO: Read 0 type definitions
+INFO: Reading UCFGs from: /workspace/.sonarqube/out/.sonar/ucfg2/php
+INFO: No UCFGs have been included for analysis.
+INFO: Sensor PhpSecuritySensor [security] (done) | time=4ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=71ms
+INFO: SCM provider for this project is: git
+INFO: 36 files to be analyzed
+INFO: 36/36 files analyzed
+INFO: 17 files had no CPD blocks
+INFO: Calculating CPD for 107 files
+INFO: CPD calculation finished
+INFO: SCM writing changed lines
+WARN: File '/workspace/MagnumCore/Magnum/Api/Commons/Business/IBusinessOperationManipulate.cs' was detected as changed but without having changed lines
+INFO: SCM writing changed lines (done) | time=532ms
+INFO: Analysis report generated in 759ms, dir size=497 KB
+INFO: Analysis report compressed in 437ms, zip size=251 KB
+INFO: Analysis report uploaded in 1805ms
+INFO: ANALYSIS SUCCESSFUL, you can browse https://sonarcloud.io/dashboard?id=pjamenaja_magnum_web&branch=dev%2Ftest_sonar&resolved=false
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarcloud.io/api/ce/task?id=AWz1DPd9UXaiCwHB9b9m
+INFO: Analysis total time: 1:02.941 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 2:00.304s
+INFO: Final Memory: 33M/93M
+INFO: ------------------------------------------------------------------------
+The SonarQube Scanner has finished
+02:56:04.548  Post-processing succeeded.
