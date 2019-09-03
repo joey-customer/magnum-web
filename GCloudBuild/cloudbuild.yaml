@@ -7,7 +7,7 @@ steps:
   args: ['fetch', '--unshallow']
 
 - name: gcr.io/cloud-builders/git
-  args: ['pull']
+  args: ['pull', 'origin', '${BRANCH_NAME}']
   
 - name: 'gcr.io/its-commons/dotnet-sonar:2.2-2'
   entrypoint: 'bash'
