@@ -3,7 +3,7 @@ substitutions:
   _DOCKER_VERSION: latest
 
 steps:
-- name: 'gcr.io/its-commons/dotnet-sonar:latest'
+- name: 'gcr.io/its-commons/dotnet-sonar:2.2-3'
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
   env: 
@@ -21,12 +21,12 @@ steps:
     - 'MAGNUM_SMTP_USER=${_MAGNUM_SMTP_USER}'
     - 'MAGNUM_SMTP_PORT=${_MAGNUM_SMTP_PORT}'
     
-#- name: 'microsoft/dotnet:2.2-sdk'
-#  entrypoint: 'dotnet'
-#  args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
+- name: 'microsoft/dotnet:2.2-sdk'
+  entrypoint: 'dotnet'
+  args: ['build', 'Magnum.sln', '-p:Version=${_VERSION}']
 
-#- name: 'gcr.io/cloud-builders/docker'
-#  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '--build-arg', 'VERSION_NUMBER=${_VERSION}', '-f', '/workspace/GCloudBuild/Dockerfile', '-t', 'gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}', '/workspace' ]
 
-#images: ['gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}']
+images: ['gcr.io/its-commons/magnum-web:${_DOCKER_VERSION}']
 
