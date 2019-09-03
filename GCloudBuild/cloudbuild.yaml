@@ -4,7 +4,10 @@ substitutions:
 
 steps:
 - name: gcr.io/cloud-builders/git
-  args: [fetch, --unshallow]
+  args: ['fetch', '--unshallow']
+
+- name: gcr.io/cloud-builders/git
+  args: ['pull', '--unshallow']
   
 - name: 'gcr.io/its-commons/dotnet-sonar:2.2-2'
   entrypoint: 'bash'
