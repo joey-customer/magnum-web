@@ -27,19 +27,8 @@ namespace Magnum.Consoles.Products
             return options;
         }
         
-        protected int DoSomeThing()
-        {
-            return 1;
-        }
-
         protected override int Execute()
         {
-            int result = DoSomeThing();
-            if (Convert.ToBoolean(result))
-            {
-                Console.WriteLine("WTF");
-            }
-
             ILogger logger = GetLogger();
             
             Hashtable args = GetArguments();
