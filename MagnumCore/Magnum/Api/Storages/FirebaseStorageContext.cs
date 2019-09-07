@@ -57,7 +57,7 @@ namespace Magnum.Api.Storages
         {
             var stream = File.Open(filePath, FileMode.Open);
             var url = UploadFile(bucketPath, stream);
-
+            stream.Close();
             return url;
         }
 
