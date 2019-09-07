@@ -79,9 +79,16 @@
                             }
                         </div>
                     </div>
+                    @if (@product.Price > 0)
+                    {
                     <div class="product-price">
                         <span class="price">$@product.Price</span>
                     </div>
+                    }
+                    else
+                    {
+                        <br/>
+                    }
                 </div>
             </div>
             }
@@ -118,9 +125,17 @@
                             }
                         </div>
                     </div>
+                    @if (@product.Price > 0)
+                    {
                     <div class="product-price">
                         <span class="price">$@product.Price</span>
                     </div>
+                    }
+                    else
+                    {
+                        <br/>
+                    }
+                    
                 </div>
             </div>
             }

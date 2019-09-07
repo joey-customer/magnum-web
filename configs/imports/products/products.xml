@@ -3153,7 +3153,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <ITEMS name="Performances">
                     <OBJECT name="Performance">
                         <FIELD name="Code">1</FIELD>
-                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
                         <FIELD name="Unit">Star</FIELD>
                         <ITEMS name="Descriptions">
                             <OBJECT name="Description">
@@ -3283,7 +3283,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <ITEMS name="Performances">
                     <OBJECT name="Performance">
                         <FIELD name="Code">1</FIELD>
-                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
                         <FIELD name="Unit">Star</FIELD>
                         <ITEMS name="Descriptions">
                             <OBJECT name="Description">
@@ -3295,7 +3295,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
 
                     <OBJECT name="Performance">
                         <FIELD name="Code">2</FIELD>
-                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
                         <FIELD name="Unit">Star</FIELD>
                         <ITEMS name="Descriptions">
                             <OBJECT name="Description">
@@ -3319,7 +3319,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
 
                     <OBJECT name="Performance">
                         <FIELD name="Code">4</FIELD>
-                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
                         <FIELD name="Unit">Star</FIELD>
 
                         <ITEMS name="Descriptions">
@@ -3566,7 +3566,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
 
                     <OBJECT name="Performance">
                         <FIELD name="Code">3</FIELD>
-                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
                         <FIELD name="Unit">Star</FIELD>
                         <ITEMS name="Descriptions">
                             <OBJECT name="Description">
@@ -3578,7 +3578,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
 
                     <OBJECT name="Performance">
                         <FIELD name="Code">4</FIELD>
-                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
                         <FIELD name="Unit">Star</FIELD>
                         <ITEMS name="Descriptions">
                             <OBJECT name="Description">
