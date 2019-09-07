@@ -10,9 +10,9 @@
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
-                        <FIELD name="Name">Orals</FIELD>
-                        <FIELD name="ShortDescription">Orals 01</FIELD>
-                        <FIELD name="LongDescription">Orals 001</FIELD>
+                        <FIELD name="Name">Injections</FIELD>
+                        <FIELD name="ShortDescription">Injections 01</FIELD>
+                        <FIELD name="LongDescription">Injections 001</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -22,9 +22,9 @@
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
-                        <FIELD name="Name">Peptids &amp; GH</FIELD>
-                        <FIELD name="ShortDescription">Peptids &amp; GH 02</FIELD>
-                        <FIELD name="LongDescription">Peptids &amp; GH 002</FIELD>
+                        <FIELD name="Name">Orals</FIELD>
+                        <FIELD name="ShortDescription">Orals 02</FIELD>
+                        <FIELD name="LongDescription">Orals 002</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -34,33 +34,45 @@
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
-                        <FIELD name="Name">Sexual Performance</FIELD>
-                        <FIELD name="ShortDescription">Sexual Performance 03</FIELD>
-                        <FIELD name="LongDescription">Sexual Performance 003</FIELD>
+                        <FIELD name="Name">Peptids &amp; GH</FIELD>
+                        <FIELD name="ShortDescription">Peptids &amp; GH 03</FIELD>
+                        <FIELD name="LongDescription">Peptids &amp; GH 003</FIELD>
                     </OBJECT>
                 </ITEMS>
-            </OBJECT>         
-            
+            </OBJECT>
+
             <OBJECT name="ProductType">
                 <FIELD name="Code">004</FIELD>
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
-                        <FIELD name="Name">Extreme Series</FIELD>
-                        <FIELD name="ShortDescription">Extreme Series 04</FIELD>
-                        <FIELD name="LongDescription">Extreme Series 004</FIELD>
+                        <FIELD name="Name">Sexual Performance</FIELD>
+                        <FIELD name="ShortDescription">Sexual Performance 04</FIELD>
+                        <FIELD name="LongDescription">Sexual Performance 004</FIELD>
                     </OBJECT>
                 </ITEMS>
-            </OBJECT>          
+            </OBJECT>         
             
             <OBJECT name="ProductType">
                 <FIELD name="Code">005</FIELD>
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Extreme Series</FIELD>
+                        <FIELD name="ShortDescription">Extreme Series 05</FIELD>
+                        <FIELD name="LongDescription">Extreme Series 005</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>          
+            
+            <OBJECT name="ProductType">
+                <FIELD name="Code">006</FIELD>
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
                         <FIELD name="Name">Ergogenics</FIELD>
-                        <FIELD name="ShortDescription">Ergogenics 05</FIELD>
-                        <FIELD name="LongDescription">Ergogenics 005</FIELD>
+                        <FIELD name="ShortDescription">Ergogenics 06</FIELD>
+                        <FIELD name="LongDescription">Ergogenics 006</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>                      

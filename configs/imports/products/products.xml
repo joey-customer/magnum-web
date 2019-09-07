@@ -4,6 +4,166 @@
 
     <OBJECT name="ProductImport">
         <ITEMS name="Products">
+            <!--Injections-->
+            <OBJECT name="Product">
+                <FIELD name="Code">Inject-001</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">001</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Orals/pro-img1.png</FIELD>
+                <FIELD name="Unit">ml</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Test-Plex 300</FIELD>
+                        <FIELD name="ShortDescription">Testosterone Compound Injection</FIELD>
+                        <FIELD name="LongDescription1">Test-Plex 300 is an oil based solution of six testosterone esters for IM injection including those of short, intermediate, and long half-lives. Serum testosterone will rapidly increase within 6 hours of IM administration and remain elevated for 7 – 10 days. Test-Plex 300 has both anabolic and androgenic effects. Test-Plex 300 will increase strength, muscle mass and improve libido.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">(300 mg/ml) - 10 x 1ml Amps / 2 x 5ml vials</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Compositions">
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">30</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Testosterone Acetate</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">30</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Testosterone Propionate USP</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">60</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Testosterone Phenylpropionate</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">60</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Testosterone Isocaproate</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">5</FIELD>
+                        <FIELD name="Quantity">60</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Testosterone Cypionate USP</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">6</FIELD>
+                        <FIELD name="Quantity">60</FIELD>
+                        <FIELD name="Unit">mg</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Testosterone Enanthate USP</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Composition">
+                        <FIELD name="Code">7</FIELD>
+                        <FIELD name="Quantity">0</FIELD>
+                        <FIELD name="Unit">q.s.</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Oil Base</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
             <!--Orals-->
             <OBJECT name="Product">
                 <FIELD name="Code">Oral-AAA-001</FIELD>
@@ -11,7 +171,7 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">200</FIELD>
                 <FIELD name="Image1LocalPath">Orals/pro-img1.png</FIELD>
-                
+
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
@@ -33,7 +193,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Lorem ipsum</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -46,7 +206,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin C</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -59,7 +219,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin B</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
                 </ITEMS>
 
@@ -74,7 +234,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Strength</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -87,7 +247,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Muscle</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -100,7 +260,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Fat/Water Loss</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -113,8 +273,8 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Side Effect</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
-                    </OBJECT>                    
+                        </ITEMS>
+                    </OBJECT>
                 </ITEMS>
             </OBJECT>
 
@@ -124,7 +284,7 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">250</FIELD>
                 <FIELD name="Image1LocalPath">Orals/pro-img2.png</FIELD>
-                
+
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
@@ -146,7 +306,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Lorem ipsum</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -159,7 +319,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin C</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -172,7 +332,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin B</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
                 </ITEMS>
 
@@ -187,7 +347,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Strength</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -200,7 +360,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Muscle</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -213,7 +373,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Fat/Water Loss</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -226,9 +386,9 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Side Effect</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
-                    </OBJECT>                    
-                </ITEMS>            
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
             </OBJECT>
 
             <!--Peptids-->
@@ -238,7 +398,7 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">24.99</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/pro-img3.png</FIELD>
-                
+
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
@@ -260,7 +420,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Protien</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -273,7 +433,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin C</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -286,7 +446,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin B</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
                 </ITEMS>
 
@@ -301,7 +461,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Strength</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -314,7 +474,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Muscle</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -327,7 +487,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Fat/Water Loss</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -340,8 +500,8 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Side Effect</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
-                    </OBJECT>                    
+                        </ITEMS>
+                    </OBJECT>
                 </ITEMS>
             </OBJECT>
 
@@ -352,7 +512,7 @@
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">19.99</FIELD>
                 <FIELD name="Image1LocalPath">Sexuals/pro-img1.png</FIELD>
-                
+
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
                         <FIELD name="Language">EN</FIELD>
@@ -374,7 +534,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Protien</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -387,7 +547,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin C</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Composition">
@@ -400,7 +560,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Vitamin B</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
                 </ITEMS>
 
@@ -415,7 +575,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Strength</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -428,7 +588,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Muscle</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -441,7 +601,7 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Fat/Water Loss</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
+                        </ITEMS>
                     </OBJECT>
 
                     <OBJECT name="Performance">
@@ -454,8 +614,8 @@
                                 <FIELD name="Language">EN</FIELD>
                                 <FIELD name="Name">Side Effect</FIELD>
                             </OBJECT>
-                        </ITEMS>                        
-                    </OBJECT>                    
+                        </ITEMS>
+                    </OBJECT>
                 </ITEMS>
             </OBJECT>
 

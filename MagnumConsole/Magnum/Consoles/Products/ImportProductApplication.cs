@@ -54,6 +54,7 @@ namespace Magnum.Consoles.Products
                     mpd.Rating = Int32.Parse(pd.GetFieldValue("Rating"));
                     mpd.ProductType = pd.GetFieldValue("ProductType");
                     mpd.Price = Double.Parse(pd.GetFieldValue("Price"));
+                    mpd.Unit = pd.GetFieldValue("Unit");
         
                     string[] imgPaths = {basedir, pd.GetFieldValue("Image1LocalPath")};
                     mpd.Image1LocalPath = Path.Combine(imgPaths);
@@ -66,7 +67,8 @@ namespace Magnum.Consoles.Products
                         mdc.Name = desc.GetFieldValue("Name");    
                         mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
                         mdc.LongDescription1 = desc.GetFieldValue("LongDescription1");
-                        mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                        
+                        mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");
+                         mdc.Extra1 = desc.GetFieldValue("Extra1");
 
                         mpd.Descriptions.Add(mdc.Language, mdc);     
                     } 
@@ -89,7 +91,7 @@ namespace Magnum.Consoles.Products
                             mdc.Name = desc.GetFieldValue("Name");    
                             mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
                             mdc.LongDescription1 = desc.GetFieldValue("LongDescription1");
-                            mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                        
+                            mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                     
 
                             mpc.Descriptions.Add(mdc.Language, mdc);
                         }                         
