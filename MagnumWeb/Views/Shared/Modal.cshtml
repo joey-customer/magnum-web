@@ -22,11 +22,13 @@
                                     <span>$@product.Price</span>
                                 }
                                 <p>@product.Descriptions["EN"].LongDescription1</p>
+                                <p>@product.Descriptions["EN"].LongDescription2</p>
                             </div>
                             <h6>Composition</h6>
-                                <div vladd="row">Each @product.Unit contains:</div>
+                            @foreach (MProductCompositionGroup compositionGroup in product.CompositionGroups) {
+                            <div vladd="row">@compositionGroup.PerUnit contains:</div>
                             <div class="container" style="font-weight: 100; font-size: 14px; margin-bottom: 20px">
-                                @foreach (MProductComposition composition in product.Compositions) {
+                                @foreach (MProductComposition composition in compositionGroup.Compositions) {
                                 <div class="row">
                                     <div class="col-lg-6 col-12">
                                         @composition.Descriptions["EN"].Name
@@ -37,6 +39,8 @@
                                 </div>
                                 }
                             </div>
+                            }
+
                             <h6>Performance Chart</h6>
                             @foreach (MProductPerformance performance in product.Performances) {
                             <div class="rating">
