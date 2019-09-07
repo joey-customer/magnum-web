@@ -9,5 +9,6 @@ namespace Magnum.Api.Models
         public string ShortDescription {get; set;}
         public string LongDescription1 {get; set;}   
         public string LongDescription2 {get; set;}   
+        public string Extra1 {get; set;}
     }
 }

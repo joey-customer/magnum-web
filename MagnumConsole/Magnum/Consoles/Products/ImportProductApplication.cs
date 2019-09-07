@@ -66,33 +66,42 @@ namespace Magnum.Consoles.Products
                         mdc.Name = desc.GetFieldValue("Name");    
                         mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
                         mdc.LongDescription1 = desc.GetFieldValue("LongDescription1");
-                        mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                        
+                        mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");
+                        mdc.Extra1 = desc.GetFieldValue("Extra1");
 
                         mpd.Descriptions.Add(mdc.Language, mdc);     
                     } 
 
-                    ArrayList compositions = pd.GetChildArray("Compositions");
-                    foreach (CTable comp in compositions)
+                    ArrayList compositionGroups = pd.GetChildArray("CompositionGroups");
+                    foreach (CTable cg in compositionGroups)
                     {
-                        MProductComposition mpc = new MProductComposition();
-                        mpc.Code = comp.GetFieldValue("Code");    
-                        mpc.Quantity = Double.Parse(comp.GetFieldValue("Quantity")); 
-                        mpc.Unit = comp.GetFieldValue("Unit");                      
+                        MProductCompositionGroup mpcg = new MProductCompositionGroup();
+                        mpcg.PerUnit = cg.GetFieldValue("PerUnit");
 
-                        mpd.Compositions.Add(mpc);
-
-                        ArrayList compositionDescs = comp.GetChildArray("Descriptions");
-                        foreach (CTable desc in compositionDescs)
+                        ArrayList compositions = cg.GetChildArray("Compositions");
+                        foreach (CTable comp in compositions)
                         {
-                            MGenericDescription mdc = new MGenericDescription();
-                            mdc.Language = desc.GetFieldValue("Language");
-                            mdc.Name = desc.GetFieldValue("Name");    
-                            mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
-                            mdc.LongDescription1 = desc.GetFieldValue("LongDescription1");
-                            mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                        
+                            MProductComposition mpc = new MProductComposition();
+                            mpc.Code = comp.GetFieldValue("Code");    
+                            mpc.Quantity = Double.Parse(comp.GetFieldValue("Quantity")); 
+                            mpc.Unit = comp.GetFieldValue("Unit");                      
 
-                            mpc.Descriptions.Add(mdc.Language, mdc);
-                        }                         
+                            mpcg.Compositions.Add(mpc);
+
+                            ArrayList compositionDescs = comp.GetChildArray("Descriptions");
+                            foreach (CTable desc in compositionDescs)
+                            {
+                                MGenericDescription mdc = new MGenericDescription();
+                                mdc.Language = desc.GetFieldValue("Language");
+                                mdc.Name = desc.GetFieldValue("Name");    
+                                mdc.ShortDescription = desc.GetFieldValue("ShortDescription"); 
+                                mdc.LongDescription1 = desc.GetFieldValue("LongDescription1");
+                                mdc.LongDescription2 = desc.GetFieldValue("LongDescription2");                     
+
+                                mpc.Descriptions.Add(mdc.Language, mdc);
+                            }                         
+                        }
+                        mpd.CompositionGroups.Add(mpcg);
                     }
 
                     ArrayList performances = pd.GetChildArray("Performances");

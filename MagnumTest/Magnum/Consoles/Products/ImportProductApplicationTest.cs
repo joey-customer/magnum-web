@@ -43,19 +43,23 @@ namespace Magnum.Consoles.Products
                     </OBJECT>
                 </ITEMS>
 
-                <ITEMS name='Compositions'>
-                    <OBJECT name='Composition'>
-                        <FIELD name='Code'>1</FIELD>
-                        <FIELD name='Quantity'>3</FIELD>
-                        <FIELD name='Unit'>Star</FIELD>
-
-                        <ITEMS name='Descriptions'>
-                            <OBJECT name='Description'>
-                                <FIELD name='Language'>EN</FIELD>
-                                <FIELD name='Name'>Strength</FIELD>
-                            </OBJECT>
-                        </ITEMS>                        
-                    </OBJECT>               
+                <ITEMS name='CompositionGroups'>
+                    <OBJECT name='CompositionGroup'>
+                        <FIELD name='PerUnit'>1 Tab</FIELD>
+                        <ITEMS name='Compositions'>
+                            <OBJECT name='Composition'>
+                                <FIELD name='Code'>1</FIELD>
+                                <FIELD name='Quantity'>3</FIELD>
+                                <FIELD name='Unit'>ml</FIELD>
+                                <ITEMS name='Descriptions'>
+                                    <OBJECT name='Description'>
+                                        <FIELD name='Language'>EN</FIELD>
+                                        <FIELD name='Name'>H2O</FIELD>
+                                    </OBJECT>
+                                </ITEMS>                        
+                            </OBJECT>               
+                        </ITEMS>
+                    </OBJECT>
                 </ITEMS>
                 
                 <ITEMS name='Performances'>

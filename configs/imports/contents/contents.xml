@@ -189,9 +189,9 @@
                 <FIELD name="Type">code</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="b1">Sexual-AAA-001</FIELD>
-                        <FIELD name="b2">Oral-AAA-002</FIELD>
-                        <FIELD name="b3">Peptid-AAA-001</FIELD>
+                        <FIELD name="b1">Inject-001</FIELD>
+                        <FIELD name="b2">Inject-002</FIELD>
+                        <FIELD name="b3">Inject-003</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -201,9 +201,9 @@
                 <FIELD name="Type">code</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="n1">Peptid-AAA-001</FIELD>
-                        <FIELD name="n2">Sexual-AAA-001</FIELD>
-                        <FIELD name="n3">Oral-AAA-002</FIELD>
+                        <FIELD name="n1">Inject-001</FIELD>
+                        <FIELD name="n2">Inject-002</FIELD>
+                        <FIELD name="n3">Inject-003</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>

@@ -9,21 +9,20 @@ namespace Magnum.Api.Models
         public int Rating {get; set;}
         public string ProductType {get; set;}
         public double Price {get; set;}
-
+        public string Unit {get; set;}
         public string Image1Url {get; set;}
         public string Image1LocalPath {get; set;}
         public string Image1StoragePath {get; set;}
-
         public DateTime LastUpdateDate {get; set;}
 
-        public List<MProductComposition> Compositions {get; set;}
+        public List<MProductCompositionGroup> CompositionGroups {get; set;}
         public List<MProductPerformance> Performances {get; set;}
         
         public Dictionary<string, MGenericDescription> Descriptions {get; set;}
 
         public MProduct()
         {
-            Compositions = new List<MProductComposition>();
+            CompositionGroups = new List<MProductCompositionGroup>();
             Performances = new List<MProductPerformance>();
             Descriptions = new Dictionary<string, MGenericDescription>();
         }
