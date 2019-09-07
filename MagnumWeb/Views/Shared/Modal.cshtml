@@ -29,7 +29,7 @@
                                         @composition.Descriptions["EN"].Name
                                     </div>
                                     <div class="col-lg-6 col-12">
-                                        @composition.Quantity@composition.Unit
+                                        @if (composition.Quantity > 0) {@composition.Quantity;} @composition.Unit
                                     </div>
                                 </div>
                                 }
