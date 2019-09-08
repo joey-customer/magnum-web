@@ -25,7 +25,6 @@ namespace Magnum.Api.Businesses.Registrations
             rg.Pin = pin;
             rg.SerialNumber = serial;
             rg.IP = ip;
-            rg.Path = path;
             
             try
             {
@@ -51,7 +50,6 @@ namespace Magnum.Api.Businesses.Registrations
             var opt = (IBusinessOperationManipulate<MRegistration>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
             
             MRegistration rg = new MRegistration();
-            rg.Path = path;
             rg.Pin = pin;
             rg.SerialNumber = serial;
             rg.IP = ip;
@@ -88,7 +86,6 @@ namespace Magnum.Api.Businesses.Registrations
             rg.Pin = "9999999999";
             rg.SerialNumber = "ABCDEFGHIJKLM";
             rg.IP = "192.168.0.1";
-            rg.Path = "This/Is/Faked/Path";
             
             bool shouldThrow = !barcodeFound || isActivated;
 

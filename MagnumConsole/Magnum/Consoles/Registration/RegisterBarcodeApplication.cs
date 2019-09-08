@@ -46,7 +46,6 @@ namespace Magnum.Consoles.Registrations
             param.IP = ip;
             param.Pin = pin;
             param.SerialNumber = serial;
-            param.Path = path;
 
             try
             {

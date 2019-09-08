@@ -25,8 +25,16 @@ namespace Magnum.Api.Businesses.Barcodes
             bc.Pin = RandomUtils.RandomStringNum(10);
             bc.PayloadUrl = string.Format("{0}/verification/{1}/{2}/{3}", bc.Url, bc.Path, bc.SerialNumber, bc.Pin);
 
-            string path = string.Format("asset_barcodes/{0}/{1}-{2}", bc.Path, bc.SerialNumber, bc.Pin);
-            
+            string path = string.Format("barcodes/{0}/{1}/{2}/{3}/{4}/{5}/{6}/{7}"
+                , bc.SerialNumber.ToCharArray()[0]
+                , bc.SerialNumber.ToCharArray()[1]
+                , bc.SerialNumber.ToCharArray()[2]
+                , bc.Pin.ToCharArray()[0]
+                , bc.Pin.ToCharArray()[1]
+                , bc.Pin.ToCharArray()[2]
+                , bc.SerialNumber
+                , bc.Pin);
+                
             var ctx = GetNoSqlContext();
             ctx.PostData(path, bc);
 

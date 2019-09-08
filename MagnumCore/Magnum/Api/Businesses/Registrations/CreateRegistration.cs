@@ -15,16 +15,23 @@ namespace Magnum.Api.Businesses.Registrations
 
             if (string.IsNullOrEmpty(dat.IP) || 
                 string.IsNullOrEmpty(dat.SerialNumber) || 
-                string.IsNullOrEmpty(dat.Path) || 
                 string.IsNullOrEmpty(dat.Pin))
             {
-                throw(new ArgumentException("IP, SerialNumber, Path, PIN must not be null!!!"));
+                throw(new ArgumentException("IP, SerialNumber, PIN must not be null!!!"));
             }
 
             var ctx = GetNoSqlContext();
 
             string barcode = string.Format("{0}-{1}", dat.SerialNumber, dat.Pin);
-            string bcPath = string.Format("asset_barcodes/{0}/{1}", dat.Path, barcode);
+            string bcPath = string.Format("barcodes/{0}/{1}/{2}/{3}/{4}/{5}/{6}/{7}"
+                , dat.SerialNumber.ToCharArray()[0]
+                , dat.SerialNumber.ToCharArray()[1]
+                , dat.SerialNumber.ToCharArray()[2]
+                , dat.Pin.ToCharArray()[0]
+                , dat.Pin.ToCharArray()[1]
+                , dat.Pin.ToCharArray()[2]
+                , dat.SerialNumber
+                , dat.Pin);
             MBarcode bc = ctx.GetObjectByKey<MBarcode>(bcPath);
 
             dat.RegistrationDate = DateTime.Now;

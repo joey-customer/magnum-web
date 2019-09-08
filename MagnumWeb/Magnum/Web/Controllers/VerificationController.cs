@@ -5,6 +5,7 @@ using Magnum.Api.Models;
 using Magnum.Api.Commons.Business;
 using System.Net;
 using Magnum.Api.Utils;
+using Magnum.Web.Utils;
 
 namespace Magnum.Web.Controllers
 {
@@ -18,13 +19,37 @@ namespace Magnum.Web.Controllers
             param.IP = RemoteUtils.GetRemoteIPAddress(ControllerContext);
             param.Pin = pin;
             param.SerialNumber = serial;
-            param.Path = string.Format("{0}/{1}", product, group);
 
             try
             {
                 operation.Apply(param);
                 ViewBag.Serial = serial;
                 ViewBag.PIN = pin;
+                return View("Success");
+            }
+            catch (Exception e)
+            {
+                ViewBag.Message = e.Message;
+                return View("Fail");
+            }
+        }
+
+        [HttpPost("verification")]
+        public IActionResult WebCheck(MBarcode form)
+        {
+            form.SerialNumber = StringUtils.StripTagsRegex(form.SerialNumber);
+            form.Pin = StringUtils.StripTagsRegex(form.Pin);
+            IBusinessOperationManipulate<MRegistration> operation = GetCreateRegistrationOperation();
+            MRegistration param = new MRegistration();
+            param.IP = RemoteUtils.GetRemoteIPAddress(ControllerContext);
+            param.Pin = form.Pin;
+            param.SerialNumber = form.SerialNumber;
+
+            try
+            {
+                operation.Apply(param);
+                ViewBag.Serial = form.SerialNumber;
+                ViewBag.PIN = form.Pin;
                 return View("Success");
             }
             catch (Exception e)
