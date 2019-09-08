@@ -70,6 +70,9 @@ namespace Magnum.Consoles.Registrations
             opt.Parse(args);
 
             MockedNoSqlContext ctx = new MockedNoSqlContext();
+            MBarcode barcode = new MBarcode();
+            barcode.IsActivated = true;
+            ctx.SetReturnObjectByKey(barcode);
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
