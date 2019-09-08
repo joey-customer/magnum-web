@@ -66,9 +66,9 @@ namespace Magnum.Consoles.Registrations
             app.DumpParameter();
         }
 
-        [TestCase("BarcodeReg", 20)]
-        [TestCase("BarcodeReg", 210)]
-        public void GenerateBarcodeTest(string appName, int quantity)
+        [TestCase("BarcodeReg", true)]
+        [TestCase("BarcodeReg", false)]
+        public void RegisterBarcodeSuccessTest(string appName, bool IsActivated)
         {
             RegisterBarcodeApplication app = (RegisterBarcodeApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();
@@ -76,8 +76,25 @@ namespace Magnum.Consoles.Registrations
 
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             MBarcode barcode = new MBarcode();
-            barcode.IsActivated = false;
+            barcode.IsActivated = IsActivated;
             ctx.SetReturnObjectByKey(barcode);
+            app.SetNoSqlContext(ctx);
+
+            //To cover test coverage
+            app.GetLogger();
+
+            app.Run();
+            Assert.True(true);
+        }
+
+        [TestCase("BarcodeReg")]
+        public void RegisterBarcodeFailTest(string appName)
+        {
+            RegisterBarcodeApplication app = (RegisterBarcodeApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            OptionSet opt = app.CreateOptionSet();
+            opt.Parse(args);
+
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
