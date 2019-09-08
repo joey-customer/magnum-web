@@ -6,6 +6,10 @@ namespace Magnum.Web.Utils
     {
         public static string StripTagsRegex(string source)
         {
+            if (source == null)
+            {
+                return "";
+            }
             return Regex.Replace(source, "<.*?>", string.Empty);
         }
     }

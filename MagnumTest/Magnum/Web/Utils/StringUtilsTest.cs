@@ -17,10 +17,12 @@ namespace Magnum.Web.Utils
         [TestCase("<script>test</script>", "test")]
         [TestCase("<scripttest</script>", "")]
         [TestCase("3 < 2", "3 < 2")]
+        [TestCase("","")]
+        [TestCase(null,"")]
         public void StripTagsRegexTest(String data, String expected)
         {
             string result = StringUtils.StripTagsRegex(data);
-            Assert.AreEqual(result, expected);
+            Assert.AreEqual(expected, result);
         }
     }
 }
