@@ -22,7 +22,6 @@ dotnet run -p MagnumConsole BarcodeReg \
 --password=${MAGNUM_DB_PASSWORD} \
 --serial=8275692980 \
 --pin=CGHHABUPDC \
---path=Oxandro10_KH0009_20190801230949/000000 \
 --ip=192.168.1.99 \
 --key=${MAGNUM_FIREBASE_KEY}
 
