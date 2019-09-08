@@ -6,26 +6,25 @@ using Magnum.Api.Models;
 
 namespace Magnum.Api.Businesses.Registrations
 {
-	public class CreateRegistrationTest
-	{
+    public class ResetRegistrationTest
+    {
         [SetUp]
         public void Setup()
         {
         }
 
-        [TestCase("192.168.0.1", "9999999999", "ABCDEFGHIJKLM", "This/Is/Faked/Path")]
-        public void CreateRegistrationWithCodeNotEmptyTest(string ip, string serial, string pin, string path)
+        [TestCase("9999999999", "ABCDEFGHIJKLM")]
+        public void ResetRegistrationWithCodeNotEmptyTest(string serial, string pin)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             FactoryBusinessOperation.SetNoSqlContext(ctx);
 
-            var opt = (IBusinessOperationManipulate<MRegistration>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
-            
+            var opt = (IBusinessOperationManipulate<MRegistration>)FactoryBusinessOperation.CreateBusinessOperationObject("ResetRegistration");
+
             MRegistration rg = new MRegistration();
             rg.Pin = pin;
             rg.SerialNumber = serial;
-            rg.IP = ip;
-            
+
             try
             {
                 opt.Apply(rg);
@@ -34,41 +33,38 @@ namespace Magnum.Api.Businesses.Registrations
             catch (Exception)
             {
                 //Do nothing
-            }            
-        } 
+            }
+        }
 
-        [TestCase("192.168.0.1", "9999999999", "", "")]
-        [TestCase("192.168.0.1", "", "", "")]
-        [TestCase("", "", "", "")]
-        [TestCase("", "9999999999", "", "")]
-        [TestCase("", "9999999999", "AAAAAAAAAA", "")]
-        public void CreateRegistrationWithEmptyTest(string ip, string serial, string pin, string path)
+        [TestCase("", "")]
+        [TestCase("", "AAAAAAAAAA")]
+        [TestCase("AAAAAAAA", "")]
+        public void CreateRegistrationWithEmptyTest(string serial, string pin)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             FactoryBusinessOperation.SetNoSqlContext(ctx);
 
-            var opt = (IBusinessOperationManipulate<MRegistration>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
-            
+            var opt = (IBusinessOperationManipulate<MRegistration>)FactoryBusinessOperation.CreateBusinessOperationObject("ResetRegistration");
+
             MRegistration rg = new MRegistration();
             rg.Pin = pin;
             rg.SerialNumber = serial;
-            rg.IP = ip;
-            
+
             try
             {
                 opt.Apply(rg);
                 Assert.Fail("Exception should be thrown");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                //Do nothing
+                Assert.AreEqual("SerialNumber, PIN must not be null!!!", e.Message);
             }
-        } 
+        }
 
         [TestCase(false, null, "Serial number and PIN not found")]
-        [TestCase(true, true, "Serial number and PIN has already been registered")]
-        [TestCase(true, false, "")]
-        public void CreateRegistrationWithCodeNotFoundTest(bool barcodeFound, bool isActivated, string keyword)
+        [TestCase(true, false, "Serial number and PIN has not been registered yet")]
+        [TestCase(true, true, "")]
+        public void ResetRegistrationWithCodeNotFoundTest(bool barcodeFound, bool isActivated, string keyword)
         {
             MockedNoSqlContext ctx = new MockedNoSqlContext();
             FactoryBusinessOperation.SetNoSqlContext(ctx);
@@ -80,14 +76,13 @@ namespace Magnum.Api.Businesses.Registrations
                 ctx.SetReturnObjectByKey(bc);
             }
 
-            var opt = (IBusinessOperationManipulate<MRegistration>) FactoryBusinessOperation.CreateBusinessOperationObject("CreateRegistration");
-            
+            var opt = (IBusinessOperationManipulate<MRegistration>)FactoryBusinessOperation.CreateBusinessOperationObject("ResetRegistration");
+
             MRegistration rg = new MRegistration();
             rg.Pin = "9999999999";
             rg.SerialNumber = "ABCDEFGHIJKLM";
-            rg.IP = "192.168.0.1";
-            
-            bool shouldThrow = !barcodeFound || isActivated;
+
+            bool shouldThrow = !barcodeFound || !isActivated;
 
             if (shouldThrow)
             {
@@ -101,7 +96,7 @@ namespace Magnum.Api.Businesses.Registrations
                     string msg = ex.Message;
                     bool foundKeyword = msg.Contains(keyword);
                     Assert.AreEqual(true, foundKeyword, "Should get [{0}] error!!!", keyword);
-                } 
+                }
             }
             else
             {
@@ -109,8 +104,8 @@ namespace Magnum.Api.Businesses.Registrations
                 opt.Apply(rg);
 
                 //Status wrote back to input parameter
-                Assert.AreEqual("SUCCESS", rg.Status);
-            }       
-        }                      
+                Assert.AreEqual("RESET", rg.Status);
+            }
+        }
     }
 }

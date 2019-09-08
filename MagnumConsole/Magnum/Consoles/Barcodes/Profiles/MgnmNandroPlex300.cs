@@ -8,8 +8,8 @@ namespace Magnum.Consoles.Barcodes.Profiles
 	{
         protected override void CustomSetting()
         {
-            Barcode = "NANDROPLEX300";
-            Product = "NANDROPLEX300";
+            Barcode = "NANDP300";
+            Product = "NANDP300";
         }
     }
 }

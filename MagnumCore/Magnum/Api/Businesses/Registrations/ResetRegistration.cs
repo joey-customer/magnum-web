@@ -7,17 +7,16 @@ using Microsoft.Extensions.Logging;
 
 namespace Magnum.Api.Businesses.Registrations
 {
-    public class CreateRegistration : BusinessOperationBase, IBusinessOperationManipulate<MRegistration>
+    public class ResetRegistration : BusinessOperationBase, IBusinessOperationManipulate<MRegistration>
     {
         public int Apply(MRegistration dat)
         {
             ILogger logger = GetLogger();
 
-            if (string.IsNullOrEmpty(dat.IP) ||
-                string.IsNullOrEmpty(dat.SerialNumber) ||
+            if (string.IsNullOrEmpty(dat.SerialNumber) ||
                 string.IsNullOrEmpty(dat.Pin))
             {
-                throw (new ArgumentException("IP, SerialNumber, PIN must not be null!!!"));
+                throw (new ArgumentException("SerialNumber, PIN must not be null!!!"));
             }
 
             string barcode = string.Format("{0}-{1}", dat.SerialNumber, dat.Pin);
@@ -57,29 +56,29 @@ namespace Magnum.Api.Businesses.Registrations
                 throw (new ArgumentException(msg));
             }
 
-            if (bc.IsActivated)
+            if (!bc.IsActivated)
             {
                 dat.Status = "FAILED";
                 path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
-                string msg = string.Format("Serial number and PIN has already been registered [{0}] since [{1}]", barcode, bc.ActivatedDate);
+                string msg = string.Format("Serial number and PIN has not been registered yet [{0}] ", barcode);
                 LogUtils.LogInformation(logger, msg);
 
                 throw (new ArgumentException(msg));
             }
 
             //Update status back to barcode
-            bc.IsActivated = true;
-            bc.ActivatedDate = DateTime.Now;
+            bc.IsActivated = false;
+            bc.ActivatedDate = new DateTime();
             bc.LastMaintDate = DateTime.Now;
             ctx.PutData(bcPath, bc.Key, bc);
 
-            dat.Status = "SUCCESS";
+            dat.Status = "RESET";
             path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
             ctx.PostData(path, dat);
 
-            string infoMsg = string.Format("Successfully registered serial number and PIN [{0}]", barcode);
+            string infoMsg = string.Format("Successfully reset serial number and PIN [{0}]", barcode);
             LogUtils.LogInformation(logger, infoMsg);
 
             return 0;

@@ -8,7 +8,6 @@ namespace Magnum.Api.Models
         public string Pin {get; set;}
         public DateTime RegistrationDate {get; set;}
         public string Status {get; set;}
-        public string Path {get; set;}
         public string IP {get; set;}
     }
 }

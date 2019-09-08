@@ -33,7 +33,8 @@ namespace Magnum.Api.Factories
         private static void initClassMap()
         {
             addClassConfig("CreateBarcode", "Magnum.Api.Businesses.Barcodes.CreateBarcode");
-            addClassConfig("CreateRegistration", "Magnum.Api.Businesses.Registrations.CreateRegistration");                        
+            addClassConfig("CreateRegistration", "Magnum.Api.Businesses.Registrations.CreateRegistration");
+            addClassConfig("ResetRegistration", "Magnum.Api.Businesses.Registrations.ResetRegistration");
             
             addClassConfig("SaveProduct", "Magnum.Api.Businesses.Products.SaveProduct");
             addClassConfig("DeleteProduct", "Magnum.Api.Businesses.Products.DeleteProduct");
