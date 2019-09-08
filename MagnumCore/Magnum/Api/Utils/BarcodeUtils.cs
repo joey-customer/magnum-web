@@ -2,7 +2,7 @@ using System;
 
 namespace Magnum.Api.Utils
 {
-    public class BarcodeUtils
+    public static class BarcodeUtils
     {
         public static string BuildBarcodePath(string tableName, string strSerial, string strPin)
         {
