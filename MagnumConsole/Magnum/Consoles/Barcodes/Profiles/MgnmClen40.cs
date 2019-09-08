@@ -8,8 +8,8 @@ namespace Magnum.Consoles.Barcodes.Profiles
 	{
         protected override void CustomSetting()
         {
-            Barcode = "CLEN 40";
-            Product = "CLEN 40";
+            Barcode = "CLENBU40";
+            Product = "CLENBU40";
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Magnum.Consoles.Barcodes.Profiles
 	{
         protected override void CustomSetting()
         {
-            Barcode = "STANOLAQ100";
-            Product = "STANOLAQ100";
+            Barcode = "STANO100";
+            Product = "STANO100";
         }
     }
 }
