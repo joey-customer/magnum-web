@@ -34,7 +34,7 @@ $(function() {
 				email: "Please enter a valid email address.",
 			 },
 			 Message: {
-				required: "Please enter your email message",
+				required: "Please enter your message",
 		   },
 		},
 	  });
