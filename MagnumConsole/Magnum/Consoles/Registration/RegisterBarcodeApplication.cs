@@ -34,7 +34,6 @@ namespace Magnum.Consoles.Registrations
             string serial = args["serial"].ToString();
             string pin = args["pin"].ToString();
             string ip = args["ip"].ToString();
-            string path = args["path"].ToString();
 
             INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
 

@@ -28,13 +28,15 @@ namespace Magnum.Api.Businesses.Registrations
             if (dat.SerialNumber.Length > 3 &&
                 dat.Pin.Length > 3)
             {
+                char[] serialNumber = dat.SerialNumber.ToCharArray();
+                char[] pin = dat.Pin.ToCharArray();
                 bcPath = string.Format("barcodes/{0}/{1}/{2}/{3}/{4}/{5}/{6}/{7}"
-                    , dat.SerialNumber.ToCharArray()[0]
-                    , dat.SerialNumber.ToCharArray()[1]
-                    , dat.SerialNumber.ToCharArray()[2]
-                    , dat.Pin.ToCharArray()[0]
-                    , dat.Pin.ToCharArray()[1]
-                    , dat.Pin.ToCharArray()[2]
+                    , serialNumber[0]
+                    , serialNumber[1]
+                    , serialNumber[2]
+                    , pin[0]
+                    , pin[1]
+                    , pin[2]
                     , dat.SerialNumber
                     , dat.Pin);
                 bc = ctx.GetObjectByKey<MBarcode>(bcPath);
