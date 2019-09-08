@@ -40,7 +40,7 @@ namespace Magnum.Web.Controllers
         {
             mockOpr.Setup(foo => foo.Apply(It.IsAny<MRegistration>())).Returns(0);
 
-            ViewResult result = (ViewResult)controller.Check(product, group, serial, pin);
+            ViewResult result = (ViewResult)controller.URLCheck(product, group, serial, pin);
 
             List<object> keys = new List<object>(result.ViewData.Keys);
             List<object> values = new List<object>(result.ViewData.Values);
@@ -56,7 +56,7 @@ namespace Magnum.Web.Controllers
         {
             mockOpr.Setup(foo => foo.Apply(It.IsAny<MRegistration>())).Throws(new Exception("Invalid barcode"));
 
-            ViewResult result = (ViewResult)controller.Check(product, group, serial, pin);
+            ViewResult result = (ViewResult)controller.URLCheck(product, group, serial, pin);
 
             List<object> keys = new List<object>(result.ViewData.Keys);
             List<object> values = new List<object>(result.ViewData.Values);
