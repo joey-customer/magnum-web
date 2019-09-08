@@ -429,7 +429,7 @@ body {
 }
 
 .card-lift--hover:hover {
-    transition: all .15s ease;
+    transition: all .3s ease;
     transform: translateY(-20px);
 }
 
@@ -456,7 +456,7 @@ body {
 	padding: 50px 30px 50px 40px;
 	margin-top: 50px;
 	border-radius: 5px;
-	transition: all .15s ease;
+	transition: all .3s ease;
 }
 
 .our-service .single-service h6 {
@@ -644,21 +644,12 @@ body {
 		padding: 60px;
 	}
 }
-
-.etu-form .form-area h2 {
-	font-size: 30px;
-	font-weight: 700;
-	color: #2d2d43;
-	text-align: center;
-	margin-bottom: 23px;
-	margin-top: -10px;
-	text-transform: capitalize;
+.etu-form .jumbotron {
+	background-color: #f7f7f7;
 }
-
 .etu-form .form-area form .single-input-box {
 	margin-bottom: 25px;
 }
-
 .etu-form .form-area form .single-input-box label:not(.error) {
 	text-transform: capitalize;
 	font-size: 16px;

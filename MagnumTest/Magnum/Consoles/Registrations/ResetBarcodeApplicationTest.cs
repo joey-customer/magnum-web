@@ -62,6 +62,27 @@ namespace Magnum.Consoles.Registrations
             app.DumpParameter();
         }
 
+        [TestCase("BarcodeReset", true)]
+        [TestCase("BarcodeReset", false)]
+        public void ResetBarcodeTest(string appName, bool IsActivated)
+        {
+            ResetBarcodeApplication app = (ResetBarcodeApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            OptionSet opt = app.CreateOptionSet();
+            opt.Parse(args);
+
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            MBarcode barcode = new MBarcode();
+            barcode.IsActivated = IsActivated;
+            ctx.SetReturnObjectByKey(barcode);
+            app.SetNoSqlContext(ctx);
+
+            //To cover test coverage
+            app.GetLogger();
+
+            app.Run();
+            Assert.True(true);
+        }
+
         [TestCase("BarcodeReset")]
         public void ResetBarcodeTest(string appName)
         {

@@ -32,56 +32,76 @@ namespace Magnum.Consoles.Registrations
                 {"password", "faked_password"},
             };
 
-            args = new string[] 
+            args = new string[]
             {
-                string.Format("--h={0}", h["host"]), 
-                string.Format("--k={0}", h["key"]), 
-                string.Format("--s={0}", h["serial"]), 
-                string.Format("--p={0}", h["pin"]), 
-                string.Format("--i={0}", h["ip"]), 
-                string.Format("--path={0}", h["path"]), 
-                string.Format("--user={0}", h["user"]), 
-                string.Format("--password={0}", h["password"]), 
-            };                      
+                string.Format("--h={0}", h["host"]),
+                string.Format("--k={0}", h["key"]),
+                string.Format("--s={0}", h["serial"]),
+                string.Format("--p={0}", h["pin"]),
+                string.Format("--i={0}", h["ip"]),
+                string.Format("--path={0}", h["path"]),
+                string.Format("--user={0}", h["user"]),
+                string.Format("--password={0}", h["password"]),
+            };
         }
 
         [TestCase("BarcodeReg")]
         public void ArgumentParsingTest(string appName)
         {
-            ConsoleAppBase app = (ConsoleAppBase) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
-            
+            ConsoleAppBase app = (ConsoleAppBase)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
             Hashtable values = app.GetArguments();
             foreach (string key in values.Keys)
             {
-                string value = (string) values[key];
+                string value = (string)values[key];
                 Assert.AreEqual(h[key].ToString(), value, "Arguments parsing incorrect!!!");
-            }  
+            }
 
             Assert.AreEqual(h.Count, values.Count, "Number of argument parsed is incorrect!!!");
 
             //Test to cover code coverage
             app.DumpParameter();
-        }  
+        }
 
-        [TestCase("BarcodeReg", 20)]
-        [TestCase("BarcodeReg", 210)]
-        public void GenerateBarcodeTest(string appName, int quantity)
+        [TestCase("BarcodeReg", true)]
+        [TestCase("BarcodeReg", false)]
+        public void RegisterBarcodeSuccessTest(string appName, bool IsActivated)
         {
-            RegisterBarcodeApplication app = (RegisterBarcodeApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            RegisterBarcodeApplication app = (RegisterBarcodeApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
             MockedNoSqlContext ctx = new MockedNoSqlContext();
+            MBarcode barcode = new MBarcode();
+            barcode.IsActivated = IsActivated;
+            ctx.SetReturnObjectByKey(barcode);
             app.SetNoSqlContext(ctx);
-            
+
             //To cover test coverage
             app.GetLogger();
 
             app.Run();
             Assert.True(true);
-        }         
-    }    
+        }
+
+        [TestCase("BarcodeReg")]
+        public void RegisterBarcodeFailTest(string appName)
+        {
+            RegisterBarcodeApplication app = (RegisterBarcodeApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            OptionSet opt = app.CreateOptionSet();
+            opt.Parse(args);
+
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            app.SetNoSqlContext(ctx);
+
+            //To cover test coverage
+            app.GetLogger();
+
+            app.Run();
+            Assert.True(true);
+        }
+    }
 }

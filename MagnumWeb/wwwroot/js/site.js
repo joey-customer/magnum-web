@@ -38,4 +38,19 @@ $(function() {
 		   },
 		},
 	  });
+
+	  $("#verifyproduct").validate({
+		rules: {
+			SerialNumber: "required",
+			Pin: "required",
+		},
+		messages: {
+			SerialNumber: {
+				required: "Please enter serial number",
+		 	},
+		 	Pin: {
+		  		required: "Please enter pin code",
+		 	},
+		},
+	  });
 })
