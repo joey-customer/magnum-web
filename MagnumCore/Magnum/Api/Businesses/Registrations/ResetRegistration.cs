@@ -62,7 +62,7 @@ namespace Magnum.Api.Businesses.Registrations
                 path = string.Format("registrations/{0}/{1}", dat.Status, barcode);
                 ctx.PostData(path, dat);
 
-                string msg = string.Format("Serial number and PIN has not been registered yet [{0}] ", barcode, bc.ActivatedDate);
+                string msg = string.Format("Serial number and PIN has not been registered yet [{0}] ", barcode);
                 LogUtils.LogInformation(logger, msg);
 
                 throw (new ArgumentException(msg));
