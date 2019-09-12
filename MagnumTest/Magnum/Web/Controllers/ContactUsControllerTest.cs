@@ -75,7 +75,7 @@ namespace Magnum.Web.Controllers
             ViewResult result = (ViewResult)controller.SaveContactUs(model);
             Assert.AreEqual("127.0.0.1", model.IP);
             Assert.AreEqual("Contact", result.ViewName);
-            Assert.AreEqual("Thank you for contacting us – we will get back to you soon!", result.ViewData["Message"]);
+            Assert.AreEqual("Your message has been received and we will contact you soon.", result.ViewData["Message"]);
         }
 
         [TestCase("", "0000", "1234", "5678")]
