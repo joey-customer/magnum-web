@@ -36,7 +36,7 @@ namespace Magnum.Web.Controllers
 
                 operation.Apply(form);
 
-                ViewBag.Message = "Your message has been recieved and we will contact you soon";
+                ViewBag.Message = "Your message has been received and we will contact you soon.";
             }
             return View("Contact");
         }
