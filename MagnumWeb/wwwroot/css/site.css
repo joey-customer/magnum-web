@@ -627,12 +627,12 @@ body {
 }
 
 @media (min-width: 992px) {
-	.etu-form {
+	.contact-form {
 		padding: 60px;
 	}
 }
 
-.etu-form .form-area {
+.contact-form .form-area {
 	padding: 30px;
 	background-color: #fff;
 	border-radius: 5px;
@@ -640,17 +640,17 @@ body {
 }
 
 @media (min-width: 992px) {
-	.etu-form .form-area {
+	.contact-form .form-area {
 		padding: 60px;
 	}
 }
-.etu-form .jumbotron {
+.contact-form .jumbotron {
 	background-color: #f7f7f7;
 }
-.etu-form .form-area form .single-input-box {
+.contact-form .form-area form .single-input-box {
 	margin-bottom: 25px;
 }
-.etu-form .form-area form .single-input-box label:not(.error) {
+.contact-form .form-area form .single-input-box label:not(.error) {
 	text-transform: capitalize;
 	font-size: 16px;
 	color: #2d2d43;
@@ -659,9 +659,9 @@ body {
 	font-weight: 500;
 }
 
-.etu-form .form-area form .single-input-box input,
-.etu-form .form-area form .single-input-box select,
-.etu-form .form-area form .single-input-box textarea {
+.contact-form .form-area form .single-input-box input,
+.contact-form .form-area form .single-input-box select,
+.contact-form .form-area form .single-input-box textarea {
 	text-transform: capitalize;
 	width: 100%;
 	height: 50px;
@@ -669,12 +669,12 @@ body {
 	border: 1px solid #e5e5e5;
 }
 
-.etu-form .form-area form .single-input-box textarea {
+.contact-form .form-area form .single-input-box textarea {
 	height: 274px;
 	padding: 10px 10px;
 }
 
-.etu-form .form-area form button {
+.contact-form .form-area form button {
 	background-image: -webkit-radial-gradient(closest-corner,rgba(255,255,255,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(145deg,#d50000,#611b32,#082d2a 119%);
 	color: #fff;
 	border-radius: 4px;
@@ -690,7 +690,7 @@ body {
 }
 
 @media (min-width: 992px) {
-	.etu-form .form-area form button {
+	.contact-form .form-area form button {
 		width: 20%;
 	}
 }
