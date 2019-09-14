@@ -7,6 +7,7 @@ steps:
   entrypoint: 'bash'
   args: ['/workspace/GCloudBuild/sonar.bash']
   env: 
+    - 'BASELINE_VERSION=1.0.2'  
     - 'SONAR_KEY=${_SONAR_KEY}'
     - 'BUILT_VERSION=${_VERSION}'
     - 'BRANCH_NAME=${BRANCH_NAME}'
