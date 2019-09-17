@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Linq;
-using Magnum.Api.Caches;
-using Magnum.Api.Factories;
+
+using Its.Onix.Core.Factories;
+using Its.Onix.Core.Caches;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -30,19 +32,19 @@ namespace Magnum.Web.Controllers
             ViewBag.ProductTypeList = productTypeList.Select(kvp => kvp.Value).ToList();
         }
 
-        public virtual ICache GetProductTypeCache()
+        public virtual ICacheContext GetProductTypeCache()
         {
-            return FactoryCache.GetCacheObject("CacheProductTypeList");
+            return FactoryCacheContext.GetCacheObject("CacheProductTypeList");
         }
 
-        public virtual ICache GetContentCache()
+        public virtual ICacheContext GetContentCache()
         {
-            return FactoryCache.GetCacheObject("CachePageContents");
+            return FactoryCacheContext.GetCacheObject("CachePageContents");
         }
 
-                public virtual ICache GetProductsCache()
+                public virtual ICacheContext GetProductsCache()
         {
-            return FactoryCache.GetCacheObject("CacheProductList");
+            return FactoryCacheContext.GetCacheObject("CacheProductList");
         }
     }
 }

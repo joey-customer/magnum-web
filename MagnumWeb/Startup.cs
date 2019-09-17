@@ -6,14 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Magnum.Api.Factories;
+
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Storages;
+using Its.Onix.Core.Factories;
+using Its.Onix.Erp.Services;
+
 using Magnum.Web.Utils;
 
 using Serilog;
 using Serilog.Events;
-
-using Magnum.Api.Storages;
-using Magnum.Api.NoSql;
 
 namespace Magnum.Web
 {
@@ -41,8 +43,11 @@ namespace Magnum.Web
             FactoryBusinessOperation.SetStorageContext(storageCtx);
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(logFactory);
+            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
 
-            FactoryCache.SetLoggerFactory(logFactory);
+//TODO : Fix here
+            FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
+            FactoryCacheContext.SetLoggerFactory(logFactory);
         }
 
         public Startup(IConfiguration configuration)

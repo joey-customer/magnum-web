@@ -1,7 +1,8 @@
 using System;
 using System.Collections;
 
-using Magnum.Api.Models;
+using Its.Onix.Erp.Models;
+
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.ImageGenerators;

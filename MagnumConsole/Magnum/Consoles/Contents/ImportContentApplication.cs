@@ -3,14 +3,14 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 
-using Magnum.Api.Models;
-using Magnum.Consoles.Commons;
-using Magnum.Api.Factories;
-using Magnum.Api.NoSql;
-using Magnum.Api.Commons.Table;
-using Magnum.Api.Businesses.Contents;
-using Magnum.Api.Utils;
+using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Businesses.Contents;
+using Its.Onix.Core.Utils;
+using Its.Onix.Core.Factories;
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Commons.Table;
 
+using Magnum.Consoles.Commons;
 using Microsoft.Extensions.Logging;
 using NDesk.Options;
 

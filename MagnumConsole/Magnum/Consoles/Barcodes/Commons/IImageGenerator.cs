@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using Magnum.Api.Models;
+using Its.Onix.Core.Commons.Model;
 
 namespace Magnum.Consoles.Barcodes.Commons
 {

@@ -2,14 +2,16 @@ using System;
 using System.IO;
 using System.Collections;
 
-using Magnum.Api.Models;
 using Magnum.Consoles.Commons;
-using Magnum.Api.Factories;
-using Magnum.Api.Businesses.Products;
-using Magnum.Api.NoSql;
-using Magnum.Api.Storages;
-using Magnum.Api.Commons.Table;
-using Magnum.Api.Utils;
+
+using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Businesses.Products;
+
+using Its.Onix.Core.Utils;
+using Its.Onix.Core.Factories;
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Storages;
+using Its.Onix.Core.Commons.Table;
 
 using Microsoft.Extensions.Logging;
 

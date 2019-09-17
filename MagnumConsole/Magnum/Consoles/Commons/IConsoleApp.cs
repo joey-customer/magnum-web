@@ -1,6 +1,6 @@
 using System;
-using Magnum.Api.NoSql;
-using Magnum.Api.Storages;
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Storages;
 using NDesk.Options;
 
 using Microsoft.Extensions.Logging;

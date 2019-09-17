@@ -4,7 +4,8 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Drawing;
 
-using Magnum.Api.Models;
+using Its.Onix.Core.Commons.Model;
+using Its.Onix.Erp.Models;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.HtmlConverters;
 

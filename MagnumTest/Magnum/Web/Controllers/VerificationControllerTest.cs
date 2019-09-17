@@ -1,9 +1,11 @@
 using System;
 using NUnit.Framework;
 using Moq;
-using Magnum.Api.Businesses.Registrations;
-using Magnum.Api.Models;
-using Magnum.Api.Commons.Business;
+
+using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Businesses.Registrations;
+using Its.Onix.Core.Business;
+
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;

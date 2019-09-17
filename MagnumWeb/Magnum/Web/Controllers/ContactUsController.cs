@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Magnum.Api.Models;
-using Magnum.Api.Commons.Business;
-using Magnum.Api.Factories;
+
+using Its.Onix.Erp.Models;
+using Its.Onix.Core.Business;
+using Its.Onix.Core.Factories;
+
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
 
