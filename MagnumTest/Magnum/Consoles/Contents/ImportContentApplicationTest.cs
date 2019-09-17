@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
-using Magnum.Api.Factories;
+using Its.Onix.Core.NoSQL;
 
 using NDesk.Options;
 using Moq;
@@ -118,7 +118,7 @@ namespace Magnum.Consoles.Contents
             string importFile = Path.Combine(paths);
             createSuccessXML(importFile);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             app.Run();
@@ -137,7 +137,7 @@ namespace Magnum.Consoles.Contents
             string importFile = Path.Combine(paths);
             createFailedXML(importFile);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             app.Run();

@@ -5,9 +5,11 @@ using NUnit.Framework;
 
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
-using Magnum.Api.Models;
-using Magnum.Api.Factories;
 
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Erp.Models;
+
+using Moq;
 using NDesk.Options;
 
 namespace Magnum.Consoles.Registrations
@@ -74,10 +76,10 @@ namespace Magnum.Consoles.Registrations
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             MBarcode barcode = new MBarcode();
             barcode.IsActivated = IsActivated;
-            ctx.SetReturnObjectByKey(barcode);
+//TODO :            ctx.SetReturnObjectByKey(barcode);
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
@@ -94,7 +96,7 @@ namespace Magnum.Consoles.Registrations
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
