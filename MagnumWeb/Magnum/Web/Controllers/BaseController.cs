@@ -42,7 +42,7 @@ namespace Magnum.Web.Controllers
             return FactoryCacheContext.GetCacheObject("CachePageContents");
         }
 
-                public virtual ICacheContext GetProductsCache()
+        public virtual ICacheContext GetProductsCache()
         {
             return FactoryCacheContext.GetCacheObject("CacheProductList");
         }

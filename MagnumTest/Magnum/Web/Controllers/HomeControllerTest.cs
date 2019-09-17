@@ -11,8 +11,12 @@ using Its.Onix.Core.Caches;
 
 namespace Magnum.Web.Controllers
 {
-    public class HomeControllerTest
+    public class HomeControllerTest : BaseTest
     {
+        public HomeControllerTest() : base()
+        {
+        }
+
         HomeController controller;
 
         [SetUp]

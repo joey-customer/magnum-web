@@ -5,8 +5,12 @@ using NUnit.Framework;
 
 namespace Magnum.Consoles.Barcodes.Commons
 {
-    public class BarcodeProfileFactoryTest
+    public class BarcodeProfileFactoryTest : BaseTest
     {
+        public BarcodeProfileFactoryTest() : base()
+        {
+        }
+
         [SetUp]
         public void Setup()
         {

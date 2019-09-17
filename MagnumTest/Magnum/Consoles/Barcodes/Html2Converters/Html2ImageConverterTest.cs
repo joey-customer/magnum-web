@@ -5,8 +5,12 @@ using NUnit.Framework;
 
 namespace Magnum.Consoles.Barcodes.HtmlConverters
 {
-    public class Html2ImageConverterTest
+    public class Html2ImageConverterTest : BaseTest
     {
+        public Html2ImageConverterTest() : base()
+        {
+        }
+
         [SetUp]
         public void Setup()
         {

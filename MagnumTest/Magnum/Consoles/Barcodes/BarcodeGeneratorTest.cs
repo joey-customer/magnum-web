@@ -19,12 +19,16 @@ using Moq;
 
 namespace Magnum.Consoles.Barcodes
 {
-    public class BarcodeGeneratorTest
+    public class BarcodeGeneratorTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private int generatedCount = 0;
         private bool imgGenerateFlag = false;
+
+        public BarcodeGeneratorTest() : base()
+        {
+        }
 
         [SetUp]
         public void Setup()

@@ -8,8 +8,12 @@ using System.Collections.Generic;
 
 namespace Magnum.Web.Controllers
 {
-    public class AboutControllerTest
+    public class AboutControllerTest : BaseTest
     {
+        public AboutControllerTest() : base()
+        {
+        }
+
         AboutController controller;
 
         [SetUp]

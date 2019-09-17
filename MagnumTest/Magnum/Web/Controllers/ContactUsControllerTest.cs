@@ -10,10 +10,14 @@ using Its.Onix.Core.Caches;
 using Its.Onix.Erp.Models;
 using Its.Onix.Erp.Businesses.ContactUs;
 
-namespace Magnum.Web.Controllers
+namespace Magnum.Web.Controllers 
 {
-    public class ContactUsControllerTest
+    public class ContactUsControllerTest : BaseTest
     {
+        public ContactUsControllerTest() : base()
+        {
+        }
+
         ContactUsController controller;
         IBusinessOperationManipulate<MContactUs> mockContactUsOpr;
 

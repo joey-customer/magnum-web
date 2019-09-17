@@ -13,12 +13,16 @@ using Microsoft.Extensions.Logging;
 
 namespace Magnum.Consoles.Contents
 {
-    public class ImportContentApplicationTest
+    public class ImportContentApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private readonly string tempPath = Path.GetTempPath();
         private readonly string fileName = "product_types.xml";
+
+        public ImportContentApplicationTest() : base()
+        {
+        }
 
         private void createSuccessXML(string fileName)
         {

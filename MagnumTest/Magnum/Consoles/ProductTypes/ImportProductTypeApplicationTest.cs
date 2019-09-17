@@ -12,12 +12,16 @@ using Microsoft.Extensions.Logging;
 
 namespace Magnum.Consoles.ProductTypes
 {
-    public class ImportProductTypeApplicationTest
+    public class ImportProductTypeApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private readonly string tempPath = Path.GetTempPath();
         private readonly string fileName = "product_types.xml";
+
+        public ImportProductTypeApplicationTest() : base()
+        {
+        }
 
         private void createSuccessXML(string fileName)
         {

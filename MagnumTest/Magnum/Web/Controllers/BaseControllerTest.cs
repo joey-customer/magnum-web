@@ -10,8 +10,12 @@ using System.Collections;
 
 namespace Magnum.Web.Controllers
 {
-    public class BaseControllerTest
+    public class BaseControllerTest : BaseTest
     {
+        public BaseControllerTest() : base()
+        {
+        }
+
         BaseController controller;
 
         BaseController realController = new BaseController();

@@ -14,10 +14,14 @@ using NDesk.Options;
 
 namespace Magnum.Consoles.Registrations
 {
-    public class RegisterBarcodeApplicationTest
+    public class RegisterBarcodeApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
+
+        public RegisterBarcodeApplicationTest() : base()
+        {
+        }
 
         [SetUp]
         public void Setup()

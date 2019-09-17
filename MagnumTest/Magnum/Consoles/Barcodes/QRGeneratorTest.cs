@@ -15,10 +15,14 @@ using Moq;
 
 namespace Magnum.Consoles.Barcodes
 {
-    public class QRGeneratorTest
+    public class QRGeneratorTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
+
+        public QRGeneratorTest() : base()
+        {
+        }
 
         [SetUp]
         public void Setup()

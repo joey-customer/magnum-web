@@ -10,8 +10,12 @@ using Its.Onix.Core.Caches;
 
 namespace Magnum.Web.Controllers
 {
-    public class ProductsControllerTest
+    public class ProductsControllerTest : BaseTest
     {
+        public ProductsControllerTest() : base()
+        {
+        }
+
         ProductsController controller;
 
         [SetUp]

@@ -13,8 +13,12 @@ using System.Net;
 
 namespace Magnum.Web.Controllers
 {
-    public class VerificationControllerTest
+    public class VerificationControllerTest : BaseTest
     {
+        public VerificationControllerTest() : base()
+        {
+        }
+
         VerificationController controller;
         Mock<IBusinessOperationManipulate<MRegistration>> mockOpr;
 

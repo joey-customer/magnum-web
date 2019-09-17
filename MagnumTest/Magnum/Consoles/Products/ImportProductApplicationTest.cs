@@ -12,12 +12,16 @@ using NDesk.Options;
 
 namespace Magnum.Consoles.Products
 {
-    public class ImportProductApplicationTest
+    public class ImportProductApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private readonly string tempPath = Path.GetTempPath();
         private readonly string fileName = "products.xml";
+
+        public ImportProductApplicationTest() : base()
+        {
+        }
 
         private void createSuccessXML(string fileName)
         {
