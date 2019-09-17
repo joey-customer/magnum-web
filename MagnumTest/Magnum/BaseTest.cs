@@ -1,7 +1,7 @@
 using Its.Onix.Core.Factories;
 using Its.Onix.Erp.Services;
 
-namespace Magnum.Web.Controllers
+namespace Magnum
 {
     public class BaseTest
     {
