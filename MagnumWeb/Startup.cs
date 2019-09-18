@@ -45,7 +45,6 @@ namespace Magnum.Web
             FactoryBusinessOperation.SetLoggerFactory(logFactory);
             FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
 
-//TODO : Fix here
             FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
             FactoryCacheContext.SetLoggerFactory(logFactory);
         }
