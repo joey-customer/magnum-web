@@ -8,7 +8,6 @@ EXPOSE 443
 
 COPY Magnum.sln ./publish/
 COPY MagnumWeb/. ./publish/MagnumWeb
-COPY MagnumCore/. ./publish/MagnumCore
 COPY MagnumConsole/. ./publish/MagnumConsole
 COPY MagnumTest/. ./publish/MagnumTest
 
