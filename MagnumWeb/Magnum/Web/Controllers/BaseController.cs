@@ -51,7 +51,7 @@ namespace Magnum.Web.Controllers
         public virtual ISmtpContext GetSmtpContext()
         {
             var ctx = FactorySmtpContext.CreateSmtpObject("SendGridSmtpContext");
-            //TODO : ctx.SetSmtpConfigByEnv("MAGNUM_SMTP_HOST", "MAGNUM_SMTP_PORT", "MAGNUM_SMTP_USER", "MAGNUM_SMTP_PASSWORD");
+            ctx.SetSmtpConfigByEnv("MAGNUM_SMTP_HOST", "MAGNUM_SMTP_PORT", "MAGNUM_SMTP_USER", "MAGNUM_SMTP_PASSWORD");
 
             return ctx;
         }        

@@ -54,7 +54,7 @@ namespace Magnum.Web.Controllers
             {
                 Mail m = new Mail();
                 m.From = "noreply@magnum-pharmacy.com";
-                //m.FromName = form.Name; //TODO: Uncomment this
+                m.FromName = form.Name;
                 m.To = emailTo;
                 m.Subject = form.Subject;
                 m.IsHtmlContent = true;
