@@ -3,6 +3,7 @@ using System.Linq;
 
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.Caches;
+using Its.Onix.Core.Smtp;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -46,5 +47,13 @@ namespace Magnum.Web.Controllers
         {
             return FactoryCacheContext.GetCacheObject("CacheProductList");
         }
+
+        public virtual ISmtpContext GetSmtpContext()
+        {
+            var ctx = FactorySmtpContext.CreateSmtpObject("SendGridSmtpContext");
+            //TODO : ctx.SetSmtpConfigByEnv("MAGNUM_SMTP_HOST", "MAGNUM_SMTP_PORT", "MAGNUM_SMTP_USER", "MAGNUM_SMTP_PASSWORD");
+
+            return ctx;
+        }        
     }
 }

@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Serilog;
+
+using Microsoft.AspNetCore.Mvc;
 
 using Its.Onix.Erp.Models;
 using Its.Onix.Core.Business;
@@ -7,8 +10,6 @@ using Its.Onix.Core.Smtp;
 
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
-
-using System;
 
 namespace Magnum.Web.Controllers
 {
@@ -63,17 +64,13 @@ namespace Magnum.Web.Controllers
 
                 ISmtpContext smtpContext = GetSmtpContext();
                 smtpContext.Send(m);
+
+                Log.Logger.Information("Email sent to [{0}]", emailTo);
             }
             else
             {
-                //TODO write log, email will not be sent.
+                Log.Logger.Information("Env variable MAGNUM_EMAIL_TO not set!!!");
             }
-        }
-
-        public virtual ISmtpContext GetSmtpContext()
-        {
-            //TODO : Change this to get from factory
-            return new SendGridSmtpContext();
         }
 
         public string ValidateContactUsForm(MContactUs form)
