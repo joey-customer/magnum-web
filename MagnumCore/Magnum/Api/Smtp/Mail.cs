@@ -5,6 +5,7 @@ namespace Magnum.Api.Smtp
 	public class Mail
 	{
         public string From {get; set;}
+        public string FromName {get; set;}
         public string To {get; set;}
         public string CC {get; set;}
         public string BCC {get; set;}

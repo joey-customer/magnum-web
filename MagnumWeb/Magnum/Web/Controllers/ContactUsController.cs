@@ -6,6 +6,7 @@ using Magnum.Web.Utils;
 using Magnum.Api.Utils;
 
 using System;
+using Magnum.Api.Smtp;
 
 namespace Magnum.Web.Controllers
 {
@@ -36,9 +37,40 @@ namespace Magnum.Web.Controllers
 
                 operation.Apply(form);
 
+                SendEmail(form);
+
                 ViewBag.Message = "Your message has been received and we will contact you soon.";
             }
             return View("Contact");
+        }
+
+        private void SendEmail(MContactUs form)
+        {
+            string emailTo = Environment.GetEnvironmentVariable("MAGNUM_EMAIL_TO");
+            if (emailTo != null)
+            {
+                Mail m = new Mail();
+                m.From = "noreply@magnum-pharmacy.com";
+                m.FromName = form.Name;
+                m.To = emailTo;
+                m.Subject = form.Subject;
+                m.IsHtmlContent = true;
+                m.Body = form.Email + ", " + form.Message;
+                m.BCC = "";
+                m.CC = "";
+
+                ISmtpContext smtpContext = GetSmtpContext();
+                smtpContext.Send(m);
+            }
+            else
+            {
+                //TODO write log, email will not be sent.
+            }
+        }
+
+        public virtual ISmtpContext GetSmtpContext()
+        {
+            return new SendGridSmtpContext();
         }
 
         public string ValidateContactUsForm(MContactUs form)

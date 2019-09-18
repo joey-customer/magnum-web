@@ -8,6 +8,7 @@ using System.Net;
 using Magnum.Api.Commons.Business;
 using Magnum.Api.Businesses.ContactUs;
 using Magnum.Api.Caches;
+using Magnum.Api.Smtp;
 
 namespace Magnum.Web.Controllers
 {
@@ -35,6 +36,9 @@ namespace Magnum.Web.Controllers
             var iCacheMock = new Mock<ICache>();
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
 
+
+            var mockSmtp = new Mock<ISmtpContext>();
+            mockController.Setup(foo => foo.GetSmtpContext()).Returns(mockSmtp.Object);
 
             controller = mockController.Object;
 
