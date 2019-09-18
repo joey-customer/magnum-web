@@ -170,10 +170,8 @@ body {
 		display: block;
 		min-width: 210px;
 		background: #fff;
-		border-radius: 0px;
+		border-radius: 0;
 		border: none;
-		-webkit-box-shadow: none;
-		box-shadow: none;
 		visibility: hidden;
 		margin-top: 1px;
 		top: 120%;
