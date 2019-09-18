@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
-using Magnum.Api.Factories;
+using Its.Onix.Core.NoSQL;
 
 using NDesk.Options;
 using Moq;
@@ -13,12 +13,16 @@ using Microsoft.Extensions.Logging;
 
 namespace Magnum.Consoles.Contents
 {
-    public class ImportContentApplicationTest
+    public class ImportContentApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private readonly string tempPath = Path.GetTempPath();
         private readonly string fileName = "product_types.xml";
+
+        public ImportContentApplicationTest() : base()
+        {
+        }
 
         private void createSuccessXML(string fileName)
         {
@@ -118,7 +122,7 @@ namespace Magnum.Consoles.Contents
             string importFile = Path.Combine(paths);
             createSuccessXML(importFile);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             app.Run();
@@ -137,7 +141,7 @@ namespace Magnum.Consoles.Contents
             string importFile = Path.Combine(paths);
             createFailedXML(importFile);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             app.Run();

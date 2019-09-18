@@ -5,10 +5,10 @@ using System.Collections;
 using Microsoft.Extensions.Logging;
 
 using NDesk.Options;
-using Magnum.Api.NoSql;
-using Magnum.Api.Storages;
-using Magnum.Api.Commons.Table;
-using Magnum.Api.Utils.Serializers;
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Storages;
+using Its.Onix.Core.Commons.Table;
+using Its.Onix.Core.Utils.Serializers;
 
 namespace Magnum.Consoles.Commons
 {

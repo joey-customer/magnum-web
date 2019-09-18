@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Linq;
-using Magnum.Api.Caches;
-using Magnum.Api.Factories;
+
+using Its.Onix.Core.Factories;
+using Its.Onix.Core.Caches;
+using Its.Onix.Core.Smtp;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -30,19 +33,27 @@ namespace Magnum.Web.Controllers
             ViewBag.ProductTypeList = productTypeList.Select(kvp => kvp.Value).ToList();
         }
 
-        public virtual ICache GetProductTypeCache()
+        public virtual ICacheContext GetProductTypeCache()
         {
-            return FactoryCache.GetCacheObject("CacheProductTypeList");
+            return FactoryCacheContext.GetCacheObject("CacheProductTypeList");
         }
 
-        public virtual ICache GetContentCache()
+        public virtual ICacheContext GetContentCache()
         {
-            return FactoryCache.GetCacheObject("CachePageContents");
+            return FactoryCacheContext.GetCacheObject("CachePageContents");
         }
 
-                public virtual ICache GetProductsCache()
+        public virtual ICacheContext GetProductsCache()
         {
-            return FactoryCache.GetCacheObject("CacheProductList");
+            return FactoryCacheContext.GetCacheObject("CacheProductList");
         }
+
+        public virtual ISmtpContext GetSmtpContext()
+        {
+            var ctx = FactorySmtpContext.CreateSmtpObject("SendGridSmtpContext");
+            ctx.SetSmtpConfigByEnv("MAGNUM_SMTP_HOST", "MAGNUM_SMTP_PORT", "MAGNUM_SMTP_USER", "MAGNUM_SMTP_PASSWORD");
+
+            return ctx;
+        }        
     }
 }

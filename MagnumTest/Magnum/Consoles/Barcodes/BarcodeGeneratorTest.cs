@@ -10,20 +10,25 @@ using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using Magnum.Consoles.Barcodes.ImageGenerators;
 using Magnum.Consoles.Barcodes.HtmlConverters;
-using Magnum.Api.Models;
-using Magnum.Api.Factories;
+
+using Its.Onix.Erp.Models;
+using Its.Onix.Core.NoSQL;
 
 using NDesk.Options;
 using Moq;
 
 namespace Magnum.Consoles.Barcodes
 {
-    public class BarcodeGeneratorTest
+    public class BarcodeGeneratorTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private int generatedCount = 0;
         private bool imgGenerateFlag = false;
+
+        public BarcodeGeneratorTest() : base()
+        {
+        }
 
         [SetUp]
         public void Setup()
@@ -156,7 +161,7 @@ namespace Magnum.Consoles.Barcodes
                 app.AddArgument("generate", "Y");
             }
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             app.Run();

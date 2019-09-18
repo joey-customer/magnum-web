@@ -4,18 +4,24 @@ using NUnit.Framework;
 
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
-using Magnum.Api.Factories;
+using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Storages;
 
+using Moq;
 using NDesk.Options;
 
 namespace Magnum.Consoles.Products
 {
-    public class ImportProductApplicationTest
+    public class ImportProductApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
         private readonly string tempPath = Path.GetTempPath();
         private readonly string fileName = "products.xml";
+
+        public ImportProductApplicationTest() : base()
+        {
+        }
 
         private void createSuccessXML(string fileName)
         {
@@ -195,10 +201,10 @@ namespace Magnum.Consoles.Products
             string importFile = Path.Combine(paths);
             createSuccessXML(importFile);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
-            MockedStorageContext storageCtx = new MockedStorageContext();
+            IStorageContext storageCtx = new Mock<IStorageContext>().Object;
             app.SetStorageContext(storageCtx);
 
             app.Run();
@@ -217,7 +223,7 @@ namespace Magnum.Consoles.Products
             string importFile = Path.Combine(paths);
             createFailedXML(importFile);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             app.Run();

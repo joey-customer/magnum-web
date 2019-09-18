@@ -4,10 +4,12 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Drawing;
 
-using Magnum.Api.Models;
+using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Utils;
+using Its.Onix.Core.Commons.Model;
+
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.HtmlConverters;
-using Magnum.Api.Utils;
 
 namespace Magnum.Consoles.Barcodes.ImageGenerators
 {
@@ -65,7 +67,7 @@ namespace Magnum.Consoles.Barcodes.ImageGenerators
         {
             MProfile bc = (MProfile) data;
 
-            string tmpFile = string.Format("{0}.png", RandomUtils.RandomString(10));
+            string tmpFile = string.Format("{0}.png", RandomUtils.RandomStringNum(10));
             string qrFile = CreateQR(tmpFile, bc.CompanyWebSite);
             var ms = ParseTemplate(htmlConverter, templateLines, bc, qrFile);
 

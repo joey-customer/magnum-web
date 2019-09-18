@@ -4,15 +4,16 @@ using System.Collections;
 
 using Microsoft.Extensions.Logging;
 
-using Magnum.Api.Models;
+using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Businesses.Barcodes;
+using Its.Onix.Core.Utils;
+using Its.Onix.Core.Factories;
+using Its.Onix.Core.NoSQL;
+
 using Magnum.Consoles.Commons;
-using Magnum.Api.Factories;
-using Magnum.Api.Businesses.Barcodes;
-using Magnum.Api.NoSql;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.ImageGenerators;
 using Magnum.Consoles.Factories;
-using Magnum.Api.Utils;
 
 using NDesk.Options;
 

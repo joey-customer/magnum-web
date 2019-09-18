@@ -15,10 +15,14 @@ using Moq;
 
 namespace Magnum.Consoles.Barcodes
 {
-    public class QRGeneratorTest
+    public class QRGeneratorTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
+
+        public QRGeneratorTest() : base()
+        {
+        }
 
         [SetUp]
         public void Setup()
@@ -68,10 +72,7 @@ namespace Magnum.Consoles.Barcodes
 
             using (Bitmap bitmap = new Bitmap(100, 100))
             {
-                bitmap.Save(tmpPath);
-                Bitmap img = (Bitmap) Bitmap.FromFile(tmpPath);
-
-                img.Save(ms, ImageFormat.Bmp);
+                bitmap.Save(ms, ImageFormat.Bmp);
 
                 byteImage = new Byte[ms.Length];   
                 byteImage = ms.ToArray();

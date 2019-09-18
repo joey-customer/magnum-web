@@ -2,14 +2,21 @@ using NUnit.Framework;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Magnum.Api.Caches;
-using Magnum.Api.Models;
+using Its.Onix.Core.Caches;
+using Its.Onix.Erp.Models;
 using System.Collections.Generic;
+
+using Its.Onix.Core.Factories;
+using Its.Onix.Erp.Services;
 
 namespace Magnum.Web.Controllers
 {
-    public class AboutControllerTest
+    public class AboutControllerTest : BaseTest
     {
+        public AboutControllerTest()
+        {
+        }
+
         AboutController controller;
 
         [SetUp]
@@ -23,7 +30,7 @@ namespace Magnum.Web.Controllers
 
             var mockController = new Mock<AboutController>() { CallBase = true };
 
-            var iCacheMock = new Mock<ICache>();
+            var iCacheMock = new Mock<ICacheContext>();
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductTypeCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductsCache()).Returns(iCacheMock.Object);

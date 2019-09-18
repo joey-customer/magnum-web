@@ -15,9 +15,12 @@ a.navbar-brand {
 
 .navbar-brand img {
 	display: block;
-	height: 100%;
-	position: absolute;
-	top: 0;
+	height: 50px;
+}
+@media (min-width: 768px) {
+	.navbar-brand img {
+		height: 100px;
+	}
 }
 
 /* Sticky footer styles
@@ -94,7 +97,6 @@ body {
 
 .navbar {
 	background: transparent;
-	padding: 0px;
 }
 
 .navbar h1 {
@@ -168,10 +170,8 @@ body {
 		display: block;
 		min-width: 210px;
 		background: #fff;
-		border-radius: 0px;
+		border-radius: 0;
 		border: none;
-		-webkit-box-shadow: none;
-		box-shadow: none;
 		visibility: hidden;
 		margin-top: 1px;
 		top: 120%;
@@ -953,7 +953,6 @@ body {
 	outline: 0;
 }
 .modal .modal-dialog .modal-content .modal-body {
-	background: #f6faf9;
 	border-radius: 8px; 
 }
 .modal .modal-dialog .modal-content .modal-body .product-details-inner .product-content {

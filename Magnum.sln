@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnumCore", "MagnumCore\MagnumCore.csproj", "{4D04005C-C53E-4749-AB1A-94298B29F715}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnumWeb", "MagnumWeb\MagnumWeb.csproj", "{A8622990-1E75-446D-B1D9-94E4A0010F47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnumTest", "MagnumTest\MagnumTest.csproj", "{743B3A36-016F-4E31-8F9E-1A865EB37CFE}"

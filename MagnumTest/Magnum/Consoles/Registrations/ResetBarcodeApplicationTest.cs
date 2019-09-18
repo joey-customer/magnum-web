@@ -1,21 +1,26 @@
 using System;
-using System.IO;
 using System.Collections;
 using NUnit.Framework;
+using Moq;
 
 using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
-using Magnum.Api.Models;
-using Magnum.Api.Factories;
+
+using Its.Onix.Erp.Models;
+using Its.Onix.Core.NoSQL;
 
 using NDesk.Options;
 
 namespace Magnum.Consoles.Registrations
 {
-    public class ResetBarcodeApplicationTest
+    public class ResetBarcodeApplicationTest : BaseTest
     {
         private Hashtable h = null;
         private string[] args = null;
+
+        public ResetBarcodeApplicationTest() : base()
+        {
+        }
 
         [SetUp]
         public void Setup()
@@ -70,10 +75,10 @@ namespace Magnum.Consoles.Registrations
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             MBarcode barcode = new MBarcode();
             barcode.IsActivated = IsActivated;
-            ctx.SetReturnObjectByKey(barcode);
+//TODO :            ctx.SetReturnObjectByKey(barcode);
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
@@ -90,7 +95,7 @@ namespace Magnum.Consoles.Registrations
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage

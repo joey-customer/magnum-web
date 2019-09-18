@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using Magnum.Consoles.Barcodes.HtmlConverters;
 
-using Magnum.Api.Models;
+using Its.Onix.Core.Commons.Model;
 using QRCoder;
 
 namespace Magnum.Consoles.Barcodes.Commons

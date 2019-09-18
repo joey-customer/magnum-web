@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Magnum.Web.Models;
-using Magnum.Api.Models;
+using Its.Onix.Erp.Models;
 using System.Collections;
 using System.Linq;
 

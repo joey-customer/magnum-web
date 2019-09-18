@@ -3,15 +3,20 @@ using Moq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Magnum.Web.Models;
-using Magnum.Api.Caches;
-using Magnum.Api.Models;
 using System.Collections.Generic;
 using System.Collections;
 
+using Its.Onix.Erp.Models;
+using Its.Onix.Core.Caches;
+
 namespace Magnum.Web.Controllers
 {
-    public class HomeControllerTest
+    public class HomeControllerTest : BaseTest
     {
+        public HomeControllerTest() : base()
+        {
+        }
+
         HomeController controller;
 
         [SetUp]
@@ -25,7 +30,7 @@ namespace Magnum.Web.Controllers
 
             var mockController = new Mock<HomeController>() { CallBase = true };
 
-            var iCacheMock = new Mock<ICache>();
+            var iCacheMock = new Mock<ICacheContext>();
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductTypeCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductsCache()).Returns(iCacheMock.Object);

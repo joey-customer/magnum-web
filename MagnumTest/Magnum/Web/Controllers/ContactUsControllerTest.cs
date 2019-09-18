@@ -1,18 +1,24 @@
 using System;
 using NUnit.Framework;
 using Moq;
-using Magnum.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Net;
-using Magnum.Api.Commons.Business;
-using Magnum.Api.Businesses.ContactUs;
-using Magnum.Api.Caches;
 
-namespace Magnum.Web.Controllers
+using Its.Onix.Core.Business;
+using Its.Onix.Core.Caches;
+using Its.Onix.Core.Smtp;
+using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Businesses.ContactUs;
+
+namespace Magnum.Web.Controllers 
 {
-    public class ContactUsControllerTest
+    public class ContactUsControllerTest : BaseTest
     {
+        public ContactUsControllerTest() : base()
+        {
+        }
+
         ContactUsController controller;
         IBusinessOperationManipulate<MContactUs> mockContactUsOpr;
 
@@ -32,12 +38,13 @@ namespace Magnum.Web.Controllers
             mockOpr.Setup(foo => foo.Apply(It.IsAny<MContactUs>())).Returns(0);
 
             mockController.Setup(foo => foo.GetSaveContactUsOperation()).Returns(mockContactUsOpr);
-            var iCacheMock = new Mock<ICache>();
+            var iCacheMock = new Mock<ICacheContext>();
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
 
+            var mockSmtp = new Mock<ISmtpContext>();
+            mockController.Setup(foo => foo.GetSmtpContext()).Returns(mockSmtp.Object);
 
             controller = mockController.Object;
-
             controller.ControllerContext = controllerContext;
         }
 

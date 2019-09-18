@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Magnum.Api.Models;
+using Its.Onix.Erp.Models;
 using System.Collections;
 using System.Linq;
 

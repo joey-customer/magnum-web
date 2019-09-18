@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Magnum.Api.Models;
-using Magnum.Api.Commons.Business;
-using Magnum.Api.Factories;
+﻿using System;
+using Serilog;
+
+using Microsoft.AspNetCore.Mvc;
+
+using Its.Onix.Erp.Models;
+using Its.Onix.Core.Business;
+using Its.Onix.Core.Factories;
+using Its.Onix.Core.Smtp;
+
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
-
-using System;
 
 namespace Magnum.Web.Controllers
 {
@@ -36,9 +40,37 @@ namespace Magnum.Web.Controllers
 
                 operation.Apply(form);
 
+                SendEmail(form);
+
                 ViewBag.Message = "Your message has been received and we will contact you soon.";
             }
             return View("Contact");
+        }
+
+        private void SendEmail(MContactUs form)
+        {
+            string emailTo = Environment.GetEnvironmentVariable("MAGNUM_EMAIL_TO");
+            if (emailTo != null)
+            {
+                Mail m = new Mail();
+                m.From = "noreply@magnum-pharmacy.com";
+                m.FromName = form.Name;
+                m.To = emailTo;
+                m.Subject = form.Subject;
+                m.IsHtmlContent = true;
+                m.Body = form.Email + ", " + form.Message;
+                m.BCC = "";
+                m.CC = "";
+
+                ISmtpContext smtpContext = GetSmtpContext();
+                smtpContext.Send(m);
+
+                Log.Logger.Information("Email sent to [{0}]", emailTo);
+            }
+            else
+            {
+                Log.Logger.Information("Env variable MAGNUM_EMAIL_TO not set!!!");
+            }
         }
 
         public string ValidateContactUsForm(MContactUs form)
@@ -69,3 +101,4 @@ namespace Magnum.Web.Controllers
         }
     }
 }
+
