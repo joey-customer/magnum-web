@@ -6,11 +6,14 @@ using Its.Onix.Core.Caches;
 using Its.Onix.Erp.Models;
 using System.Collections.Generic;
 
+using Its.Onix.Core.Factories;
+using Its.Onix.Erp.Services;
+
 namespace Magnum.Web.Controllers
 {
     public class AboutControllerTest : BaseTest
     {
-        public AboutControllerTest() : base()
+        public AboutControllerTest()
         {
         }
 

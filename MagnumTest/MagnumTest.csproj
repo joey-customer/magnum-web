@@ -7,9 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OnixBusinessErp" Version="1.0.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.4" />
     <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="OnixBusinessErp" Version="1.0.4" />
+    <PackageReference Include="OnixCore" Version="1.0.12" />
     <ProjectReference Include="..\MagnumConsole\MagnumConsole.csproj" />
     <ProjectReference Include="..\MagnumWeb\MagnumWeb.csproj" />
     <PackageReference Include="nunit" Version="3.11.0" />

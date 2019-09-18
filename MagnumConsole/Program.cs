@@ -8,6 +8,8 @@ using Magnum.Consoles.Factories;
 using NDesk.Options;
 
 using Serilog;
+using Its.Onix.Core.Factories;
+using Its.Onix.Erp.Services;
 
 namespace Magnum.Consoles
 {
@@ -20,6 +22,12 @@ namespace Magnum.Consoles
                 Console.WriteLine("Missing application name!!!");
                 return;
             }
+
+            FactoryBusinessOperation.ClearRegisteredItems();
+            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
+
+            FactoryCacheContext.ClearRegisteredItems();
+            FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
 
             string appName = args[0];
 

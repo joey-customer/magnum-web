@@ -5,15 +5,13 @@ namespace Magnum
 {
     public class BaseTest
     {
-        private static bool isLoad = false;
         public BaseTest()
-        {            
-            if (!isLoad)
-            {
-                FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
-                FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
-                isLoad = true;
-            }
+        {      
+            FactoryBusinessOperation.ClearRegisteredItems();
+            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
+
+            FactoryCacheContext.ClearRegisteredItems();
+            FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
         }
     }
 }

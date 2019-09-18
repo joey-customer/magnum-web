@@ -72,10 +72,7 @@ namespace Magnum.Consoles.Barcodes
 
             using (Bitmap bitmap = new Bitmap(100, 100))
             {
-                bitmap.Save(tmpPath);
-                Bitmap img = (Bitmap) Bitmap.FromFile(tmpPath);
-
-                img.Save(ms, ImageFormat.Bmp);
+                bitmap.Save(ms, ImageFormat.Bmp);
 
                 byteImage = new Byte[ms.Length];   
                 byteImage = ms.ToArray();
