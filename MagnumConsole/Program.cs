@@ -3,13 +3,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using NDesk.Options;
 
 using Serilog;
 using Its.Onix.Core.Factories;
 using Its.Onix.Erp.Services;
+using Its.Onix.Core.Applications;
 
 namespace Magnum.Consoles
 {
@@ -43,7 +43,7 @@ namespace Magnum.Consoles
                 .CreateLogger();
 
             FactoryConsoleApplication.SetLoggerFactory(loggerFactory);
-            IConsoleApp app = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);    
+            IApplication app = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);    
 
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);

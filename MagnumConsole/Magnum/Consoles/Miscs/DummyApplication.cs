@@ -1,6 +1,7 @@
 using System;
-using Magnum.Consoles.Commons;
 using NDesk.Options;
+
+using Its.Onix.Core.Applications;
 
 namespace Magnum.Consoles.Miscs
 {

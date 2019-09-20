@@ -4,7 +4,7 @@ using System.Reflection;
 
 using Microsoft.Extensions.Logging;
 
-using Magnum.Consoles.Commons;
+using Its.Onix.Core.Applications;
 
 namespace Magnum.Consoles.Factories
 {   
@@ -37,7 +37,7 @@ namespace Magnum.Consoles.Factories
             addClassConfig("DummyApp", "Magnum.Consoles.Miscs.DummyApplication");       
         }  
 
-        public static IConsoleApp CreateConsoleApplicationObject(string name)
+        public static IApplication CreateConsoleApplicationObject(string name)
         {        
             string className = (string)classMaps[name];
             if (className == null)
@@ -46,7 +46,7 @@ namespace Magnum.Consoles.Factories
             }
 
             Assembly asm = Assembly.GetExecutingAssembly();
-            IConsoleApp obj = (IConsoleApp)asm.CreateInstance(className);
+            IApplication obj = (IApplication)asm.CreateInstance(className);
 
             if (loggerFactory != null)
             {

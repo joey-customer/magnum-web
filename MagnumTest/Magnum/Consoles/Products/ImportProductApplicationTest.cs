@@ -2,10 +2,10 @@ using System.IO;
 using System.Collections;
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
+using Its.Onix.Core.Applications;
 
 using Moq;
 using NDesk.Options;
@@ -213,7 +213,7 @@ namespace Magnum.Consoles.Products
 
 
         [TestCase("ImportProduct")]
-        public void ImportProductTypeFailedTest(string appName)
+        public void ImportProductFailedTest(string appName)
         {
             ImportProductApplication app = (ImportProductApplication) FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();

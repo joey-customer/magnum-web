@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 
 using Its.Onix.Erp.Models;
 using Its.Onix.Erp.Businesses.Registrations;
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Applications;
 
 using NDesk.Options;
 

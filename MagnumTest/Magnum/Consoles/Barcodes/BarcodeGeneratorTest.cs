@@ -6,13 +6,13 @@ using System.Collections;
 
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using Magnum.Consoles.Barcodes.ImageGenerators;
 using Magnum.Consoles.Barcodes.HtmlConverters;
 
 using Its.Onix.Erp.Models;
 using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Applications;
 
 using NDesk.Options;
 using Moq;

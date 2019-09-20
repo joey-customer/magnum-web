@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
+using Its.Onix.Core.Applications;
 
 namespace Magnum.Consoles.Factories
 {
@@ -17,7 +17,7 @@ namespace Magnum.Consoles.Factories
         {
             try
             {
-                IConsoleApp opt = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+                IApplication opt = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
                 Assert.True(false, "Exception shoud be throw for unknow application name!!!");
             }
             catch (Exception e)
@@ -29,7 +29,7 @@ namespace Magnum.Consoles.Factories
         [TestCase("BarcodeGen")]
         public void KnownApplicationNameTest(string appName)
         {
-            IConsoleApp opt = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
+            IApplication opt = FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             Assert.IsNotNull(opt, "Object must not be null!!!");
         }          
     }    

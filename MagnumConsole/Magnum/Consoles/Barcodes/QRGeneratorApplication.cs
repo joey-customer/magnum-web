@@ -3,7 +3,7 @@ using System.Collections;
 
 using Its.Onix.Erp.Models;
 
-using Magnum.Consoles.Commons;
+using Its.Onix.Core.Applications;
 using Magnum.Consoles.Barcodes.Commons;
 using Magnum.Consoles.Barcodes.ImageGenerators;
 
