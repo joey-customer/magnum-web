@@ -2,11 +2,11 @@ using System;
 using System.IO;
 using System.Collections;
 
-using Magnum.Consoles.Commons;
 
 using Its.Onix.Erp.Models;
 using Its.Onix.Erp.Businesses.Products;
 
+using Its.Onix.Core.Applications;
 using Its.Onix.Core.Utils;
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.NoSQL;
@@ -38,10 +38,10 @@ namespace Magnum.Consoles.Products
 
             CTable t = XmlToCTable();
 
-            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("FirebaseNoSqlContext");
             FactoryBusinessOperation.SetNoSqlContext(ctx);
 
-            IStorageContext storageCtx = GetStorageContextWithAuthen("firebase");
+            IStorageContext storageCtx = GetStorageContextWithAuthen("FirebaseStorageContext");
             FactoryBusinessOperation.SetStorageContext(storageCtx);
 
             SaveProduct opr = (SaveProduct) FactoryBusinessOperation.CreateBusinessOperationObject("SaveProduct");

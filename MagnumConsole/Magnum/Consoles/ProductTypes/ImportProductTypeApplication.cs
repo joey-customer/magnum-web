@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 
-using Magnum.Consoles.Commons;
-
 using Its.Onix.Erp.Models;
 using Its.Onix.Erp.Businesses.ProductTypes;
 
@@ -10,6 +8,7 @@ using Its.Onix.Core.Utils;
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Commons.Table;
+using Its.Onix.Core.Applications;
 
 using Microsoft.Extensions.Logging;
 using NDesk.Options;

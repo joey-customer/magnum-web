@@ -3,9 +3,9 @@ using System.IO;
 using System.Collections;
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Applications;
 
 using NDesk.Options;
 using Moq;
@@ -131,7 +131,7 @@ namespace Magnum.Consoles.Contents
 
 
         [TestCase("ImportContent")]
-        public void ImportProductTypeFailedTest(string appName)
+        public void ImportContentFailedTest(string appName)
         {
             ImportContentApplication app = (ImportContentApplication)FactoryConsoleApplication.CreateConsoleApplicationObject(appName);
             OptionSet opt = app.CreateOptionSet();

@@ -5,8 +5,8 @@ using Its.Onix.Erp.Models;
 using Its.Onix.Erp.Businesses.Registrations;
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Applications;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 
 using NDesk.Options;

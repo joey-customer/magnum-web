@@ -3,11 +3,11 @@ using System.IO;
 using System.Collections;
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Erp.Models;
+using Its.Onix.Core.Applications;
 
 using Moq;
 using NDesk.Options;

@@ -2,9 +2,9 @@ using System.IO;
 using System.Collections;
 using NUnit.Framework;
 
-using Magnum.Consoles.Commons;
 using Magnum.Consoles.Factories;
 using Its.Onix.Core.NoSQL;
+using Its.Onix.Core.Applications;
 
 using NDesk.Options;
 using Moq;

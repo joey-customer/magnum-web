@@ -9,8 +9,8 @@ using Its.Onix.Core.Utils;
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Commons.Table;
+using Its.Onix.Core.Applications;
 
-using Magnum.Consoles.Commons;
 using Microsoft.Extensions.Logging;
 using NDesk.Options;
 
