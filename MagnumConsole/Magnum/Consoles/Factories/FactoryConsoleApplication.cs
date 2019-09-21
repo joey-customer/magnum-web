@@ -28,8 +28,11 @@ namespace Magnum.Consoles.Factories
         {            
             addClassConfig("BarcodeGen", "Magnum.Consoles.Barcodes.BarcodeGeneratorApplication"); 
             addClassConfig("QrGen", "Magnum.Consoles.Barcodes.QRGeneratorApplication");             
+            addClassConfig("BarcodeMigrate", "Magnum.Consoles.Barcodes.BarcodeMigrateApplication");
+            
             addClassConfig("BarcodeReg", "Magnum.Consoles.Registrations.RegisterBarcodeApplication");
             addClassConfig("BarcodeReset", "Magnum.Consoles.Registrations.ResetBarcodeApplication"); 
+            
             addClassConfig("ImportProductType", "Magnum.Consoles.ProductTypes.ImportProductTypeApplication"); 
             addClassConfig("ImportProduct", "Magnum.Consoles.Products.ImportProductApplication");
             addClassConfig("ImportContent", "Magnum.Consoles.Contents.ImportContentApplication"); 

@@ -60,3 +60,11 @@ dotnet run -p MagnumConsole ImportContent \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
+dotnet run -p MagnumConsole BarcodeMigrate \
+--if='/c/Magnum/BarcodeMigrate/tar.txt' \
+--u=https://development.magnum-pharmacy.com \
+--h=${MAGNUM_FIREBASE_URL} \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+

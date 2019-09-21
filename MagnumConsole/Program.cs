@@ -24,10 +24,10 @@ namespace Magnum.Consoles
             }
 
             FactoryBusinessOperation.ClearRegisteredItems();
-            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
+            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetInstance().ExportedServicesList());
 
             FactoryCacheContext.ClearRegisteredItems();
-            FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
+            FactoryCacheContext.RegisterCaches(BusinessErpCaches.GetInstance().ExportedServicesList());
 
             string appName = args[0];
 
