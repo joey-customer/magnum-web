@@ -33,7 +33,7 @@ namespace Magnum.Consoles.Registrations
             string serial = args["serial"].ToString();
             string pin = args["pin"].ToString();
 
-            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("FirebaseNoSqlContext");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());
