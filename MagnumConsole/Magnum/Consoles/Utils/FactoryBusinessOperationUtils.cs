@@ -10,10 +10,10 @@ namespace Magnum.Consoles.Utils
         private static bool isLoad = false;
 
         public static void LoadBusinessOperations()
-        {
+        {   
             if (!isLoad)
             {
-                FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
+                FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetInstance().ExportedServicesList());
                 isLoad = true;
             }
         }

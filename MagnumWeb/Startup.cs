@@ -43,9 +43,9 @@ namespace Magnum.Web
             FactoryBusinessOperation.SetStorageContext(storageCtx);
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(logFactory);
-            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetBusinessOperationList());
+            FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetInstance().ExportedServicesList());
 
-            FactoryCacheContext.RegisterCaches(BusinessErpCaches.BusinessErpCachesList());
+            FactoryCacheContext.RegisterCaches(BusinessErpCaches.GetInstance().ExportedServicesList());
             FactoryCacheContext.SetLoggerFactory(logFactory);
         }
 

@@ -27,8 +27,8 @@ DA:51,1
 DA:52,2
 BRDA:20,10,0,1
 BRDA:20,10,1,1
-BRDA:35,80,0,1
-BRDA:35,80,1,1
+BRDA:35,90,0,1
+BRDA:35,90,1,1
 LF:24
 LH:24
 BRF:4
@@ -149,51 +149,51 @@ FNF:3
 FNH:3
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\ProductTypes\ImportProductTypeApplication.cs
-FN:21,NDesk.Options.OptionSet Magnum.Consoles.ProductTypes.ImportProductTypeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
+FN:20,NDesk.Options.OptionSet Magnum.Consoles.ProductTypes.ImportProductTypeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
 FNDA:3,NDesk.Options.OptionSet Magnum.Consoles.ProductTypes.ImportProductTypeApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
-DA:22,3
+DA:21,3
+DA:22,6
 DA:23,6
-DA:24,6
+DA:25,3
 DA:26,3
-DA:27,3
-FN:29,System.Int32 Magnum.Consoles.ProductTypes.ImportProductTypeApplication::Execute()
+FN:28,System.Int32 Magnum.Consoles.ProductTypes.ImportProductTypeApplication::Execute()
 FNDA:2,System.Int32 Magnum.Consoles.ProductTypes.ImportProductTypeApplication::Execute()
+DA:29,2
 DA:30,2
 DA:31,2
-DA:32,2
+DA:33,2
 DA:34,2
-DA:35,2
-DA:37,2
+DA:36,2
+DA:39,2
 DA:40,2
-DA:41,2
-DA:42,9
+DA:41,9
+DA:42,2
 DA:43,2
 DA:44,2
-DA:45,2
-DA:47,2
-DA:48,7
+DA:46,2
+DA:47,7
+DA:48,1
 DA:49,1
 DA:50,1
 DA:51,1
 DA:52,1
 DA:53,1
-DA:54,1
+DA:55,1
 DA:56,1
 DA:57,1
-DA:58,1
+DA:59,1
 DA:60,1
 DA:61,1
 DA:62,1
 DA:63,1
 DA:64,1
 DA:65,1
-DA:66,1
+DA:67,2
 DA:68,2
-DA:69,2
-BRDA:42,366,1,2
-BRDA:48,320,1,1
-BRDA:48,320,0,1
-BRDA:42,366,0,1
+BRDA:41,366,1,2
+BRDA:47,320,1,1
+BRDA:47,320,0,1
+BRDA:41,366,0,1
 LF:37
 LH:37
 BRF:4
@@ -323,25 +323,25 @@ FNF:2
 FNH:2
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Miscs\DummyApplication.cs
-FN:9,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
+FN:10,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
 FNDA:1,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::CreateOptionSet()
-DA:10,1
 DA:11,1
 DA:12,1
 DA:13,1
 DA:14,1
 DA:15,1
-FN:17,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
+DA:16,1
+FN:18,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
 FNDA:1,NDesk.Options.OptionSet Magnum.Consoles.Miscs.DummyApplication::PopulateCustomOptionSet(NDesk.Options.OptionSet)
-DA:18,1
-DA:20,1
+DA:19,1
 DA:21,1
-FN:23,System.Int32 Magnum.Consoles.Miscs.DummyApplication::Execute()
+DA:22,1
+FN:24,System.Int32 Magnum.Consoles.Miscs.DummyApplication::Execute()
 FNDA:1,System.Int32 Magnum.Consoles.Miscs.DummyApplication::Execute()
-DA:24,1
 DA:25,1
 DA:26,1
 DA:27,1
+DA:28,1
 LF:13
 LH:13
 BRF:0
@@ -351,53 +351,54 @@ FNH:3
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Factories\FactoryConsoleApplication.cs
 FN:17,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
-FNDA:8,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
-DA:18,8
-DA:19,8
-DA:20,8
+FNDA:9,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::addClassConfig(System.String,System.String)
+DA:18,9
+DA:19,9
+DA:20,9
 FN:27,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::initClassMap()
 FNDA:1,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::initClassMap()
 DA:28,1
 DA:29,1
 DA:30,1
 DA:31,1
-DA:32,1
 DA:33,1
 DA:34,1
-DA:35,1
+DA:36,1
 DA:37,1
 DA:38,1
-FN:40,Magnum.Consoles.Commons.IConsoleApp Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
-FNDA:25,Magnum.Consoles.Commons.IConsoleApp Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
-DA:41,25
-DA:42,25
-DA:43,25
-DA:44,1
-DA:45,1
-DA:48,24
-DA:49,24
+DA:40,1
+DA:41,1
+FN:43,Its.Onix.Core.Applications.IApplication Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
+FNDA:25,Its.Onix.Core.Applications.IApplication Magnum.Consoles.Factories.FactoryConsoleApplication::CreateConsoleApplicationObject(System.String)
+DA:44,25
+DA:45,25
+DA:46,25
+DA:47,1
+DA:48,1
 DA:51,24
 DA:52,24
-DA:53,24
 DA:54,24
 DA:55,24
 DA:56,24
+DA:57,24
 DA:58,24
 DA:59,24
-BRDA:43,24,0,1
-BRDA:43,24,1,24
-BRDA:51,75,0,24
-BRDA:51,75,1,24
-FN:61,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
+DA:61,24
+DA:62,24
+BRDA:46,24,0,1
+BRDA:46,24,1,24
+BRDA:54,75,0,24
+BRDA:54,75,1,24
+FN:64,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
 FNDA:7,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::SetLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)
-DA:62,7
-DA:63,7
-DA:64,7
-FN:66,Microsoft.Extensions.Logging.ILoggerFactory Magnum.Consoles.Factories.FactoryConsoleApplication::GetLoggerFactory()
+DA:65,7
+DA:66,7
+DA:67,7
+FN:69,Microsoft.Extensions.Logging.ILoggerFactory Magnum.Consoles.Factories.FactoryConsoleApplication::GetLoggerFactory()
 FNDA:8,Microsoft.Extensions.Logging.ILoggerFactory Magnum.Consoles.Factories.FactoryConsoleApplication::GetLoggerFactory()
-DA:67,8
-DA:68,8
-DA:69,8
+DA:70,8
+DA:71,8
+DA:72,8
 FN:12,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::.cctor()
 FNDA:1,System.Void Magnum.Consoles.Factories.FactoryConsoleApplication::.cctor()
 DA:13,1
@@ -405,8 +406,8 @@ DA:15,1
 DA:23,1
 DA:24,1
 DA:25,1
-LF:39
-LH:39
+LF:40
+LH:40
 BRF:4
 BRH:4
 FNF:6
@@ -467,166 +468,6 @@ BRF:6
 BRH:6
 FNF:2
 FNH:2
-end_of_record
-SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Commons\ConsoleAppBase.cs
-FN:26,NDesk.Options.OptionSet Magnum.Consoles.Commons.ConsoleAppBase::CreateOptionSet()
-FNDA:22,NDesk.Options.OptionSet Magnum.Consoles.Commons.ConsoleAppBase::CreateOptionSet()
-DA:27,22
-DA:28,22
-DA:30,22
-DA:32,42
-DA:33,22
-DA:34,42
-DA:35,42
-DA:36,42
-DA:38,22
-DA:40,22
-DA:41,22
-FN:43,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
-FNDA:23,System.Void Magnum.Consoles.Commons.ConsoleAppBase::ClearArgument()
-DA:44,23
-DA:45,23
-DA:46,23
-FN:48,System.Void Magnum.Consoles.Commons.ConsoleAppBase::AddArgument(System.String,System.String)
-FNDA:168,System.Void Magnum.Consoles.Commons.ConsoleAppBase::AddArgument(System.String,System.String)
-DA:49,168
-DA:50,168
-DA:51,168
-FN:53,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
-FNDA:18,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetNoSqlContext(Its.Onix.Core.NoSQL.INoSqlContext)
-DA:54,18
-DA:55,18
-DA:56,18
-FN:58,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
-FNDA:1,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetStorageContext(Its.Onix.Core.Storages.IStorageContext)
-DA:59,1
-DA:60,1
-DA:61,1
-FN:63,Its.Onix.Core.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext()
-FNDA:1,Its.Onix.Core.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext()
-DA:64,1
-DA:65,1
-DA:66,1
-FN:68,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
-FNDA:24,System.Void Magnum.Consoles.Commons.ConsoleAppBase::SetLogger(Microsoft.Extensions.Logging.ILogger)
-DA:69,24
-DA:70,24
-DA:71,24
-FN:73,Microsoft.Extensions.Logging.ILogger Magnum.Consoles.Commons.ConsoleAppBase::GetLogger()
-FNDA:14,Microsoft.Extensions.Logging.ILogger Magnum.Consoles.Commons.ConsoleAppBase::GetLogger()
-DA:74,14
-DA:75,14
-DA:76,14
-FN:78,Its.Onix.Core.NoSQL.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
-FNDA:2,Its.Onix.Core.NoSQL.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext()
-DA:79,2
-DA:80,2
-DA:81,2
-FN:83,Its.Onix.Core.NoSQL.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContextWithAuthen(System.String)
-FNDA:16,Its.Onix.Core.NoSQL.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContextWithAuthen(System.String)
-DA:84,16
-DA:85,16
-DA:86,16
-DA:87,2
-DA:88,2
-DA:89,2
-DA:90,2
-DA:91,2
-DA:92,2
-DA:93,2
-DA:95,16
-DA:96,16
-BRDA:86,19,0,2
-BRDA:86,19,1,16
-FN:98,Its.Onix.Core.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContextWithAuthen(System.String)
-FNDA:4,Its.Onix.Core.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContextWithAuthen(System.String)
-DA:99,4
-DA:100,4
-DA:101,4
-DA:102,3
-DA:103,3
-DA:104,3
-DA:105,3
-DA:106,3
-DA:107,3
-DA:108,3
-DA:110,4
-DA:111,4
-BRDA:101,19,0,3
-BRDA:101,19,1,4
-FN:113,System.Int32 Magnum.Consoles.Commons.ConsoleAppBase::Run()
-FNDA:18,System.Int32 Magnum.Consoles.Commons.ConsoleAppBase::Run()
-DA:114,18
-DA:115,18
-DA:116,17
-DA:117,17
-FN:119,System.Void Magnum.Consoles.Commons.ConsoleAppBase::DumpParameter()
-FNDA:7,System.Void Magnum.Consoles.Commons.ConsoleAppBase::DumpParameter()
-DA:120,7
-DA:121,109
-DA:122,44
-DA:123,44
-DA:124,44
-DA:125,44
-DA:126,7
-BRDA:121,72,1,44
-BRDA:121,72,0,7
-FN:128,System.Collections.Hashtable Magnum.Consoles.Commons.ConsoleAppBase::GetArguments()
-FNDA:24,System.Collections.Hashtable Magnum.Consoles.Commons.ConsoleAppBase::GetArguments()
-DA:129,24
-DA:130,24
-DA:131,24
-FN:133,Its.Onix.Core.NoSQL.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext(System.String,System.String,System.String,System.String,System.String)
-FNDA:4,Its.Onix.Core.NoSQL.INoSqlContext Magnum.Consoles.Commons.ConsoleAppBase::GetNoSqlContext(System.String,System.String,System.String,System.String,System.String)
-DA:134,4
-DA:135,4
-DA:136,4
-DA:137,2
-DA:138,2
-DA:139,2
-DA:140,1
-DA:142,3
-DA:143,3
-BRDA:136,16,0,2
-BRDA:136,16,1,3
-FN:145,Its.Onix.Core.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext(System.String,System.String,System.String,System.String,System.String)
-FNDA:3,Its.Onix.Core.Storages.IStorageContext Magnum.Consoles.Commons.ConsoleAppBase::GetStorageContext(System.String,System.String,System.String,System.String,System.String)
-DA:146,3
-DA:147,3
-DA:148,3
-DA:149,2
-DA:150,2
-DA:151,2
-DA:152,2
-DA:154,3
-DA:155,3
-BRDA:148,16,0,2
-BRDA:148,16,1,3
-FN:157,Its.Onix.Core.Commons.Table.CTable Magnum.Consoles.Commons.ConsoleAppBase::XmlToCTable()
-FNDA:6,Its.Onix.Core.Commons.Table.CTable Magnum.Consoles.Commons.ConsoleAppBase::XmlToCTable()
-DA:158,6
-DA:159,6
-DA:160,6
-DA:161,6
-DA:163,6
-DA:164,6
-DA:165,6
-DA:167,6
-DA:168,6
-DA:169,6
-DA:171,6
-DA:172,6
-FN:17,System.Void Magnum.Consoles.Commons.ConsoleAppBase::.ctor()
-FNDA:30,System.Void Magnum.Consoles.Commons.ConsoleAppBase::.ctor()
-DA:18,30
-DA:19,30
-DA:20,30
-LF:106
-LH:106
-BRF:10
-BRH:10
-FNF:18
-FNH:18
 end_of_record
 SF:D:\dev\projects\magnum_workspace\magnum-web\MagnumConsole\Magnum\Consoles\Barcodes\BarcodeGeneratorApplication.cs
 FN:43,System.Void Magnum.Consoles.Barcodes.BarcodeGeneratorApplication::BarcodeGenerateProgressUpdate(Its.Onix.Erp.Models.MBarcode,System.String)
