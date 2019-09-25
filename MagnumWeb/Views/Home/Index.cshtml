@@ -13,7 +13,7 @@
                 <div class="bannner-content">
                     <h1>@Contents["txt/Home_Banner_Header"].Values[lang]</h1>
                     <p>@Contents["txt/Home_Banner_Text"].Values[lang]</p>
-                    <a href="#">Learn More</a>
+                    <a href="#our-service">Learn More</a>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
 </div>
 
 
-<div class="our-service">
+<div id="our-service" class="our-service">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -65,7 +65,7 @@
                                 <img src="@product.Image1Url" alt="">
                             </a>
                         </div>
-                        <h6 class="name">@product.Descriptions["EN"].Name <span>(15% off)</span></h6>
+                        <h6 class="name">@product.Descriptions["EN"].Name</h6>
                         <div class="rating">
                             @for(int i=0; i < product.Rating; i++) {
                                 <a href="#">
@@ -111,7 +111,7 @@
                                 <img src="@product.Image1Url" alt="">
                             </a>
                         </div>
-                        <h6 class="name">@product.Descriptions["EN"].Name <span>(15% off)</span></h6>
+                        <h6 class="name">@product.Descriptions["EN"].Name</h6>
                         <div class="rating">
                             @for(int i=0; i < product.Rating; i++) {
                                 <a href="#">

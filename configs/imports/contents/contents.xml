@@ -99,7 +99,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN"></FIELD>
+                        <FIELD name="EN">Best buy products by our buyers</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -119,7 +119,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN"></FIELD>
+                        <FIELD name="EN">The original product has just been delivered to our stores</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
