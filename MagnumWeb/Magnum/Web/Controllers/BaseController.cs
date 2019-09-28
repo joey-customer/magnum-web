@@ -30,23 +30,28 @@ namespace Magnum.Web.Controllers
 
         private dynamic GetViews()
         {
-            var matrixOpr = GetMatrixIncreaseOperation();
-            MMatrix dat = new MMatrix();
+            var metricOpr = GetMetricIncreaseOperation();
+            MMetric dat = new MMetric();
             dat.Key = "views";
             dat.Value = 1;
 
-            int views = matrixOpr.Apply(dat);
+            int views = metricOpr.Apply(dat);
             return String.Format("{0:n0}", views); ;
         }
 
         private dynamic GetOrderShipped()
         {
-            var matrixOpr = GetMatrixRetrieveOperation();
-            MMatrix dat = new MMatrix();
-            dat.Key = "shipped";
-
-            int views = matrixOpr.Apply(dat);
-            return String.Format("{0:n0}", views); ;
+            var cache = GetMatricsCache();
+            int shipped = 0;
+            try
+            {
+                MMetric metric = (MMetric)cache.GetValue("shipped");
+                shipped = metric.Value;
+            }
+            catch
+            {
+            }
+            return String.Format("{0:n0}", shipped); ;
         }
 
         private string GetDaysUpTime()
@@ -91,6 +96,11 @@ namespace Magnum.Web.Controllers
             return FactoryCacheContext.GetCacheObject("CacheProductList");
         }
 
+        public virtual ICacheContext GetMatricsCache()
+        {
+            return FactoryCacheContext.GetCacheObject("CacheMetrics");
+        }
+
         public virtual ISmtpContext GetSmtpContext()
         {
             var ctx = FactorySmtpContext.CreateSmtpObject("SendGridSmtpContext");
@@ -98,13 +108,10 @@ namespace Magnum.Web.Controllers
 
             return ctx;
         }
-        public virtual IBusinessOperationManipulate<MMatrix> GetMatrixRetrieveOperation()
+
+        public virtual IBusinessOperationManipulate<MMetric> GetMetricIncreaseOperation()
         {
-            return (IBusinessOperationManipulate<MMatrix>)FactoryBusinessOperation.CreateBusinessOperationObject("RetrieveMatrix");
-        }
-        public virtual IBusinessOperationManipulate<MMatrix> GetMatrixIncreaseOperation()
-        {
-            return (IBusinessOperationManipulate<MMatrix>)FactoryBusinessOperation.CreateBusinessOperationObject("IncreaseAndRetrieveMatrix");
+            return (IBusinessOperationManipulate<MMetric>)FactoryBusinessOperation.CreateBusinessOperationObject("IncreaseAndRetrieveMetric");
         }
     }
 }
