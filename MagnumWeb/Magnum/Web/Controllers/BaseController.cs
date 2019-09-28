@@ -50,6 +50,7 @@ namespace Magnum.Web.Controllers
             }
             catch
             {
+                // Use initial value zero if unable to retrieve the shipped value.
             }
             return String.Format("{0:n0}", shipped); ;
         }
