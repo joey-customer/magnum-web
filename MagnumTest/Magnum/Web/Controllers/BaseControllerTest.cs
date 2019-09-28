@@ -7,6 +7,7 @@ using Its.Onix.Core.Caches;
 using Its.Onix.Erp.Models;
 using System.Collections.Generic;
 using System.Collections;
+using Its.Onix.Core.Business;
 
 namespace Magnum.Web.Controllers
 {
@@ -35,6 +36,12 @@ namespace Magnum.Web.Controllers
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductTypeCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductsCache()).Returns(iCacheMock.Object);
+
+            var iBusinessOpr = new Mock<IBusinessOperationManipulate<MMatrix>>();
+            mockController.Setup(foo => foo.GetMatrixIncreaseOperation()).Returns(iBusinessOpr.Object);
+            mockController.Setup(foo => foo.GetMatrixRetrieveOperation()).Returns(iBusinessOpr.Object);
+
+            mockController.Setup(foo => foo.GetEstablishedDate()).Returns("2019-01-01");
 
             MContent bestSellers = new MContent();
             bestSellers.Values = new Dictionary<string, string>();
@@ -89,6 +96,20 @@ namespace Magnum.Web.Controllers
         {
             var cache = realController.GetProductsCache();
             Assert.NotNull(cache);
+        }
+
+        [Test]
+        public void GetMatrixIncreaseOperation()
+        {
+            var opr = realController.GetMatrixIncreaseOperation();
+            Assert.NotNull(opr);
+        }
+
+        [Test]
+        public void GetMatrixRetrieveOperation()
+        {
+            var opr = realController.GetMatrixRetrieveOperation();
+            Assert.NotNull(opr);
         }
     }
 }

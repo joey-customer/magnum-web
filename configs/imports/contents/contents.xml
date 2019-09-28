@@ -5,6 +5,16 @@
     <OBJECT name="ContentImport">
         <ITEMS name="Contents">
             <OBJECT name="Content">
+                <FIELD name="Name">Established_Date</FIELD>
+                <FIELD name="Type">cfg</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">2018-01-01</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
                 <FIELD name="Name">Home_Banner_Header</FIELD>
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
