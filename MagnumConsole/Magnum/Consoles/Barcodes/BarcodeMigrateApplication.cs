@@ -92,6 +92,11 @@ namespace Magnum.Consoles.Barcodes
 
                 }
             }
+            if (file != null)
+            {
+                file.Dispose();
+            }
+
             return 0;
         }
 

@@ -197,7 +197,7 @@ namespace Magnum.Consoles.Barcodes
         private int UpdateTotalShipped(int value)
         {
             var matrixOpr = GetMatrixIncreaseOperation();
-            MMatrix dat = new MMatrix();
+            MMetric dat = new MMetric();
             dat.Key = "shipped";
             dat.Value = value;
 
@@ -205,9 +205,9 @@ namespace Magnum.Consoles.Barcodes
             return shipped;
         }
 
-        public virtual IBusinessOperationManipulate<MMatrix> GetMatrixIncreaseOperation()
+        public virtual IBusinessOperationManipulate<MMetric> GetMatrixIncreaseOperation()
         {
-            return (IBusinessOperationManipulate<MMatrix>)FactoryBusinessOperation.CreateBusinessOperationObject("IncreaseAndRetrieveMatrix");
+            return (IBusinessOperationManipulate<MMetric>)FactoryBusinessOperation.CreateBusinessOperationObject("IncreaseAndRetrieveMetric");
         }
     }
 }
