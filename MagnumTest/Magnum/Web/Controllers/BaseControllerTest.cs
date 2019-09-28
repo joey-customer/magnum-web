@@ -36,10 +36,11 @@ namespace Magnum.Web.Controllers
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductTypeCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductsCache()).Returns(iCacheMock.Object);
+            mockController.Setup(foo => foo.GetMatricsCache()).Returns(iCacheMock.Object);
 
-            var iBusinessOpr = new Mock<IBusinessOperationManipulate<MMatrix>>();
-            mockController.Setup(foo => foo.GetMatrixIncreaseOperation()).Returns(iBusinessOpr.Object);
-            mockController.Setup(foo => foo.GetMatrixRetrieveOperation()).Returns(iBusinessOpr.Object);
+            var iBusinessOpr = new Mock<IBusinessOperationManipulate<MMetric>>();
+            mockController.Setup(foo => foo.GetMetricIncreaseOperation()).Returns(iBusinessOpr.Object);
+            
 
             mockController.Setup(foo => foo.GetEstablishedDate()).Returns("2019-01-01");
 
@@ -99,16 +100,16 @@ namespace Magnum.Web.Controllers
         }
 
         [Test]
-        public void GetMatrixIncreaseOperation()
+        public void GetMetricIncreaseOperation()
         {
-            var opr = realController.GetMatrixIncreaseOperation();
+            var opr = realController.GetMetricIncreaseOperation();
             Assert.NotNull(opr);
         }
 
         [Test]
-        public void GetMatrixRetrieveOperation()
+        public void GetMatricsCache()
         {
-            var opr = realController.GetMatrixRetrieveOperation();
+            var opr = realController.GetMatricsCache();
             Assert.NotNull(opr);
         }
     }
