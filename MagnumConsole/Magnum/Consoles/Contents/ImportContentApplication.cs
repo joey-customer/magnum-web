@@ -31,7 +31,7 @@ namespace Magnum.Consoles.Contents
             ILogger logger = GetLogger();
             CTable t = XmlToCTable();
 
-            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("FirebaseNoSqlContext");
             FactoryBusinessOperation.SetNoSqlContext(ctx);
 
             SaveContent opr = (SaveContent)FactoryBusinessOperation.CreateBusinessOperationObject("SaveContent");

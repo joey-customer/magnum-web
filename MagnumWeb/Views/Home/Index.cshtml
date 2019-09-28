@@ -13,7 +13,7 @@
                 <div class="bannner-content">
                     <h1>@Contents["txt/Home_Banner_Header"].Values[lang]</h1>
                     <p>@Contents["txt/Home_Banner_Text"].Values[lang]</p>
-                    <a href="#">Learn More</a>
+                    <a href="#our-service">Learn More</a>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
 </div>
 
 
-<div class="our-service">
+<div id="our-service" class="our-service">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -51,7 +51,7 @@
 
 <div class="section-spacing our-product">
     <div class="container">
-        <div class="text-left">
+        <div class="text-center">
             <h3 class="heading">@Contents["txt/Home_BestSeller_Text"].Values[lang]</h3>
             <p class="sub-heading">@Contents["txt/Home_BestSeller_Desc"].Values[lang]</p>
         </div>
@@ -65,7 +65,7 @@
                                 <img src="@product.Image1Url" alt="">
                             </a>
                         </div>
-                        <h6 class="name">@product.Descriptions["EN"].Name <span>(15% off)</span></h6>
+                        <h6 class="name">@product.Descriptions["EN"].Name</h6>
                         <div class="rating">
                             @for(int i=0; i < product.Rating; i++) {
                                 <a href="#">
@@ -97,7 +97,7 @@
 </div>
 <div class="section-spacing our-product" style="padding-top: 0; padding-bottom: 70px;">
     <div class="container">
-        <div class="text-left">
+        <div class="text-center">
             <h3 class="heading">@Contents["txt/Home_NewArrival_Text"].Values[lang]</h3>
             <p class="sub-heading">@Contents["txt/Home_NewArrival_Desc"].Values[lang]</p>
         </div>
@@ -111,7 +111,7 @@
                                 <img src="@product.Image1Url" alt="">
                             </a>
                         </div>
-                        <h6 class="name">@product.Descriptions["EN"].Name <span>(15% off)</span></h6>
+                        <h6 class="name">@product.Descriptions["EN"].Name</h6>
                         <div class="rating">
                             @for(int i=0; i < product.Rating; i++) {
                                 <a href="#">

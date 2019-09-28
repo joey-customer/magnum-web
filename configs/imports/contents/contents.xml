@@ -5,11 +5,21 @@
     <OBJECT name="ContentImport">
         <ITEMS name="Contents">
             <OBJECT name="Content">
+                <FIELD name="Name">Established_Date</FIELD>
+                <FIELD name="Type">cfg</FIELD>
+                <ITEMS name="Values">
+                    <OBJECT name="Value">
+                        <FIELD name="EN">2018-01-01</FIELD>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Content">
                 <FIELD name="Name">Home_Banner_Header</FIELD>
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Gain Muscle Quickly</FIELD>
+                        <FIELD name="EN">Gaining Lean Muscle Fast</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -19,7 +29,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Semper et vehicula. Ac vestibulum, in quis mollis metus, mattis ipsum gnissim proin. Nibh mollis mauris nunc mollis quam.</FIELD>
+                        <FIELD name="EN">Reduce your body-fat and build lean muscle mass</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -39,7 +49,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                        <FIELD name="EN">Experience the energy already after a few minutes</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -49,7 +59,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Calorie Build Up</FIELD>
+                        <FIELD name="EN">Faster Recovery</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -59,7 +69,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                        <FIELD name="EN">Keep your body stimulated and fuelled with our products</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -69,7 +79,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Fit The Body</FIELD>
+                        <FIELD name="EN">Fit Body</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -79,7 +89,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                        <FIELD name="EN">Increase muscle growth and prevent muscle breakdown</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -99,7 +109,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                        <FIELD name="EN">Best buy products by our buyers</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>
@@ -119,7 +129,7 @@
                 <FIELD name="Type">txt</FIELD>
                 <ITEMS name="Values">
                     <OBJECT name="Value">
-                        <FIELD name="EN">Metus lectus nonummy maecendolor phasellus torquent eget nunc</FIELD>
+                        <FIELD name="EN">The original product has just been delivered to our stores</FIELD>
                     </OBJECT>
                 </ITEMS>
             </OBJECT>

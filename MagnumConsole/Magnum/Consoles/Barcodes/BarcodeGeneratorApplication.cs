@@ -16,25 +16,26 @@ using Magnum.Consoles.Barcodes.ImageGenerators;
 using Magnum.Consoles.Factories;
 
 using NDesk.Options;
+using Its.Onix.Core.Business;
 
 namespace Magnum.Consoles.Barcodes
 {
     public delegate void BarcodeGenerateProgress(MBarcode bc, string dir);
 
-	public class BarcodeGeneratorApplication : ConsoleAppBase
-	{
+    public class BarcodeGeneratorApplication : ConsoleAppBase
+    {
         private ILogger logger;
 
         private StreamWriter csvStream;
         private StreamWriter txtStream;
-                
+
         private LabelGenerator generator = new LabelGenerator();
 
         private int imgPerFolder = 100;
         private int progressPerImage = 100;
 
         private BarcodeGenerateProgress progressFunc = null;
-        
+
         public BarcodeGeneratorApplication()
         {
             progressFunc = BarcodeGenerateProgressUpdate;
@@ -62,7 +63,7 @@ namespace Magnum.Consoles.Barcodes
             .Add("o=|outpath=", "QR image file output directory (folder)", s => AddArgument("outpath", s))
             .Add("profile=", "Product profile", s => AddArgument("profile", s))
             .Add("g=|generate=", "Image generation flag", s => AddArgument("generate", s))
-            .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));            
+            .Add("b=|batch=", "Batch number", s => AddArgument("batch", s));
 
             return options;
         }
@@ -80,7 +81,7 @@ namespace Magnum.Consoles.Barcodes
         private void CreateExportFile(string profile, MBarcode param, string outputPath, string timeStamp)
         {
             string exportFile = string.Format("{0}_{1}_{2}", profile, param.BatchNo, timeStamp);
-            string[] paths = {outputPath, exportFile};
+            string[] paths = { outputPath, exportFile };
             string exportPath = Path.Combine(paths);
 
             string csvFile = String.Format("{0}.csv", exportPath);
@@ -104,7 +105,7 @@ namespace Magnum.Consoles.Barcodes
             string csvLine = String.Format("=\"{0}\",=\"{1}\",\"{2}\",\"{3}\",\"{4}\"", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
             string txtLine = String.Format("{0},{1},{2},{3},{4}", bc.SerialNumber, bc.Pin, bc.PayloadUrl, param.Barcode, prf.CompanyWebSite);
 
-            LogUtils.LogInformation(logger , txtLine); 
+            LogUtils.LogInformation(logger, txtLine);
 
             txtStream.WriteLine(txtLine);
             csvStream.WriteLine(csvLine);
@@ -120,7 +121,7 @@ namespace Magnum.Consoles.Barcodes
             string prof = args["profile"].ToString();
             string outputPath = args["outpath"].ToString();
 
-            string generate = (string) args["generate"];            
+            string generate = (string)args["generate"];
             if (generate == null)
             {
                 generate = "";
@@ -128,18 +129,18 @@ namespace Magnum.Consoles.Barcodes
 
             bool imageGenerate = generate.Equals("Y");
 
-            BarcodeProfileBase prf = (BarcodeProfileBase) BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
-            INoSqlContext ctx = GetNoSqlContextWithAuthen("firebase");
+            BarcodeProfileBase prf = (BarcodeProfileBase)BarcodeProfileFactory.CreateBarcodeProfileObject(prof);
+            INoSqlContext ctx = GetNoSqlContextWithAuthen("FirebaseNoSqlContext");
 
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());
-            CreateBarcode opr = (CreateBarcode) FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
+            CreateBarcode opr = (CreateBarcode)FactoryBusinessOperation.CreateBusinessOperationObject("CreateBarcode");
 
             int quantity = Int32.Parse(args["quantity"].ToString());
 
             MBarcode param = new MBarcode();
             param.BatchNo = batch;
-            param.Url = payloadUrl;            
+            param.Url = payloadUrl;
 
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
@@ -148,12 +149,12 @@ namespace Magnum.Consoles.Barcodes
 
             CreateExportFile(prof, param, outputPath, timeStamp);
 
-            for (int i=1; i<=quantity; i++)
+            for (int i = 1; i <= quantity; i++)
             {
-                string chunk = ((i-1)/imgPerFolder).ToString().PadLeft(6, '0');
+                string chunk = ((i - 1) / imgPerFolder).ToString().PadLeft(6, '0');
                 string urlPath = string.Format("{0}_{1}_{2}/{3}", prof, param.BatchNo, timeStamp, chunk);
                 string dir = string.Format("{0}/{1}", outputPath, urlPath);
-                
+
                 if (!Directory.Exists(dir) && imageGenerate)
                 {
                     Directory.CreateDirectory(dir);
@@ -163,7 +164,7 @@ namespace Magnum.Consoles.Barcodes
                 param.CompanyWebSite = prf.CompanyWebSite;
                 param.Barcode = prf.Barcode;
                 param.Product = prf.Product;
-                MBarcode bc = opr.Apply(param);                
+                MBarcode bc = opr.Apply(param);
 
                 string fileName = string.Format("{0}/{1}-{2}.png", dir, bc.SerialNumber, bc.Pin);
                 if (imageGenerate)
@@ -177,16 +178,36 @@ namespace Magnum.Consoles.Barcodes
                 if ((i % progressPerImage) == 0)
                 {
                     int remain = quantity - i;
-                    LogUtils.LogInformation(logger , "Generated {0} barcodes, {1} barcodes to go...", i, remain);   
-                }                
+                    LogUtils.LogInformation(logger, "Generated {0} barcodes, {1} barcodes to go...", i, remain);
+                }
             }
-            
+
             CloseExportFiles();
 
             generator.Cleanup();
-            LogUtils.LogInformation(logger , "Done generating {0} barcodes.", quantity); 
+            LogUtils.LogInformation(logger, "Done generating {0} barcodes.", quantity);
+
+            int shipped = UpdateTotalShipped(quantity);
+            LogUtils.LogInformation(logger, "Updated shipped number to {0}.", shipped);
+
 
             return 0;
+        }
+
+        private int UpdateTotalShipped(int value)
+        {
+            var matrixOpr = GetMatrixIncreaseOperation();
+            MMatrix dat = new MMatrix();
+            dat.Key = "shipped";
+            dat.Value = value;
+
+            int shipped = matrixOpr.Apply(dat);
+            return shipped;
+        }
+
+        public virtual IBusinessOperationManipulate<MMatrix> GetMatrixIncreaseOperation()
+        {
+            return (IBusinessOperationManipulate<MMatrix>)FactoryBusinessOperation.CreateBusinessOperationObject("IncreaseAndRetrieveMatrix");
         }
     }
 }
