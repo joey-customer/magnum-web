@@ -47,8 +47,7 @@ namespace Magnum.Consoles.Barcodes
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             while ((text = file.ReadLine()) != null)
             {
-                if (text != null
-                    && !"".Equals(text.Trim())
+                if ("".Equals(text.Trim())
                     && !text.Trim().StartsWith("Serial")
                 )
                 {
