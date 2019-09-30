@@ -928,10 +928,6 @@ body {
 	font-weight: 400;
 }
 
-.product-details-inner .product-thumb img {
-	height: 200px;
-}
-
 .price {
 	color: rgb(213, 0, 0);
 }
@@ -939,9 +935,6 @@ body {
 	display: inline-block;
 	width: 120px;
 	font-size: 14px;
-}
-.product-details-inner .rating {
-	display: inline-block;
 }
 
 .footer {
