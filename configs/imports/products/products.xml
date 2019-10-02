@@ -702,7 +702,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/nandroplex300.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/nandroplex300.png</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -816,7 +816,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/bold300.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/bold300.png</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1020,7 +1020,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/trene200.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/trene200.png</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1323,7 +1323,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/magjack250.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/magjack250.png</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1551,7 +1551,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/primo100.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/primo100.png</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
