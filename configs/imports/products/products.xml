@@ -10,7 +10,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/testplex300.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/testplex300.png</FIELD>
                 <FIELD name="NameColor">#a69f99</FIELD>
                 <FIELD name="NameBgColor">#480e0c</FIELD>
 
@@ -175,7 +175,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/testc300.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/testc300.png</FIELD>
                 <FIELD name="NameColor">#b5b1a6</FIELD>
                 <FIELD name="NameBgColor">#630708</FIELD>
 
@@ -278,7 +278,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/teste300.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/teste300.png</FIELD>
                 <FIELD name="NameColor">#beb7ad</FIELD>
                 <FIELD name="NameBgColor">#7b0815</FIELD>
 
@@ -508,7 +508,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/testprop100.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/testprop100.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -934,7 +934,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/drostanp100.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/drostanp100.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -1141,7 +1141,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/trena100.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/trena100.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -1476,7 +1476,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Injections/stanolaq100.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Injections/stanolaq100.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -1681,7 +1681,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/oxandro10.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/oxandro10.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -2217,7 +2217,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/clen40.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/clen40.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -2306,7 +2306,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/anastrol.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/anastrol.png</FIELD>
                 <FIELD name="NameColor">#1d1816</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
