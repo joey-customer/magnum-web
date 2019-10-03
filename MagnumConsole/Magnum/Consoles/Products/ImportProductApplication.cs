@@ -56,6 +56,8 @@ namespace Magnum.Consoles.Products
                     mpd.Rating = Int32.Parse(pd.GetFieldValue("Rating"));
                     mpd.ProductType = pd.GetFieldValue("ProductType");
                     mpd.Price = Double.Parse(pd.GetFieldValue("Price"));
+                    mpd.NameColor = pd.GetFieldValue("NameColor");
+                    mpd.NameBgColor = pd.GetFieldValue("NameBgColor");
         
                     string[] imgPaths = {basedir, pd.GetFieldValue("Image1LocalPath")};
                     mpd.Image1LocalPath = Path.Combine(imgPaths);
