@@ -1142,7 +1142,7 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/trena100.png</FIELD>
-                <FIELD name="NameColor">#000000</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#7a797c</FIELD>
 
                 <ITEMS name="Descriptions">
