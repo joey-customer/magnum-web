@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ProductImport">
+        <ITEMS name="Products">
+            <!--Sexuals-->
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-001</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/androxil.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#aa0203</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Androxil</FIELD>
+                        <FIELD name="ShortDescription">N-Clomiphene Tablets</FIELD>
+                        <FIELD name="LongDescription1">Androxil is a non-steroidal estrogen receptor antagonist and promotes gonadotropin stimulation. This gonadotropin stimulation restores testicular function and volume as well as endogenous testosterone and sperm production. Through a revolutionary process, stereoisomers Zu-Clomiphene and N-Clomiphene are separated from a racemic mixture, eliminating Zu-Clomiphene linked side effects in traditional Clomiphene therapy. Androxil is indicated for Post-Cycle Therapy to restore HPTA, as a Testosterone Replacement Therapy Alternative in men with secondary hypogonadism, and to increase sperm count for men with certain conditions.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">25 mg/Tablet – 30 Tablets</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 Tab</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">25</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">N-Clomiphene</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-002</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/cialisdaily.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#aa0203</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Androxil</FIELD>
+                        <FIELD name="ShortDescription">Tadalafil Tablets</FIELD>
+                        <FIELD name="LongDescription1">Cialis is a PDE5 inhibitor used to treat Erectile Dysfunction and improve erection quality and duration. Cialis also has the ability to improve overall circulation and enhance exercise ability. When taken daily, Cialis may help to provide erectile response on demand, reduce blood pressure, and enhance circulation.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5 mg/Tablet – 30 Tablets</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 Tab</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Tadalafil Citrate USP</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Erectile Duration</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Erectile Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Reduce BP</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-003</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/hcg5000.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29741d</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">HCG 5000</FIELD>
+                        <FIELD name="ShortDescription">Human Chorionic Gonadotropin Injection</FIELD>
+                        <FIELD name="LongDescription1">Human Chorionic Gonandotropin (HCG) is a highly purified polypeptide hormone. HCG acts as an analogue for Leutenizing Hormone (LH) and stimulates natural endogenous testosterone production in the testis. HCG helps to maintain testicular size and function while increasing ejaculate volume. HCG use during a steroid cycle and in the initial post-cycle therapy (PCT) is critical to maintaining the muscle gains made. HCG Stimulates natural testosterone production, Increases libido, and Helps to reduce muscle loss in post-cycle therapy.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5000 IU/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5000</FIELD>
+                                <FIELD name="Unit">IU</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized HGH</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-004</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/andractimgel.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#000000</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Andractim Gel 2.5%</FIELD>
+                        <FIELD name="ShortDescription">DHT Transdermal Gel 2.5%</FIELD>
+                        <FIELD name="LongDescription1">Andractim is a topical Dihydrotestosterone (DHT) Gel providing for transdermal absorption of DHT using the skin as a reservoir. Serum DHT generally elevates within 1 hour and peaks 3 to 4 hours after application. Unlike testosterone, DHT cannot be aromatized to estrogens and has been demonstrated to Increase Erectile Duration and Rigidity. DHT has anti-progestin properties and may be useful in the treatment of male gynecomastia. DHT also produces increases in Strength.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">25mg/g – 60g Pump</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 gram of gel</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">25</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Dihydrotestosterone BP</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-005</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/androgel.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#000000</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Andro-Gel 5%</FIELD>
+                        <FIELD name="ShortDescription">Testosterone Transdermal Gel 5%</FIELD>
+                        <FIELD name="LongDescription1">Andro-Gel is a topical Testosterone Gel providing for transdermal absorption of Testosterone using the skin as a reservoir. Serum Testosterone generally elevates within 30 minutes and peaks 2 to 4 hours after application. Testosterone Gel is an alternative to injectable Testosterone for replacement therapy with once daily application. Increasing testosterone levels in hypogonadal men is associated with improved sexual function, energy, strength, muscle growth, mood, and body fat.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">50mg/g – 60g Pump</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 gram of gel</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">50</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Testosterone USP</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-006</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/triptorelinir.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#2eaecf</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Triptorelin IR</FIELD>
+                        <FIELD name="ShortDescription">Triptorelin Acetate Injection</FIELD>
+                        <FIELD name="LongDescription1">Triptorelin Acetate is a potent GnRH agonist which produces surges in FSH and LH minutes after injection and can elevate serum testosterone levels for several weeks. LH causes the testis to produce more Testosterone. FSH causes the testis to produce more sperm and ejaculate. Low-dose triptorelin during a cycle or just before Post-Cycle Therapy (PCT) can help to maintain testicular volume, fertility, and natural testosterone production reducing post-cycle muscle loss when used properly.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">1mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">1</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Triptorelin Acetate</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule </FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Sexual-007</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">004</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Sexuals/rhmg.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#2eaecf</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">r-HMG</FIELD>
+                        <FIELD name="ShortDescription">Recombinant LH &amp; FSH Injection</FIELD>
+                        <FIELD name="LongDescription1">r-HMG contains Recombinant Leutenizing Hormone (LH) and Recombinant α-Follicle Stimulating Hormone (α-FSH) for Injection. HMG contains LH which stimulates Testoterone production in the Testis and FSH which stimulates Sperm production and maturation. Typical HMG is derived from the urine of pregnant women to reduce costs but brings risks of antibodies, diseases, and impurities. Our Recombinant HMG is made from DNA/PCR technology eliminating human impurities and producing better results. HMG is the most natural way to keep the Testis functioning while on a Cycle or TRT and avoid infertility.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">2 x 5ml vials + solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">450</FIELD>
+                                <FIELD name="Unit">IU</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Recombinant LH</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">450</FIELD>
+                                <FIELD name="Unit">IU</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Recombinant FSH</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule </FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">1.2</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Mannitol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Sperm Production</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Natural Testosterone</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Raise Ejaculate Volume</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">0</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+        </ITEMS>
+    </OBJECT>
+</API>
