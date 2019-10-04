@@ -11,8 +11,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/testplex300.png</FIELD>
-                <FIELD name="NameColor">#a69f99</FIELD>
-                <FIELD name="NameBgColor">#480e0c</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#741320</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -176,8 +176,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/testc300.png</FIELD>
-                <FIELD name="NameColor">#b5b1a6</FIELD>
-                <FIELD name="NameBgColor">#630708</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#920b0d</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -279,8 +279,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/teste300.png</FIELD>
-                <FIELD name="NameColor">#beb7ad</FIELD>
-                <FIELD name="NameBgColor">#7b0815</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#9a0b25</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -382,7 +382,7 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/testr200.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD><!-- Can not find value -->
 
                 <ITEMS name="Descriptions">
@@ -509,8 +509,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/testprop100.png</FIELD>
-                <FIELD name="NameColor">#cbc3ac</FIELD>
-                <FIELD name="NameBgColor">#620d0a</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#870e1e</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -612,7 +612,7 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">coming_soon.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -715,8 +715,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/nandroplex300.png</FIELD>
-                <FIELD name="NameColor">#c4c7c0</FIELD>
-                <FIELD name="NameBgColor">#15155b</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#141c93</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -831,8 +831,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/bold300.png</FIELD>
-                <FIELD name="NameColor">#b4b8aa</FIELD>
-                <FIELD name="NameBgColor">#234010</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#2c5a25</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -935,8 +935,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/drostanp100.png</FIELD>
-                <FIELD name="NameColor">#fafafa</FIELD>
-                <FIELD name="NameBgColor">#2e4926</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#203924</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1039,8 +1039,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/trene200.png</FIELD>
-                <FIELD name="NameColor">#1a1300</FIELD>
-                <FIELD name="NameBgColor">#504601</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#5f561b</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1142,8 +1142,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/trena100.png</FIELD>
-                <FIELD name="NameColor">#191410</FIELD>
-                <FIELD name="NameBgColor">#514d44</FIELD>
+                <FIELD name="NameColor">#000000</FIELD>
+                <FIELD name="NameBgColor">#7a797c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1245,7 +1245,7 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/trenaq50.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -1348,8 +1348,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/magjack250.png</FIELD>
-                <FIELD name="NameColor">#b8b8b6</FIELD>
-                <FIELD name="NameBgColor">#471b1a</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#751c25</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1477,8 +1477,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/stanolaq100.png</FIELD>
-                <FIELD name="NameColor">#827f6e</FIELD>
-                <FIELD name="NameBgColor">#989c00</FIELD>
+                <FIELD name="NameColor">#000000</FIELD>
+                <FIELD name="NameBgColor">#d6dc05</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1580,8 +1580,8 @@
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Injections/primo100.png</FIELD>
-                <FIELD name="NameColor">#bcbeb3</FIELD>
-                <FIELD name="NameBgColor">#181648</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#1e1b75</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1682,8 +1682,8 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/oxandro10.png</FIELD>
-                <FIELD name="NameColor">#b1b8b0</FIELD>
-                <FIELD name="NameBgColor">#073066</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#013aa6</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1771,7 +1771,7 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/turnibol10.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -1860,7 +1860,7 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/stanol10.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -1949,8 +1949,8 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/dbol10.png</FIELD>
-                <FIELD name="NameColor">#c8ccbd</FIELD>
-                <FIELD name="NameBgColor">#1f3c10</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#1c3e1e</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2039,7 +2039,7 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/oxymeth50.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -2129,7 +2129,7 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/proviron25.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -2218,8 +2218,8 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/clen40.png</FIELD>
-                <FIELD name="NameColor">#b1b2a2</FIELD>
-                <FIELD name="NameBgColor">#5a5148</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#74696f</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2307,8 +2307,8 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/anastrol.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#211476</FIELD>
 
 
                 <ITEMS name="Descriptions">
@@ -2385,7 +2385,7 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/magnumman.jpg</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -2475,7 +2475,7 @@
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/hgh10.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -2740,7 +2740,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/ghrp2.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -2872,7 +2872,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/ghrp6.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3004,7 +3004,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/ipamorelin.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3136,7 +3136,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/cjc1295.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3268,7 +3268,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/grf(1-29).png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3400,7 +3400,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/tb500.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3531,7 +3531,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/igf1lr3.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3662,7 +3662,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/hgh176191.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3793,7 +3793,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/mgf.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
@@ -3924,7 +3924,7 @@ reduce muscle loss in post-cycle therapy.</FIELD>
                 <FIELD name="ProductType">003</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/mtii.png</FIELD>
-                <FIELD name="NameColor">#1d1816</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
                 <ITEMS name="Descriptions">
