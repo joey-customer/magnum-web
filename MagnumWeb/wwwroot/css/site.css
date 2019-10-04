@@ -865,7 +865,6 @@ body {
 .shop-page .shop-product-wrap .product-list-item .product-thumb {
 	width: 100%; 
 	text-align: center;
-	padding: 15px 0;
 }
 @media (min-width: 768px) {
 	.shop-page .shop-product-wrap .product-list-item .product-thumb {
