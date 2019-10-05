@@ -611,9 +611,9 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">001</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">testaq75.png</FIELD>
+                <FIELD name="Image1LocalPath">Injections/testaq75.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#9c1e35</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
