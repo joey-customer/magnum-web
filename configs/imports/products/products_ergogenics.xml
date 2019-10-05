@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ProductImport">
+        <ITEMS name="Products">
+            <!--Ergogenics-->
+            <OBJECT name="Product">
+                <FIELD name="Code">Ergogenics-001</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">006</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Ergogenics/pentosangold.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#000000</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Pentosan Gold</FIELD>
+                        <FIELD name="ShortDescription">Pentosan Gold Injection</FIELD>
+                        <FIELD name="LongDescription1">Pentosan Gold Injection is a potent concentrated anti-inflammatory and a stimulant of cartilage synthesis, repair, and protection. Pentosan Gold Injection is an aqueous solution of Sodium Pentosan Polysulfate and N-Acetyl-Glucosamine. Pentosan Gold actively reverses the effects of osteoarthritis in joints through several pathways. Pentosan Gold stimulates chondrocyte metabolism, mediates several anti-inflammatory cascades, and supports the mobilization of synovial fluid in joints.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">2 x 5ml Vials</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">250</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Arthritis Control</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+							
+							<OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">150</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">N-Acetyl D-Glucosamine</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+							
+							<OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Sodium Hyaluronic Acid</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Arthritis Control</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Anti-Inflammatory</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Cartiliage: Repair</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Ergogenics-002</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">006</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Ergogenics/antigynogel.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#000000</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Anti-Gyno Gel</FIELD>
+                        <FIELD name="ShortDescription">DHT Stanozolol Compound Gel 2.5%</FIELD>
+                        <FIELD name="LongDescription1">Anti-Gyno Gel is a topical Dihydrotestosterone (DHT) and Stanozolol compound gel for transdermal absorption near the site of male gynecomastia using the skin as a reservoir. DHT and Stanozolol cannot aromatize to estrogens and compete for estrogen and progesterone receptors allowing male gynecomastia tissue to slowly atrophy. Side effects may include dryer and leaner appearance, fat loss, and increased strength, aggressiveness, libido, and muscle growth.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">25mg/g each– 60g Pump</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 gram of gel</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">15</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Dihydrotestosterone BP</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+							
+							<OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">15</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Stanozolol USP</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Reduce Gyno</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Increase libido</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Ergogenics-003</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">006</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Ergogenics/nootropicblend.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#084787</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Nootropic Blend</FIELD>
+                        <FIELD name="ShortDescription">Nootropic Compound Tablet</FIELD>
+                        <FIELD name="LongDescription1">Nootropic Blend contains a synergistic blend of the well known Nootropic Hydergine and a phenylated form of Piracetam with several adjuvants to facilitate bioavailability. Hydergine increases short and long term memory, clears lipofuscin deposits from neural tissues, and increases Dopamine response in the brain. Phenyl-piracetam is an AMPA receptor modulator and improves Cognitive Function.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">50 Tablets</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 Tab</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">1</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Ergoloid Mesylates (Hydergine)</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+							
+							<OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">100</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Phenyl-Piracetam</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+							
+							<OBJECT name="Composition">
+                                <FIELD name="Code">3</FIELD>
+                                <FIELD name="Quantity">25</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Choline Bitartrate</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+							
+							<OBJECT name="Composition">
+                                <FIELD name="Code">4</FIELD>
+                                <FIELD name="Quantity">25</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Anhydrous Caffeine</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Reduce Gyno</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Increase libido</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+        </ITEMS>
+    </OBJECT>
+</API>
