@@ -1770,7 +1770,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/turnibol10.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/turnibol10.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -1859,7 +1859,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/stanol10.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/stanol10.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -2038,7 +2038,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/oxymeth50.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/oxymeth50.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -2128,7 +2128,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/proviron25.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/proviron25.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
@@ -2384,7 +2384,7 @@
                 <FIELD name="Rating">4</FIELD>
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
-                <FIELD name="Image1LocalPath">Orals/magnumman.jpg</FIELD>
+                <FIELD name="Image1LocalPath">Orals/magnumman.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
                 <FIELD name="NameBgColor">#625e53</FIELD>
 
