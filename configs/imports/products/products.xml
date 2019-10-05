@@ -1772,7 +1772,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/turnibol10.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#02593a</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -1860,8 +1860,8 @@
                 <FIELD name="ProductType">002</FIELD>
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/stanol10.png</FIELD>
-                <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameColor">#000000</FIELD>
+                <FIELD name="NameBgColor">#eae800</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2040,7 +2040,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/oxymeth50.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#143625</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2130,7 +2130,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/proviron25.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#3876b6</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2386,7 +2386,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Orals/magnumman.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#1758a2</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
