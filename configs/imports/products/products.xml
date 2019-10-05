@@ -2476,7 +2476,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/hgh10.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#2a731e</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2608,7 +2608,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/ghrp2.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2740,7 +2740,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/ghrp6.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -2872,7 +2872,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/ipamorelin.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3004,7 +3004,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/cjc1295.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3136,7 +3136,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/grf(1-29).png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3268,7 +3268,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/tb500.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3399,7 +3399,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/igf1lr3.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3530,7 +3530,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/hgh176191.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3661,7 +3661,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/mgf.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
@@ -3792,7 +3792,7 @@
                 <FIELD name="Price">0</FIELD>
                 <FIELD name="Image1LocalPath">Peptids/mtii.png</FIELD>
                 <FIELD name="NameColor">#ffffff</FIELD>
-                <FIELD name="NameBgColor">#625e53</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
 
                 <ITEMS name="Descriptions">
                     <OBJECT name="Description">
