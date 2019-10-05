@@ -20,7 +20,7 @@
 								</a>
 							</div>
 							<div class="product-content product-type-@product.ProductType">
-								<h5>@product.Descriptions["EN"].Name</h5>
+								<h5 style="color: @product.NameColor; background-color: @product.NameBgColor;">@product.Descriptions["EN"].Name</h5>
 								<span>@product.Descriptions["EN"].ShortDescription, @product.Descriptions["EN"].Extra1</span>
 								<p>@product.Descriptions["EN"].LongDescription1</p>
 								@if(@product.Price > 0) {

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ProductImport">
+        <ITEMS name="Products">
+            <!--Extreme Series-->
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-001</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/trentabs.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#3e8d1e</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">TREN-TABS</FIELD>
+                        <FIELD name="ShortDescription">Methyl-Trenbolone Tablets</FIELD>
+                        <FIELD name="LongDescription1">Methyl-Trenbolone is a 17-methylated Trenbolone, also known as Metribolone or Methyltrienolone. The methylation is necessary to slow the hepatic clearance of trenbolone making it practical for oral use. It is an extremely potent and non-aromatizing androgen capable of promoting Muscle Growth and a rapid onset of Strength and Aggression.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">1mg/Tablet – 50 Tablets</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 Tab</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">1</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Methyl-trenbolone</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Aggression</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-002</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/halotestin.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#3e8d1e</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">HALOTESTIN</FIELD>
+                        <FIELD name="ShortDescription">Fluoxymesterone Capsules</FIELD>
+                        <FIELD name="LongDescription1">Halotestin is controversial due to its Extremely Fast Acting ability to produce Profound Increases in Strength and Aggression. Halotestin upregulates EPO resulting in increases in serum RBCs, Hematocrit, and Endurance. It upregulates fatty acid catalysis in the liver leading to Rapid Fat Loss. Halotestin is commonly used for Pre-Competition to increase Aggression.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5mg/Capsules – 50 Capsules</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 Tab</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Halotestin</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Aggression</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-003</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/dimethandrolone.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#a5002d</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Dimethandrolone</FIELD>
+                        <FIELD name="ShortDescription">Dimethandrolone Undecanoate Injection</FIELD>
+                        <FIELD name="LongDescription1">Dimethandrolone (DMA) is the 17beta-undecanoic acid ester of dimethandrolone (DMAU; 7alpha,11beta-dimethyl-19-nortestosterone). A potent androgen, it has been shown to have a binding affinity to the Androgen Receptor more than 100 times stronger than testosterone. DMA has a progestin base providing for progestin-mediated anti-inflammatory properties. DMA does not aromatize into estrogens. DMA has strong Anabolic and Anti-Inflammatory Properties. DMA is notably absent from many AAS testing profiles.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">125mg/ml – 10 x 1ml Ampoules</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">125</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Dimethandrolone Undecanoate</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Anti-Inflammatory</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-004</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/dimethandrolone.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#a5002d</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Anatrofin</FIELD>
+                        <FIELD name="ShortDescription">Stenbolone Acetate Injection</FIELD>
+                        <FIELD name="LongDescription1">Anatrofin is a methylated DHT derivate and similar in structure to Primobolan. It was launched by Schering in Germany during the 1960s. It was a top favorite of Dan Duchaine and many others. As a DHT derivative, Anatrofin does not aromatize and helps to produce a Lean and Dry Appearance while increasing protein uptake and Growth of Lean Muscle.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">75mg/ml – 10 x 1ml Ampoules</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">75</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Strenbolone Acetate</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-005</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/furazabol.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#a5002d</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Furazabol</FIELD>
+                        <FIELD name="ShortDescription">Furazabol Injectable Suspension</FIELD>
+                        <FIELD name="LongDescription1">Furazabol is structurally similar to Stanozolol. Furazabol is a DHT derivative and cannot be aromatized. Previously approved for oral use in Japan, Furazabol produces a Lean and Dry Appearance and increases protein uptake to support Growth of Lean Muscle. Through multiple passes of micronization, our Furazabol is 98%</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">50mg/ml – 10 x 1ml Ampoules</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">50</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Furazabol micronized</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-006</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/mohn.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#3e8d1e</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">MOHN</FIELD>
+                        <FIELD name="ShortDescription">Methylhydroxy-Nandrolone Capsules</FIELD>
+                        <FIELD name="LongDescription1">MOHN contains 4-Hydroxy-17alpha-methyl-hydroxyestra-4-ene-3-one, a potent derivative of Nandrolone. The 4-hydroxylation blocks 5-alpha-reductase from reducing MOHN to weaker metabolites, making MOHN more Anabolic (mg-for-mg) than Trenbolone or Dianabol. The methylation at 17-alpha makes it practical for oral use. MOHN does not aromatize to estrogen and facilitates Fat Loss. MOHN is one of the strongest anabolic substances ever created, providing for tremendous growth of Muscle Tissue without estrogen-derived side effects.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">10mg/Capsules – 50 Capsules</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">1 Capsule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">10</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Methylhydroxynandrolone</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">Extreme-007</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">005</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">ExtremeSeries/oxobolone.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#a5002d</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Oxobolone</FIELD>
+                        <FIELD name="ShortDescription">Hydroxy-Nandrolone Enanthate Injection</FIELD>
+                        <FIELD name="LongDescription1">Oxobolone is a 4-hydroxylated derivative of Nandrolone. Unlike MOHN, alpha-17 methylation is not required as it is injectable. The 4-OH restricts 5-alpha reductase activity preventing weaker di-hydro metabolites from forming and making it an Extremely Anabolic Androgen, similar to Trenbolone. Oxybolone does not aromatize, eliminating estrogen-derived side effects and supporting use for Fat Loss and production of Lean Muscle Mass.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">200mg/ml – 10 x 1ml ampoules</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">200</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Hydroxynandrolone Enanthate</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">9</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">5</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+        </ITEMS>
+    </OBJECT>
+</API>

@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<API>
+    <OBJECT name="PARAM"></OBJECT>
+
+    <OBJECT name="ProductImport">
+        <ITEMS name="Products">
+            <!--Peptids-->
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-001</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/hgh10.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#2a731e</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">HGH 10</FIELD>
+                        <FIELD name="ShortDescription">Recombinant Somatropin Injection</FIELD>
+                        <FIELD name="LongDescription1">HGH 10 is a highly purified preparation of human growth hormone produced using recombinant DNA technology and consisting of 191 amino acids. Our rHGH is not from an E. Coli digest but rather from a modified mammalian cell line reducing the impurities and inflammation often associated with E. Coli derived growth hormones. HGH Increases protein synthesis, Promotes fat loss, Reduces muscle breakdown, Restores damaged cartilage, tendons &amp; joints, &amp; Increases libido &amp; energy.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">10 IU/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">10</FIELD>
+                                <FIELD name="Unit">IU</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized rHGH</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-003</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/ghrp2.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">GHRP-2</FIELD>
+                        <FIELD name="ShortDescription">Growth Hormone Releasing Peptide 2 Injection</FIELD>
+                        <FIELD name="LongDescription1">GHRP-2 is a synthetic agonist of ghrelin and binds to the GH secretagogue receptor thereby increasing natural GH production and raising serum levels of GH and IGF-1. GHRP-2 also inhibits somatostatin allowing greater GH production. As with rHGH injections, such elevation is associated with Enhanced Protein Uptake for Muscle Gain and Loss of Visceral Fat as well as more Rapid Healing. Increases in appetite with GHRP-2 are generally mild relative to GHRP-6. GHRP-2 increases natural HGH production</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5 mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized GHRP-2</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-004</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/ghrp6.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">GHRP-6</FIELD>
+                        <FIELD name="ShortDescription">Growth Hormone Releasing Peptide 6 Injection</FIELD>
+                        <FIELD name="LongDescription1">GHRP-6 is a synthetic agonist of ghrelin and similar to GHRP-2 in that it binds to the GH secretagogue receptor resulting in increased natural GH production and consequently higher serum IGF-1 levels. Such elevations are associated with enhanced protein absorption, facilitating muscle gains and breakdown of difficult to burn abdominal visceral fat stores. GHRP-6 often produces increased appetite. As with rHGH treatment, patients commonly report better sleep and improved recovery.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5 mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized GHRP-6</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-005</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/ipamorelin.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">Ipamorelin</FIELD>
+                        <FIELD name="ShortDescription">Ipamorelin Injection</FIELD>
+                        <FIELD name="LongDescription1">Ipamorelin is a powerful 3rd generation selective GH secretagogue. Ipamorelin does not increase appetite, prolactin, or cortisol appreciably allowing greater dosing flexibility for maximum GH release and serum IGF-1. Improved GH release provides for Lean Muscle Growth, Faster Recovery from Injury, Collagen Growth, Loss of Visceral Fat, &amp; Improved Bone Density.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5 mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized Ipamorelin</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-006</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/cjc1295.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">CJC-1295</FIELD>
+                        <FIELD name="ShortDescription">CJC-1295 Injection</FIELD>
+                        <FIELD name="LongDescription1">Normal growth hormone releasing hormones and peptides (GHRHs/GHRPs) are quickly metabolized yielding transient bursts of serum GH and requiring frequent dosing. CJC-1295 is a growth hormone releasing peptide modified for a half-life of 6 to 8 days in humans permitting weekly dosing. A single-dose has been demonstrated to increase plasma GH levels 2 – 10-fold over a 6 day period (AUC) and serum IGF-1 levels from 1.5 – 3-fold above baseline for 9 to 11 days. Elevated serum GH and IGF-1 levels are associated with Increased Lean Muscle Production, Faster Healing, and Loss of Visceral Fat. Elevated IGF-1 levels also help to reduce muscle breakdown.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">2mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">2</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized CJC-1295</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-007</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/grf(1-29).png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">GRF (1-29)</FIELD>
+                        <FIELD name="ShortDescription">Modified GRF (1-29)</FIELD>
+                        <FIELD name="LongDescription1">GRF 1-29 is a 29-amino peptide chain cleaved from Growth Hormone Release Hormone (GHRH). GRF 1-29 has a longer half-life than native GHRH. When used with GHRP-2 or Ipamorelin, it provides a synergistic effect amplifying the GH pulse. The GHRP &amp; GRF combination provide for powerful short bursts of GH and consequently serum IGF-1. This manifests in Improved Lean Muscle Growth, Recovery, and Fat Loss.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized CJC-1295</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-008</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/tb500.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">TB-500</FIELD>
+                        <FIELD name="ShortDescription">Thymosin Beta 4 Frag Injection</FIELD>
+                        <FIELD name="LongDescription1">TB-500 promotes rapid healing and growth. TB-500 is a synthetic fragment of Thymosin Beta-4 (TB-4), a natural hormone linked to healing and growth which diminishes with age. TB-500 promotes growth and repair of muscle tissue, collagen, tendons, ligaments, ulcers, and damaged cardiac tissue. TB-500 is a potent anti-inflammatory and promotes increases in muscle mass, strength, and endurance. It also promotes hair growth.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ml</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Thymosin Beta 4 Frag Injection</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-009</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/igf1lr3.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">IGF-1 LR3</FIELD>
+                        <FIELD name="ShortDescription">IGF-1 LR3 Injection</FIELD>
+                        <FIELD name="LongDescription1">IGF-1 LR3 is a synthetic long-acting analogue of IGF-1. Human Growth Hormone (HGH) is converted to IGF-1 in the liver and is responsible for many of the positive effects of GH therapy. Unfortunately, IGF-1 is cleared rapidly after conversion limiting the efficacy of direct IGF-1 therapy. By tagging IGF-1 at the R3 node, the half-life is greatly extended making Long R3 IGF-1 a practical and powerful way to Improve Metabolic Rate, Stimulate Local Muscle Growth, Regenerate Nerve Tissue, Reduce Visceral Fat, Increase Protein Transport, and Reduce Muscle Breakdown.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">1mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">1</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized IGF-1 LR3</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-010</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/hgh176191.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">HGH 176-191</FIELD>
+                        <FIELD name="ShortDescription">HGH Frag 176-191 Injection</FIELD>
+                        <FIELD name="LongDescription1">HGH Fragment 176-191 is truncated from the C-terminal of Human Growth Hormone (HGH) with tyrosine added to the N terminal. HGH Fragment has been linked to Increases in Lipolysis (fat burning) and Inhibition of Lipogenesis (stopping new fat from forming). HGH Fragment 176-191 is estimated to be 12-fold more effective in body fat reduction than growth hormone itself with fewer incidences of hyperglycemia. HGH Fragment is particularly effect in the oxidation of stubborn visceral fat stores.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized HGH Frag 176-191</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">0</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">0</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">3</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-011</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/mgf.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">MGF</FIELD>
+                        <FIELD name="ShortDescription">Mechano Growth Factor Injection</FIELD>
+                        <FIELD name="LongDescription1">Mechano Growth Factor is critical to muscle growth in the body. A frame-shifted cousin of IGF-1, it is Highly Anabolic and Promotes Localized Muscle Growth. MGF generates a PUMP and FULL appearance when administered IM. MGF activates satellite stem cells in muscle tissue triggering a cascade of Muscle Growth Activity. MGF has also been linked to promotion of Fat Loss and Regeneration of Damaged Nerve Tissue.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">5mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized MGF</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+
+            <OBJECT name="Product">
+                <FIELD name="Code">PeptideGH-012</FIELD>
+                <FIELD name="Rating">4</FIELD>
+                <FIELD name="ProductType">003</FIELD>
+                <FIELD name="Price">0</FIELD>
+                <FIELD name="Image1LocalPath">Peptids/mtii.png</FIELD>
+                <FIELD name="NameColor">#ffffff</FIELD>
+                <FIELD name="NameBgColor">#29778c</FIELD>
+
+                <ITEMS name="Descriptions">
+                    <OBJECT name="Description">
+                        <FIELD name="Language">EN</FIELD>
+                        <FIELD name="Name">MT II</FIELD>
+                        <FIELD name="ShortDescription">Melanotan II Injection</FIELD>
+                        <FIELD name="LongDescription1">Melanotan II gives you the ability to achieve a tanned skin tone without exposing yourself to the sun. It also protects you from sunburn if you are out in the sun. MT II has an aphrodisiac effect increasing Libido in most individuals and producing stronger erections. MT II is an analogue of your body’s own alpha-Melanocyte Stimulating Hormone signalling the body to increase skin pigments.</FIELD>
+                        <FIELD name="LongDescription2"></FIELD>
+                        <FIELD name="Extra1">10mg/vial – 2 vials &amp; solvent</FIELD>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="CompositionGroups">
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each vial</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">5</FIELD>
+                                <FIELD name="Unit">mg</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Lyophilized MGF</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="CompositionGroup">
+                        <FIELD name="PerUnit">Each ampoule</FIELD>
+                        <ITEMS name="Compositions">
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">1</FIELD>
+                                <FIELD name="Quantity">0.9</FIELD>
+                                <FIELD name="Unit">% v/v</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Water &amp; Benzyl Alcohol</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+
+                            <OBJECT name="Composition">
+                                <FIELD name="Code">2</FIELD>
+                                <FIELD name="Quantity">0</FIELD>
+                                <FIELD name="Unit">q.s.</FIELD>
+                                <ITEMS name="Descriptions">
+                                    <OBJECT name="Description">
+                                        <FIELD name="Language">EN</FIELD>
+                                        <FIELD name="Name">Excipients</FIELD>
+                                    </OBJECT>
+                                </ITEMS>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+
+                <ITEMS name="Performances">
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">1</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Strength</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">2</FIELD>
+                        <FIELD name="Quantity">4</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Muscle Gain</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">3</FIELD>
+                        <FIELD name="Quantity">2</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Fat/Water Loss</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+
+                    <OBJECT name="Performance">
+                        <FIELD name="Code">4</FIELD>
+                        <FIELD name="Quantity">1</FIELD>
+                        <FIELD name="Unit">Star</FIELD>
+                        <ITEMS name="Descriptions">
+                            <OBJECT name="Description">
+                                <FIELD name="Language">EN</FIELD>
+                                <FIELD name="Name">Side Effects</FIELD>
+                            </OBJECT>
+                        </ITEMS>
+                    </OBJECT>
+                </ITEMS>
+            </OBJECT>
+        </ITEMS>
+    </OBJECT>
+</API>

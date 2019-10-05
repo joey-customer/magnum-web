@@ -51,6 +51,33 @@ dotnet run -p MagnumConsole ImportProduct \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
+dotnet run -p MagnumConsole ImportProduct \
+--if='products_sexuals.xml' \
+--b="./configs/imports/products" \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
+dotnet run -p MagnumConsole ImportProduct \
+--if='products_extreme_series.xml' \
+--b="./configs/imports/products" \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
+dotnet run -p MagnumConsole ImportProduct \
+--if='products_ergogenics.xml' \
+--b="./configs/imports/products" \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
 dotnet run -p MagnumConsole ImportContent \
 --if='contents.xml' \
 --b="./configs/imports/contents" \
