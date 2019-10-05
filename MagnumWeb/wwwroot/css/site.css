@@ -821,6 +821,14 @@ body {
 	}
 }
 
+.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="Ergogenics-001"] img,
+.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="Ergogenics-002"] img,
+.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="view_Sexual-004"] img,
+.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="view_Sexual-005"] img
+{
+	height: auto;
+}
+
 .shop-page .shop-product-wrap .product-list-item .product-thumb:hover img {
 	transform: scale3d(1.1,1.1,1);
 }
@@ -866,7 +874,7 @@ body {
 	width: 100%; 
 	text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
 	.shop-page .shop-product-wrap .product-list-item .product-thumb {
 		width: 30%; 
 	} 
