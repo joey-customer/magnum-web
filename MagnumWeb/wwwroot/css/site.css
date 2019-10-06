@@ -76,26 +76,21 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.55);
+	background: #000;
 	top: 0;
 	left: 0;
 }
 
 .site-header {
-	z-index: 1000;
-	left: 0;
 	width: 100%;
-	padding: 15px 0;
-	background-color: #151515;
 }
 
 .Home .site-header {
-	position: absolute;
-    top: 0;
     background-color: transparent;
 }
 
 .navbar {
+	padding: 0;
 	background: transparent;
 }
 
@@ -130,7 +125,7 @@ body {
 .navbar .navbar-nav > .nav-item > .nav-link {
 	font-size: 16px;
 	text-align: left;
-	color: #fff;
+	color: #222;
 	line-height: 35px;
 	font-weight: 600;
 	-webkit-transition: all 300ms linear 0s;
@@ -146,10 +141,6 @@ body {
 
 .navbar .navbar-nav > .nav-item > .nav-link:after {
 	display: none;
-}
-
-.navbar .navbar-nav > .nav-item:hover a, .navbar .navbar-nav > .nav-item.active a {
-	color: #fff;
 }
 
 .navbar .navbar-nav > .nav-item.submenu .dropdown-menu {
@@ -262,7 +253,7 @@ body {
 		width: 22px;
 		height: 2px;
 		border-radius: 1px;
-		background-color: #fff;
+		background-color: black;
 	}
 
 	.navbar-toggler .icon-bar + .icon-bar {
@@ -291,19 +282,17 @@ body {
 
 .banner {
 	position: relative;
-	padding: 50px 0;
-	background-image: url('/images/intro.jpg');
-	background-size: cover;
+	/* background-image: url('/images/intro.jpg');
+	background-size: cover; */
 }
 
 .bannner-content {
-	margin-top: 250px;
+	margin-top: 40px;
 }
 
 .bannner-content h1 {
 	font-size: 60px;
 	font-weight: 800;
-	margin-bottom: 20px;
 	color: #fff;
 }
 
@@ -325,7 +314,7 @@ body {
 
 @media (max-width: 575px) {
 	.banner {
-		padding: 130px 0;
+		padding: 10px 0;
 	}
 
 	.bannner-content h1 {
