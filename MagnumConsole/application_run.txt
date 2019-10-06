@@ -42,8 +42,19 @@ dotnet run -p MagnumConsole ImportProductType \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
 
+################################### IMPORT PRODUCTS ###################################
+
 dotnet run -p MagnumConsole ImportProduct \
 --if='products.xml' \
+--b="./configs/imports/products" \
+--bucket=${MAGNUM_FIREBASE_BUCKET} \
+--h=${MAGNUM_FIREBASE_URL} \
+--user=${MAGNUM_DB_USERNAME} \
+--password=${MAGNUM_DB_PASSWORD} \
+--key=${MAGNUM_FIREBASE_KEY}
+
+dotnet run -p MagnumConsole ImportProduct \
+--if='products_peptids.xml' \
 --b="./configs/imports/products" \
 --bucket=${MAGNUM_FIREBASE_BUCKET} \
 --h=${MAGNUM_FIREBASE_URL} \
@@ -77,6 +88,8 @@ dotnet run -p MagnumConsole ImportProduct \
 --user=${MAGNUM_DB_USERNAME} \
 --password=${MAGNUM_DB_PASSWORD} \
 --key=${MAGNUM_FIREBASE_KEY}
+
+#######################################################################################
 
 dotnet run -p MagnumConsole ImportContent \
 --if='contents.xml' \
