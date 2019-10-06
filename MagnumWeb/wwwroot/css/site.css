@@ -83,11 +83,12 @@ body {
 
 .site-header {
 	width: 100%;
+	background-color: #000;
 }
 
-.Home .site-header {
-    background-color: transparent;
-}
+/* .Home .site-header {
+    background-color: #000;
+} */
 
 .navbar {
 	padding: 0;
@@ -125,7 +126,7 @@ body {
 .navbar .navbar-nav > .nav-item > .nav-link {
 	font-size: 16px;
 	text-align: left;
-	color: #222;
+	color: #fff;
 	line-height: 35px;
 	font-weight: 600;
 	-webkit-transition: all 300ms linear 0s;
@@ -253,7 +254,7 @@ body {
 		width: 22px;
 		height: 2px;
 		border-radius: 1px;
-		background-color: black;
+		background-color: #fff;
 	}
 
 	.navbar-toggler .icon-bar + .icon-bar {
@@ -297,9 +298,9 @@ body {
 }
 
 .bannner-content p {
-	margin-bottom: 50px;
+	margin-top: 10px;
 	font-size: 18px;
-	color: #ccc;
+	color:rgba(213, 0, 0, .75);
 }
 
 .bannner-content a {
