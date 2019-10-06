@@ -291,13 +291,13 @@ body {
 
 .banner {
 	position: relative;
-	padding: 150px 0;
+	padding: 50px 0;
 	background-image: url('/images/intro.jpg');
 	background-size: cover;
 }
 
 .bannner-content {
-	margin-top: 150px;
+	margin-top: 250px;
 }
 
 .bannner-content h1 {
