@@ -76,19 +76,30 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #000;
+	background: rgba(0, 0, 0, 1);
 	top: 0;
 	left: 0;
 }
 
-.site-header {
-	width: 100%;
-	background-color: #000;
+@media (min-width: 1024px) {
+	.overlay {
+		background: rgba(0, 0, 0, 0.55);
+	}
 }
 
-/* .Home .site-header {
-    background-color: #000;
-} */
+.site-header {
+    z-index: 1000;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    padding: 15px 0px;
+}
+
+.Home .site-header {
+    position: absolute;
+    top: 0px;
+    background-color: transparent;
+}
 
 .navbar {
 	padding: 0;
@@ -283,12 +294,18 @@ body {
 
 .banner {
 	position: relative;
-	/* background-image: url('/images/intro.jpg');
-	background-size: cover; */
+	padding-top: 100px;
+}
+
+@media (min-width: 1024px) {
+	.banner {
+		background-image: url('/images/intro.jpg');
+		background-size: cover;
+	}
 }
 
 .bannner-content {
-	margin-top: 40px;
+	margin-top: 150px;
 }
 
 .bannner-content h1 {
@@ -298,7 +315,7 @@ body {
 }
 
 .bannner-content p {
-	margin-top: 10px;
+	margin-bottom: 60px;
 	font-size: 18px;
 	color:rgba(213, 0, 0, .75);
 }
@@ -431,9 +448,17 @@ body {
 }
 
 /*------------------------ OUR SERVICE ---------------------*/
+
 .our-service {
-	margin-top: -100px;
+	display: none;
 }
+
+@media (min-width: 992px) {
+	.our-service {
+		display: block;
+		margin-top: -85px;
+	}
+}	
 
 .heading {
 	margin: 0 0 10px;
