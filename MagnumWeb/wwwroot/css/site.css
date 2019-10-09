@@ -305,13 +305,7 @@ body {
 }
 
 .bannner-content {
-	margin-top: 100px;
-}
-
-@media (min-width: 1024px) {
-	.bannner-content {
-		margin-top: 150px;
-	}
+	margin-top: 150px;
 }
 
 .bannner-content h1 {
@@ -321,15 +315,9 @@ body {
 }
 
 .bannner-content p {
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	font-size: 18px;
 	color:rgba(213, 0, 0, .75);
-}
-
-@media (min-width: 1024px) {
-	.bannner-content p {
-		margin-bottom: 60px;
-	}
 }
 
 .bannner-content a {
