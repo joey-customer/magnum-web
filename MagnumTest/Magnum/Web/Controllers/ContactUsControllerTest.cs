@@ -75,6 +75,8 @@ namespace Magnum.Web.Controllers
         [TestCase("Maxnum", "0000", "1234", "5678")]
         public void SaveContactTest(String name, String subject, String email, String message)
         {
+            mockController.Setup(foo => foo.GetEmailTo()).Returns("dummy@dummy.com");
+
             MContactUs model = new MContactUs();
             model.Name = name;
             model.Subject = subject;
@@ -140,6 +142,12 @@ namespace Magnum.Web.Controllers
         {
             var cache = new ContactUsController().GetContentCache();
             Assert.NotNull(cache);
+        }
+
+        [Test]
+        public void GetEmailTo()
+        {
+            var cache = new ContactUsController().GetEmailTo();
         }
     }
 }
