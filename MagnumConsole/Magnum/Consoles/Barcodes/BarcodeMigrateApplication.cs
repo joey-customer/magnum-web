@@ -47,7 +47,7 @@ namespace Magnum.Consoles.Barcodes
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             while ((text = file.ReadLine()) != null)
             {
-                if ("".Equals(text.Trim())
+                if (!"".Equals(text.Trim())
                     && !text.Trim().StartsWith("Serial")
                 )
                 {
@@ -107,7 +107,7 @@ namespace Magnum.Consoles.Barcodes
             return false;
         }
 
-        private CreateBarcode GetCreateBarcodeOperation()
+        public virtual CreateBarcode GetCreateBarcodeOperation()
         {
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());
