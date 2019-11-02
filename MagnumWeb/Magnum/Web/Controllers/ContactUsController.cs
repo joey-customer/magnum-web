@@ -40,25 +40,16 @@ namespace Magnum.Web.Controllers
 
                 operation.Apply(form);
 
-                bool sendResult = SendEmail(form);
+                SendEmail(form);
 
-                if (sendResult)
-                {
-                    ViewBag.Message = "Your message has been received and we will contact you soon.";
-                }
-                else
-                {
-                    ViewBag.Message = "Unable to send the message, internal server error.";
-                }
-
+                ViewBag.Message = "Your message has been received and we will contact you soon.";
             }
             return View("Contact");
         }
 
-        public virtual bool SendEmail(MContactUs form)
+        private void SendEmail(MContactUs form)
         {
-            bool result = false;
-            string emailTo = GetEmailTo();
+            string emailTo = Environment.GetEnvironmentVariable("MAGNUM_EMAIL_TO");
             if (emailTo != null)
             {
                 Mail m = new Mail();
@@ -75,18 +66,11 @@ namespace Magnum.Web.Controllers
                 smtpContext.Send(m);
 
                 Log.Logger.Information("Email sent to [{0}]", emailTo);
-                result = true;
             }
             else
             {
                 Log.Logger.Information("Env variable MAGNUM_EMAIL_TO not set!!!");
             }
-            return result;
-        }
-
-        public virtual string GetEmailTo()
-        {
-            return Environment.GetEnvironmentVariable("MAGNUM_EMAIL_TO");
         }
 
         public string ValidateContactUsForm(MContactUs form)

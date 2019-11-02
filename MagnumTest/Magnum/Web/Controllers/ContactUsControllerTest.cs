@@ -11,7 +11,7 @@ using Its.Onix.Core.Smtp;
 using Its.Onix.Erp.Models;
 using Its.Onix.Erp.Businesses.ContactUs;
 
-namespace Magnum.Web.Controllers
+namespace Magnum.Web.Controllers 
 {
     public class ContactUsControllerTest : BaseTest
     {
@@ -20,7 +20,6 @@ namespace Magnum.Web.Controllers
         }
 
         ContactUsController controller;
-        Mock<ContactUsController> mockController;
         IBusinessOperationManipulate<MContactUs> mockContactUsOpr;
 
         [SetUp]
@@ -33,7 +32,7 @@ namespace Magnum.Web.Controllers
             };
             controllerContext.HttpContext.Connection.RemoteIpAddress = IPAddress.Parse("127.0.0.1");
 
-            mockController = new Mock<ContactUsController>() { CallBase = true };
+            var mockController = new Mock<ContactUsController>() { CallBase = true };
             var mockOpr = new Mock<IBusinessOperationManipulate<MContactUs>>();
             mockContactUsOpr = mockOpr.Object;
             mockOpr.Setup(foo => foo.Apply(It.IsAny<MContactUs>())).Returns(0);
@@ -88,21 +87,6 @@ namespace Magnum.Web.Controllers
             Assert.AreEqual("Your message has been received and we will contact you soon.", result.ViewData["Message"]);
         }
 
-        [TestCase("Maxnum", "0000", "1234", "5678")]
-        public void SaveContactFail(String name, String subject, String email, String message)
-        {
-            MContactUs model = new MContactUs();
-            model.Name = name;
-            model.Subject = subject;
-            model.Email = email;
-            model.Message = message;
-            mockController.Setup(foo => foo.SendEmail(It.IsAny<MContactUs>())).Returns(false);
-            ViewResult result = (ViewResult)controller.SaveContactUs(model);
-            Assert.AreEqual("127.0.0.1", model.IP);
-            Assert.AreEqual("Contact", result.ViewName);
-            Assert.AreEqual("Unable to send the message, internal server error.", result.ViewData["Message"]);
-        }
-
         [TestCase("", "0000", "1234", "5678")]
         public void SaveContactTestEmpty(String name, String subject, String email, String message)
         {
@@ -123,18 +107,6 @@ namespace Magnum.Web.Controllers
             var realController = new ContactUsController();
             SaveContactUs result = (SaveContactUs)realController.GetSaveContactUsOperation();
             Assert.IsNotNull(result);
-        }
-
-        [Test]
-        public void SendEmailNoEnvironment()
-        {
-            string nullString = null;
-            var mockController = new Mock<ContactUsController>() { CallBase = true };
-            mockController.Setup(foo => foo.GetEmailTo()).Returns(nullString);
-
-            MContactUs contactUs = new MContactUs();
-            bool result = mockController.Object.SendEmail(contactUs);
-            Assert.IsFalse(result);
         }
 
         [Test]
