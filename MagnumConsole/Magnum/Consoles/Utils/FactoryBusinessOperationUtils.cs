@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using Its.Onix.Core.Commons.Plugin;
 using Its.Onix.Core.Factories;
 using Its.Onix.Erp.Services;
 
