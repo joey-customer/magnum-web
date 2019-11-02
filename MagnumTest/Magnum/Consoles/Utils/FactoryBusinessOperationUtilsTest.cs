@@ -7,6 +7,10 @@ namespace Magnum.Consoles.Utils
         [Test]
         public void LoadBusinessOperationsTest()
         {
+            //Load
+            FactoryBusinessOperationUtils.LoadBusinessOperations();
+
+            //No reload
             FactoryBusinessOperationUtils.LoadBusinessOperations();
         }
     }

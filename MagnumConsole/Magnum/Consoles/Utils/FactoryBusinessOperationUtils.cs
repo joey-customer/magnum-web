@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using Its.Onix.Core.Commons.Plugin;
 using Its.Onix.Core.Factories;
 using Its.Onix.Erp.Services;
 
@@ -11,7 +14,17 @@ namespace Magnum.Consoles.Utils
         {
             if (!isLoad)
             {
-                FactoryBusinessOperation.RegisterBusinessOperations(BusinessErpOperations.GetInstance().ExportedServicesList());
+                var servicesList = BusinessErpOperations.GetInstance().ExportedServicesList();
+                try
+                {
+                    FactoryBusinessOperation.RegisterBusinessOperations(servicesList);
+                }
+                catch (Exception)
+                {
+                    FactoryBusinessOperation.ClearRegisteredItems();
+                    FactoryBusinessOperation.RegisterBusinessOperations(servicesList);
+                }
+
                 isLoad = true;
             }
         }
