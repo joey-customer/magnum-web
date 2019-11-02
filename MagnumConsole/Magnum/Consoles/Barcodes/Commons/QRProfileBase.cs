@@ -1,8 +1,6 @@
-using System;
-
 namespace Magnum.Consoles.Barcodes.Commons
 {
-	public abstract class QRProfileBase : IBarcodeProfile
+    public abstract class QRProfileBase : IBarcodeProfile
 	{        
         public string TemplateFile {get; set;}
         public string Message1 {get; set;}

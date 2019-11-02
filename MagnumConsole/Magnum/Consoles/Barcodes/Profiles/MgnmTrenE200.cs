@@ -1,10 +1,8 @@
-using System;
-
 using Magnum.Consoles.Barcodes.Commons;
 
 namespace Magnum.Consoles.Barcodes.Profiles
 {
-	public class MgnmTrenE200 : BarcodeProfileBase
+    public class MgnmTrenE200 : BarcodeProfileBase
 	{
         protected override void CustomSetting()
         {

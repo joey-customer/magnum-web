@@ -1,10 +1,8 @@
-using System;
-
 using Magnum.Consoles.Barcodes.Commons;
 
 namespace Magnum.Consoles.Barcodes.Profiles
 {
-	public class MgnmStanolAQ100 : BarcodeProfileBase
+    public class MgnmStanolAQ100 : BarcodeProfileBase
 	{
         protected override void CustomSetting()
         {
