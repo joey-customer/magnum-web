@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-
 using NUnit.Framework;
 
 namespace Magnum.Consoles.Barcodes.HtmlConverters

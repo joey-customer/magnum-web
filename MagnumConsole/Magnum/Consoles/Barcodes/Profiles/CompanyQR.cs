@@ -1,11 +1,8 @@
-using System;
-using System.IO;
-
 using Magnum.Consoles.Barcodes.Commons;
 
 namespace Magnum.Consoles.Barcodes.Profiles
 {
-	public class CompanyQR : QRProfileBase
+    public class CompanyQR : QRProfileBase
 	{
         protected override void CustomSetting()
         {

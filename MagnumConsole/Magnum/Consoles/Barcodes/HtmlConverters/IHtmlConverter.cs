@@ -1,8 +1,6 @@
-using System;
-
 namespace Magnum.Consoles.Barcodes.HtmlConverters
 {
-	public interface IHtmlConverter
+    public interface IHtmlConverter
 	{
         void SetWidth(int w);
         void SetImageFormat(int fmt);
