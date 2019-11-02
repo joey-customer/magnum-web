@@ -835,20 +835,6 @@ body {
 	/* height: 260px; */
 }
 
-/* @media (min-width: 960px) {
-	.shop-page .shop-product-wrap .product-list-item .product-thumb img {
-		height: 300px;
-	}
-} */
-
-/* .shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="Ergogenics-001"] img,
-.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="Ergogenics-002"] img,
-.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="view_Sexual-004"] img,
-.shop-page .shop-product-wrap .product-list-item .product-thumb a[data-target*="view_Sexual-005"] img
-{
-	height: auto;
-} */
-
 .shop-page .shop-product-wrap .product-list-item .product-thumb:hover img {
 	transform: scale3d(1.1,1.1,1);
 }
