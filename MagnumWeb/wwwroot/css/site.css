@@ -235,6 +235,13 @@ body {
 		top: 2px;
 	}
 
+	.navbar-toggler .icon-bar {
+		position: relative;
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+	}
+
 	.navbar-toggler.active .icon-bar:nth-of-type(1) {
 		top: 6px;
 		-webkit-transform: rotate(45deg);
@@ -254,15 +261,11 @@ body {
 	}
 
 	.navbar-toggler .icon-bar {
-		position: relative;
 		display: block;
 		width: 22px;
 		height: 2px;
 		border-radius: 1px;
 		background-color: #fff;
-		-webkit-transition: all 500ms ease-in-out;
-		-moz-transition: all 500ms ease-in-out;
-		transition: all 500ms ease-in-out;
 	}
 
 	.navbar-toggler .icon-bar + .icon-bar {
@@ -302,13 +305,7 @@ body {
 }
 
 .bannner-content {
-	margin-top: 100px;
-}
-
-@media (min-width: 1024px) {
-	.bannner-content {
-		margin-top: 150px;
-	}
+	margin-top: 150px;
 }
 
 .bannner-content h1 {
@@ -318,15 +315,9 @@ body {
 }
 
 .bannner-content p {
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	font-size: 18px;
 	color:rgba(213, 0, 0, .75);
-}
-
-@media (min-width: 1024px) {
-	.bannner-content p {
-		margin-bottom: 60px;
-	}
 }
 
 .bannner-content a {
@@ -819,6 +810,10 @@ body {
 	bottom: 0; 
 }
 
+.shop-page .shop-product-wrap .product-list-item .product-thumb {
+	position: relative;
+	overflow: hidden; 
+}
 .shop-page .shop-product-wrap .product-list-item .product-thumb .product-action-link {
 	display: flex;
 	flex-wrap: wrap;
@@ -896,8 +891,6 @@ body {
 	color: #ecb341; 
 }
 .shop-page .shop-product-wrap .product-list-item .product-thumb {
-	position: relative;
-	overflow: hidden; 
 	width: 100%; 
 	text-align: center;
 }

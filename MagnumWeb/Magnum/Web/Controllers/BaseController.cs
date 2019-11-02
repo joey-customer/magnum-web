@@ -36,12 +36,12 @@ namespace Magnum.Web.Controllers
             dat.Value = 1;
 
             int views = metricOpr.Apply(dat);
-            return String.Format("{0:n0}", views); ;
+            return String.Format("{0:n0}", views);
         }
 
-        private dynamic GetOrderShipped()
+        public virtual string GetOrderShipped()
         {
-            var cache = GetMatricsCache();
+            var cache = GetMetricsCache();
             int shipped = 0;
             try
             {
@@ -52,7 +52,7 @@ namespace Magnum.Web.Controllers
             {
                 // Use initial value zero if unable to retrieve the shipped value.
             }
-            return String.Format("{0:n0}", shipped); ;
+            return String.Format("{0:n0}", shipped);
         }
 
         private string GetDaysUpTime()
@@ -97,7 +97,7 @@ namespace Magnum.Web.Controllers
             return FactoryCacheContext.GetCacheObject("CacheProductList");
         }
 
-        public virtual ICacheContext GetMatricsCache()
+        public virtual ICacheContext GetMetricsCache()
         {
             return FactoryCacheContext.GetCacheObject("CacheMetrics");
         }

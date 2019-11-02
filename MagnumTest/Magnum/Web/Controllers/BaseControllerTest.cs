@@ -18,6 +18,8 @@ namespace Magnum.Web.Controllers
         }
 
         BaseController controller;
+        Mock<HomeController> mockController;
+        Mock<ICacheContext> iCacheMock;
 
         BaseController realController = new BaseController();
 
@@ -30,25 +32,16 @@ namespace Magnum.Web.Controllers
                 HttpContext = httpContext,
             };
 
-            var mockController = new Mock<HomeController>() { CallBase = true };
+            mockController = new Mock<HomeController>() { CallBase = true };
 
-            var iCacheMock = new Mock<ICacheContext>();
+            iCacheMock = new Mock<ICacheContext>();
             mockController.Setup(foo => foo.GetContentCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductTypeCache()).Returns(iCacheMock.Object);
             mockController.Setup(foo => foo.GetProductsCache()).Returns(iCacheMock.Object);
-            mockController.Setup(foo => foo.GetMatricsCache()).Returns(iCacheMock.Object);
+            mockController.Setup(foo => foo.GetMetricsCache()).Returns(iCacheMock.Object);
 
             var iBusinessOpr = new Mock<IBusinessOperationManipulate<MMetric>>();
             mockController.Setup(foo => foo.GetMetricIncreaseOperation()).Returns(iBusinessOpr.Object);
-            
-
-            mockController.Setup(foo => foo.GetEstablishedDate()).Returns("2019-01-01");
-
-            MContent bestSellers = new MContent();
-            bestSellers.Values = new Dictionary<string, string>();
-            bestSellers.Values.Add("b1", "ITEM-001");
-            bestSellers.Values.Add("b2", "ITEM-002");
-            iCacheMock.Setup(foo => foo.GetValue("code/Best_Seller_Products")).Returns(bestSellers);
 
             MContent newArrivals = new MContent();
             newArrivals.Values = new Dictionary<string, string>();
@@ -57,14 +50,36 @@ namespace Magnum.Web.Controllers
             newArrivals.Values.Add("n3", "ITEM-005");
             iCacheMock.Setup(foo => foo.GetValue("code/New_Arrival_Products")).Returns(newArrivals);
 
-            Dictionary<string, BaseModel> products = new Dictionary<string, BaseModel>();
+            Dictionary<string, BaseModel> cacheData = new Dictionary<string, BaseModel>();
             MProductType product1 = new MProductType();
             product1.Code = "ITEM-001";
-            products.Add("ITEM-001", product1);
-            iCacheMock.Setup(foo => foo.GetValues()).Returns(products);
+            cacheData.Add("ITEM-001", product1);
+            iCacheMock.Setup(foo => foo.GetValues()).Returns(cacheData);
 
             controller = mockController.Object;
             controller.ControllerContext = controllerContext;
+
+            MContent establishedDate = new MContent();
+            establishedDate.Values = new Dictionary<string, string>();
+            establishedDate.Values.Add("EN", "2019-01-01");
+
+            MContent bestSellers = new MContent();
+            bestSellers.Values = new Dictionary<string, string>();
+            bestSellers.Values.Add("b1", "ITEM-001");
+            bestSellers.Values.Add("b2", "ITEM-002");
+            iCacheMock.Setup(foo => foo.GetValue("code/Best_Seller_Products")).Returns(bestSellers);
+
+            MMetric shipped = new MMetric();
+            shipped.Value = 2000;
+            iCacheMock.Setup(foo => foo.GetValue("shipped")).Returns(shipped);
+
+            var contentCache = new Dictionary<string, BaseModel>();
+            contentCache["cfg/Established_Date"] = establishedDate;
+            cacheData.Add("cfg/Established_Date", establishedDate);
+            contentCache["code/Best_Seller_Products"] = bestSellers;
+            controller.ViewBag.Contents = contentCache;
+            controller.ViewBag.Lang = "EN";
+
         }
 
         [Test]
@@ -74,7 +89,7 @@ namespace Magnum.Web.Controllers
             ArrayList productList = (ArrayList)controller.ViewData["ProductList"];
             var productTypeList = (List<BaseModel>)controller.ViewData["ProductTypeList"];
             Assert.AreEqual(0, productList.Count);
-            Assert.AreEqual(1, productTypeList.Count);
+            Assert.AreEqual(2, productTypeList.Count);
             Assert.AreEqual("ITEM-001", ((MProductType)productTypeList[0]).Code);
         }
 
@@ -109,8 +124,39 @@ namespace Magnum.Web.Controllers
         [Test]
         public void GetMatricsCache()
         {
-            var opr = realController.GetMatricsCache();
+            var opr = realController.GetMetricsCache();
             Assert.NotNull(opr);
+        }
+
+        [Test]
+        public void GetEstablishedDate()
+        {
+            var result = controller.GetEstablishedDate();
+            Assert.AreEqual("2019-01-01", result);
+        }
+
+        [Test]
+        public void GetSmtpContext()
+        {
+            var result = controller.GetSmtpContext();
+            Assert.NotNull(result);
+        }
+
+
+        [Test]
+        public void GetOrderShipped()
+        {
+            var result = controller.GetOrderShipped();
+            Assert.AreEqual("2,000", result);
+        }
+
+        [Test]
+        public void GetOrderShippedError()
+        {
+            var e = new System.Exception();
+            iCacheMock.Setup(foo => foo.GetValue("shipped")).Throws(e);
+            var result = controller.GetOrderShipped();
+            Assert.AreEqual("0", result);
         }
     }
 }
