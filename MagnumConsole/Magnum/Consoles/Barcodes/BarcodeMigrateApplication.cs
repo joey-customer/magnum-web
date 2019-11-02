@@ -30,6 +30,7 @@ namespace Magnum.Consoles.Barcodes
 
         protected override int Execute()
         {
+            int result = 0;
             logger = GetLogger();
             ctx = GetNoSqlContextWithAuthen("FirebaseNoSqlContext");
 
@@ -39,8 +40,6 @@ namespace Magnum.Consoles.Barcodes
             string batch = "0000";
             string chunk = "0000";
             string prof = "MIGRATE";
-
-            CreateBarcode opr = GetCreateBarcodeOperation();
 
             System.IO.StreamReader file = new System.IO.StreamReader(inputFile);
             string text;
@@ -78,22 +77,27 @@ namespace Magnum.Consoles.Barcodes
                         bc.IsActivated = false;
                         try
                         {
-                            opr.Apply(bc);
+                            InsertData(bc);
                             logger.LogInformation("Result: SUCCESS");
                         }
                         catch (Exception e)
                         {
                             logger.LogError(e.StackTrace);
                             logger.LogError("Result: FAIL");
+                            result = 1;
                         }
                     }
-
-
                 }
             }
             file.Dispose();
 
-            return 0;
+            return result;
+        }
+
+        public virtual MBarcode InsertData(MBarcode bc)
+        {
+            CreateBarcode opr = GetCreateBarcodeOperation();
+            return opr.Apply(bc);
         }
 
         private bool IsBarcodeExisting(string serialNumber, string pin)

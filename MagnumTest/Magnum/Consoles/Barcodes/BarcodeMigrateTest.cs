@@ -20,8 +20,6 @@ namespace Magnum.Consoles.Barcodes
     {
         private Hashtable h = null;
         private string[] args = null;
-        private int generatedCount = 0;
-        private bool imgGenerateFlag = false;
 
         public BarcodeMigrateTest() : base()
         {
@@ -96,6 +94,32 @@ namespace Magnum.Consoles.Barcodes
             int result = app.Run();
 
             Assert.AreEqual(0, result);
+        }
+
+         [Test]
+        public void ExecuteExceptionTest()
+        {
+            Mock<BarcodeMigrateApplication> mockApp = new Mock<BarcodeMigrateApplication>() { CallBase = true }; ;
+            mockApp.Setup(foo => foo.InsertData(It.IsAny<MBarcode>())).Throws(new Exception());
+            BarcodeMigrateApplication app = mockApp.Object;
+
+            MBarcode existingData = new MBarcode();
+
+            Mock<INoSqlContext> mockCtx = new Mock<INoSqlContext>();
+            INoSqlContext ctx = mockCtx.Object;
+            app.SetNoSqlContext(ctx);
+
+            ILogger logger = new Mock<ILogger>().Object;
+            app.SetLogger(logger);
+
+            OptionSet opt = app.CreateOptionSet();
+            opt.Parse(args);
+
+            createInputFile((String)h["infile"]);
+
+            int result = app.Run();
+
+            Assert.AreEqual(1, result);
         }
 
         private void createInputFile(string fileName)
