@@ -1,6 +1,6 @@
 substitutions:
-  _VERSION: "1.0.40"
-  _DOCKER_VERSION: "1.0.40"
+  _VERSION: "1.0.41"
+  _DOCKER_VERSION: "1.0.41"
 
 steps:
 - name: 'gcr.io/its-artifact-commons/dotnet-sonar:2.2-4'
