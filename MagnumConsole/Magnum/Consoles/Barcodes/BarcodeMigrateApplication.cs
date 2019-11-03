@@ -30,6 +30,7 @@ namespace Magnum.Consoles.Barcodes
 
         protected override int Execute()
         {
+            int result = 0;
             logger = GetLogger();
             ctx = GetNoSqlContextWithAuthen("FirebaseNoSqlContext");
 
@@ -40,14 +41,12 @@ namespace Magnum.Consoles.Barcodes
             string chunk = "0000";
             string prof = "MIGRATE";
 
-            CreateBarcode opr = GetCreateBarcodeOperation();
-
             System.IO.StreamReader file = new System.IO.StreamReader(inputFile);
             string text;
             string timeStamp = DateTime.Now.ToString("yyyyMMddHHmmss");
             while ((text = file.ReadLine()) != null)
             {
-                if ("".Equals(text.Trim())
+                if (!"".Equals(text.Trim())
                     && !text.Trim().StartsWith("Serial")
                 )
                 {
@@ -78,22 +77,27 @@ namespace Magnum.Consoles.Barcodes
                         bc.IsActivated = false;
                         try
                         {
-                            opr.Apply(bc);
+                            InsertData(bc);
                             logger.LogInformation("Result: SUCCESS");
                         }
                         catch (Exception e)
                         {
                             logger.LogError(e.StackTrace);
                             logger.LogError("Result: FAIL");
+                            result = 1;
                         }
                     }
-
-
                 }
             }
             file.Dispose();
 
-            return 0;
+            return result;
+        }
+
+        public virtual MBarcode InsertData(MBarcode bc)
+        {
+            CreateBarcode opr = GetCreateBarcodeOperation();
+            return opr.Apply(bc);
         }
 
         private bool IsBarcodeExisting(string serialNumber, string pin)
@@ -107,7 +111,7 @@ namespace Magnum.Consoles.Barcodes
             return false;
         }
 
-        private CreateBarcode GetCreateBarcodeOperation()
+        public virtual CreateBarcode GetCreateBarcodeOperation()
         {
             FactoryBusinessOperation.SetNoSqlContext(ctx);
             FactoryBusinessOperation.SetLoggerFactory(FactoryConsoleApplication.GetLoggerFactory());

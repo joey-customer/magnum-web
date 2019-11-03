@@ -1,9 +1,8 @@
-using System;
 using CoreHtmlToImage;
 
 namespace Magnum.Consoles.Barcodes.HtmlConverters
 {
-	public class Html2ImageConverter : IHtmlConverter
+    public class Html2ImageConverter : IHtmlConverter
 	{
         private readonly HtmlConverter converter = new HtmlConverter();
         private int width = 1024;

@@ -10,6 +10,7 @@ using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Applications;
 
 using NDesk.Options;
+using Its.Onix.Erp.Businesses.Mocks;
 
 namespace Magnum.Consoles.Registrations
 {
@@ -75,10 +76,11 @@ namespace Magnum.Consoles.Registrations
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            
             MBarcode barcode = new MBarcode();
             barcode.IsActivated = IsActivated;
-//TODO :            ctx.SetReturnObjectByKey(barcode);
+             ctx.SetReturnObjectByKey(barcode);
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
