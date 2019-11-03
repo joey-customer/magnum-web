@@ -1,5 +1,3 @@
-using System;
-using System.IO;
 using System.Collections;
 using NUnit.Framework;
 
@@ -7,6 +5,7 @@ using Magnum.Consoles.Factories;
 
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Erp.Models;
+using Its.Onix.Erp.Businesses.Mocks;
 using Its.Onix.Core.Applications;
 
 using Moq;
@@ -80,10 +79,11 @@ namespace Magnum.Consoles.Registrations
             OptionSet opt = app.CreateOptionSet();
             opt.Parse(args);
 
-            INoSqlContext ctx = new Mock<INoSqlContext>().Object;
+            MockedNoSqlContext ctx = new MockedNoSqlContext();
+            
             MBarcode barcode = new MBarcode();
             barcode.IsActivated = IsActivated;
-//TODO :            ctx.SetReturnObjectByKey(barcode);
+            ctx.SetReturnObjectByKey(barcode);
             app.SetNoSqlContext(ctx);
 
             //To cover test coverage
