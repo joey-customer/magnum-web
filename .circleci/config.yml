@@ -2,7 +2,7 @@ version: 2.1
 
 #Reusable pieces of value here
 parameters:
-  app_version:
+  package_version:
     type: string
     default: "0.0.0" 
 
@@ -172,7 +172,7 @@ jobs:
       # build the application image
       - run: |
           docker build \
-          '--build-arg' 'VERSION_NUMBER=<< pipeline.parameters.app_version >>' \
+          '--build-arg' 'VERSION_NUMBER=<< pipeline.parameters.package_version >>' \
           -f docker/Dockerfile \
           -t pjamenaja/magnum-web:<< pipeline.parameters.docker_version >> .
 
