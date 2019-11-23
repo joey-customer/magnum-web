@@ -168,8 +168,13 @@ jobs:
 
       - checkout
 
-      - build-and-push-image:
-          context: .
+      #- gcp-gcr/gcr-auth:
+      #    gcloud-service-key: 'dsdfsdfsdfsdfsdf'
+      #    google-project-id: magnum-dev
+
+      - gcp-gcr/build-image:
+          dockerfile: docker/Dockerfile
+          tag: ${PACKAGE_VERSION}
           image: magnum-web
           registry-url: gcr.io
           google-project-id: magnum-dev
