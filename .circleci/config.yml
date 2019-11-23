@@ -174,8 +174,14 @@ jobs:
 
       - gcp-gcr/build-image:
           dockerfile: docker/Dockerfile
-          tag: ${PACKAGE_VERSION}
+          tag: ${PACKAGE_NAME}
           image: magnum-web
           registry-url: gcr.io
           google-project-id: DEV_GOOGLE_PROJECT_ID
           extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.package_version >>
+
+      - gcp-gcr/push-image:
+          google-project-id: DEV_GOOGLE_PROJECT_ID
+          tag: ${PACKAGE_NAME}
+          image: magnum-web
+          registry-url: gcr.io      
