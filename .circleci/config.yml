@@ -80,7 +80,7 @@ jobs:
       - run: |      
           BT=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 1)
           DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
-          VERSION=<< pipeline.parameters.package_version >>
+          VERSION=<< pipeline.parameters.docker_version >>
 
           if [ "${BT}" == 'release' ]
           then
@@ -178,7 +178,7 @@ jobs:
           image: magnum-web
           registry-url: gcr.io
           google-project-id: DEV_GOOGLE_PROJECT_ID
-          extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.package_version >>
+          extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.docker_version >>
 
       - gcp-gcr/push-image:
           google-project-id: DEV_GOOGLE_PROJECT_ID
