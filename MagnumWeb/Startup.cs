@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 using Its.Onix.Core.NoSQL;
 using Its.Onix.Core.Storages;
@@ -79,7 +79,7 @@ namespace Magnum.Web
             });
 
             services.AddLogging(builder => builder.AddSerilog());
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddRazorPages();
 
             var serviceProvider = services.BuildServiceProvider();
             var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
@@ -88,7 +88,7 @@ namespace Magnum.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -106,12 +106,12 @@ namespace Magnum.Web
             app.UseCookiePolicy();
             app.UseHsts();
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });        
         }
     }
 }

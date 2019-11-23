@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/MagnumWeb/bin/Debug/netcoreapp2.2/MagnumWeb.dll",
+            "program": "${workspaceFolder}/MagnumWeb/bin/Debug/netcoreapp3.0/MagnumWeb.dll",
             "args": [],
             "cwd": "${workspaceFolder}/MagnumWeb",
             "stopAtEntry": false,
@@ -31,7 +31,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/MagnumTest/bin/Debug/netcoreapp2.2/MagnumTest.dll",
+            "program": "${workspaceFolder}/MagnumTest/bin/Debug/netcoreapp3.0/MagnumTest.dll",
             "args": [],
             "cwd": "${workspaceFolder}/MagnumTest",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

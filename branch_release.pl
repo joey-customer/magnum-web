@@ -9,7 +9,7 @@ use File::Copy;
 use constant false => 0;
 use constant true  => 1;
 
-# ./branch_release -rv '1.0.0'
+# ./branch_release -rv '1.0-0'
 
 my $TEMP_DIR = $ENV{'TEMP'}; #Temp directory
 
@@ -17,8 +17,8 @@ my $TEMP_DIR = $ENV{'TEMP'}; #Temp directory
 my $SOURCE_BRANCH = 'trunk';
 
 my $REPO_NAME = 'magnum-web';
-my $POM_FILE = "$TEMP_DIR/$REPO_NAME/GCloudBuild/cloudbuild.yaml";
-my $SOURCE_REPO = 'https://github.com/pjamenaja/' . "$REPO_NAME.git";
+my $POM_FILE = "$TEMP_DIR/$REPO_NAME/.circleci/config.yml";
+my $SOURCE_REPO = 'https://github.com/joey-customer/' . "$REPO_NAME.git";
 my $TARGET_BRANCH = 'master';
 my $RELEASE_PREFIX = 'release';
 
@@ -134,6 +134,12 @@ sub parse_pom
     my ($pom, $version) = @_;
     my $src_file = "$pom.tmp";
 
+    my $dotnet_version = $version;
+    if ($version =~ /^(.+)-(.+)$/)
+    {
+        $dotnet_version = $1;
+    }
+
     print("Moving file [$pom] to [$src_file]\n");
 
     move($pom, $src_file) or die "Cannot move file : $!\n";
@@ -154,7 +160,7 @@ sub parse_pom
         my $line = $_;
         my $new_line = $line;
 
-        if (($line =~ /^\s*_DOCKER_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_version))
+        if (($line =~ /^\s*default:\s*\"(latest)\"\s*$/) && (!$found_version))
         { 
             #Replace only first occurence            
 
@@ -163,16 +169,7 @@ sub parse_pom
 
             print("Replaced [$old_version] with [$version]\n");
             $found_version = true;
-        }
-        elsif (($line =~ /^\s*_VERSION\s*:\s*"(.+)"\s*$/) && (!$found_docker_version))
-        { 
-            #Replace only first occurence                        
-            my $old_version = $1;
-            $new_line =~ s/$old_version/$version/ig;
-
-            print("Replaced [$old_version] with [$version]\n");
-            $found_docker_version = true;
-        }
+        }  
 
         print($oh "$new_line");
     }  
@@ -295,7 +292,7 @@ my @COMMANDS =
         "cd $REPO_NAME; mv $POM_FILE.original $POM_FILE", #We don't care version from 'master' branch
 
         "parse_pom($POM_FILE,$RELEASE_VERSION)",
-        "cd $REPO_NAME; git add *; git commit --m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",        
+        "cd $REPO_NAME; git add .circleci/config.yml *; git commit --m 'Auto merge script $RELEASE_VERSION cut from $SOURCE_BRANCH'",        
         "cd $REPO_NAME; git push origin $RELEASE_BRANCH",
         "cd $REPO_NAME; git tag -a V$RELEASE_VERSION -m 'Release $RELEASE_VERSION'",
         "cd $REPO_NAME; git push origin V$RELEASE_VERSION",
