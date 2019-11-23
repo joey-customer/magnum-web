@@ -168,7 +168,7 @@ jobs:
 
       - checkout
 
-      - gcp-gcr/build-and-push-image:
+      - build-and-push-image:
           context: .
           image: magnum-web
           registry-url: gcr.io
