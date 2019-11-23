@@ -168,9 +168,9 @@ jobs:
 
       - checkout
 
-      #- gcp-gcr/gcr-auth:
-      #    gcloud-service-key: 'dsdfsdfsdfsdfsdf'
-      #    google-project-id: magnum-dev
+      - gcp-gcr/gcr-auth:
+          gcloud-service-key: GCLOUD_SERVICE_KEY
+          google-project-id: DEV_GOOGLE_PROJECT_ID
 
       - gcp-gcr/build-image:
           dockerfile: docker/Dockerfile
