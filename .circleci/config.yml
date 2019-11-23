@@ -178,4 +178,5 @@ jobs:
           image: magnum-web
           registry-url: gcr.io
           google-project-id: DEV_GOOGLE_PROJECT_ID
-          extra_build_args: VERSION_NUMBER=<< pipeline.parameters.package_version >>
+          extra_build_args: |
+            --build-arg VERSION_NUMBER=<< pipeline.parameters.package_version >>
