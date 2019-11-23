@@ -34,6 +34,9 @@ parameters:
     type: string
     default: "MagnumWeb/bin/Release"
 
+orbs:
+  gcp-gcr: circleci/gcp-gcr@0.6.1
+
 #Reusable pieces of code here
 commands:
   populate_params:
@@ -165,16 +168,8 @@ jobs:
 
       - checkout
 
-      # with credentials stored in the UI
-      - run: |
-          echo "${DOCKER_PASS}" | docker login --username ${DOCKER_USER} --password-stdin
-
-      # build the application image
-      - run: |
-          docker build \
-          '--build-arg' 'VERSION_NUMBER=<< pipeline.parameters.package_version >>' \
-          -f docker/Dockerfile \
-          -t pjamenaja/magnum-web:<< pipeline.parameters.docker_version >> .
-
-      # deploy the image
-      - run: docker push pjamenaja/magnum-web:<< pipeline.parameters.docker_version >>
+      - gcp-gcr/build-and-push-image:
+          context: .
+          image: magnum-web
+          registry-url: gcr.io
+          google-project-id: magnum-dev
