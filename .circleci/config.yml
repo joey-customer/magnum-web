@@ -2,9 +2,13 @@ version: 2.1
 
 #Reusable pieces of value here
 parameters:
-  package_version:
+  app_version:
     type: string
-    default: "0.0.0-SNAPSHOT"
+    default: "0.0.0"
+
+  docker_version:
+    type: string
+    default: "latest"
 
   params_file:
     type: string
@@ -57,12 +61,9 @@ workflows:
       - sonar_scan:
           requires:
             - initialize
-      - build:
+      - build_and_publish:
           requires:
             - sonar_scan
-      - nuget_upload:
-          requires:
-            - build
 
 jobs:
   initialize:
@@ -152,10 +153,9 @@ jobs:
           name: Sonar Scanner End
           command: dotnet sonarscanner end /d:sonar.login=${SONAR_KEY}
           
-  build:
+  build_and_publish:
     working_directory: ~/<< pipeline.parameters.work_dir >>
-    docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+    machine: true
 
     steps:
       - attach_workspace:
@@ -165,36 +165,16 @@ jobs:
 
       - checkout
 
-      - run:
-          name: Restore Packages
-          command: dotnet restore
+      # with credentials stored in the UI
+      - run: |
+          echo "${DOCKER_PASS}" | docker login --username ${DOCKER_USER} --password-stdin
 
-      - run:
-          name: Build Packages
-          command: dotnet build Magnum.sln -c Release -p:Version=${PACKAGE_NAME}            
-      
-      - persist_to_workspace:
-          root: .
-          paths:
-            - << pipeline.parameters.package_path >>
+      # build the application image
+      - run: |
+          docker build \
+          '--build-arg' 'VERSION_NUMBER=<< pipeline.parameters.app_version >>' \
+          -f docker/Dockerfile \
+          -t pjamenaja/magnum-web:<< pipeline.parameters.docker_version >> .
 
-  nuget_upload:
-    working_directory: ~/<< pipeline.parameters.work_dir >>
-    docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
-
-    steps:
-      - attach_workspace:
-          at: << pipeline.parameters.workspace_path >>
-
-      - populate_params
-
-      - run: find << pipeline.parameters.workspace_path >> -name *
-
-      - run:
-          name: Publish Packages
-          command: |
-            dotnet nuget \
-            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_NAME}.nupkg \
-            -k ${NUGET_PUSH_KEY} \
-            -s << pipeline.parameters.nuget_api >>
+      # deploy the image
+      - run: docker push pjamenaja/magnum-web:<< pipeline.parameters.docker_version >>

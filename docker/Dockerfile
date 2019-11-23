@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 WORKDIR /app
 
 ARG VERSION_NUMBER
@@ -16,7 +16,7 @@ WORKDIR /app/publish
 RUN dotnet restore
 RUN dotnet publish -c Release -o out -p:Version=$VERSION_NUMBER 
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0 AS runtime
 WORKDIR /app
 
 RUN  apt-get update \
@@ -32,8 +32,8 @@ RUN rm filebeat-7.3.0-amd64.deb
 
 COPY --from=build /app/publish/MagnumWeb/out ./
 COPY --from=build /app/publish/MagnumConsole/out ./
-COPY GCloudBuild/filebeat.yml /etc/filebeat/filebeat.yml
-COPY GCloudBuild/supervisor.conf /etc/supervisor.conf
+COPY docker/filebeat.yml /etc/filebeat/filebeat.yml
+COPY docker/supervisor.conf /etc/supervisor.conf
 COPY configs/. ./configs/
 
 RUN mkdir -p /logs
