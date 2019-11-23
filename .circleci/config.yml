@@ -4,7 +4,7 @@ version: 2.1
 parameters:
   app_version:
     type: string
-    default: "0.0.0"
+    default: "0.0.0" 
 
   docker_version:
     type: string
