@@ -30,8 +30,7 @@ RUN wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.3.0-am
 RUN dpkg -i filebeat-7.3.0-amd64.deb
 RUN rm filebeat-7.3.0-amd64.deb
 
-COPY --from=build /app/publish/MagnumWeb/out ./
-COPY --from=build /app/publish/MagnumConsole/out ./
+COPY --from=build /app/publish/out ./
 COPY docker/filebeat.yml /etc/filebeat/filebeat.yml
 COPY docker/supervisor.conf /etc/supervisor.conf
 COPY configs/. ./configs/
