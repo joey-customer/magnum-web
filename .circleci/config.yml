@@ -1,0 +1,200 @@
+version: 2.1
+
+#Reusable pieces of value here
+parameters:
+  package_version:
+    type: string
+    default: "0.0.0-SNAPSHOT"
+
+  params_file:
+    type: string
+    default: "params/parameters.list"
+
+  workspace_path:
+    type: string
+    default: "/tmp/workspace"
+
+  work_dir:
+    type: string
+    default: "magnum-web"
+
+  work_key:
+    type: string
+    default: "magnum-web"    
+
+  nuget_api:
+    type: string
+    default: "https://api.nuget.org/v3/index.json"  
+
+  package_path:
+    type: string
+    default: "MagnumWeb/bin/Release"
+
+#Reusable pieces of code here
+commands:
+  populate_params:
+    description: "Setup custom environment variables"
+    steps:
+      - run: 
+          name: "Setup custom environment variables"
+          command: |
+            echo 'export PATH=$PATH:/root/.dotnet/tools' >> $BASH_ENV   
+            while read p; do
+              VAR_KEY=$(echo "$p" | cut -d "=" -f 1)
+              VAR_VAL=$(echo "$p" | cut -d "=" -f 2)
+
+              echo "export ${VAR_KEY}=${VAR_VAL}" >> $BASH_ENV
+              echo "Populating with : ${VAR_KEY}=${VAR_VAL}"
+            done < << pipeline.parameters.workspace_path >>/<< pipeline.parameters.params_file >>
+
+# Workflow and jobs start here
+workflows:
+  version: 2
+
+  btd:
+    jobs:
+      - initialize
+      - sonar_scan:
+          requires:
+            - initialize
+      - build:
+          requires:
+            - sonar_scan
+      - nuget_upload:
+          requires:
+            - build
+
+jobs:
+  initialize:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - run: mkdir -p params
+
+      #Branches should be : devlopment, release/1.0.1, master, feature/JIRA00001
+      - run: |      
+          BT=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 1)
+          DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
+          VERSION=<< pipeline.parameters.package_version >>
+
+          if [ "${BT}" == 'release' ]
+          then
+            NAME=${VERSION}-${BT}
+          elif [ "${BT}" == 'master' ]
+          then
+            NAME=${VERSION}
+          elif [ "${BT}" == 'trunk' ]
+          then
+            NAME=${VERSION}-${BT}-${CIRCLE_BUILD_NUM}    
+          else
+            NAME=${VERSION}-${BT}-${DESC}-${CIRCLE_BUILD_NUM}
+          fi
+
+          echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
+          echo "BRANCH_TYPE=${BT}" >> << pipeline.parameters.params_file >>
+          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>    
+      - persist_to_workspace:
+          root: .
+          paths:
+            - params
+
+  sonar_scan:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: pjamenaja/dotnet3.0-sonar:1.0.1
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - checkout
+
+      - run:
+          name: Debug Env
+          command: env | grep -E 'ONIX_|MAGNUM_'
+
+      - run:
+          name: Sonar Scanner Begin
+          command: |
+            dotnet sonarscanner begin \
+            /key:pjamenaja_magnum_web \
+            /o:pjamenaja \
+            /v:${PACKAGE_VERSION} \
+            /d:sonar.host.url=https://sonarcloud.io \
+            /d:sonar.branch.name=${CIRCLE_BRANCH} \
+            /d:sonar.cs.opencover.reportsPaths=./coverage.opencover.xml \
+            /d:sonar.javascript.exclusions=**/bootstrap/**,**/jquery/**,**/jquery-validation/**,**/jquery-validation-unobtrusive/** \
+            /d:sonar.verbose=true \
+            /d:sonar.scm.provider=git \
+            /d:sonar.login=${SONAR_KEY}
+
+      - run:
+          name: Sonar Analyse
+          command: dotnet build Magnum.sln
+
+      - run:
+          name: Coverlet
+          command: |
+            coverlet './MagnumTest/bin/Debug/netcoreapp3.0/MagnumTest.dll' \
+            --target 'dotnet' --targetargs 'test . --no-build' --format opencover
+
+            if [ "$?" -ne "0" ]; then
+              echo "Exit code from coverlet is not zero but ignore it for now!!!!"              
+              exit 0
+            fi
+
+            exit 0
+
+      - run:
+          name: Sonar Scanner End
+          command: dotnet sonarscanner end /d:sonar.login=${SONAR_KEY}
+          
+  build:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - checkout
+
+      - run:
+          name: Restore Packages
+          command: dotnet restore
+
+      - run:
+          name: Build Packages
+          command: dotnet build Magnum.sln -c Release -p:Version=${PACKAGE_NAME}            
+      
+      - persist_to_workspace:
+          root: .
+          paths:
+            - << pipeline.parameters.package_path >>
+
+  nuget_upload:
+    working_directory: ~/<< pipeline.parameters.work_dir >>
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+
+    steps:
+      - attach_workspace:
+          at: << pipeline.parameters.workspace_path >>
+
+      - populate_params
+
+      - run: find << pipeline.parameters.workspace_path >> -name *
+
+      - run:
+          name: Publish Packages
+          command: |
+            dotnet nuget \
+            push << pipeline.parameters.workspace_path >>/<< pipeline.parameters.package_path >>/OnixCore.${PACKAGE_NAME}.nupkg \
+            -k ${NUGET_PUSH_KEY} \
+            -s << pipeline.parameters.nuget_api >>
