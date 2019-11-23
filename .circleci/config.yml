@@ -177,4 +177,4 @@ jobs:
           tag: ${PACKAGE_VERSION}
           image: magnum-web
           registry-url: gcr.io
-          google-project-id: magnum-dev
+          google-project-id: DEV_GOOGLE_PROJECT_ID
