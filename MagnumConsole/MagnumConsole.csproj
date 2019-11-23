@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- <ProjectReference Include="..\..\onix-business-erp\OnixBusinessErp\OnixBusinessErp.csproj" /> -->
-    <PackageReference Include="OnixBusinessErp" Version="1.0.19" />
+    <PackageReference Include="OnixBusinessErp" Version="1.0.20" />
     <PackageReference Include="CoreHtmlToImage" Version="1.0.5" />
     <PackageReference Include="FirebaseAuthentication.net" Version="3.2.0" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.1" />
