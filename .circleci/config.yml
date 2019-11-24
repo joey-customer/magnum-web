@@ -5,7 +5,7 @@ parameters:
   app_version:
     type: string
     #BE CAREFUL TO USE SPCE RATHER THAN TAB HERE!!!!
-    default: "1.1.4" #app_version
+    default: "1.1.6" #app_version
 
   params_file:
     type: string
@@ -34,6 +34,10 @@ parameters:
   env_name_for_gcp_project:
     type: string
     default: "DEV_GOOGLE_PROJECT_ID"
+
+  docker_registry:
+    type: string
+    default: "gcr.io"    
 
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.1
@@ -176,13 +180,20 @@ jobs:
       - gcp-gcr/build-image:
           dockerfile: docker/Dockerfile
           tag: ${PACKAGE_NAME}
-          image: magnum-web
-          registry-url: gcr.io
+          image: << pipeline.parameters.work_key >>
+          registry-url: << pipeline.parameters.docker_registry >>
           google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
           extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.app_version >>
 
       - gcp-gcr/push-image:
           google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
           tag: ${PACKAGE_NAME}
-          image: magnum-web
-          registry-url: gcr.io      
+          image: << pipeline.parameters.work_key >>
+          registry-url: << pipeline.parameters.docker_registry >>
+
+      - gcp-gcr/tag-image:
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
+          image: << pipeline.parameters.work_key >>
+          registry-url: << pipeline.parameters.docker_registry >>
+          source-tag: ${PACKAGE_NAME}
+          target-tag: latest
