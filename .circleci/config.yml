@@ -2,13 +2,9 @@ version: 2.1
 
 #Reusable pieces of value here
 parameters:
-  package_version:
+  app_version:
     type: string
-    default: "0.0.0" 
-
-  docker_version:
-    type: string
-    default: "latest"
+    default: "0.0.0" #app_version
 
   params_file:
     type: string
@@ -84,7 +80,7 @@ jobs:
       - run: |      
           BT=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 1)
           DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
-          VERSION=<< pipeline.parameters.docker_version >>
+          VERSION=<< pipeline.parameters.app_version >>
 
           if [ "${BT}" == 'release' ]
           then
@@ -182,7 +178,7 @@ jobs:
           image: magnum-web
           registry-url: gcr.io
           google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
-          extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.docker_version >>
+          extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.app_version >>
 
       - gcp-gcr/push-image:
           google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
