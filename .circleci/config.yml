@@ -189,7 +189,6 @@ jobs:
 
       - gcp-gcr/tag-image:
           google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
-          tag: ${PACKAGE_NAME}
           image: magnum-web
           registry-url: gcr.io
           source-tag: ${PACKAGE_NAME}
