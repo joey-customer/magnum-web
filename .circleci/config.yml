@@ -4,7 +4,8 @@ version: 2.1
 parameters:
   app_version:
     type: string
-    default: "latest" #app_version
+    #BE CAREFUL TO USE SPCE RATHER THAN TAB HERE!!!!
+    default: "0.0.0" #app_version
 
   params_file:
     type: string
