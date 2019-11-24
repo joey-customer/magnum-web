@@ -34,6 +34,10 @@ parameters:
     type: string
     default: "MagnumWeb/bin/Release"
 
+  env_name_for_gcp_project:
+    type: string
+    default: "DEV_GOOGLE_PROJECT_ID"
+
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.1
 
@@ -81,7 +85,6 @@ jobs:
           BT=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 1)
           DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
           VERSION=<< pipeline.parameters.docker_version >>
-          PROJECT_ENV_VAR_NMAE='DEV_GOOGLE_PROJECT_ID'
 
           if [ "${BT}" == 'release' ]
           then
@@ -99,7 +102,6 @@ jobs:
           echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
           echo "BRANCH_TYPE=${BT}" >> << pipeline.parameters.params_file >>
           echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>
-          echo "ENV_PROJECT_ID_NAME=${PROJECT_ENV_VAR_NMAE}" >> << pipeline.parameters.params_file >>   
       - persist_to_workspace:
           root: .
           paths:
@@ -172,18 +174,18 @@ jobs:
 
       - gcp-gcr/gcr-auth:
           gcloud-service-key: GCLOUD_SERVICE_KEY
-          google-project-id: ${ENV_PROJECT_ID_NAME}
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
 
       - gcp-gcr/build-image:
           dockerfile: docker/Dockerfile
           tag: ${PACKAGE_NAME}
           image: magnum-web
           registry-url: gcr.io
-          google-project-id: ${ENV_PROJECT_ID_NAME}
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
           extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.docker_version >>
 
       - gcp-gcr/push-image:
-          google-project-id: ${ENV_PROJECT_ID_NAME}
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
           tag: ${PACKAGE_NAME}
           image: magnum-web
           registry-url: gcr.io      
