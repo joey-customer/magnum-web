@@ -160,7 +160,7 @@ sub parse_pom
         my $line = $_;
         my $new_line = $line;
 
-        if (($line =~ /^\s*default:\s*\"(latest)\"\s*$/) && (!$found_version))
+        if (($line =~ /^\s*default:\s*\"(.+)\"\s*#app_version\s*$/) && (!$found_version))
         { 
             #Replace only first occurence            
 

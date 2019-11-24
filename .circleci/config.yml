@@ -2,13 +2,10 @@ version: 2.1
 
 #Reusable pieces of value here
 parameters:
-  package_version:
+  app_version:
     type: string
-    default: "0.0.0" 
-
-  docker_version:
-    type: string
-    default: "1.1.2"
+    #BE CAREFUL TO USE SPCE RATHER THAN TAB HERE!!!!
+    default: "1.1.4" #app_version
 
   params_file:
     type: string
@@ -33,6 +30,10 @@ parameters:
   package_path:
     type: string
     default: "MagnumWeb/bin/Release"
+
+  env_name_for_gcp_project:
+    type: string
+    default: "DEV_GOOGLE_PROJECT_ID"
 
 orbs:
   gcp-gcr: circleci/gcp-gcr@0.6.1
@@ -80,7 +81,7 @@ jobs:
       - run: |      
           BT=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 1)
           DESC=$(echo ${CIRCLE_BRANCH} | cut -d '/' -f 2)
-          VERSION=<< pipeline.parameters.docker_version >>
+          VERSION=<< pipeline.parameters.app_version >>
 
           if [ "${BT}" == 'release' ]
           then
@@ -97,7 +98,7 @@ jobs:
 
           echo "PACKAGE_NAME=${NAME}" >> << pipeline.parameters.params_file >>
           echo "BRANCH_TYPE=${BT}" >> << pipeline.parameters.params_file >>
-          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>    
+          echo "PACKAGE_VERSION=${VERSION}" >> << pipeline.parameters.params_file >>
       - persist_to_workspace:
           root: .
           paths:
@@ -170,18 +171,18 @@ jobs:
 
       - gcp-gcr/gcr-auth:
           gcloud-service-key: GCLOUD_SERVICE_KEY
-          google-project-id: DEV_GOOGLE_PROJECT_ID
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
 
       - gcp-gcr/build-image:
           dockerfile: docker/Dockerfile
           tag: ${PACKAGE_NAME}
           image: magnum-web
           registry-url: gcr.io
-          google-project-id: DEV_GOOGLE_PROJECT_ID
-          extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.docker_version >>
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
+          extra_build_args: --build-arg VERSION_NUMBER=<< pipeline.parameters.app_version >>
 
       - gcp-gcr/push-image:
-          google-project-id: DEV_GOOGLE_PROJECT_ID
+          google-project-id: << pipeline.parameters.env_name_for_gcp_project >>
           tag: ${PACKAGE_NAME}
           image: magnum-web
           registry-url: gcr.io      
