@@ -4,7 +4,7 @@ version: 2.1
 parameters:
   app_version:
     type: string
-    default: "0.0.0" #app_version
+    default: "latest" #app_version
 
   params_file:
     type: string
