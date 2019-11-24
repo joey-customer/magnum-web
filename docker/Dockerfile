@@ -16,7 +16,8 @@ WORKDIR /app/publish
 RUN dotnet restore
 RUN dotnet publish -c Release -o out -p:Version=$VERSION_NUMBER 
 
-FROM mcr.microsoft.com/dotnet/core/runtime:3.0 AS runtime
+#Let use sdk rather than runtime for now
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS runtime
 WORKDIR /app
 
 RUN  apt-get update \
