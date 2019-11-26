@@ -5,7 +5,7 @@ parameters:
   app_version:
     type: string
     #BE CAREFUL TO USE SPCE RATHER THAN TAB HERE!!!!
-    default: "0.0.0" #app_version
+    default: "1.1.9" #app_version
 
   params_file:
     type: string
