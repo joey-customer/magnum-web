@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Its.Onix.Core.Business;
 using Its.Onix.Core.Factories;
 using Its.Onix.Erp.Models;
+using Its.Onix.Core.Notifications;
 
 using Magnum.Api.Utils;
 using Magnum.Web.Utils;
@@ -36,19 +37,38 @@ namespace Magnum.Web.Controllers
             return VerifyProduct(param);
         }
 
+        private void LineNotify(MRegistration param, string message)
+        {
+            string token = Environment.GetEnvironmentVariable("MAGNUM_LINE_TOKEN");
+            LineNotification line = new LineNotification();
+            
+            line.SetNotificationToken(token);
+
+            string lineMsg = String.Format(
+                "\nMagnumWeb Product Verification\nSerial:{0}\nPin:{1}\nMessage:{2}\n", 
+                param.SerialNumber, param.Pin, message);
+
+            line.Send(lineMsg);
+        }
+
         private IActionResult VerifyProduct(MRegistration param)
         {
             IBusinessOperationManipulate<MRegistration> operation = GetCreateRegistrationOperation();
             try
-            {
+            {                
                 operation.Apply(param);
                 ViewBag.Serial = param.SerialNumber;
                 ViewBag.PIN = param.Pin;
+
+                LineNotify(param, "Production verification successfully.");
+
                 return View("Success");
             }
             catch (Exception e)
             {
                 ViewBag.Message = e.Message;
+                LineNotify(param, e.Message);
+
                 return View("Fail");
             }
         }

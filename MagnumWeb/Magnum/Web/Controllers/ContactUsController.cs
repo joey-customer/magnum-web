@@ -7,6 +7,7 @@ using Its.Onix.Erp.Models;
 using Its.Onix.Core.Business;
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.Smtp;
+using Its.Onix.Core.Notifications;
 
 using Magnum.Web.Utils;
 using Magnum.Api.Utils;
@@ -76,6 +77,14 @@ namespace Magnum.Web.Controllers
 
                 Log.Logger.Information("Email sent to [{0}]", emailTo);
                 result = true;
+
+                LineNotification line = new LineNotification();
+                string token = Environment.GetEnvironmentVariable("MAGNUM_LINE_TOKEN");
+                line.SetNotificationToken(token);
+                string lineMsg = String.Format(
+                    "\nMagnumWeb ContactUs\nFrom:{0}\nSubject:{1}\nMessage:{2}\n", 
+                    form.Email, form.Subject, form.Message);
+                line.Send(lineMsg);
             }
             else
             {
