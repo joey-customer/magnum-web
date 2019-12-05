@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 
 using Its.Onix.Core.Business;
@@ -51,6 +52,14 @@ namespace Magnum.Web.Controllers
             line.Send(lineMsg);
         }
 
+        private string FilterSensitive(string str)
+        {
+            Regex regex = new Regex("https://.+");
+            string cleanString = regex.Replace(str, "********Filter*******");
+
+            return cleanString;
+        }
+
         private IActionResult VerifyProduct(MRegistration param)
         {
             IBusinessOperationManipulate<MRegistration> operation = GetCreateRegistrationOperation();
@@ -66,7 +75,7 @@ namespace Magnum.Web.Controllers
             }
             catch (Exception e)
             {
-                ViewBag.Message = e.Message;
+                ViewBag.Message = FilterSensitive(e.Message);
                 LineNotify(param, e.Message);
 
                 return View("Fail");
