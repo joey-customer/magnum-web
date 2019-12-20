@@ -14,6 +14,7 @@ using Magnum.Api.Utils;
 
 namespace Magnum.Web.Controllers
 {
+    [AutoValidateAntiforgeryToken]
     public class ContactUsController : BaseController
     {
         [HttpGet("Contact")]
