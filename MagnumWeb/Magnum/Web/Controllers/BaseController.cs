@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
 
 using Its.Onix.Core.Factories;
 using Its.Onix.Core.Caches;
@@ -15,8 +16,12 @@ namespace Magnum.Web.Controllers
 {
     public class BaseController : Controller
     {
+        private HttpRequest httpReq;
+
         public override void OnActionExecuting(ActionExecutingContext context)
         {
+            httpReq = Request;
+
             LoadProductTypeList();
             LoadContents();
             //Program generates Modal every pages, assign this to prevent null pointer exception.
@@ -25,7 +30,6 @@ namespace Magnum.Web.Controllers
             ViewBag.PageViews = GetViews();
             ViewBag.OrderShipped = GetOrderShipped();
             ViewBag.Uptime = GetDaysUpTime();
-
         }
 
         private dynamic GetViews()
@@ -114,5 +118,16 @@ namespace Magnum.Web.Controllers
         {
             return (IBusinessOperationManipulate<MMetric>)FactoryBusinessOperation.CreateBusinessOperationObject("IncreaseAndRetrieveMetric");
         }
+
+        public void SetHttpRequest(HttpRequest req)
+        {
+            httpReq = req;
+        }  
+
+        protected virtual string GetCpatchaToken()
+        {
+            string token = httpReq.Form["g-recaptcha-response"];
+            return token;
+        }        
     }
 }
