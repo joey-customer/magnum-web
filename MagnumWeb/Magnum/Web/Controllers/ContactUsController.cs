@@ -26,8 +26,10 @@ namespace Magnum.Web.Controllers
         [HttpPost("Contact/Save")]
         public IActionResult SaveContactUs(MContactUs form)
         {
-            string validationMessage = ValidateContactUsForm(form);
-            if (ValidateContactUsForm(form) != null)
+            string token = GetCpatchaToken();
+
+            string validationMessage = ValidateContactUsForm(form, token);
+            if (validationMessage != null)
             {
                 ViewBag.Message = validationMessage;
             }
@@ -42,7 +44,7 @@ namespace Magnum.Web.Controllers
 
                 operation.Apply(form);
 
-                bool sendResult = SendEmail(form);
+                bool sendResult = SendEmail(form, token);
 
                 if (sendResult)
                 {
@@ -54,10 +56,11 @@ namespace Magnum.Web.Controllers
                 }
 
             }
+
             return View("Contact");
         }
 
-        public virtual bool SendEmail(MContactUs form)
+        public virtual bool SendEmail(MContactUs form, string captchaToken)
         {
             bool result = false;
             string emailTo = GetEmailTo();
@@ -79,12 +82,14 @@ namespace Magnum.Web.Controllers
                 Log.Logger.Information("Email sent to [{0}]", emailTo);
                 result = true;
 
+                string shortToken = captchaToken.Substring(0, 10);
+                
                 LineNotification line = new LineNotification();
                 string token = Environment.GetEnvironmentVariable("MAGNUM_LINE_TOKEN");
                 line.SetNotificationToken(token);
                 string lineMsg = String.Format(
-                    "\nMagnumWeb ContactUs\nFrom:{0}\nSubject:{1}\nMessage:{2}\n", 
-                    form.Email, form.Subject, form.Message);
+                    "\nMagnumWeb ContactUs\nFrom:{0}\nSubject:{1}\nMessage:{2}\nCaptcha:{3}", 
+                    form.Email, form.Subject, form.Message, shortToken);
                 line.Send(lineMsg);
             }
             else
@@ -99,9 +104,10 @@ namespace Magnum.Web.Controllers
             return Environment.GetEnvironmentVariable("MAGNUM_EMAIL_TO");
         }
 
-        public string ValidateContactUsForm(MContactUs form)
+        public string ValidateContactUsForm(MContactUs form, string token)
         {
             string validationMessage = null;
+         
             if (String.IsNullOrEmpty(form.Name))
             {
                 validationMessage = "Name cannot be empty.";
@@ -118,6 +124,11 @@ namespace Magnum.Web.Controllers
             {
                 validationMessage = "Email cannot be empty.";
             }
+            else if (String.IsNullOrEmpty(token))
+            {
+                validationMessage = "Please click reCaptcha checkbox to make sure you are not robot.";
+            }   
+
             return validationMessage;
         }
 

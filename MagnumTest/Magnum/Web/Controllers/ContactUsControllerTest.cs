@@ -1,9 +1,12 @@
 using System;
-using NUnit.Framework;
-using Moq;
+using System.Net;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using System.Net;
+using Microsoft.Extensions.Primitives;
+
+using NUnit.Framework;
+using Moq;
 
 using Its.Onix.Core.Business;
 using Its.Onix.Core.Caches;
@@ -47,6 +50,17 @@ namespace Magnum.Web.Controllers
 
             controller = mockController.Object;
             controller.ControllerContext = controllerContext;
+
+            var values = new Dictionary<string, StringValues>()
+            {
+                { "g-recaptcha-response", new StringValues("ThisIsFakedToken") }
+            };
+            var formValues = new FormCollection(values);
+            
+            var httpReqMocked = new Mock<HttpRequest>();
+            httpReqMocked.Setup(r => r.Form).Returns(formValues);
+            var httpReq = httpReqMocked.Object;
+            controller.SetHttpRequest(httpReq);
         }
 
         [Test]
@@ -68,9 +82,21 @@ namespace Magnum.Web.Controllers
             model.Subject = subject;
             model.Email = email;
             model.Message = message;
-            string result = controller.ValidateContactUsForm(model);
+            string result = controller.ValidateContactUsForm(model, "This is fake");
             Assert.AreEqual(expected, result);
         }
+
+        [TestCase("A", "B", "C", "D", "Please click reCaptcha checkbox to make sure you are not robot.")]
+        public void ValidateContactUsCaptchaEmptyTest(String name, String subject, String email, String message, string expected)
+        {
+            MContactUs model = new MContactUs();
+            model.Name = name;
+            model.Subject = subject;
+            model.Email = email;
+            model.Message = message;
+            string result = controller.ValidateContactUsForm(model, "");
+            Assert.AreEqual(expected, result);
+        }     
 
         [TestCase("Maxnum", "0000", "1234", "5678")]
         public void SaveContactTest(String name, String subject, String email, String message)
@@ -95,8 +121,8 @@ namespace Magnum.Web.Controllers
             model.Name = name;
             model.Subject = subject;
             model.Email = email;
-            model.Message = message;
-            mockController.Setup(foo => foo.SendEmail(It.IsAny<MContactUs>())).Returns(false);
+            model.Message = message;            
+            mockController.Setup(foo => foo.SendEmail(It.IsAny<MContactUs>(), It.IsAny<string>())).Returns(false);
             ViewResult result = (ViewResult)controller.SaveContactUs(model);
             Assert.AreEqual("127.0.0.1", model.IP);
             Assert.AreEqual("Contact", result.ViewName);
@@ -133,7 +159,7 @@ namespace Magnum.Web.Controllers
             mockController.Setup(foo => foo.GetEmailTo()).Returns(nullString);
 
             MContactUs contactUs = new MContactUs();
-            bool result = mockController.Object.SendEmail(contactUs);
+            bool result = mockController.Object.SendEmail(contactUs, "ThisIsCaptchaToken");
             Assert.IsFalse(result);
         }
 
